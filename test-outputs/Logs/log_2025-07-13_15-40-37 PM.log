@@ -1,0 +1,10 @@
+[INFO] 13-07-2025 15:40:37 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
+[INFO] 13-07-2025 15:40:37 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 13-07-2025 15:40:38 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 13-07-2025 15:40:39 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 13-07-2025 15:40:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-07-2025 15:40:47 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //a[@href="/requests/issueCommerciallist"]
+[INFO] 13-07-2025 15:40:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 13-07-2025 15:40:51 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //label[contains(text(), ' مركز رئيسى')]
+[INFO] 13-07-2025 15:40:53 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //button[contains(text(), ' انشاء الطلب ')]
+[INFO] 13-07-2025 15:40:53 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:BusinessLicenseRequest is Successed

@@ -1,0 +1,28 @@
+[INFO] 13-10-2025 11:46:20 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
+[INFO] 13-10-2025 11:46:20 [main] [Utilities.Utility.SENDKEYS(Utility.java:58)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 13-10-2025 11:46:20 [main] [Utilities.Utility.SENDKEYS(Utility.java:58)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 13-10-2025 11:46:21 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 13-10-2025 11:46:26 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-10-2025 11:46:27 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //a[@href="/requests/issueCommerciallist"]
+[INFO] 13-10-2025 11:46:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 13-10-2025 11:46:33 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[contains(text(), ' مركز رئيسى')]
+[INFO] 13-10-2025 11:46:35 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[contains(text(), ' انشاء الطلب ')]
+[INFO] 13-10-2025 11:46:44 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:66)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 30001231231231
+[INFO] 13-10-2025 11:46:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 13-10-2025 11:46:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "البيانات القانونية")]
+[INFO] 13-10-2025 11:46:50 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[contains(text(), "تصنيف المنشاة")]/following-sibling::*[1]
+[INFO] 13-10-2025 11:46:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 13-10-2025 11:46:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(text(), " نوع المنشأة ")]/following-sibling::*[1]
+[INFO] 13-10-2025 11:46:53 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 13-10-2025 11:46:53 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:66)] -  Data sent to  By.xpath: //label[normalize-space(text())='الاسم التجاري']/following-sibling::*[1] is Test
+[INFO] 13-10-2025 11:46:53 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:66)] -  Data sent to  By.xpath: //label[normalize-space(text())='السمة التجارية']/following-sibling::*[1] is Test
+[INFO] 13-10-2025 11:46:53 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "البيانات القانونية")]
+[INFO] 13-10-2025 11:46:54 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "الاعضاء")]
+[INFO] 13-10-2025 11:46:55 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='الصفة القانونية']/following-sibling::*[1]
+[INFO] 13-10-2025 11:46:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 13-10-2025 11:46:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "اضافة شريك ")]
+[INFO] 13-10-2025 11:46:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "الاعضاء")]
+[INFO] 13-10-2025 11:46:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات رأس المال')]
+[INFO] 13-10-2025 11:46:58 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:66)] -  Data sent to  By.xpath: //label[normalize-space(text())='رأس المال المسدد (ج.م)']/following-sibling::*[1] is 100000
+[INFO] 13-10-2025 11:46:58 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات رأس المال')]
+[INFO] 13-10-2025 11:46:58 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:BusinessLicenseRequest is Successed

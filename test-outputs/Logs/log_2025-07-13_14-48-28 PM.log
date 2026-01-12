@@ -1,0 +1,8 @@
+[INFO] 13-07-2025 14:48:28 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
+[INFO] 13-07-2025 14:48:29 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 13-07-2025 14:48:29 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 13-07-2025 14:48:31 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 13-07-2025 14:48:38 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-07-2025 14:48:40 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //a[@href="/requests/issueCommerciallist"]
+[INFO] 13-07-2025 14:48:44 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 13-07-2025 14:48:44 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:BusinessLicenseRequest is Successed
