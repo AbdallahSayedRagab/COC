@@ -26,14 +26,14 @@ public class P03_BusinessLicensePage {
     private final By TradeNameField = By.xpath("//label[normalize-space(text())='الاسم التجاري']/following-sibling::*[1]");
     private final By CommercialFeatureField = By.xpath("//label[normalize-space(text())='السمة التجارية']/following-sibling::*[1]");
     private final By MembersSection = By.xpath("//span[contains(text(), \"الاعضاء\")]");
-    private final By LegalStatus = By.xpath("//label[normalize-space(text())='الصفة القانونية']/following-sibling::*[1]");
+    private final By LegalStatus = By.xpath("//label[normalize-space(text())='الصفات الإدارية']/following-sibling::*[1]");
     private final By AddMemberButton = By.xpath("//span[contains(text(), \" إضافة  شريك \")]");
     private final By CapitalData = By.xpath("//span[contains(text(), 'بيانات رأس المال')]");
     private final By CapitalDataField = By.xpath("//label[normalize-space(text())='رأس المال المسدد (ج.م)']/following-sibling::*[1]");
     private final By ActivitiesData = By.xpath("//span[contains(text(), 'بيانات النشاط')]");
     private final By TaxCardNumber = By.xpath("//label[normalize-space(text())='رقم التسجيل الضريبى']/following-sibling::*[1]");
     private final By DataOfStartingActivity = By.xpath("//label[normalize-space(text())='تاريخ بدء النشاط']/following-sibling::*[1]");
-    private final By FixedDateForAnyCalendar = By.xpath("//td[@role='gridcell'][3]/span[contains(text(), \"١٥\")]");
+    private final By FixedDateForAnyCalendar = By.xpath("//td[@role='gridcell']/span[contains(text(), \"١٥\")]");
     private final By ActivityDescription = By.xpath("//label[normalize-space(text())='النشاط طبقا لوثيقة البطاقة الضريبية']/following-sibling::*[1]");
     private final By ActivityField = By.xpath("//label[normalize-space(text())='النشاط']/following-sibling::*[1]");
     private final By AddActivityButton = By.xpath("//button[contains(text(), ' اضافة نشاط ')]");
@@ -50,13 +50,13 @@ public class P03_BusinessLicensePage {
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
 
-    private final By EditButton = By.xpath("(//img[@src=\"../../../../assets/images/pen-black.svg\"])[1]");
+    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
     private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
     private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
-    private final By ViewButton = By.xpath("  (//img[@src=\"../../../../assets/images/view-icon.svg\"])[1]");
+    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
 
 
     public P03_BusinessLicensePage ClickOnAddNewRequest_Button () throws InterruptedException {
@@ -161,11 +161,18 @@ public class P03_BusinessLicensePage {
         return this;
     }
 
-    public P03_BusinessLicensePage SendingRequestToCollect(){
+    public P04_InvoicesPage SendingRequestToCollect(){
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        return new P04_InvoicesPage(driver);
+    }
+
+    public P03_BusinessLicensePage ReceivingTheCertificate () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
         return this;
     }
 

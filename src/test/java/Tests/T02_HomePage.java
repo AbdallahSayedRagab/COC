@@ -42,9 +42,11 @@ public class T02_HomePage {
                         DataUtiles.getJsonData("Data","Description"))
                 .FillCapitalDataSection(DataUtiles.getJsonData("Data","Capital"))
                 .FillBusinessLocationSection(DataUtiles.getJsonData("Data","NameOfSt"))
-                .FillCertificateData().FillAttachmentSection().ReviewRequest().SendingRequestToCollect();
+                .FillCertificateData().FillAttachmentSection().ReviewRequest().SendingRequestToCollect()
+                .PayingFirstBill().Select_BusinessLicense().ReceivingTheCertificate();
 
     }
+
     @Test
     public void EditRequest () throws InterruptedException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
@@ -54,6 +56,13 @@ public class T02_HomePage {
                 .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
                 .SendingRequestToCollect();
     }
+//    @Test
+//    public void EditReqwwwwwuest () throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password")).Select_BusinessLicense();
+//        new P05_EditRequestPage(driver).ReviewRequest()
+//                .SendingRequestToCollect();
+//    }
 
 
 
