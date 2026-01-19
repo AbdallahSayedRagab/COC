@@ -1,0 +1,36 @@
+[INFO] 18-01-2026 13:04:46 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:EditRequest is Started
+[INFO] 18-01-2026 13:04:47 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 18-01-2026 13:04:47 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 18-01-2026 13:04:48 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 18-01-2026 13:04:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 18-01-2026 13:04:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[contains(@href, '/requests/editCommercialList')]
+[INFO] 18-01-2026 13:05:10 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 18-01-2026 13:05:11 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 30001231231231
+[INFO] 18-01-2026 13:05:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 18-01-2026 13:05:18 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input[@placeholder="ابحث برقم السجل  "] is 990099
+[INFO] 18-01-2026 13:05:26 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"])[1]
+[INFO] 18-01-2026 13:05:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//input[@type="checkbox"])[1]
+[INFO] 18-01-2026 13:05:30 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]
+[INFO] 18-01-2026 13:05:32 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 18-01-2026 13:05:49 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 18-01-2026 13:05:50 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 18-01-2026 13:06:04 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]
+[INFO] 18-01-2026 13:06:07 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 18-01-2026 13:06:11 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(),"أقبل الطلب")]
+[INFO] 18-01-2026 13:06:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 18-01-2026 13:06:25 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 18-01-2026 13:06:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 18-01-2026 13:06:33 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(normalize-space(), 'أرسال للتحصيل')]
+[INFO] 18-01-2026 13:06:39 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]
+[INFO] 18-01-2026 13:06:41 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/collections-icon.svg"]
+[INFO] 18-01-2026 13:06:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[@href="/collections/invoices?title=::Invoices"]
+[INFO] 18-01-2026 13:06:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 18-01-2026 13:06:56 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.id: WithdrawTheBill
+[INFO] 18-01-2026 13:06:58 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//input[@type="radio"])[1]
+[INFO] 18-01-2026 13:07:05 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[@type="button"]
+[INFO] 18-01-2026 13:07:07 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 18-01-2026 13:07:12 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[contains(@href, '/requests/editCommercialList')]
+[INFO] 18-01-2026 13:07:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 18-01-2026 13:07:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 18-01-2026 13:07:27 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), "تم التسليم")]
+[INFO] 18-01-2026 13:07:27 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:EditRequest is Successed

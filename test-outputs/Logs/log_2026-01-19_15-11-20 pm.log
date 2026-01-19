@@ -1,0 +1,15 @@
+[INFO] 19-01-2026 15:11:20 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:EditRequest is Started
+[INFO] 19-01-2026 15:11:21 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 19-01-2026 15:11:21 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 19-01-2026 15:11:23 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 19-01-2026 15:11:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 19-01-2026 15:11:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[contains(@href, '/requests/editCommercialList')]
+[INFO] 19-01-2026 15:11:44 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 19-01-2026 15:11:46 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 30001231231231
+[INFO] 19-01-2026 15:11:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 19-01-2026 15:11:53 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input[@placeholder="ابحث برقم السجل  "] is 990099
+[INFO] 19-01-2026 15:12:01 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"])[1]
+[INFO] 19-01-2026 15:12:05 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//input[@type="checkbox"])[1]
+[INFO] 19-01-2026 15:12:06 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]
+[INFO] 19-01-2026 15:12:08 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 19-01-2026 15:12:23 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed

@@ -43,6 +43,13 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     wait.until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
     LogsUtiles.info("Clicked on " + Locator.toString());
 }
+    public static void WatingLoadingCircle_And_CLICKON_WebElement(
+            WebDriver driver, WebElement element, By loadingCircle) {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingCircle));
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
 
     public static void CLICKONVISIBLEELEMENTS(WebDriver driver, By Locator) {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(Locator));

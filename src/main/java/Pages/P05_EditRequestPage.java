@@ -6,10 +6,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
+
 public class P05_EditRequestPage {
+    private static final Logger log = LoggerFactory.getLogger(P05_EditRequestPage.class);
+
     public P05_EditRequestPage(WebDriver driver) { this.driver = driver;
     }
     private WebDriver driver;
@@ -28,12 +36,13 @@ public class P05_EditRequestPage {
     private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
-    private final By EditButton = By.xpath("(//img[@src=\"../../../../assets/images/pen-black.svg\"])[1]");
+    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
     private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
     private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
-    private final By ViewButton = By.xpath("  (//img[@xmlns=\"http://www.w3.org/2000/svg\"])[1]");
+    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
 
 
     public P05_EditRequestPage CreateNewEditRequest_Button () throws InterruptedException {
@@ -74,12 +83,40 @@ public class P05_EditRequestPage {
         return this;
     }
 
-    public P05_EditRequestPage FillAttachmentSectionAndConfirmRequest() throws InterruptedException {
+    public P05_EditRequestPage FillAttachmentSectionAndConfirmRequest() throws InterruptedException, AWTException {
 
         List<WebElement> buttons = driver.findElements(AddAttachmentButton);
-        if (buttons.size() > 0) {
-            for (WebElement btn : buttons) {
-                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, (By) btn, Loading_Circle);
+        if (!buttons.isEmpty()) {
+//            int size = driver.findElements(AddAttachmentButton).size();
+            for(int i = 0; i < buttons.size();i++) {
+                WebElement btn = buttons.get(i);
+                String path = "\"C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg\"";
+                Utility.WatingLoadingCircle_And_CLICKON_WebElement(driver, btn, Loading_Circle);
+                StringSelection StringSelection = new StringSelection(path);
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(StringSelection,null);
+
+                Robot robot = new Robot();
+                robot.delay(500);
+
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
+                robot.delay(1000);
+
+//                robot.keyPress(KeyEvent.VK_CONTROL);
+//                robot.keyPress(KeyEvent.VK_C);
+//                robot.keyRelease(KeyEvent.VK_C);
+//                robot.keyRelease(KeyEvent.VK_CONTROL);
+//                robot.delay(1000);
+
+                robot.keyPress(KeyEvent.VK_CONTROL);
+                robot.keyPress(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_CONTROL);
+                robot.delay(1000);
+
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
+                robot.delay(7000);
             }
         }
         Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
@@ -96,11 +133,17 @@ public class P05_EditRequestPage {
         return this;
     }
 
-    public P05_EditRequestPage SendingRequestToCollect(){
+    public P04_InvoicesPage SendingRequestToCollect(){
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        return new P04_InvoicesPage(driver);
+    }
+    public P05_EditRequestPage ReceivingTheCertificate () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
         return this;
     }
 

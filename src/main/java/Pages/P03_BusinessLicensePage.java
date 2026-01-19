@@ -6,6 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 public class P03_BusinessLicensePage {
@@ -57,6 +60,7 @@ public class P03_BusinessLicensePage {
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
     private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
 
 
     public P03_BusinessLicensePage ClickOnAddNewRequest_Button () throws InterruptedException {
@@ -141,12 +145,40 @@ public class P03_BusinessLicensePage {
         return this;
     }
 
-    public P03_BusinessLicensePage FillAttachmentSection () throws InterruptedException {
+    public P03_BusinessLicensePage FillAttachmentSectionAndConfirmRequest() throws InterruptedException, AWTException {
 
         List<WebElement> buttons = driver.findElements(AddAttachmentButton);
-        if (buttons.size() > 0) {
-            for (WebElement btn : buttons) {
-                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, (By) btn, Loading_Circle);
+        if (!buttons.isEmpty()) {
+//            int size = driver.findElements(AddAttachmentButton).size();
+            for(int i = 0; i < buttons.size();i++) {
+                WebElement btn = buttons.get(i);
+                String path = "\"C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg\"";
+                Utility.WatingLoadingCircle_And_CLICKON_WebElement(driver, btn, Loading_Circle);
+                StringSelection StringSelection = new StringSelection(path);
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(StringSelection,null);
+
+                Robot robot = new Robot();
+                robot.delay(500);
+
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
+                robot.delay(1000);
+
+//                robot.keyPress(KeyEvent.VK_CONTROL);
+//                robot.keyPress(KeyEvent.VK_C);
+//                robot.keyRelease(KeyEvent.VK_C);
+//                robot.keyRelease(KeyEvent.VK_CONTROL);
+//                robot.delay(1000);
+
+                robot.keyPress(KeyEvent.VK_CONTROL);
+                robot.keyPress(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_CONTROL);
+                robot.delay(1000);
+
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
+                robot.delay(7000);
             }
         }
         Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
