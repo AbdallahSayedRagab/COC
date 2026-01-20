@@ -42,7 +42,8 @@ public class T02_HomePage {
                         DataUtiles.getJsonData("Data","Description"))
                 .FillCapitalDataSection(DataUtiles.getJsonData("Data","Capital"))
                 .FillBusinessLocationSection(DataUtiles.getJsonData("Data","NameOfSt"))
-                .FillCertificateData().FillAttachmentSectionAndConfirmRequest().ReviewRequest().SendingRequestToCollect()
+                .FillCertificateData().FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile()
+                .ReviewRequest().SendingRequestToCollect()
                 .PayingFirstBill().Select_BusinessLicense().ReceivingTheCertificate();
 
     }

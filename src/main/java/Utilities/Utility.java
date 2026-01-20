@@ -83,10 +83,12 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         dropdown.selectByIndex(index);
     }
 
-    public static String GETTEXT(WebDriver driver, By locator ) {
+    public static String GETTEXT(WebDriver driver, By Locator , By LoadingCircle ) {
+//        new WebDriverWait(driver, Duration.ofSeconds(5)).until(elementToBeClickable(Locator));
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
         String Text = new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
-        LogsUtiles.info(" Data of " + locator.toString() + " is " + Text);
+                .until(ExpectedConditions.visibilityOfElementLocated(Locator)).getText();
+        LogsUtiles.info(" Data of " + Locator.toString() + " is " + Text);
         return Text ;
     }
     public static void HOVER(WebDriver driver, By locator) {

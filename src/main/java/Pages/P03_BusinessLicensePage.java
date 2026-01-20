@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.JsonUtil;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -186,6 +187,14 @@ public class P03_BusinessLicensePage {
         Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
+
+    public P03_BusinessLicensePage SaveRequestNumberInJsonFile() {
+
+        String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
+        JsonUtil.writeValue("requestNumber", requestNumber);
+        return this;
+    }
+
 
     public P03_BusinessLicensePage ReviewRequest () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);

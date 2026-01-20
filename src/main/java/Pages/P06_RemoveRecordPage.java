@@ -125,15 +125,6 @@ public class P06_RemoveRecordPage {
         return this;
     }
 
-//    public P06_RemoveRecordPage AcceptTheWarningPopUP (){
-//
-//        try {
-//            if (AcceptButtonOfWarningPopUp.findElement(driver).isDisplayed())
-//                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptButtonOfWarningPopUp, Loading_Circle);
-//        }
-//        catch (NoSuchElementException e){}
-//        return this;
-//    }
 
     public P06_RemoveRecordPage ReviewRequest () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
