@@ -30,7 +30,6 @@ public class T02_HomePage {
 
     }
 
-
     @Test
     public void BusinessLicenseRequest () throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
@@ -57,16 +56,17 @@ public class T02_HomePage {
                 .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
     }
-//    @Test
-//    public void EditReqwwwwwuest () throws InterruptedException {
-//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-//                ,DataUtiles.getJsonData("Data","Password")).Select_BusinessLicense();
-//        new P05_EditRequestPage(driver).ReviewRequest()
-//                .SendingRequestToCollect();
-//    }
 
+    @Test
+    public void RemoveRequest() throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
+                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).FillCertificateData()
+                .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
+                .SendingRequestToCollect().PayingFirstBill().Select_RemoveRequest().ReceivingTheCertificate();
 
-
+    }
 
     @AfterMethod
     public void quit () {

@@ -1,0 +1,19 @@
+[INFO] 20-01-2026 12:54:07 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:RemoveRequest is Started
+[INFO] 20-01-2026 12:54:08 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 20-01-2026 12:54:08 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 20-01-2026 12:54:09 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 20-01-2026 12:54:18 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 20-01-2026 12:54:23 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[contains(@href, '/requests/removeCommercialList')]
+[INFO] 20-01-2026 12:54:31 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 20-01-2026 12:54:33 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 30001231231231
+[INFO] 20-01-2026 12:54:39 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 20-01-2026 12:54:40 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input[@placeholder="ابحث برقم السجل  "] is 990099
+[INFO] 20-01-2026 12:54:47 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"])[1]
+[INFO] 20-01-2026 12:54:49 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]
+[INFO] 20-01-2026 12:54:50 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 20-01-2026 12:55:16 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 20-01-2026 12:55:18 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 20-01-2026 12:55:31 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]
+[INFO] 20-01-2026 12:55:35 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 20-01-2026 12:55:38 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(),"أقبل الطلب")]
+[INFO] 20-01-2026 12:55:53 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed

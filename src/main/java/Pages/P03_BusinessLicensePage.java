@@ -47,12 +47,9 @@ public class P03_BusinessLicensePage {
     private final By SecondAdministrativeField = By.xpath("//label[normalize-space(text())='التقسيم الاداري الثانى']/following-sibling::*[1]");
     private final By StreetName = By.xpath("//label[normalize-space(text())='اسم الشارع']/following-sibling::*[1]");
     private final By SendCertificateToOfficeField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]");
-
-
     private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
-
     private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
     private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
     private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
@@ -67,20 +64,24 @@ public class P03_BusinessLicensePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
         return this;
     }
+
     public P03_BusinessLicensePage Validate_BusinessLicenseURL () throws InterruptedException {
         Validations.ValidateURL("https://coc-backoffice-fix.apps.softprograms-eg.com/requests/issueCommerciallist");
         return this;
     }
+
     public P03_BusinessLicensePage ChooseFacilityNature_And_CreateRequest() throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,FacilityNature_Choice);
         Utility.CLICKONELEMENTS(driver,CreateRequest_Button);
         return this;
     }
+
     public P03_BusinessLicensePage FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
         Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,Loading_Circle,ID);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button,Loading_Circle);
         return this;
     }
+
     public P03_BusinessLicensePage FillLegalDataSection (String TradeName , String CommercialFeature ) throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection,Loading_Circle);
         Utility.CLICKONELEMENTS(driver,FacilityClassificationField);
@@ -92,6 +93,7 @@ public class P03_BusinessLicensePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection,Loading_Circle);
         return this;
     }
+
     public P03_BusinessLicensePage FillMembersSection () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection,Loading_Circle);
         Utility.CLICKONELEMENTS(driver,LegalStatus);
@@ -107,8 +109,6 @@ public class P03_BusinessLicensePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CapitalData,Loading_Circle);
         return this;
     }
-
-
 
     public P03_BusinessLicensePage FillActivitiesDataSection (String TaxCardNum, String Description) throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData,Loading_Circle);
@@ -139,6 +139,7 @@ public class P03_BusinessLicensePage {
 
 
     }
+
     public P03_BusinessLicensePage FillCertificateData () throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,SendCertificateToOfficeField);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
@@ -185,6 +186,7 @@ public class P03_BusinessLicensePage {
         Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
+
     public P03_BusinessLicensePage ReviewRequest () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
