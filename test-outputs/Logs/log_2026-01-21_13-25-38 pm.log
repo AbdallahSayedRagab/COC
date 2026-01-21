@@ -1,0 +1,71 @@
+[INFO] 21-01-2026 13:25:38 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
+[INFO] 21-01-2026 13:25:38 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 21-01-2026 13:25:39 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 21-01-2026 13:25:40 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 21-01-2026 13:25:50 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 21-01-2026 13:25:51 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //a[@href="/requests/issueCommerciallist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5%20%D9%85%D8%B2%D8%A7%D9%88%D9%84%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9"]
+[INFO] 21-01-2026 13:25:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 21-01-2026 13:26:00 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[contains(text(), ' مركز رئيسى')]
+[INFO] 21-01-2026 13:26:03 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[contains(text(), ' انشاء الطلب ')]
+[INFO] 21-01-2026 13:26:11 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 30001231231231
+[INFO] 21-01-2026 13:26:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 21-01-2026 13:26:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "البيانات القانونية")]
+[INFO] 21-01-2026 13:26:21 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[contains(text(), "تصنيف المنشاة")]/following-sibling::*[1]
+[INFO] 21-01-2026 13:26:25 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:26:28 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(text(), " نوع المنشأة ")]/following-sibling::*[1]
+[INFO] 21-01-2026 13:26:31 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:26:33 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='الاسم التجاري']/following-sibling::*[1] is Test
+[INFO] 21-01-2026 13:26:34 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='السمة التجارية']/following-sibling::*[1] is Test
+[INFO] 21-01-2026 13:26:37 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "البيانات القانونية")]
+[INFO] 21-01-2026 13:26:39 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "الاعضاء")]
+[INFO] 21-01-2026 13:26:40 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='الصفات الإدارية']/following-sibling::*[1]
+[INFO] 21-01-2026 13:26:43 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:26:46 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), " إضافة  شريك ")]
+[INFO] 21-01-2026 13:26:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), "الاعضاء")]
+[INFO] 21-01-2026 13:26:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات النشاط')]
+[INFO] 21-01-2026 13:26:53 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم التسجيل الضريبى']/following-sibling::*[1] is 123123123
+[INFO] 21-01-2026 13:26:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='تاريخ بدء النشاط']/following-sibling::*[1]
+[INFO] 21-01-2026 13:26:58 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //td[@role='gridcell']/span[contains(text(), "١٥")]
+[INFO] 21-01-2026 13:26:59 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='النشاط طبقا لوثيقة البطاقة الضريبية']/following-sibling::*[1] is DescriptionTest
+[INFO] 21-01-2026 13:27:02 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='النشاط']/following-sibling::*[1]
+[INFO] 21-01-2026 13:27:06 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:27:15 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), ' اضافة نشاط ')]
+[INFO] 21-01-2026 13:27:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='اسم الشعبة']/following-sibling::*[1]
+[INFO] 21-01-2026 13:27:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:27:22 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), ' اضافة شعبة')]
+[INFO] 21-01-2026 13:27:24 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات النشاط')]
+[INFO] 21-01-2026 13:27:27 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات رأس المال')]
+[INFO] 21-01-2026 13:27:28 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='رأس المال المسدد (ج.م)']/following-sibling::*[1] is 100000
+[INFO] 21-01-2026 13:27:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'بيانات رأس المال')]
+[INFO] 21-01-2026 13:27:34 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'محل النشاط')]
+[INFO] 21-01-2026 13:27:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='التقسيم الاداري الاول']/following-sibling::*[1]
+[INFO] 21-01-2026 13:27:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:27:42 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='التقسيم الاداري الثانى']/following-sibling::*[1]
+[INFO] 21-01-2026 13:27:44 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:27:46 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='اسم الشارع']/following-sibling::*[1] is Test St
+[INFO] 21-01-2026 13:27:48 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'محل النشاط')]
+[INFO] 21-01-2026 13:27:50 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]
+[INFO] 21-01-2026 13:27:51 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 21-01-2026 13:27:53 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 21-01-2026 13:27:54 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 21-01-2026 13:28:02 [main] [Utilities.Utility.GETTEXT(Utility.java:91)] -  Data of By.xpath: (//td/a[@class="ng-star-inserted"])[1] is 1768994759
+[INFO] 21-01-2026 13:28:14 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]
+[INFO] 21-01-2026 13:28:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 21-01-2026 13:28:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(),"أقبل الطلب")]
+[INFO] 21-01-2026 13:28:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 21-01-2026 13:28:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 21-01-2026 13:28:43 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 21-01-2026 13:28:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(normalize-space(), 'أرسال للتحصيل')]
+[INFO] 21-01-2026 13:28:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]
+[INFO] 21-01-2026 13:28:54 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/collections-icon.svg"]
+[INFO] 21-01-2026 13:28:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[@href="/collections/invoices?title=::Invoices"]
+[INFO] 21-01-2026 13:29:02 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 21-01-2026 13:29:06 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.id: WithdrawTheBill
+[INFO] 21-01-2026 13:29:09 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//input[@type="radio"])[1]
+[INFO] 21-01-2026 13:29:15 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[@type="button"]
+[INFO] 21-01-2026 13:29:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 21-01-2026 13:29:18 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //a[@href="/requests/issueCommerciallist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5%20%D9%85%D8%B2%D8%A7%D9%88%D9%84%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9"]
+[INFO] 21-01-2026 13:29:26 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 21-01-2026 13:29:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 21-01-2026 13:29:38 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), "تم التسليم")]
+[INFO] 21-01-2026 13:29:38 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:BusinessLicenseRequest is Successed

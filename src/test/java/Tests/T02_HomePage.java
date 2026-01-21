@@ -52,10 +52,10 @@ public class T02_HomePage {
     public void CreateRecordEffect() throws InterruptedException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
-        new V01_EffectsOnRecordsPage(driver).AddNewEffectToCreateNewRecord()
-                .FillDataForRecordAndCreateEffect(DataUtiles.getJsonData("Data","requestNumber"),
-                        DataUtiles.getJsonData("Data","requestNumber"),
-                        DataUtiles.getJsonData("Data","requestNumber")    )
+        new V01_CreateRecordEffectPage(driver).AddNewEffectToCreateNewRecord()
+                .FillDataForRecordAndCreateEffect(DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
+                        DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
+                        DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber")    )
                 .ConfirmAndApproveTheRecord();
     }
 
@@ -64,9 +64,21 @@ public class T02_HomePage {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
         new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
-                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).SelectSectionToEdit().FillCertificateData()
-                .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
+                .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).SelectSectionToEdit().FillCertificateData()
+                .FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
+    }
+
+    @Test
+    public void EditRecordEffect() throws InterruptedException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new V02_EditRecordEffectPage(driver).AddNewEffectToEditNewRecord()
+                .FillDataForRecordAndCreateEditEffect(
+                        DataUtiles.getJsonData("Data","RecordNumber"),
+                        DataUtiles.getJsonData("Data","EditRequestNumber"),
+                        DataUtiles.getJsonData("Data","EditRequestNumber")    )
+                .ConfirmAndApproveTheRecord();
     }
 
     @Test
@@ -74,7 +86,7 @@ public class T02_HomePage {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
         new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
-                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).FillCertificateData()
+                .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
                 .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_RemoveRequest().ReceivingTheCertificate();
 

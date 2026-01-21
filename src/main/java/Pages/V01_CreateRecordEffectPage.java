@@ -4,8 +4,8 @@ import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class V01_EffectsOnRecordsPage {
-    public V01_EffectsOnRecordsPage(WebDriver driver) { this.driver = driver;}
+public class V01_CreateRecordEffectPage {
+    public V01_CreateRecordEffectPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
 
@@ -29,7 +29,7 @@ public class V01_EffectsOnRecordsPage {
 
 
 
-    public V01_EffectsOnRecordsPage AddNewEffectToCreateNewRecord() {
+    public V01_CreateRecordEffectPage AddNewEffectToCreateNewRecord() {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RecordsListIcon, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, EffectsPageButton, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddEffectButton, Loading_Circle);
@@ -38,7 +38,7 @@ public class V01_EffectsOnRecordsPage {
     return this;
     }
 
-    public V01_EffectsOnRecordsPage FillDataForRecordAndCreateEffect(String RecordNum,String SignatureNumber, String CertificateNum) {
+    public V01_CreateRecordEffectPage FillDataForRecordAndCreateEffect(String RecordNum, String SignatureNumber, String CertificateNum) {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RecordOffice, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList, Loading_Circle);
         Utility.WatingAndSENDKEYS(driver, RecordNumField, Loading_Circle,RecordNum);
@@ -50,7 +50,7 @@ public class V01_EffectsOnRecordsPage {
         return this;
     }
 
-    public V01_EffectsOnRecordsPage ConfirmAndApproveTheRecord() {
+    public V01_CreateRecordEffectPage ConfirmAndApproveTheRecord() {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptButton, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp, Loading_Circle);

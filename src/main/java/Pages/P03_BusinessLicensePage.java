@@ -191,7 +191,9 @@ public class P03_BusinessLicensePage {
     public P03_BusinessLicensePage SaveRequestNumberInJsonFile() {
 
         String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
-        JsonUtil.writeValue("requestNumber", requestNumber);
+        JsonUtil.writeValue("BusinessLicenseRequestNumber", requestNumber);
+        JsonUtil.writeValue("RecordNumber", requestNumber);
+
         return this;
     }
 

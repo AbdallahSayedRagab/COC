@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.JsonUtil;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -44,6 +45,8 @@ public class P05_EditRequestPage {
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
     private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
+    private final By AcceptButtonOfWarningPopUp = By.xpath("//button[@class=\"swal2-confirm swal2-styled\"]");
 
 
     public P05_EditRequestPage CreateNewEditRequest_Button () throws InterruptedException {
@@ -94,11 +97,11 @@ public class P05_EditRequestPage {
                 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(StringSelection,null);
 
                 Robot robot = new Robot();
-                robot.delay(500);
+                robot.delay(1000);
 
                 robot.keyPress(KeyEvent.VK_ENTER);
                 robot.keyRelease(KeyEvent.VK_ENTER);
-                robot.delay(1000);
+                robot.delay(500);
 
 //                robot.keyPress(KeyEvent.VK_CONTROL);
 //                robot.keyPress(KeyEvent.VK_C);
@@ -114,11 +117,18 @@ public class P05_EditRequestPage {
 
                 robot.keyPress(KeyEvent.VK_ENTER);
                 robot.keyRelease(KeyEvent.VK_ENTER);
-                robot.delay(7000);
+                robot.delay(10000);
             }
         }
         Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
         Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
+        return this;
+    }
+
+    public P05_EditRequestPage SaveRequestNumberInJsonFile() {
+
+        String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
+        JsonUtil.writeValue("EditRequestNumber", requestNumber);
         return this;
     }
 
@@ -128,8 +138,8 @@ public class P05_EditRequestPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
 
         try {
-            if (AcceptRequestButtonOfPopUP.findElement(driver).isDisplayed())
-                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+            if (AcceptButtonOfWarningPopUp.findElement(driver).isDisplayed())
+                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptButtonOfWarningPopUp, Loading_Circle);
         }
         catch (NoSuchElementException e){}
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
