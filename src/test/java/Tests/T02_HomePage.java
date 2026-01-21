@@ -49,6 +49,17 @@ public class T02_HomePage {
     }
 
     @Test
+    public void CreateRecordEffect() throws InterruptedException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new V01_EffectsOnRecordsPage(driver).AddNewEffectToCreateNewRecord()
+                .FillDataForRecordAndCreateEffect(DataUtiles.getJsonData("Data","requestNumber"),
+                        DataUtiles.getJsonData("Data","requestNumber"),
+                        DataUtiles.getJsonData("Data","requestNumber")    )
+                .ConfirmAndApproveTheRecord();
+    }
+
+    @Test
     public void EditRequest () throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
