@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import Utilities.Scrolling;
+
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
@@ -107,6 +109,17 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         List<WebElement> products = driver.findElements(locator);
         return products.size();
     }
+
+    public static void WaitForPageLoad (WebDriver driver) {
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(webDriver -> ((JavascriptExecutor) webDriver)
+                                .executeScript("return document.readyState")
+                                .equals("complete"));
+                driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+
+
+    }
+
 
 
 }

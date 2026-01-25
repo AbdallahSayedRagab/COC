@@ -21,7 +21,7 @@ public class V01_CreateRecordEffectPage {
     private final By SignatureNumberInRecordField = By.xpath("//label[normalize-space(text())='رقم التأشير في السجل']/following-sibling::*[1]");
     private final By SearchingOfCertificateNumField = By.xpath("//input[@name=\"recordNumber\"]");
     private final By SearchButton = By.xpath("//button/span[contains(text(), 'بحث')]");
-    private final By FirstRowForCertificateResult = By.xpath("(//tr[@class=\"ng-star-inserted\"])[1]");
+    private final By FirstRowForCertificateResult = By.xpath("(//tr[@class=\"ng-star-inserted\"]/td)[1]");
     private final By SendingEffectButton = By.xpath("//button/span[contains(text(), ' ارسال')]");
     private final By OkButtonOfPopUp = By.xpath("//button[contains(text(), 'OK')]");
     private final By AcceptButton = By.xpath("//span[contains(text(), ' موافقة')]");

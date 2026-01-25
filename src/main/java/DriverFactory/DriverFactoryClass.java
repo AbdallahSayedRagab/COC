@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactoryClass {
     public static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
@@ -21,13 +22,18 @@ public class DriverFactoryClass {
                 driverThreadLocal.set(new ChromeDriver(Options));
                 break;
 
-            case "firefox":
-                driverThreadLocal.set(new FirefoxDriver());
-                break;
-            default:
+            case "edge":
                 EdgeOptions Optionss = new EdgeOptions();
                 Optionss.addArguments("--start-maximized");
                 driverThreadLocal.set(new EdgeDriver(Optionss));
+                break;
+
+            default:
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--kiosk");;
+                options.addPreference("layout.css.devPixelsPerPx", "0.80");
+                driverThreadLocal.set(new FirefoxDriver(options));
+
 
         }
     }

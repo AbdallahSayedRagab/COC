@@ -1,1 +1,0 @@
-{"uuid":"9cc2cee5-73d6-41bd-9d4e-0502a662424b","name":"Tests.T02_HomePage.quit","children":["4ea8454d-7135-497f-9fcb-ef67923d94d0"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1769001598555,"stop":1769001598555}],"start":1769001598554,"stop":1769001598555}

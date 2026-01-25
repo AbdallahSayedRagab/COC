@@ -32,7 +32,7 @@ public class P06_RemoveRecordPage {
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SearchForRecord_Field = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
-    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"])[1]");
+    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By SendCertificateToOfficeField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");

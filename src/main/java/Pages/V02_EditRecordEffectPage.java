@@ -21,10 +21,10 @@ public class V02_EditRecordEffectPage {
     private final By DateOfSigntureField = By.xpath("//label[normalize-space(text())='تاريخ التأشير في السجل']/following-sibling::*[1]");
     private final By FixedDateForAnyCalendar = By.xpath("//td[@role='gridcell']/span[contains(text(), \"١٥\")]");
     private final By SearchingOfRecordNumField = By.xpath("(//input[@name=\"recordNumber\"])[1]");
-    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"])[1]");
+    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By SearchingOfCertificateNumField = By.xpath("(//input[@name=\"recordNumber\"])[2]");
     private final By SearchButton = By.xpath("//button/span[contains(text(), 'بحث')]");
-    private final By FirstRowForCertificateResult = By.xpath("(//tr[@class=\"ng-star-inserted\"])[1]");
+    private final By FirstRowForCertificateResult = By.xpath("(//tr[@class=\"ng-star-inserted\"]/td)[1]");
     private final By SendingEffectButton = By.xpath("//button/span[contains(text(), ' ارسال')]");
     private final By OkButtonOfPopUp = By.xpath("//button[contains(text(), 'OK')]");
     private final By EditButton = By.xpath("(//a[.//*[local-name()='svg' and contains(@class,'icon-edit')]])[1]");

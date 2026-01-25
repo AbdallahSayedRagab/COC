@@ -3,16 +3,15 @@ package Pages;
 import Utilities.JsonUtil;
 import Utilities.Utility;
 import Utilities.Validations;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -31,7 +30,7 @@ public class P05_EditRequestPage {
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SearchForRecord_Field = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
-    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"])[1]");
+    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By CheckBoxOFLegalData = By.xpath("(//input[@type=\"checkbox\"])[1]");
     private final By SendCertificateToOfficeField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -136,13 +135,15 @@ public class P05_EditRequestPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-
         try {
-            if (AcceptButtonOfWarningPopUp.findElement(driver).isDisplayed())
                 Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptButtonOfWarningPopUp, Loading_Circle);
+                Utility.CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
+
+        } catch (NoSuchElementException | TimeoutException e) {
+            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+
         }
-        catch (NoSuchElementException e){}
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
+
         return this;
     }
 

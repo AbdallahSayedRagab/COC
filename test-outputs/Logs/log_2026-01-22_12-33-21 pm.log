@@ -1,0 +1,23 @@
+[INFO] 22-01-2026 12:33:21 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:CreateRecordEffect is Started
+[INFO] 22-01-2026 12:33:21 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 22-01-2026 12:33:21 [main] [Utilities.Utility.SENDKEYS(Utility.java:65)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 22-01-2026 12:33:22 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:33)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 22-01-2026 12:33:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//span[@class="ng-star-inserted"])[3]
+[INFO] 22-01-2026 12:33:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //a[contains(@href, '/records/actions-on-records/list')]
+[INFO] 22-01-2026 12:33:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), 'التأثير علي سجل')]
+[INFO] 22-01-2026 12:33:31 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.id: create
+[INFO] 22-01-2026 12:33:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), ' انشاء التأثير ')]
+[INFO] 22-01-2026 12:33:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //label[normalize-space(text())='مكتب السجل']/following-sibling::*[1]
+[INFO] 22-01-2026 12:33:33 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 22-01-2026 12:33:33 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم السجل']/following-sibling::*[1] is 1769076821
+[INFO] 22-01-2026 12:33:33 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم التأشير في السجل']/following-sibling::*[1] is 1769076821
+[INFO] 22-01-2026 12:33:34 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:73)] -  Data sent to  By.xpath: //input[@name="recordNumber"] is 1769076821
+[INFO] 22-01-2026 12:33:35 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button/span[contains(text(), 'بحث')]
+[INFO] 22-01-2026 12:33:37 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: (//tr[@class="ng-star-inserted"]/td)[1]
+[INFO] 22-01-2026 12:33:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button/span[contains(text(), ' ارسال')]
+[INFO] 22-01-2026 12:33:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-01-2026 12:33:52 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), ' موافقة')]
+[INFO] 22-01-2026 12:33:52 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-01-2026 12:33:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //span[contains(text(), ' اعتماد')]
+[INFO] 22-01-2026 12:33:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:44)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-01-2026 12:33:59 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:CreateRecordEffect is Successed

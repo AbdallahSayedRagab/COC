@@ -5,11 +5,9 @@ import Listeners.IInvociedMethodListener;
 import Listeners.ITestResultListener;
 import Pages.*;
 import Utilities.DataUtiles;
+import Utilities.Utility;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.IOException;
@@ -21,16 +19,17 @@ import static DriverFactory.DriverFactoryClass.getdriver;
 @Listeners({IInvociedMethodListener.class , ITestResultListener.class})
 public class T02_HomePage {
     private WebDriver driver ;
-    @BeforeMethod
+    @BeforeClass
     public void setupdriver () throws IOException {
         SetupDriver(DataUtiles.getPropertyValue("environment","BROWSER"));
         driver = DriverFactoryClass.getdriver();
         getdriver().get(DataUtiles.getPropertyValue("environment","BASE_URL"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+        Utility.WaitForPageLoad(driver);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
 
     }
 
-    @Test
+    @Test (priority = 1)
     public void BusinessLicenseRequest () throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).Select_BusinessLicense()
@@ -48,10 +47,10 @@ public class T02_HomePage {
 
     }
 
-    @Test
+    @Test (priority = 2)
     public void CreateRecordEffect() throws InterruptedException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new V01_CreateRecordEffectPage(driver).AddNewEffectToCreateNewRecord()
                 .FillDataForRecordAndCreateEffect(DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
                         DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
@@ -59,20 +58,20 @@ public class T02_HomePage {
                 .ConfirmAndApproveTheRecord();
     }
 
-    @Test
+    @Test (priority = 3)
     public void EditRequest () throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).SelectSectionToEdit().FillCertificateData()
                 .FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
     }
 
-    @Test
+    @Test (priority = 4)
     public void EditRecordEffect() throws InterruptedException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new V02_EditRecordEffectPage(driver).AddNewEffectToEditNewRecord()
                 .FillDataForRecordAndCreateEditEffect(
                         DataUtiles.getJsonData("Data","RecordNumber"),
@@ -81,10 +80,10 @@ public class T02_HomePage {
                 .ConfirmAndApproveTheRecord();
     }
 
-    @Test
+    @Test (priority = 5)
     public void RemoveRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
                 .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
@@ -92,9 +91,9 @@ public class T02_HomePage {
 
     }
 
-    @AfterMethod
+    @AfterClass
     public void quit () {
-//        driver.quit();
+        driver.quit();
     }
 }
 
