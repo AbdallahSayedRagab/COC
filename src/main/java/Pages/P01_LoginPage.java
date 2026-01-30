@@ -5,6 +5,8 @@ import Utilities.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static Utilities.Scrolling.ScrollToElement;
+
 public class P01_LoginPage {
     public P01_LoginPage(WebDriver driver){
         this.driver = driver ;
@@ -19,7 +21,7 @@ public class P01_LoginPage {
     public P02_Dashboard Login (String EMAIL ,String password) throws InterruptedException {
 //        String EMAIL =DataUtils.getJsonData("Data","ValidLoginEmail");
 //        String password =DataUtils.getJsonData("Data","Password");
-        Utility.SENDKEYS(driver,Login_Email,EMAIL);
+        Utility.WatingAndSENDKEYS(driver,Login_Email,LoadingCircle,EMAIL);
         Utility.SENDKEYS(driver,Login_Password,password);
         Utility.CLICKONELEMENTS(driver,Login_button);
         return new P02_Dashboard( driver);

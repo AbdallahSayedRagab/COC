@@ -76,7 +76,7 @@ public class T02_HomePage {
                 .FillDataForRecordAndCreateEditEffect(
                         DataUtiles.getJsonData("Data","RecordNumber"),
                         DataUtiles.getJsonData("Data","EditRequestNumber"),
-                        DataUtiles.getJsonData("Data","EditRequestNumber")    )
+                        DataUtiles.getJsonData("Data","EditRequestNumber"))
                 .ConfirmAndApproveTheRecord();
     }
 
@@ -90,8 +90,28 @@ public class T02_HomePage {
                 .SendingRequestToCollect().PayingFirstBill().Select_RemoveRequest().ReceivingTheCertificate();
 
     }
+    @Test
+    public void sourcecode () throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
+                .ClickOnAddNewRequest_Button()
+                .enterthePersonalidentificationnumber(DataUtiles.getJsonData("Data","ID"))
+                .clickonsavedmedicalprovider()
+                .searchonrecordnumber(DataUtiles.getJsonData("Data","requestNumber"))
+                .clickoncommericaldata(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
+                .clickonItems(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
+                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
+                .Certificatecount("2")
+                .Signatureauthentication()
+                .Certificatelanguage()
+                .confirmrequest();
 
-    @AfterClass
+
+
+
+    }
+
+        @AfterClass
     public void quit () {
         driver.quit();
     }

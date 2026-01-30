@@ -1,2 +1,0 @@
-[INFO] 22-01-2026 16:35:58 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
-[INFO] 22-01-2026 16:35:59 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed
