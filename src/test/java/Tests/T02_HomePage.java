@@ -110,6 +110,25 @@ public class T02_HomePage {
 
 
     }
+    @Test
+    public void AdministrativeCertificate () throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                        ,DataUtiles.getJsonData("Data","Password"))
+                .selecttheAdministrativecertificate()
+                .ClickOnAddNewRequest_Button()
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .ClickOnSavedMedicalProvider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+                .EnterTheAdministrativeCertificateDetails("alahly")
+                .SendCeriticateTo("bahaa")
+                .ConfirmRequest();
+
+
+
+
+
+    }
+
 
         @AfterClass
     public void quit () {
