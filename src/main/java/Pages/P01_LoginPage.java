@@ -21,7 +21,7 @@ public class P01_LoginPage {
     public P02_Dashboard Login (String EMAIL ,String password) throws InterruptedException {
 //        String EMAIL =DataUtils.getJsonData("Data","ValidLoginEmail");
 //        String password =DataUtils.getJsonData("Data","Password");
-        Utility.WatingAndSENDKEYS(driver,Login_Email,LoadingCircle,EMAIL);
+        Utility.SENDKEYS(driver,Login_Email,EMAIL);
         Utility.SENDKEYS(driver,Login_Password,password);
         Utility.CLICKONELEMENTS(driver,Login_button);
         return new P02_Dashboard( driver);
