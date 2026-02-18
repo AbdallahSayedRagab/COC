@@ -5,6 +5,8 @@ import Utilities.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static Utilities.Scrolling.ScrollToElement;
+
 public class P01_LoginPage {
     public P01_LoginPage(WebDriver driver){
         this.driver = driver ;

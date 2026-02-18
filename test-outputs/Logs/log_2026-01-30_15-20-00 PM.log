@@ -1,0 +1,43 @@
+[INFO] 30-01-2026 15:20:00 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:sourcecode is Started
+[INFO] 30-01-2026 15:20:02 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 30-01-2026 15:20:02 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 30-01-2026 15:20:04 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 30-01-2026 15:20:21 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 30-01-2026 15:20:22 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //a[@href="/requests/goodsOriginrequestslist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%B5%D8%AF%D8%B1%D8%B1%20%D8%A8%D8%B6%D8%A7%D8%B9%D8%A9"]
+[INFO] 30-01-2026 15:20:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 30-01-2026 15:20:40 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='applicantNationalId']//input is 29905042101852
+[INFO] 30-01-2026 15:20:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button[@type='submit']
+[INFO] 30-01-2026 15:20:45 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is 1768985937
+[INFO] 30-01-2026 15:21:01 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"]/td)[1]
+[INFO] 30-01-2026 15:21:02 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: (//div[contains(@class, 'form-accordion-head')])[1]
+[INFO] 30-01-2026 15:21:03 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='دولة المستورد']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:04 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:05 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='دولة المنشأ']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:07 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:08 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='مصدر البضاعه']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:09 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:09 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='importerName']//input is Abdallah
+[INFO] 30-01-2026 15:21:09 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='importerAddress']//input is Cairo
+[INFO] 30-01-2026 15:21:10 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: (//input[@formcontrolname='sameCompany'])[1]
+[INFO] 30-01-2026 15:21:12 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: (//input[@formcontrolname='sameAddress'])[1]
+[INFO] 30-01-2026 15:21:13 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: (//div[contains(@class, 'form-accordion-head')])[3]
+[INFO] 30-01-2026 15:21:13 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='category']//input is electronics
+[INFO] 30-01-2026 15:21:13 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='signsAndNo']//input is hp
+[INFO] 30-01-2026 15:21:13 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='packagesTypesAndCounts']//input is 22
+[INFO] 30-01-2026 15:21:13 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='netWeight']//input is 30
+[INFO] 30-01-2026 15:21:14 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='totalWeight']//input is 60
+[INFO] 30-01-2026 15:21:14 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='totalValue']//input is 200
+[INFO] 30-01-2026 15:21:15 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='نوعية الطرود']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:16 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:17 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='وحدة الوزن']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:18 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:20 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='العملة']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:21 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:22 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //button[@type='button']
+[INFO] 30-01-2026 15:21:22 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input-control[@formcontrolname='certificatesCount']//input is 2
+[INFO] 30-01-2026 15:21:23 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='تصديق توقيع']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:24 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 30-01-2026 15:21:26 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //label[normalize-space(text())='لغة الشهادة']/following-sibling::*[1]
+[INFO] 30-01-2026 15:21:27 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 30-01-2026 15:21:28 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 30-01-2026 15:21:28 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:sourcecode is Successed

@@ -48,7 +48,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     public static void WatingLoadingCircle_And_CLICKON_WebElement(
             WebDriver driver, WebElement element, By loadingCircle) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingCircle));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
@@ -62,13 +62,13 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     //    @Step("Adding Data On: {Locator}")
     public static void SENDKEYS(WebDriver driver, By Locator, String text) {
         Scrolling.ScrollToElement(driver,Locator);
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(elementToBeClickable(Locator));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementToBeClickable(Locator));
         driver.findElement(Locator).sendKeys(text);
         LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
 
     }
     public static void WatingAndSENDKEYS(WebDriver driver, By Locator, By LoadingCircle , String text) {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(elementToBeClickable(Locator));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementToBeClickable(Locator));
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
         Scrolling.ScrollToElement(driver,Locator);
         driver.findElement(Locator).sendKeys(text);

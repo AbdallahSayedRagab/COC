@@ -1,5 +1,0 @@
-[INFO] 13-07-2025 12:48:12 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:InvalidLogin is Started
-[INFO] 13-07-2025 12:48:12 [main] [Utilities.Utility.SENDKEYS(Utility.java:33)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is Abdawwwqlla@coc.net
-[INFO] 13-07-2025 12:48:12 [main] [Utilities.Utility.SENDKEYS(Utility.java:33)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
-[INFO] 13-07-2025 12:48:12 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:20)] - Clicked on By.xpath: //button[@type="submit"]
-[INFO] 13-07-2025 12:48:12 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:InvalidLogin is Successed

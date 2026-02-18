@@ -1,5 +1,0 @@
-[INFO] 08-10-2025 15:47:05 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:ValidLogin is Started
-[INFO] 08-10-2025 15:47:09 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
-[INFO] 08-10-2025 15:47:09 [main] [Utilities.Utility.SENDKEYS(Utility.java:47)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
-[INFO] 08-10-2025 15:47:11 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:24)] - Clicked on By.xpath: //button[@type="submit"]
-[INFO] 08-10-2025 15:47:11 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:ValidLogin is Successed
