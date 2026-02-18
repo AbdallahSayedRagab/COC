@@ -15,6 +15,9 @@ import static Utilities.DataUtiles.getJsonData;
 
 public class p07_sourcedcode {
     private final WebDriver driver;
+    public p07_sourcedcode(WebDriver driver) {
+        this.driver=driver;
+    }
     private final By SearchingOfRecordNumField = By.xpath("(//input[@name=\"recordNumber\"])[1]");
     private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
@@ -47,14 +50,13 @@ public class p07_sourcedcode {
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
     private final By additem=By.xpath("//button[@type='button']");
-    public p07_sourcedcode(WebDriver driver) {
-        this.driver=driver;
-    }
+
 
     public p07_sourcedcode ClickOnAddNewRequest_Button () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
         return this;
     }
+
     public p07_sourcedcode searchonrecordnumber(String recordnumber) throws InterruptedException {
         Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,Loading_Circle,recordnumber);
         driver.findElement(SearchingOfRecordNumField).sendKeys(Keys.ENTER);
@@ -66,10 +68,12 @@ public class p07_sourcedcode {
     Utility.SENDKEYS(driver,Personalidentificationnumber,personalidentifier);
     return this;
     }
+
     public p07_sourcedcode clickonsavedmedicalprovider() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider,Loading_Circle);
         return this;
     }
+
     public p07_sourcedcode clickoncommericaldata(String name,String address ) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Commercialdata);
        Utility.CLICKONELEMENTS(driver,importerycountry);
@@ -84,24 +88,29 @@ public class p07_sourcedcode {
        Utility.CLICKONELEMENTS(driver,sameaddress);
         return this;
     }
+
     public p07_sourcedcode Certificatecount(String numberofcertificates){
         Utility.SENDKEYS(driver,certificatesCount,numberofcertificates);
         return this;
     }
+
     public p07_sourcedcode Signatureauthentication() throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Signatureauthentication);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         return this;
     }
+
     public p07_sourcedcode Certificatelanguage() throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Certificatelanguage);
         return this;
     }
+
     public p07_sourcedcode confirmrequest() throws InterruptedException, AWTException {
         Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
         Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
+
     public p07_sourcedcode clickonItems(String desccatogery,String Trademarks,String Numberofparcels,String netweight,String Totalweight,String Totalvalue) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,item);
         Utility.SENDKEYS(driver,descraptincatogey,desccatogery);

@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.JsonUtil;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -42,7 +43,7 @@ public class P06_RemoveRecordPage {
     private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
     private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
     private final By AcceptButtonOfWarningPopUp = By.xpath("//button[@class=\"swal2-confirm swal2-styled\"]");
-
+    private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
@@ -125,6 +126,12 @@ public class P06_RemoveRecordPage {
         return this;
     }
 
+    public P06_RemoveRecordPage SaveRequestNumberInJsonFile() {
+
+        String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
+        JsonUtil.writeValue("RemoveRequestNumber", requestNumber);
+        return this;
+    }
 
     public P06_RemoveRecordPage ReviewRequest () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
@@ -134,7 +141,7 @@ public class P06_RemoveRecordPage {
             if (AcceptButtonOfWarningPopUp.findElement(driver).isDisplayed())
                 Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptButtonOfWarningPopUp, Loading_Circle);
         }
-        catch (NoSuchElementException e){}
+        catch (Exception e){}
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
         return this;
     }

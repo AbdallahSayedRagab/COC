@@ -12,6 +12,7 @@
   "NameOfSt": "Test St",
   "Record": "990099",
   "Office": "Office",
+  "RemoveNum": "11211",
   "Name_Signup": "Abdallah Sayed",
   "First Name": "Abdallah",
   "Last Name": "Sayed",
@@ -27,14 +28,14 @@
   "Expiration_M": "11",
   "Expiration_Y": "2025",
   "requestNumber": "1768985937",
-  "BusinessLicenseRequestNumber": "1769093486",
-  "RecordNumber": "1769093486",
-  "EditRequestNumber": "1769093707",
+  "BusinessLicenseRequestNumber": "1771423339",
+  "RecordNumber": "1771423339",
+  "EditRequestNumber": "1771423558",
   "desccatogery": "electronics",
   "Trademarks": "hp",
   "Numberofparcels": "22",
   "netweight": "30",
   "Totalweight": "60",
-  "Totalvalue": "200"
-
+  "Totalvalue": "200",
+  "RemoveRequestNumber": "1771423760"
 }

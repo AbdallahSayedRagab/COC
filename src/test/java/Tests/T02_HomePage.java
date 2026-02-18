@@ -11,7 +11,6 @@ import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.IOException;
-import java.time.Duration;
 
 import static DriverFactory.DriverFactoryClass.SetupDriver;
 import static DriverFactory.DriverFactoryClass.getdriver;
@@ -80,18 +79,32 @@ public class T02_HomePage {
                 .ConfirmAndApproveTheRecord();
     }
 
+//    @Test
+//    public void RemoveRecordEffect() throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+//        new V02_EditRecordEffectPage(driver).AddNewEffectToEditNewRecord()
+//                .FillDataForRecordAndCreateEditEffect(
+//                        DataUtiles.getJsonData("Data","RecordNumber"),
+//                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
+//                        DataUtiles.getJsonData("Data","RemoveRequestNumber"))
+//                .ConfirmAndApproveTheRecord();
+//    }
+
     @Test (priority = 5)
     public void RemoveRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
         new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
-                .FillAttachmentSectionAndConfirmRequest().ReviewRequest()
-                .SendingRequestToCollect().PayingFirstBill().Select_RemoveRequest().ReceivingTheCertificate();
+                .FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile()
+                .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+                .Select_RemoveRequest().ReceivingTheCertificate();
 
     }
-    @Test
-    public void sourcecode () throws InterruptedException, AWTException {
+
+    @Test (priority = 6)
+    public void SourceCodeRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
                 .ClickOnAddNewRequest_Button()
@@ -105,13 +118,10 @@ public class T02_HomePage {
                 .Signatureauthentication()
                 .Certificatelanguage()
                 .confirmrequest();
-
-
-
-
     }
-    @Test
-    public void AdministrativeCertificate () throws InterruptedException, AWTException {
+
+    @Test (priority = 7)
+    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                         ,DataUtiles.getJsonData("Data","Password"))
                 .selecttheAdministrativecertificate()
@@ -124,15 +134,12 @@ public class T02_HomePage {
                 .ConfirmRequest();
 
 
-
-
-
     }
 
 
-        @AfterClass
+    @AfterClass
     public void quit () {
-        driver.quit();
+//        driver.quit();
     }
 }
 
