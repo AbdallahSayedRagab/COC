@@ -133,7 +133,7 @@ public class T02_HomePage {
             .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
             .FillAttachmentSectionAndConfirmRequest()
             .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
-            .Select_RemoveRequest().ReceivingTheCertificate();
+            .Select_NegativeRequest().ReceivingTheCertificate();
 
 }
     @Test (priority = 12)
