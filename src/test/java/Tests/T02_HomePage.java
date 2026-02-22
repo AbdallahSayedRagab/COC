@@ -79,17 +79,7 @@ public class T02_HomePage {
                 .ConfirmAndApproveTheRecord();
     }
 
-//    @Test
-//    public void RemoveRecordEffect() throws InterruptedException {
-//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-//                ,DataUtiles.getJsonData("Data","Password"));
-//        new V02_EditRecordEffectPage(driver).AddNewEffectToEditNewRecord()
-//                .FillDataForRecordAndCreateEditEffect(
-//                        DataUtiles.getJsonData("Data","RecordNumber"),
-//                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
-//                        DataUtiles.getJsonData("Data","RemoveRequestNumber"))
-//                .ConfirmAndApproveTheRecord();
-//    }
+
 
     @Test (priority = 5)
     public void RemoveRequest() throws InterruptedException, AWTException {
@@ -103,39 +93,61 @@ public class T02_HomePage {
 
     }
 
-    @Test (priority = 6)
-    public void SourceCodeRequest() throws InterruptedException, AWTException {
+//    @Test (priority = 6)
+//    public void SourceCodeRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
+//                .ClickOnAddNewRequest_Button()
+//                .enterthePersonalidentificationnumber(DataUtiles.getJsonData("Data","ID"))
+//                .clickonsavedmedicalprovider()
+//                .searchonrecordnumber(DataUtiles.getJsonData("Data","requestNumber"))
+//                .clickoncommericaldata(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
+//                .clickonItems(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
+//                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
+//                .Certificatecount("2")
+//                .Signatureauthentication()
+//                .Certificatelanguage()
+//                .confirmrequest();
+//    }
+//
+//    @Test (priority = 7)
+//    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                        ,DataUtiles.getJsonData("Data","Password"))
+//                .selecttheAdministrativecertificate()
+//                .ClickOnAddNewRequest_Button()
+//                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+//                .ClickOnSavedMedicalProvider()
+//                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+//                .EnterTheAdministrativeCertificateDetails("alahly")
+//                .SendCeriticateTo("bahaa")
+//                .ConfirmRequest();
+//
+//
+//    }
+   @Test (priority = 8)
+   public void P10_NegativeCertificteRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
-                .ClickOnAddNewRequest_Button()
-                .enterthePersonalidentificationnumber(DataUtiles.getJsonData("Data","ID"))
-                .clickonsavedmedicalprovider()
-                .searchonrecordnumber(DataUtiles.getJsonData("Data","requestNumber"))
-                .clickoncommericaldata(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
-                .clickonItems(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
-                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
-                .Certificatecount("2")
-                .Signatureauthentication()
-                .Certificatelanguage()
-                .confirmrequest();
+                ,DataUtiles.getJsonData("Data","Password"));
+    new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+            .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
+            .FillAttachmentSectionAndConfirmRequest()
+            .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+            .Select_RemoveRequest().ReceivingTheCertificate();
+
+}
+    @Test (priority = 12)
+    public void RemoveRecordEffect() throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new V03_RemoveRecordEffectPage(driver).AddNewEffectToRemoveNewRecord()
+                .FillDataForRecordAndCreateRemoveEffect(
+                        DataUtiles.getJsonData("Data","RecordNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"))
+                .ConfirmAndApproveTheRecord();
     }
-
-    @Test (priority = 7)
-    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                        ,DataUtiles.getJsonData("Data","Password"))
-                .selecttheAdministrativecertificate()
-                .ClickOnAddNewRequest_Button()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
-                .ClickOnSavedMedicalProvider()
-                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
-                .EnterTheAdministrativeCertificateDetails("alahly")
-                .SendCeriticateTo("bahaa")
-                .ConfirmRequest();
-
-
-    }
-
 
     @AfterClass
     public void quit () {

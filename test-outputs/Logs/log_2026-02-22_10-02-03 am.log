@@ -1,0 +1,29 @@
+[INFO] 22-02-2026 10:02:03 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:RemoveRecordEffect is Started
+[INFO] 22-02-2026 10:02:04 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 22-02-2026 10:02:04 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 22-02-2026 10:02:05 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 22-02-2026 10:02:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: (//span[@class="ng-star-inserted"])[3]
+[INFO] 22-02-2026 10:02:18 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //a[contains(@href, '/records/actions-on-records/list')]
+[INFO] 22-02-2026 10:02:22 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //span[contains(text(), 'التأثير علي سجل')]
+[INFO] 22-02-2026 10:02:23 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.id: remove
+[INFO] 22-02-2026 10:02:26 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button[contains(text(), ' انشاء التأثير ')]
+[INFO] 22-02-2026 10:02:27 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم التأشير في السجل']/following-sibling::*[1] is 1771746660
+[INFO] 22-02-2026 10:02:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //label[normalize-space(text())='تاريخ التأشير في السجل']/following-sibling::*[1]
+[INFO] 22-02-2026 10:02:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //td[@role='gridcell']/span[contains(text(), "١٥")]
+[INFO] 22-02-2026 10:02:31 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[2] is 1771746660
+[INFO] 22-02-2026 10:02:33 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button/span[contains(text(), 'بحث')]
+[INFO] 22-02-2026 10:02:38 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: (//tr[@class="ng-star-inserted"]/td)[1]
+[INFO] 22-02-2026 10:02:39 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is 1771746202
+[INFO] 22-02-2026 10:02:42 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button/span[contains(text(), 'بحث')]
+[INFO] 22-02-2026 10:02:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"]/td)[1]
+[INFO] 22-02-2026 10:02:47 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //label[normalize-space(text())="مكتب ايداع المحو"]/following-sibling::*[1]
+[INFO] 22-02-2026 10:02:48 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 22-02-2026 10:02:49 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:75)] -  Data sent to  By.xpath: //label[normalize-space(text())="رقم المحو"]/following-sibling::*[1] is 1771746660
+[INFO] 22-02-2026 10:02:53 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button/span[contains(text(), ' ارسال')]
+[INFO] 22-02-2026 10:02:54 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-02-2026 10:02:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: (//a[.//*[local-name()='svg' and contains(@class,'icon-edit')]])[1]
+[INFO] 22-02-2026 10:03:05 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //span[contains(text(), ' موافقة')]
+[INFO] 22-02-2026 10:03:06 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-02-2026 10:03:12 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //span[contains(text(), ' اعتماد')]
+[INFO] 22-02-2026 10:03:13 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //button[contains(text(), 'OK')]
+[INFO] 22-02-2026 10:03:13 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:RemoveRecordEffect is Successed

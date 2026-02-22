@@ -59,10 +59,11 @@ public class V03_RemoveRecordEffectPage {
         Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,Loading_Circle,RecordNum);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SearchButton , Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SendingEffectButton, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, OfficeOfRemove, Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
         Utility.WatingAndSENDKEYS(driver,RemoveNumber,Loading_Circle,RemoveNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SendingEffectButton, Loading_Circle);
+
         return this;
     }
 
