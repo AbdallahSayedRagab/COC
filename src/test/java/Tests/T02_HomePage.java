@@ -125,8 +125,18 @@ public class T02_HomePage {
 //
 //
 //    }
-   @Test (priority = 8)
-   public void P10_NegativeCertificteRequest() throws InterruptedException, AWTException {
+@Test (priority = 8)
+public void ServicesRequest() throws InterruptedException, AWTException {
+    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+            ,DataUtiles.getJsonData("Data","Password"));
+    new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+            .SelectServicesData().ConfirmRequest().SendingRequestToCollect()
+            .PayingFirstBill().Select_ServicesRequest();
+
+}
+
+   @Test (priority = 9)
+   public void NegativeCertificteRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
     new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
@@ -136,6 +146,7 @@ public class T02_HomePage {
             .Select_NegativeRequest().ReceivingTheCertificate();
 
 }
+
     @Test (priority = 12)
     public void RemoveRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
