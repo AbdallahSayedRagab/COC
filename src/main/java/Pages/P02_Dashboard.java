@@ -18,6 +18,7 @@ public class P02_Dashboard {
     private final By  Administrativecertificate =By.xpath("//a[@href=\"/requests/issueManagementList?title=%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B5%D8%AF%D8%A7%D8%B1%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9\"]");
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By ServicesRequest_FSM = By.xpath("//a[contains(@href, '/requests/unregisteredRequestList')]");
+    private final By DivisionEditRequest_FSM = By.xpath("//a[contains(@href, '/requests/recordDivisionRequestList')]");
 
 
     public P03_BusinessLicensePage Select_BusinessLicense () throws InterruptedException {
@@ -59,6 +60,11 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
         Utility.CLICKONELEMENTS(driver,ServicesRequest_FSM);
         return new P10_NegativeCertificteRequest(driver);
+    }
+    public P12_DivisionEditRequestPage Select_DivisionRequest () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DivisionEditRequest_FSM,LoadingCircle);
+        return new P12_DivisionEditRequestPage(driver);
     }
 
 }

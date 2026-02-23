@@ -134,8 +134,18 @@ public void ServicesRequest() throws InterruptedException, AWTException {
             .PayingFirstBill().Select_ServicesRequest();
 
 }
+    @Test (priority = 9)
+    public void DivisionEditRequest() throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P12_DivisionEditRequestPage(driver).CreateNewDivisionEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).FillDivisionDataSection()
+                .FillAttachmentSection().ConfirmRequest().ReviewRequest()
+                .SendingRequestToCollect().PayingFirstBill().Select_DivisionRequest();
 
-   @Test (priority = 9)
+    }
+
+   @Test (priority = 10)
    public void NegativeCertificteRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
