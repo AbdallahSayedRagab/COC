@@ -93,47 +93,60 @@ public class T02_HomePage {
 
     }
 
-    @Test (priority = 6)
-    public void SourceCodeRequest() throws InterruptedException, AWTException {
+//    @Test (priority = 6)
+//    public void SourceCodeRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
+//                .ClickOnAddNewRequest_Button()
+//                .enterthePersonalidentificationnumber(DataUtiles.getJsonData("Data","ID"))
+//                .clickonsavedmedicalprovider()
+//                .searchonrecordnumber(DataUtiles.getJsonData("Data","requestNumber"))
+//                .clickoncommericaldata(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
+//                .clickonItems(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
+//                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
+//                .Certificatecount("2")
+//                .Signatureauthentication()
+//                .Certificatelanguage()
+//                .confirmrequest();
+//    }
+//
+//    @Test (priority = 7)
+//    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                        ,DataUtiles.getJsonData("Data","Password"))
+//                .selecttheAdministrativecertificate()
+//                .ClickOnAddNewRequest_Button()
+//                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+//                .ClickOnSavedMedicalProvider()
+//                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+//                .EnterTheAdministrativeCertificateDetails("alahly")
+//                .SendCeriticateTo("bahaa")
+//                .ConfirmRequest();
+//
+//
+//    }
+@Test (priority = 8)
+public void ServicesRequest() throws InterruptedException, AWTException {
+    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+            ,DataUtiles.getJsonData("Data","Password"));
+    new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+            .SelectServicesData().ConfirmRequest().SendingRequestToCollect()
+            .PayingFirstBill().Select_ServicesRequest();
+
+}
+    @Test (priority = 9)
+    public void DivisionEditRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password")).selectthesourcecode()
-                .ClickOnAddNewRequest_Button()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
-              .clickonsavedmedicalprovider()
-               .SearchOnRecordNumber(DataUtiles.getJsonData("Data","requestNumber"))
-                .FillTheCommericalData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
-                .FillTheItemSection(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
-                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
-                .Certificatecount("2")
-                .Signatureauthentication()
-                .Certificatelanguage()
-                .confirmrequest()
-                .ReviewRequest()
-                .SendingRequestToCollect()
-                .PayingFirstBill()
-                .selectthesourcecode()
-                .ReceivingTheCertificate();
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P12_DivisionEditRequestPage(driver).CreateNewDivisionEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).FillDivisionDataSection()
+                .FillAttachmentSection().ConfirmRequest().ReviewRequest()
+                .SendingRequestToCollect().PayingFirstBill().Select_DivisionRequest();
+
     }
 
-    @Test (priority = 7)
-    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                        ,DataUtiles.getJsonData("Data","Password"))
-                .selecttheAdministrativecertificate()
-                .ClickOnAddNewRequest_Button()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
-                .ClickOnSavedMedicalProvider()
-                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber")).EnterTheAdministrativeCertificateDetails("alahly")
-                .SendCeriticateTo("bahaa")
-                .ConfirmRequest()
-                .ReviewRequest()
-                .SendingRequestToCollect()
-                .PayingFirstBill()
-                .selecttheAdministrativecertificate()
-                .ReviewRequest();
-    }
-   @Test (priority = 8)
-   public void P10_NegativeCertificteRequest() throws InterruptedException, AWTException {
+   @Test (priority = 10)
+   public void NegativeCertificteRequest() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
     new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
