@@ -168,6 +168,23 @@ public void ServicesRequest() throws InterruptedException, AWTException {
                         DataUtiles.getJsonData("Data","RemoveRequestNumber"))
                 .ConfirmAndApproveTheRecord();
     }
+    @Test (priority = 9)
+    public void payingsub() throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+            ,DataUtiles.getJsonData("Data","Password"));
+      new P02_Dashboard(driver).SelectTheRecorsMangements()
+               .SearchOfRecordNumber(DataUtiles.getJsonData("Data","Record"))
+               .ClickOnEditRequest()
+               .OutstandingSubscriptions("ss","229")
+               .ClickOnPayingSub()
+               .ClickOnAddNewRequest_Button()
+              .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+              .clickonsavedmedicalprovider()
+              .ClickOnLastYear()
+              .ConfirmRequest()
+              .SendingRequestToCollect();
+
+    }
 
     @AfterClass
     public void quit () {

@@ -16,6 +16,7 @@ import Utilities.Scrolling;
 
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Utility {
 //    public static void CLICKONELEMENTS(WebDriver driver, By Locator ) throws InterruptedException {
@@ -68,8 +69,8 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
     }
     public static void WatingAndSENDKEYS(WebDriver driver, By Locator, By LoadingCircle , String text) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementToBeClickable(Locator));
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(visibilityOfElementLocated(Locator));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
         Scrolling.ScrollToElement(driver,Locator);
         driver.findElement(Locator).sendKeys(text);
         LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
