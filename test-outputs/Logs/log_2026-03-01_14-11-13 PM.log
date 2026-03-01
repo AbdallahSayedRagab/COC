@@ -1,0 +1,7 @@
+[INFO] 01-03-2026 14:11:13 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:payingsub is Started
+[INFO] 01-03-2026 14:11:14 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 01-03-2026 14:11:14 [main] [Utilities.Utility.SENDKEYS(Utility.java:67)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 01-03-2026 14:11:15 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 01-03-2026 14:11:23 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:46)] - Clicked on By.xpath: //img[@src="../../assets/images/records-icon.svg"]
+[INFO] 01-03-2026 14:11:24 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:35)] - Clicked on By.xpath: //a[@href="/records/list?title=::records"]
+[INFO] 01-03-2026 14:11:40 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed
