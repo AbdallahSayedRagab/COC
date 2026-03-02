@@ -19,6 +19,13 @@ public class p08_Requestforissuanceofanadministrativecertificate {
     private final By CertificateToMe=By.xpath("//input-control[@formcontrolname='certificateFor']//input");
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
+    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
+    private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
+    private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
+    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
+    private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
+    private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
 
     public p08_Requestforissuanceofanadministrativecertificate(WebDriver driver) {
         this.driver=driver;
@@ -58,7 +65,29 @@ public class p08_Requestforissuanceofanadministrativecertificate {
         return this;
 
     }
+    public p08_Requestforissuanceofanadministrativecertificate ReviewRequest () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
 
+        return this;
+    }
+
+    public P04_InvoicesPage SendingRequestToCollect(){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        return new P04_InvoicesPage(driver);
+    }
+
+    public p08_Requestforissuanceofanadministrativecertificate ReceivingTheCertificate () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+        return this;
+    }
 
 
 }

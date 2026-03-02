@@ -1,0 +1,29 @@
+[INFO] 02-03-2026 10:11:47 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:payingsub is Started
+[INFO] 02-03-2026 10:11:49 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 02-03-2026 10:11:49 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 02-03-2026 10:11:50 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 02-03-2026 10:11:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../assets/images/records-icon.svg"]
+[INFO] 02-03-2026 10:12:00 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //a[@href="/records/list?title=::records"]
+[INFO] 02-03-2026 10:12:18 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:76)] -  Data sent to  By.xpath: //input[@placeholder="ابحث برقم السجل  "] is 990099
+[INFO] 02-03-2026 10:12:25 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //a[@href="/records/view/8ec81e3a-3618-ea53-2ef2-e5a182ef3334"]
+[INFO] 02-03-2026 10:12:26 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //label[normalize-space(text())='السنة']/following-sibling::*[1]
+[INFO] 02-03-2026 10:12:28 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //td[@role='gridcell']/span[contains(text(), "٢٠٢١")]
+[INFO] 02-03-2026 10:12:29 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //label[normalize-space(text())='نوع البند']/following-sibling::*[1]
+[INFO] 02-03-2026 10:12:30 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 02-03-2026 10:12:30 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input-control[@formcontrolname='value']//input is 229
+[INFO] 02-03-2026 10:12:31 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input-control[@formcontrolname='desc']//input is youssef
+[INFO] 02-03-2026 10:12:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 02-03-2026 10:12:33 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //a[@href="/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA"]
+[INFO] 02-03-2026 10:12:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 02-03-2026 10:12:50 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input-control[@formcontrolname='applicantNationalId']//input is 30001231231231
+[INFO] 02-03-2026 10:12:56 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //button[@type='submit']
+[INFO] 02-03-2026 10:12:56 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:76)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is 990099
+[INFO] 02-03-2026 10:13:04 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"]/td)[1]
+[INFO] 02-03-2026 10:13:05 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: (//table[contains(@class, 'subscription')]//tbody//tr//input[@type='checkbox'])[last()]
+[INFO] 02-03-2026 10:13:07 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 02-03-2026 10:13:08 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 02-03-2026 10:13:28 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 02-03-2026 10:13:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 02-03-2026 10:13:41 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //span[contains(normalize-space(), 'أرسال للتحصيل')]
+[INFO] 02-03-2026 10:13:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]
+[INFO] 02-03-2026 10:13:51 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:payingsub is Successed

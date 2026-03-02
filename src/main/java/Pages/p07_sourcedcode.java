@@ -50,21 +50,27 @@ public class p07_sourcedcode {
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
     private final By additem=By.xpath("//button[@type='button']");
-
+    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
+    private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
+    private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
+    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
+    private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
+    private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
 
     public p07_sourcedcode ClickOnAddNewRequest_Button () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
         return this;
     }
 
-    public p07_sourcedcode searchonrecordnumber(String recordnumber) throws InterruptedException {
+    public p07_sourcedcode SearchOnRecordNumber(String recordnumber) throws InterruptedException {
         Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,Loading_Circle,recordnumber);
         driver.findElement(SearchingOfRecordNumField).sendKeys(Keys.ENTER);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult,Loading_Circle);
         return this;
     }
 
-    public p07_sourcedcode enterthePersonalidentificationnumber(String personalidentifier){
+    public p07_sourcedcode EnterThePersonalIdentificationNumber(String personalidentifier){
     Utility.SENDKEYS(driver,Personalidentificationnumber,personalidentifier);
     return this;
     }
@@ -74,7 +80,7 @@ public class p07_sourcedcode {
         return this;
     }
 
-    public p07_sourcedcode clickoncommericaldata(String name,String address ) throws InterruptedException {
+    public p07_sourcedcode FillTheCommericalData(String name,String address ) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Commercialdata);
        Utility.CLICKONELEMENTS(driver,importerycountry);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
@@ -102,6 +108,7 @@ public class p07_sourcedcode {
 
     public p07_sourcedcode Certificatelanguage() throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Certificatelanguage);
+        Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         return this;
     }
 
@@ -111,7 +118,7 @@ public class p07_sourcedcode {
         return this;
     }
 
-    public p07_sourcedcode clickonItems(String desccatogery,String Trademarks,String Numberofparcels,String netweight,String Totalweight,String Totalvalue) throws InterruptedException {
+    public p07_sourcedcode FillTheItemSection(String desccatogery,String Trademarks,String Numberofparcels,String netweight,String Totalweight,String Totalvalue) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,item);
         Utility.SENDKEYS(driver,descraptincatogey,desccatogery);
         Utility.SENDKEYS(driver,signedandno,Trademarks);
@@ -126,6 +133,29 @@ public class p07_sourcedcode {
         Utility.CLICKONELEMENTS(driver,Currency);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         Utility.CLICKONELEMENTS(driver,additem);
+        return this;
+    }
+    public p07_sourcedcode ReviewRequest () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+
+        return this;
+    }
+
+    public P04_InvoicesPage SendingRequestToCollect(){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        return new P04_InvoicesPage(driver);
+    }
+
+    public p07_sourcedcode ReceivingTheCertificate () throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
         return this;
     }
 

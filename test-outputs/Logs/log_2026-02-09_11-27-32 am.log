@@ -1,3 +1,0 @@
-[INFO] 09-02-2026 11:27:32 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:BusinessLicenseRequest is Started
-[INFO] 09-02-2026 11:27:33 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed
-[INFO] 09-02-2026 11:27:33 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:CreateRecordEffect is Started

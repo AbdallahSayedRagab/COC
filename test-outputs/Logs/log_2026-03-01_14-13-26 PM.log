@@ -1,0 +1,20 @@
+[INFO] 01-03-2026 14:13:26 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:payingsub is Started
+[INFO] 01-03-2026 14:13:27 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 01-03-2026 14:13:27 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input[@formcontrolname="password"] is 1q2w3E*
+[INFO] 01-03-2026 14:13:28 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 01-03-2026 14:13:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../assets/images/records-icon.svg"]
+[INFO] 01-03-2026 14:13:37 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //a[@href="/records/list?title=::records"]
+[INFO] 01-03-2026 14:13:58 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:76)] -  Data sent to  By.xpath: //input[@placeholder="ابحث برقم السجل  "] is 990099
+[INFO] 01-03-2026 14:13:59 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //input[@placeholder="ابحث برقم السجل  "]
+[INFO] 01-03-2026 14:14:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //a[@href="/records/view/8ec81e3a-3618-ea53-2ef2-e5a182ef3334"]
+[INFO] 01-03-2026 14:14:19 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //label[normalize-space(text())='السنة']/following-sibling::*[1]
+[INFO] 01-03-2026 14:14:20 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //td[@role='gridcell']/span[contains(text(), "٢٠٢١")]
+[INFO] 01-03-2026 14:14:21 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //label[normalize-space(text())='نوع البند']/following-sibling::*[1]
+[INFO] 01-03-2026 14:14:22 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 01-03-2026 14:14:22 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input-control[@formcontrolname='value']//input is aa
+[INFO] 01-03-2026 14:14:22 [main] [Utilities.Utility.SENDKEYS(Utility.java:68)] -  Data sent to  By.xpath: //input-control[@formcontrolname='desc']//input is ss
+[INFO] 01-03-2026 14:14:24 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 01-03-2026 14:14:25 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:36)] - Clicked on By.xpath: //a[@href="/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA"]
+[INFO] 01-03-2026 14:14:34 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:47)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 01-03-2026 14:14:35 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:76)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is "Data","Record"
+[INFO] 01-03-2026 14:14:50 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed

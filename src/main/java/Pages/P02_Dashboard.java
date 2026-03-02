@@ -10,6 +10,7 @@ public class P02_Dashboard {
     }
     private WebDriver driver;
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
+    private final By Records = By.xpath("//img[@src=\"../../assets/images/records-icon.svg\"]");
     private final By BusinessLicenseRequest_FSM = By.xpath("//a[@href=\"/requests/issueCommerciallist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5%20%D9%85%D8%B2%D8%A7%D9%88%D9%84%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9\"]");
     private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By EditRequest_FSM = By.xpath("//a[contains(@href, '/requests/editCommercialList')]");
@@ -19,6 +20,8 @@ public class P02_Dashboard {
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By ServicesRequest_FSM = By.xpath("//a[contains(@href, '/requests/unregisteredRequestList')]");
     private final By DivisionEditRequest_FSM = By.xpath("//a[contains(@href, '/requests/recordDivisionRequestList')]");
+    private final By RecordsManagement = By.xpath("//a[@href=\"/records/list?title=::records\"]");
+    private final By Payingsubscriptions = By.xpath("//a[@href=\"/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA\"]");
 
 
     public P03_BusinessLicensePage Select_BusinessLicense () throws InterruptedException {
@@ -44,12 +47,24 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RemoveRequest_FSM,LoadingCircle);
         return new P06_RemoveRecordPage(driver);
     }
-    public p08_Requestforissuanceofanadministrativecertificate selecttheAdministrativecertificate() throws InterruptedException {
+    public p08_Requestforissuanceofanadministrativecertificate selectTheAdministrativeCertificate() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
         Utility.CLICKONELEMENTS(driver,Administrativecertificate);
         return new p08_Requestforissuanceofanadministrativecertificate(driver);
 
     }
+    public P09_PaymentOfSubscriptions selectThePaymentOfSubscriptions() throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
+        Utility.CLICKONELEMENTS(driver,Payingsubscriptions);
+        return new P09_PaymentOfSubscriptions(driver);
+    }
+    public R013_RecordsManagement SelectTheRecorsMangements() throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Records,LoadingCircle);
+        Utility.CLICKONELEMENTS(driver,RecordsManagement);
+        return new R013_RecordsManagement(driver);
+    }
+
+
     public P10_NegativeCertificteRequest Select_NegativeRequest() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
         Utility.CLICKONELEMENTS(driver,NegativeRequest_FSM);

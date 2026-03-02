@@ -9,8 +9,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class DataUtiles {
-    public final static String TEST_DATA_PATH = "D:\\Abdallah\\Automation course\\ACOC_Automation\\src\\test\\TestData\\";
-
+//    public final static String TEST_DATA_PATH = "E:\\the automation test\\COC\\src\\test\\TestData\\";
+public final static String TEST_DATA_PATH =
+        System.getProperty("user.dir") + "/src/test/TestData/";
     public static String getJsonData(String jsonFilename, String field) {
         try {
             FileReader reader = new FileReader(TEST_DATA_PATH + jsonFilename + ".json");
