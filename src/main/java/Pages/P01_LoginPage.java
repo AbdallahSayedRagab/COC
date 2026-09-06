@@ -13,7 +13,7 @@ public class P01_LoginPage {
     }
     private WebDriver driver;
     private final By Login_Email = By.xpath("//input[@formcontrolname=\"username\"]");
-    private final By Login_Password = By.xpath("//input[@formcontrolname=\"password\"]");
+    private final By Login_Password = By.xpath("//input[@type=\"password\"]");
     private final By Login_button = By.xpath("//button[@type=\"submit\"]");
     private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
 

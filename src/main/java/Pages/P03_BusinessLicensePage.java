@@ -59,7 +59,7 @@ public class P03_BusinessLicensePage {
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
     private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
     private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
-
+    private final By fff = By.xpath("");
 
     public P03_BusinessLicensePage ClickOnAddNewRequest_Button () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
