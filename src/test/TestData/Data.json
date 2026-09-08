@@ -18,6 +18,7 @@
   "Name_Signup": "Abdallah Sayed",
   "First Name": "Abdallah",
   "Last Name": "Sayed",
+  "Full Name": "عبدالله سيد رجب",
   "Address": "Ain Shams",
   "Country": "Canada",
   "State": "AAA",
@@ -39,5 +40,8 @@
   "netweight": "30",
   "Totalweight": "60",
   "Totalvalue": "200",
-  "RemoveRequestNumber": "1771747883"
+  "RemoveRequestNumber": "1771747883",
+
+  "Number": "01148200717"
+
 }

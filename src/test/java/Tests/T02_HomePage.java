@@ -186,6 +186,20 @@ public class T02_HomePage {
               .SendingRequestToCollect();
     }
 
+
+    @Test
+    public void  AddReservation () throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P02_Dashboard(driver).SelectReservationsPage()
+                .CreateAReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","ID"));
+
+
+    }
+
+
     @AfterClass
     public void quit () {
 //        driver.quit();

@@ -120,7 +120,16 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
 
     }
+    public static void SelectFirstEnableDayinCalender (WebDriver driver, By LoadingCircle) throws InterruptedException {
+       By locator = By.xpath("//table[@class='days weeks']//span[@class='ng-star-inserted'][1]");
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(visibilityOfElementLocated(locator));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
+        Scrolling.ScrollToElement(driver,locator);
+        WatingLoadingCircle_And_CLICKONELEMENTS(driver,locator,LoadingCircle);
+    }
 
-
+    public static By InputFieldXpath(String label){
+        return By.xpath("By.xpath(\"//label[contains(normalize-space(.), '\"+label.trim()+\"')]/following::input[1]\");");
+    }
 
 }
