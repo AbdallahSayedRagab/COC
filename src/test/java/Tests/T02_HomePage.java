@@ -188,14 +188,28 @@ public class T02_HomePage {
 
 
     @Test
-    public void  AddReservation () throws InterruptedException, AWTException {
+    public void  AddNormalReservation () throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
-                .CreateAReservation(DataUtiles.getJsonData("Data","Full Name"),
+                .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
-                        DataUtiles.getJsonData("Data","ID"));
+                        DataUtiles.getJsonData("Data","ID"))
+                .CreateVIPReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","ID"))
+                .PayingFirstBill();
 
+    }
+    @Test
+    public void  AddVIPReservation () throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P02_Dashboard(driver).SelectReservationsPage()
+                .CreateVIPReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","ID"))
+                .PayingFirstBill().SelectReservationsPage();
 
     }
 

@@ -1,12 +1,9 @@
 package Pages;
 
 import Utilities.Utility;
-import Utilities.Validations;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import static Utilities.Scrolling.ScrollToElement;
 public class K01_ResrvationsListPage {
     public K01_ResrvationsListPage(WebDriver driver){
         this.driver = driver ;
@@ -38,13 +35,14 @@ public class K01_ResrvationsListPage {
     // بيانات الحجز
     private final By ReservationTypeList = By.id("elctReservationTypeId");
     private final By NormalReservationType = By.xpath("//div[@role='option']//span[normalize-space(text())='حجز عادي']");
+    private final By VIPReservationType = By.xpath("//div[@role='option']//span[normalize-space(text())='حجز عاجل']");
     private final By ReservationCalendar = By.xpath("//label[normalize-space(text())='تاريخ الحجز']/following-sibling::*[1]");
     private final By PeriodsList = By.xpath("//label[normalize-space(text())='أختر الفترة المناسبة']/following-sibling::*[1]");
 
     private final By SubmitButton = By.xpath("//button[@type=\"submit\"]");
 
 
-    public K01_ResrvationsListPage CreateAReservation (String Name , String phoneNumber , String ID) throws InterruptedException {
+    public K01_ResrvationsListPage CreateNormalReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button,Loading_Circle);
         Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
         Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
@@ -66,6 +64,30 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
 
         return this;
+    }
+
+    public P04_InvoicesPage CreateVIPReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
+        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
+        Utility.CLICKONELEMENTS(driver,NationalityOfApplicant_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
+        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
+
+        return new P04_InvoicesPage(driver);
     }
 
 }
