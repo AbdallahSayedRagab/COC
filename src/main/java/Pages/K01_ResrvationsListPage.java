@@ -24,6 +24,9 @@ public class K01_ResrvationsListPage {
     private final By CertificateType_Field = By.xpath("//label[normalize-space(text())='نوع الشهادة']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
+    private final By OptionsButton = By.xpath("(//button[@id=\"optionBtn\"])[1]");
+    private final By ConfirmAttendanceButtonForFirstReserv = By.xpath("(//button[text()=' تأكيد الحضور '])[last()]");
+    private final By ConfirmAttendanceButtonOnPopUp = By.xpath("//button[text()='تأكيد الحضور']");
 
 
     // locators المستفيد
@@ -88,6 +91,14 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
 
         return new P04_InvoicesPage(driver);
+    }
+
+    public K01_ResrvationsListPage ConfirmFirstReservationInTable() throws InterruptedException {
+
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp,Loading_Circle);
+        return this;
     }
 
 }

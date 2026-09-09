@@ -209,7 +209,7 @@ public class T02_HomePage {
                 .CreateVIPReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
                         DataUtiles.getJsonData("Data","ID"))
-                .PayingFirstBill().SelectReservationsPage();
+                .PayingFirstBill().SelectReservationsPage().ConfirmFirstReservationInTable();
 
     }
 
