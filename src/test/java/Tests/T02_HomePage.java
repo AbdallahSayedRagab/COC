@@ -253,10 +253,16 @@ public class T02_HomePage {
                 .CreateTodayReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
                         DataUtiles.getJsonData("Data","ID"));
-
+    }
+    @Test
+    public void  ConfirmAttendForReservationFromSelfServicePage () throws InterruptedException, AWTException, IOException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data", "ValidLoginEmail")
+                , DataUtiles.getJsonData("Data", "Password"));
+        new P02_Dashboard(driver).SelectSelfServicePage()
+                .ConfirmAttendReservation(DataUtiles.getJsonData("Data", "ID"));
     }
 
-    @AfterClass
+        @AfterClass
     public void quit () {
 //        driver.quit();
     }

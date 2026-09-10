@@ -21,12 +21,14 @@ public class K02_SelfServicePage {
 //    private final By ApplicantIDType_Field = By.xpath("//label[normalize-space(text())='نوع تحقيق شخصية مقدم الطلب']/following-sibling::*[1]");
     private final By ApplicantID_Field = By.xpath("//label[normalize-space(text())='رقم تحقيق شخصية مقدم الطلب']/following-sibling::*[1]");
     private final By ConfirmTheReservationButton = By.xpath("//button[text()=' تأكيد الحجز ']");
-//    private final By ApplicantAttribute_Field = By.xpath("//label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]");
+    private final By NextButton = By.xpath("//button[text()=' التالي ']");
+    //    private final By ApplicantAttribute_Field = By.xpath("//label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]");
 //    private final By OwnerAttribute = By.xpath("//div[@role='option']//span[normalize-space(text())='صاحب الشأن']");
 
     private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By OptionsButton = By.xpath("(//button[@id=\"optionBtn\"])[1]");
-    private final By ConfirmAttendanceButtonForFirstReserv = By.xpath("(//button[text()=' تأكيد الحضور '])[last()]");
+    private final By ConfirmAttendanceButton= By.xpath("//button[text()=' تأكيد الحضور ']");
+    private final By FirstReservationInConfirmingPage = By.xpath("(//div[@class=\"reservation-card reservation-available\"])[1]");
     private final By ConfirmAttendanceButtonOnPopUp = By.xpath("//button[text()='تأكيد الحضور']");
     private final By PrintButtonForFirstReserv = By.xpath("(//button[text()=' طباعة '])[last()]");
     private final By PrintQueueDaraAfterAttending = By.xpath("//button[text()='طباعة']");
@@ -48,7 +50,17 @@ public class K02_SelfServicePage {
         Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
         Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
         Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmTheReservationButton,Loading_Circle);        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmTheReservationButton,Loading_Circle);
+
+        return this;
+    }
+
+    public K02_SelfServicePage ConfirmAttendReservation (String ID) throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButton,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NextButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstReservationInConfirmingPage,Loading_Circle);
+
 
         return this;
     }
