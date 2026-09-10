@@ -4,6 +4,8 @@ import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class K01_ResrvationsListPage {
     public K01_ResrvationsListPage(WebDriver driver){
         this.driver = driver ;
@@ -27,6 +29,9 @@ public class K01_ResrvationsListPage {
     private final By OptionsButton = By.xpath("(//button[@id=\"optionBtn\"])[1]");
     private final By ConfirmAttendanceButtonForFirstReserv = By.xpath("(//button[text()=' تأكيد الحضور '])[last()]");
     private final By ConfirmAttendanceButtonOnPopUp = By.xpath("//button[text()='تأكيد الحضور']");
+    private final By PrintButtonForFirstReserv = By.xpath("(//button[text()=' طباعة '])[last()]");
+    private final By PrintQueueDaraAfterAttending = By.xpath("//button[text()='طباعة']");
+    private final By ReschedulingButtonForFirstReserv = By.xpath("(//button[text()=' اعادة جدولة الحجز '])[last()]");
 
 
     // locators المستفيد
@@ -43,6 +48,7 @@ public class K01_ResrvationsListPage {
     private final By PeriodsList = By.xpath("//label[normalize-space(text())='أختر الفترة المناسبة']/following-sibling::*[1]");
 
     private final By SubmitButton = By.xpath("//button[@type=\"submit\"]");
+    private final By SubmitReschedulingButton = By.xpath("//button[text()='تاكيد إعادة الجدولة ']");
 
 
     public K01_ResrvationsListPage CreateNormalReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
@@ -100,5 +106,33 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp,Loading_Circle);
         return this;
     }
+    public K01_ResrvationsListPage PrintReservationData (String ScreenShotName) throws InterruptedException, IOException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
+        Utility.PrintAndScreenShot(driver,PrintButtonForFirstReserv,Loading_Circle,ScreenShotName);
+        return this;
+    }
 
+    public K01_ResrvationsListPage PrintQueueData (String ScreenShotName) throws InterruptedException, IOException {
+
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv,Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp,Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PrintQueueDaraAfterAttending,Loading_Circle);
+        Utility.PrintAndScreenShot(driver,PrintQueueDaraAfterAttending,Loading_Circle,ScreenShotName);
+        return this;
+    }
+
+    public K01_ResrvationsListPage ReschedulingReservation () throws InterruptedException, IOException {
+
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReschedulingButtonForFirstReserv,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
+        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitReschedulingButton,Loading_Circle);
+        return this;
+    }
 }

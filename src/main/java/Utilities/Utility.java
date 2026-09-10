@@ -11,7 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+
 import Utilities.Scrolling;
 
 
@@ -132,4 +135,62 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         return By.xpath("By.xpath(\"//label[contains(normalize-space(.), '\"+label.trim()+\"')]/following::input[1]\");");
     }
 
+    public static void PrintAndScreenShot (WebDriver driver, By Locator, By LoadingCircle, String ImageName) throws IOException {
+
+        String originalWindow = driver.getWindowHandle();
+        Set<String> oldHandles = driver.getWindowHandles();
+
+        WatingLoadingCircle_And_CLICKONELEMENTS(driver, Locator, LoadingCircle);
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        // 1) ننتظر تاب جديد يتفتح
+        wait.until(d -> d.getWindowHandles().size() > oldHandles.size());
+
+        Set<String> newHandles = driver.getWindowHandles();
+        newHandles.removeAll(oldHandles);
+        String newWindow = newHandles.iterator().next();
+
+        driver.switchTo().window(newWindow);
+
+        // 2) ننتظر الـ URL يحتوي على blob
+        wait.until(ExpectedConditions.urlContains("blob:"));
+
+        // 3) ننتظر الصفحة تخلص تحميل بالكامل
+        wait.until(d -> ((JavascriptExecutor) d)
+                .executeScript("return document.readyState").equals("complete"));
+
+        // 4) ننتظر السكرين شوت نفسه يستقر (يبقى نفس الصورة مرتين على التوالي)
+        byte[] previousShot = null;
+        long startTime = System.currentTimeMillis();
+        long timeoutMillis = 15000; // 15 ثانية أقصى انتظار للاستقرار
+        boolean stable = false;
+
+        while (System.currentTimeMillis() - startTime < timeoutMillis) {
+            byte[] currentShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+
+            if (previousShot != null && Arrays.equals(previousShot, currentShot)) {
+                stable = true;
+                break;
+            }
+
+            previousShot = currentShot;
+            try {
+                Thread.sleep(500); // فاصل بسيط بين المقارنات
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        if (!stable) {
+            LogsUtiles.info("Warning: PDF screenshot did not stabilize within timeout, taking screenshot anyway");
+        }
+
+        SCREENSHOT(driver, ImageName);
+
+        driver.close();
+        driver.switchTo().window(originalWindow);
+
+        LogsUtiles.info("Screenshot taken for PDF: " + ImageName);
+    }
 }
