@@ -24,6 +24,7 @@ public class P02_Dashboard {
     private final By Payingsubscriptions = By.xpath("//a[@href=\"/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA\"]");
     private final By ReservationIcon = By.xpath("//img[@src=\"../../assets/images/booking.svg\"]");
     private final By ReservationsPage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys\"]");
+    private final By SelfService_FSM = By.xpath("//a[@href=\"/managementsys/selfservicemanagement?title=::SelfService\"]");
 
 
     public P03_BusinessLicensePage Select_BusinessLicense () throws InterruptedException {
@@ -88,6 +89,12 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationIcon,LoadingCircle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationsPage_FSM,LoadingCircle);
         return new K01_ResrvationsListPage(driver);
+    }
+
+    public K02_SelfServicePage SelectSelfServicePage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SelfService_FSM,LoadingCircle);
+        return new K02_SelfServicePage(driver);
     }
 
 }
