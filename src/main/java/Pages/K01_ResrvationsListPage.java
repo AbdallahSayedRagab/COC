@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.JsonUtil;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -49,6 +50,9 @@ public class K01_ResrvationsListPage {
 
     private final By SubmitButton = By.xpath("//button[@type=\"submit\"]");
     private final By SubmitReschedulingButton = By.xpath("//button[text()='تاكيد إعادة الجدولة ']");
+    private final By ReservationNumber  = By.xpath("(//td)[1]");
+
+
 
 
     public K01_ResrvationsListPage CreateNormalReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
@@ -135,4 +139,12 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitReschedulingButton,Loading_Circle);
         return this;
     }
+    public P02_Dashboard SaveReservationNumberInJsonFile() {
+        String NumberOfReservation = Utility.GETTEXT(driver,ReservationNumber,Loading_Circle);
+        JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
+        JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
+        return new P02_Dashboard(driver);
+    }
+
+
 }

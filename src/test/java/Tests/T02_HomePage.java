@@ -194,7 +194,8 @@ public class T02_HomePage {
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
-                        DataUtiles.getJsonData("Data","ID"));
+                        DataUtiles.getJsonData("Data","ID"))
+                .SaveReservationNumberInJsonFile();
 
     }
     @Test
@@ -260,6 +261,19 @@ public class T02_HomePage {
                 , DataUtiles.getJsonData("Data", "Password"));
         new P02_Dashboard(driver).SelectSelfServicePage()
                 .ConfirmAttendReservation(DataUtiles.getJsonData("Data", "ID"));
+    }
+    @Test
+    public void  CompleteTheReservation () throws InterruptedException, AWTException, IOException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P02_Dashboard(driver).SelectReservationsPage()
+                .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","ID"))
+                .ConfirmFirstReservationInTable().PrintQueueData("QueueNumber")
+                .SaveReservationNumberInJsonFile().SelectRequestsAndCertificatesPage().
+                CompleteReservationForLastReservation(DataUtiles.getJsonData("Data","ReservationNumber"));
+
     }
 
         @AfterClass

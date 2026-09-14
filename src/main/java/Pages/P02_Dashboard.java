@@ -25,7 +25,7 @@ public class P02_Dashboard {
     private final By ReservationIcon = By.xpath("//img[@src=\"../../assets/images/booking.svg\"]");
     private final By ReservationsPage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys\"]");
     private final By SelfService_FSM = By.xpath("//a[@href=\"/managementsys/selfservicemanagement?title=::SelfService\"]");
-
+    private final By RequestsAndCertificates_FSM = By.xpath("//a[@href=\"/requests/management?title=%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA\"]");
 
     public P03_BusinessLicensePage Select_BusinessLicense () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
@@ -96,5 +96,12 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SelfService_FSM,LoadingCircle);
         return new K02_SelfServicePage(driver);
     }
+
+    public P13_RequestsAndCertificatesPage SelectRequestsAndCertificatesPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsAndCertificates_FSM,LoadingCircle);
+        return new P13_RequestsAndCertificatesPage(driver);
+    }
+
 
 }
