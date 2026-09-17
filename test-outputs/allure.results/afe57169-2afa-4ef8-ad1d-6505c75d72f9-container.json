@@ -1,0 +1,1 @@
+{"uuid":"afe57169-2afa-4ef8-ad1d-6505c75d72f9","name":"Tests.T03_ReservationTests.quit","children":["3fa18105-60e8-43e3-98e4-c47f5c0a3cb8"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1789643519883,"stop":1789643521456}],"start":1789643519883,"stop":1789643521456}

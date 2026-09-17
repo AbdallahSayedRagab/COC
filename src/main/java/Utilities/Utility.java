@@ -41,7 +41,7 @@ public class Utility {
     }
 
 public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By Locator, By LoadingCircle) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
     wait.until(ExpectedConditions.elementToBeClickable(Locator));
     wait.until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
     Scrolling.ScrollToElement(driver,Locator);
