@@ -3,7 +3,7 @@
 
     <test name="Smoke Test">
         <classes>
-            <class name="Tests.T02_HomePage"/>
+            <class name="Tests.T03_ReservationTests"/>
         </classes>
     </test>
 
