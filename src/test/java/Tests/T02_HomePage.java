@@ -187,10 +187,10 @@ public class T02_HomePage {
     }
 
 
-    @Test
+    @Test(priority = 13)
     public void  AddNormalReservation () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
@@ -198,10 +198,10 @@ public class T02_HomePage {
                 .SaveReservationNumberInJsonFile();
 
     }
-    @Test
+    @Test (priority = 14)
     public void  AddVIPReservation () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateVIPReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
@@ -210,10 +210,10 @@ public class T02_HomePage {
                 ;
 
     }
-    @Test
+    @Test (priority = 15)
     public void  AddReservationAndPrintReservationData () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
@@ -222,10 +222,10 @@ public class T02_HomePage {
 
     }
 
-    @Test
+    @Test (priority = 16)
     public void  ConfirmReservationAndPrintQueueData () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
@@ -234,10 +234,10 @@ public class T02_HomePage {
 
     }
 
-    @Test
+    @Test (priority = 17)
     public void  AddReservationAndRescheduleIt () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
@@ -246,26 +246,26 @@ public class T02_HomePage {
 
     }
 
-    @Test
+    @Test (priority = 18)
     public void  CreateReservationFromSelfServicePage () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectSelfServicePage()
                 .CreateTodayReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
                         DataUtiles.getJsonData("Data","ID"));
     }
-    @Test
+    @Test (priority = 19)
     public void  ConfirmAttendForReservationFromSelfServicePage () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data", "ValidLoginEmail")
-                , DataUtiles.getJsonData("Data", "Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data", "ValidLoginEmail")
+//                , DataUtiles.getJsonData("Data", "Password"));
         new P02_Dashboard(driver).SelectSelfServicePage()
                 .ConfirmAttendReservation(DataUtiles.getJsonData("Data", "ID"));
     }
-    @Test
+    @Test (priority = 20)
     public void  CompleteTheReservation () throws InterruptedException, AWTException, IOException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
