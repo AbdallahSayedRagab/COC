@@ -40,7 +40,7 @@ private final By ReservationTypeList = By.xpath("//ng-select[@formcontrolname=\"
     private final By ReservationCalendar = By.xpath("//label[normalize-space(text())='تاريخ الحجز']/following-sibling::*[1]");
     private final By PeriodsList = By.xpath("//label[normalize-space(text())='أختر الفترة المناسبة']/following-sibling::*[1]");
     private final By SubmitButton = By.xpath("//a[text()=\"تأكيد\"]");
-
+    private final By RequstNumber = By.xpath("//th[text()='رقم الطلب']");
 
 
 
@@ -49,6 +49,7 @@ private final By ReservationTypeList = By.xpath("//ng-select[@formcontrolname=\"
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterListButton,Loading_Circle);
         Utility.WatingAndSENDKEYS(driver,ReservationNumberField,Loading_Circle,NumOfReservation);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterButton,Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequstNumber,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CompleteReservationButton,Loading_Circle);

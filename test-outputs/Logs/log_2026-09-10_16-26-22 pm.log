@@ -1,0 +1,11 @@
+[INFO] 10-09-2026 16:26:22 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:ConfirmAttendForReservationFromSelfServicePage is Started
+[INFO] 10-09-2026 16:26:23 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 10-09-2026 16:26:23 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@type="password"] is 1q2w3E*
+[INFO] 10-09-2026 16:26:24 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 10-09-2026 16:26:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/booking.svg"]
+[INFO] 10-09-2026 16:26:42 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[@href="/managementsys/selfservicemanagement?title=::SelfService"]
+[INFO] 10-09-2026 16:26:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text()=' تأكيد الحضور ']
+[INFO] 10-09-2026 16:26:46 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم تحقيق شخصية مقدم الطلب']/following-sibling::*[1] is 30001231231231
+[INFO] 10-09-2026 16:26:48 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text()=' التالي ']
+[INFO] 10-09-2026 16:26:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//div[@class="reservation-card reservation-available"])[1]
+[INFO] 10-09-2026 16:26:51 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:ConfirmAttendForReservationFromSelfServicePage is Successed

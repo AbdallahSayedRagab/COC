@@ -1,0 +1,27 @@
+[INFO] 14-09-2026 11:20:00 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:AddNormalReservation is Started
+[INFO] 14-09-2026 11:20:02 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 14-09-2026 11:20:02 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@type="password"] is 1q2w3E*
+[INFO] 14-09-2026 11:20:03 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 14-09-2026 11:20:20 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/booking.svg"]
+[INFO] 14-09-2026 11:20:21 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[@href="/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys"]
+[INFO] 14-09-2026 11:20:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[contains (text(), 'أضافة حجز ')]
+[INFO] 14-09-2026 11:20:37 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='اسم مقدم الطلب']/following-sibling::*[1] is عبدالله سيد رجب
+[INFO] 14-09-2026 11:20:38 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم هاتف مقدم الطلب']/following-sibling::*[1] is 01148200717
+[INFO] 14-09-2026 11:20:39 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //label[normalize-space(text())='جنسية مقدم الطلب']/following-sibling::*[1]
+[INFO] 14-09-2026 11:20:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='مصري']
+[INFO] 14-09-2026 11:20:41 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم تحقيق شخصية مقدم الطلب']/following-sibling::*[1] is 30001231231231
+[INFO] 14-09-2026 11:20:42 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]
+[INFO] 14-09-2026 11:20:44 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='صاحب الشأن']
+[INFO] 14-09-2026 11:20:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='نوع الطلب']/following-sibling::*[1]
+[INFO] 14-09-2026 11:20:47 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='طلب اصدار شهادة إدارية']
+[INFO] 14-09-2026 11:20:48 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='نوع الشهادة']/following-sibling::*[1]
+[INFO] 14-09-2026 11:20:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-09-2026 11:20:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: elctReservationTypeId
+[INFO] 14-09-2026 11:21:03 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='حجز عادي']
+[INFO] 14-09-2026 11:21:04 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='تاريخ الحجز']/following-sibling::*[1]
+[INFO] 14-09-2026 11:21:07 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //table[@class='days weeks']//span[@class='ng-star-inserted'][1]
+[INFO] 14-09-2026 11:21:08 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='أختر الفترة المناسبة']/following-sibling::*[1]
+[INFO] 14-09-2026 11:21:10 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-09-2026 11:21:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 14-09-2026 11:21:18 [main] [Utilities.Utility.GETTEXT(Utility.java:97)] -  Data of By.xpath: (//td)[1] is 0214-09-20262
+[INFO] 14-09-2026 11:21:18 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:AddNormalReservation is Successed
