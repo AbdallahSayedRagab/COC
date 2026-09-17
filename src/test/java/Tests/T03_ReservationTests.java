@@ -16,7 +16,7 @@ import static DriverFactory.DriverFactoryClass.getdriver;
 
 public class T03_ReservationTests {
     private WebDriver driver ;
-    @BeforeClass
+    @BeforeMethod
     public void setupdriver () throws IOException {
         SetupDriver(DataUtiles.getPropertyValue("environment","BROWSER"));
         driver = DriverFactoryClass.getdriver();
@@ -117,7 +117,7 @@ public class T03_ReservationTests {
 
 
 
-    @AfterClass
+    @AfterMethod
     public void quit () {
         driver.quit();
     }
