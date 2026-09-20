@@ -120,9 +120,10 @@ public class T02_HomePage {
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
                 .ClickOnSavedMedicalProvider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
-                .EnterTheAdministrativeCertificateDetails("alahly")
-                .SendCeriticateTo("bahaa")
-                .ConfirmRequest();
+                .EnterTheAdministrativeCertificateDetails("Test")
+                .SendCeriticateTo("Office")
+                .ConfirmRequest().ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+                        .selectTheAdministrativeCertificate().ReceivingTheCertificate();
     }
 
     @Test (priority = 8)
@@ -186,7 +187,19 @@ public class T02_HomePage {
               .SendingRequestToCollect();
     }
 
-
+    @Test
+    public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","UserName")
+                ,DataUtiles.getJsonData("Data","UserPassword"));
+        new P02_Dashboard(driver).SelectRequestsAndCertificatesMailPage()
+                .AddAdministrationRequest()
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .ClickOnSavedMedicalProvider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+                .EnterTheAdministrativeCertificateDetails("Test")
+                .SendCeriticateTo("Office")
+                .ConfirmRequest();
+    }
 
 
         @AfterClass

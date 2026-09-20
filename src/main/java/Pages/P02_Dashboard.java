@@ -16,7 +16,7 @@ public class P02_Dashboard {
     private final By EditRequest_FSM = By.xpath("//a[contains(@href, '/requests/editCommercialList')]");
     private final By RemoveRequest_FSM = By.xpath("//a[contains(@href, '/requests/removeCommercialList')]");
     private final By  Sourceofgoods=By.xpath("//a[@href=\"/requests/goodsOriginrequestslist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%B5%D8%AF%D8%B1%D8%B1%20%D8%A8%D8%B6%D8%A7%D8%B9%D8%A9\"]");
-    private final By  Administrativecertificate =By.xpath("//a[@href=\"/requests/issueManagementList?title=%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B5%D8%AF%D8%A7%D8%B1%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9\"]");
+    private final By  Administrativecertificate =By.xpath("//a[contains(@href,'/requests/issueManagementList')]");
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By ServicesRequest_FSM = By.xpath("//a[contains(@href, '/requests/unregisteredRequestList')]");
     private final By DivisionEditRequest_FSM = By.xpath("//a[contains(@href, '/requests/recordDivisionRequestList')]");
@@ -26,6 +26,9 @@ public class P02_Dashboard {
     private final By ReservationsPage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys\"]");
     private final By SelfService_FSM = By.xpath("//a[@href=\"/managementsys/selfservicemanagement?title=::SelfService\"]");
     private final By RequestsAndCertificates_FSM = By.xpath("//a[@href=\"/requests/management?title=%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA\"]");
+    private final By RequestsAndCertificatesMail_FSM = By.xpath("//a[contains(@href,'/requests/requests-certificates-mailbox')]");
+
+
 
     public P03_BusinessLicensePage Select_BusinessLicense () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
@@ -52,7 +55,7 @@ public class P02_Dashboard {
     }
     public p08_Requestforissuanceofanadministrativecertificate selectTheAdministrativeCertificate() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
-        Utility.CLICKONELEMENTS(driver,Administrativecertificate);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Administrativecertificate,LoadingCircle);
         return new p08_Requestforissuanceofanadministrativecertificate(driver);
 
     }
@@ -103,5 +106,10 @@ public class P02_Dashboard {
         return new P13_RequestsAndCertificatesPage(driver);
     }
 
+    public P14_RequestsAndCertificatesMailPage SelectRequestsAndCertificatesMailPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsAndCertificatesMail_FSM,LoadingCircle);
+        return new P14_RequestsAndCertificatesMailPage(driver);
+    }
 
 }
