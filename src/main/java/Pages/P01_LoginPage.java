@@ -16,6 +16,13 @@ public class P01_LoginPage {
     private final By Login_Password = By.xpath("//input[@type=\"password\"]");
     private final By Login_button = By.xpath("//button[@type=\"submit\"]");
     private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
+    private final By BranchList = By.xpath("(//ng-select)[1]");
+    private final By ChamberBranchChoice = By.xpath("//span[text()=' فرع الغرفه للخدمات الاختياريه  ']");
+    private final By WindowList = By.xpath("(//ng-select)[2]");
+    private final By NormalWindowChoice = By.xpath("//span[text()=' 1 ']");
+    private final By ConFirmChoiceButton = By.xpath("//span[text()='تأكيد الاختيار']");
+
+
 
 
     public P02_Dashboard Login (String EMAIL ,String password) throws InterruptedException {
@@ -26,47 +33,20 @@ public class P01_LoginPage {
         Utility.CLICKONELEMENTS(driver,Login_button);
         return new P02_Dashboard( driver);
     }
-    //    public P01_HomePage Continue_Button_AfterDeleteAccount(){
-//        Utilitiy.CLICKONELEMENTS(driver,Continue_Button_AfterDeleteAccount);
-//        return this;
-//    }
-//    public P07_ViewCartPage ClickingOn_CartButton(){
-//        Utility.CLICKONELEMENTS(driver,Cart_Button);
-//        return new P07_ViewCartPage(driver);
-//    }
-//    public P05_ProductsPage ClickingOn_ProductsButton(){
-//        Utility.CLICKONELEMENTS(driver,Products_Button);
-//        return new P05_ProductsPage(driver);
-//    }
-//    public P05_ProductsPage VerifyLoggedName() {
-//        String Logged_visability = Utility.GETTEXT(driver,Logged_as_Button);
-//        Validations.ValidateEquals(Logged_visability,"Logged in as AbdallahSayed");
-//        return new P05_ProductsPage(driver);
-//    }
-//    public P01_LoginPage VerifyLoggedNameP1() {
-//        String Logged_visability = Utility.GETTEXT(driver,Logged_as_Button);
-//        Validations.ValidateEquals(Logged_visability,"Logged in as Abdallah Sayed");
-//        return this;
 
-//
-//    public P01_LoginPage VerifyHomePageURL() {
-//        Validations.ValidateURL("https://automationexercise.com/login");
-//        return this;
-//    }
-//    public P01_LoginPage ClickingOn_LogoutButton(){
-//        Utility.CLICKONELEMENTS(driver,Logout_Button);
-////        Validations.ValidateURL("https://automationexercise.com/login");
-//        return this;
-//    }
+    public P02_Dashboard LoginAndChooseWindow (String EMAIL ,String password) throws InterruptedException {
+//        String EMAIL =DataUtils.getJsonData("Data","ValidLoginEmail");
+//        String password =DataUtils.getJsonData("Data","Password");
+        Utility.SENDKEYS(driver,Login_Email,EMAIL);
+        Utility.SENDKEYS(driver,Login_Password,password);
+        Utility.CLICKONELEMENTS(driver,Login_button);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ChamberBranchChoice,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WindowList,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalWindowChoice,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConFirmChoiceButton,LoadingCircle);
 
-//    public P01_LoginPage VerifyDeletedMessege() {
-//        String Messege = Utility.GETTEXT(driver,Deleted_Account_messege);
-//        Validations.ValidateEquals(Messege,"ACCOUNT DELETED!");
-//        Utility.CLICKONELEMENTS(driver,Continue_Button_AfterDeleteAccount);
-//        return this;
-//    }
-//    public P02_LoginPage ClickingOn_SignUpLoginButton(){
-//        Utility.CLICKONELEMENTS(driver,Signup_login_button);
-//        return new P02_LoginPage(driver);
-//    }
+        return new P02_Dashboard( driver);
+    }
+
 }

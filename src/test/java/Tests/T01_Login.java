@@ -44,6 +44,13 @@ public class T01_Login {
                 ,DataUtiles.getJsonData("Data","Password"));
 //        P02_LoginPage visiable_messeges = new P02_LoginPage(driver);
     }
+
+    @Test
+    public void LoginAsWindowUser () throws InterruptedException {
+        new P01_LoginPage(driver).LoginAndChooseWindow(DataUtiles.getJsonData("Data","WindowUserName")
+                ,DataUtiles.getJsonData("Data","WindowPassword"));
+
+    }
 //    @Test
 //    public void Logout(){
 //        new P01_LoginPage(driver).ClickingOn_SignUpLoginButton()

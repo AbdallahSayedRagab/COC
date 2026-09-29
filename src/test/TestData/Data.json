@@ -1,7 +1,9 @@
 {
   "ValidLoginEmail": "admin",
   "UserName": "Abdallah_Sayed",
-  "UserPassword" : "Abdallah_Sayed@123",
+  "WindowUserName": "Uuser",
+  "WindowPassword": "Uuser@123",
+  "UserPassword": "Abdallah_Sayed@123",
   "InValidLoginEmail": "Abdawwwqlla@coc.net",
   "Password": "1q2w3E*",
   "ID": "30001231231231",
@@ -43,5 +45,6 @@
   "Totalweight": "60",
   "Totalvalue": "200",
   "RemoveRequestNumber": "1771747883",
-  "ReservationNumber": "0217-09-202618"
+  "ReservationNumber": "0229-09-20262",
+  "WindowCode": "1"
 }

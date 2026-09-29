@@ -68,7 +68,7 @@ public class T03_ReservationTests {
         new P02_Dashboard(driver).SelectReservationsPage()
                 .CreateNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),
-                        DataUtiles.getJsonData("Data","ID"))
+                        DataUtiles.getJsonData("Data","ID")).SaveReservationNumberInJsonFile()
                 .ConfirmFirstReservationInTable().PrintQueueData("QueueData");
 
     }
@@ -115,6 +115,14 @@ public class T03_ReservationTests {
 //                CompleteReservationForLastReservation(DataUtiles.getJsonData("Data","ReservationNumber"));
 //
 //    }
+
+    @Test(priority = 9)
+    public void AssignNormalWindow () throws InterruptedException {
+        new P01_LoginPage(driver).LoginAndChooseWindow(DataUtiles.getJsonData("Data","WindowUserName")
+                ,DataUtiles.getJsonData("Data","WindowPassword"))
+                .SelectQueuePage().AssigningReservationToAvailableWindow();
+
+    }
 
 
 

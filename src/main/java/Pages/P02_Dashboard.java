@@ -27,6 +27,7 @@ public class P02_Dashboard {
     private final By SelfService_FSM = By.xpath("//a[@href=\"/managementsys/selfservicemanagement?title=::SelfService\"]");
     private final By RequestsAndCertificates_FSM = By.xpath("//a[@href=\"/requests/management?title=%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA\"]");
     private final By RequestsAndCertificatesMail_FSM = By.xpath("//a[contains(@href,'/requests/requests-certificates-mailbox')]");
+    private final By QueuePage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingqueuemanagement?title=::elecbookingqueuemanagementsys\"]");
 
 
 
@@ -110,6 +111,12 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,LoadingCircle);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsAndCertificatesMail_FSM,LoadingCircle);
         return new P14_RequestsAndCertificatesMailPage(driver);
+    }
+
+    public K03_QueuePage SelectQueuePage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,QueuePage_FSM,LoadingCircle);
+        return new K03_QueuePage(driver);
     }
 
 }
