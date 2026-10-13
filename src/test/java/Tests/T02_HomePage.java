@@ -102,7 +102,8 @@ public class T02_HomePage {
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
                 .clickonsavedmedicalprovider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","requestNumber"))
-                .FillTheCommericalData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"))
+                .FillTheCommericalData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"),
+                        DataUtiles.getJsonData("Data","country"))
                 .FillTheItemSection(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
                 ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
                 .Certificatecount("2")
@@ -154,10 +155,10 @@ public class T02_HomePage {
             .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
             .FillAttachmentSectionAndConfirmRequest()
             .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
-            .Select_RemoveRequest().ReceivingTheCertificate();
+            .Select_NegativeRequest().ReceivingTheCertificate();
 
 }
-    @Test (priority = 12)
+    @Test (priority = 14)
     public void RemoveRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -187,7 +188,7 @@ public class T02_HomePage {
               .SendingRequestToCollect();
     }
 
-    @Test
+    @Test (priority = 13)
     public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
         new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","UserName")
                 ,DataUtiles.getJsonData("Data","UserPassword"));

@@ -56,7 +56,7 @@ public class p07_sourcedcode {
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تسليم الشهادة\")]");
 
     public p07_sourcedcode ClickOnAddNewRequest_Button () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
@@ -80,12 +80,11 @@ public class p07_sourcedcode {
         return this;
     }
 
-    public p07_sourcedcode FillTheCommericalData(String name,String address ) throws InterruptedException {
+    public p07_sourcedcode FillTheCommericalData(String name,String address,String country ) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver,Commercialdata);
        Utility.CLICKONELEMENTS(driver,importerycountry);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
-        Utility.CLICKONELEMENTS(driver,countryoforigin);
-        Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.SENDKEYS(driver,countryoforigin,country);
         Utility.CLICKONELEMENTS(driver,Thesourceofthegoods);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         Utility.SENDKEYS(driver,importername,name);

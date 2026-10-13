@@ -43,7 +43,7 @@ public class P05_EditRequestPage {
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تسليم الشهادة\")]");
     private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
     private final By AcceptButtonOfWarningPopUp = By.xpath("//button[@class=\"swal2-confirm swal2-styled\"]");
 

@@ -139,11 +139,11 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitReschedulingButton,Loading_Circle);
         return this;
     }
-    public P02_Dashboard SaveReservationNumberInJsonFile() {
+    public K01_ResrvationsListPage SaveReservationNumberInJsonFile() {
         String NumberOfReservation = Utility.GETTEXT(driver,ReservationNumber,Loading_Circle);
         JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
         JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
-        return new P02_Dashboard(driver);
+        return this;
     }
 
 

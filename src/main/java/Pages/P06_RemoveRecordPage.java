@@ -47,7 +47,7 @@ public class P06_RemoveRecordPage {
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تسليم الشهادة\")]");
 
 
     public P06_RemoveRecordPage CreateNewRemoveRequest_Button () throws InterruptedException {

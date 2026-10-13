@@ -30,22 +30,22 @@ public class P03_BusinessLicensePage {
     private final By TradeNameField = By.xpath("//label[normalize-space(text())='الاسم التجاري']/following-sibling::*[1]");
     private final By CommercialFeatureField = By.xpath("//label[normalize-space(text())='السمة التجارية']/following-sibling::*[1]");
     private final By MembersSection = By.xpath("//span[contains(text(), \"الاعضاء\")]");
-    private final By LegalStatus = By.xpath("//label[normalize-space(text())='الصفات الإدارية']/following-sibling::*[1]");
-    private final By AddMemberButton = By.xpath("//span[contains(text(), \" إضافة  شريك \")]");
+    private final By LegalStatus = By.xpath("//label[normalize-space(text())='الصفة القانونية']/following-sibling::*[1]");
+    private final By AddMemberButton = By.xpath("//span[contains(text(), \" إضافة عضو \")]");
     private final By CapitalData = By.xpath("//span[contains(text(), 'بيانات رأس المال')]");
-    private final By CapitalDataField = By.xpath("//label[normalize-space(text())='رأس المال المسدد (ج.م)']/following-sibling::*[1]");
+    private final By CapitalDataField = By.xpath("//label[normalize-space(text())='رأس المال المسدد(ج.م)']/following-sibling::*[1]");
     private final By ActivitiesData = By.xpath("//span[contains(text(), 'بيانات النشاط')]");
     private final By TaxCardNumber = By.xpath("//label[normalize-space(text())='رقم التسجيل الضريبى']/following-sibling::*[1]");
     private final By DataOfStartingActivity = By.xpath("//label[normalize-space(text())='تاريخ بدء النشاط']/following-sibling::*[1]");
     private final By FixedDateForAnyCalendar = By.xpath("//td[@role='gridcell']/span[contains(text(), \"١٥\")]");
-    private final By ActivityDescription = By.xpath("//label[normalize-space(text())='النشاط طبقا لوثيقة البطاقة الضريبية']/following-sibling::*[1]");
+    private final By ActivityDescription = By.xpath("//label[normalize-space(text())='وصف النشاط طبقا للبطاقة الضريبية']/following-sibling::*[1]");
     private final By ActivityField = By.xpath("//label[normalize-space(text())='النشاط']/following-sibling::*[1]");
     private final By AddActivityButton = By.xpath("//button[contains(text(), ' اضافة نشاط ')]");
     private final By DepartmentName = By.xpath("//label[normalize-space(text())='اسم الشعبة']/following-sibling::*[1]");
     private final By AddDepartNameButton = By.xpath("//button[contains(text(), ' اضافة شعبة')]");
     private final By BusinessLocationSection = By.xpath("//span[contains(text(), 'محل النشاط')]");
-    private final By FirstِِAdministrativeField = By.xpath("//label[normalize-space(text())='التقسيم الاداري الاول']/following-sibling::*[1]");
-    private final By SecondAdministrativeField = By.xpath("//label[normalize-space(text())='التقسيم الاداري الثانى']/following-sibling::*[1]");
+    private final By FirstِِAdministrativeField = By.xpath("//label[normalize-space(text())='تقسيم اداري اول']/following-sibling::*[1]");
+    private final By SecondAdministrativeField = By.xpath("//label[normalize-space(text())='تقسيم اداري ثان']/following-sibling::*[1]");
     private final By StreetName = By.xpath("//label[normalize-space(text())='اسم الشارع']/following-sibling::*[1]");
     private final By SendCertificateToOfficeField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الى مكتب']/following-sibling::*[1]");
     private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
@@ -57,7 +57,7 @@ public class P03_BusinessLicensePage {
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
+    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تسليم الشهادة\")]");
     private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
     private final By fff = By.xpath("");
 

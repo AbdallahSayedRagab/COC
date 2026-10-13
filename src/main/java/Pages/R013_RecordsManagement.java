@@ -14,6 +14,7 @@ public class R013_RecordsManagement {
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By DueAmount = By.xpath("//input-control[@formcontrolname='value']//input");
     private final By ItemName = By.xpath("//input-control[@formcontrolname='desc']//input");
+    private final By AddSubscriptionItemButton = By.xpath("//button[contains(text(), ' اضافة بند اشتراك آخر')]");
     private final WebDriver driver;
     private final By YearsField = By.xpath("//label[normalize-space(text())='السنة']/following-sibling::*[1]");
     private final By FixedDateOfYear = By.xpath("//td[@role='gridcell']/span[contains(text(), \"٢٠٢١\")]");
@@ -48,6 +49,7 @@ public class R013_RecordsManagement {
         Utility.CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.SENDKEYS(driver, DueAmount, amount);
         Utility.SENDKEYS(driver, ItemName, item);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddSubscriptionItemButton, Loading_Circle);
 
         return this;
     }
