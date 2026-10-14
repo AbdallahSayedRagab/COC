@@ -1,0 +1,23 @@
+- generic [ref=e3]:
+  - progressbar [ref=e5]
+  - generic [ref=e11]:
+    - generic [ref=e13]:
+      - img "Logo" [ref=e14]
+      - text: الغرفة التجارية المصرية بالشرقية
+    - generic [ref=e15]:
+      - generic [ref=e16]: لوحة الادارة
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e24]:
+            - generic [ref=e25]: اسم المستخدم
+            - textbox [ref=e26]: admin
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]:
+                - text: كلمة المرور
+                - generic [ref=e32]: "*"
+              - textbox [ref=e33]: 1q2w3E*
+            - button [ref=e34] [cursor=pointer]:
+              - img [aria-hidden] [ref=e36]: visibility_off
+        - generic [ref=e37]:
+          - button "جاري التسجيل.." [disabled]

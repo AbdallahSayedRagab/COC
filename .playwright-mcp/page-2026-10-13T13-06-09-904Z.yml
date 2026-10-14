@@ -1,0 +1,211 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e4]:
+    - list [ref=f6e6]:
+      - listitem [ref=f6e7]:
+        - link [ref=f6e8] [cursor=pointer]:
+          - /url: /ar/another-services/divisions/categories
+      - listitem [ref=f6e12]:
+        - generic [ref=f6e13] [cursor=pointer]
+      - listitem [ref=f6e21]:
+        - generic [ref=f6e22] [cursor=pointer]
+    - generic:
+      - banner [ref=f6e27]:
+        - generic [ref=f6e28]:
+          - link [ref=f6e1355] [cursor=pointer]:
+            - /url: /
+            - img "Logo" [ref=f6e1356]
+          - generic [ref=f6e32]:
+            - list [ref=f6e33]:
+              - listitem [ref=f6e34]:
+                - link "الصفحة الرئيسية" [ref=f6e1357] [cursor=pointer]:
+                  - /url: /ar
+              - listitem [ref=f6e36]:
+                - link "من نحن" [ref=f6e1358] [cursor=pointer]:
+                  - /url: /ar/about
+              - listitem [ref=f6e41]:
+                - link "المركز الإعلامي" [ref=f6e1359] [cursor=pointer]:
+                  - /url: /ar/media-center
+              - listitem [ref=f6e46]:
+                - link "الخدمات الإلكترونية" [ref=f6e1360] [cursor=pointer]:
+                  - /url: /ar/eservices
+              - listitem [ref=f6e51]:
+                - link "تواصل معنا" [ref=f6e1361] [cursor=pointer]:
+                  - /url: /ar/contactus
+              - listitem [ref=f6e53]:
+                - generic [ref=f6e54]: استكشف المزيد
+            - list [ref=f6e60]:
+              - listitem [ref=f6e61]:
+                - generic [ref=f6e62]: عبدالله سيد رجب
+      - generic [ref=f6e66]:
+        - generic [ref=f6e68] [cursor=pointer]
+        - list [ref=f6e72]:
+          - listitem [ref=f6e73]:
+            - link "الصفحة الرئيسية" [ref=f6e1362] [cursor=pointer]:
+              - /url: /ar
+          - listitem [ref=f6e75]:
+            - link "من نحن" [ref=f6e1363] [cursor=pointer]:
+              - /url: /ar/about
+          - listitem [ref=f6e77]:
+            - link "المركز الإعلامي" [ref=f6e1364] [cursor=pointer]:
+              - /url: /ar/media-center
+          - listitem [ref=f6e79]:
+            - link "تواصل معنا" [ref=f6e1365] [cursor=pointer]:
+              - /url: /ar/contactus
+          - listitem
+        - generic [ref=f6e81]: تسجيل الخروج
+    - generic [ref=f6e1373]:
+      - generic [ref=f6e1374]:
+        - generic [ref=f6e1375]:
+          - generic [ref=f6e1376]:
+            - generic [ref=f6e1377]: AY
+            - strong [ref=f6e1381]: عبدالله سيد رجب
+          - generic [ref=f6e1382]:
+            - generic [ref=f6e1383]:
+              - generic [ref=f6e1384]: البريد الالكتروني
+              - generic [ref=f6e1387]: Abdallah@coc.net
+            - generic [ref=f6e1389]:
+              - generic [ref=f6e1390]: الهاتف
+              - generic [ref=f6e1393]: "01123232333"
+          - button "تغيير كلمة السر" [ref=f6e1395] [cursor=pointer]
+          - button "تعديل البيانات الشخصية" [ref=f6e1396] [cursor=pointer]
+        - generic [ref=f6e1397]:
+          - generic [ref=f6e1398]:
+            - generic [ref=f6e1399]:
+              - generic [ref=f6e1400]: رصيد محفظة الغرفة
+              - generic [ref=f6e1403]: 0 ج.م
+            - generic [ref=f6e1405]:
+              - generic [ref=f6e1406]: رصيد الخدمات المتميزة
+              - generic [ref=f6e1409]: "213"
+          - button "إضافة رصيد للمحفظة" [ref=f6e1411] [cursor=pointer]
+        - generic [ref=f6e1413]:
+          - generic [ref=f6e1414] [cursor=pointer]: الاسئلة الشائعة
+          - generic [ref=f6e1417] [cursor=pointer]: طلب المساعدة
+      - generic [ref=f6e1422]:
+        - generic [ref=f6e1424]:
+          - generic [ref=f6e1425]:
+            - strong [ref=f6e1427] [cursor=pointer]: الخدمات المطلوبة
+            - strong [ref=f6e1430] [cursor=pointer]: الخدمات المتميزة
+          - button "اطلب خدمة جديدة" [ref=f6e1432] [cursor=pointer]
+        - generic [ref=f6e1436]:
+          - generic [ref=f6e1440]:
+            - generic [ref=f6e1441]:
+              - generic [ref=f6e1442]: ابحث بنوع الخدمة
+              - combobox [ref=f6e1443]:
+                - textbox [ref=f6e1444]
+            - generic [ref=f6e1445] [cursor=pointer]
+          - textbox "رقم الطلب" [ref=f6e1448]
+          - generic [ref=f6e1451]:
+            - generic [ref=f6e1452]:
+              - generic [ref=f6e1453]: فرع الغرفة
+              - combobox [ref=f6e1454]:
+                - textbox [ref=f6e1455]
+            - generic [ref=f6e1456] [cursor=pointer]
+          - generic [ref=f6e1459]:
+            - generic [ref=f6e1460]:
+              - generic [ref=f6e1461]: حالة الطلب
+              - combobox [ref=f6e1462]:
+                - textbox [ref=f6e1463]
+            - generic [ref=f6e1464] [cursor=pointer]
+          - textbox "تاريخ الطلب" [ref=f6e1467]
+        - paragraph [ref=f6e1471]: ليس لديك اي خدمات مطلوبة
+    - generic [ref=f6e648] [cursor=pointer]
+    - contentinfo [ref=f6e654]:
+      - generic [ref=f6e656]:
+        - generic [ref=f6e657]:
+          - generic [ref=f6e661]:
+            - textbox "ادخل البريد الالكتروني الخاص بك حتي نرسل لك احدث الاخبار" [ref=f6e1472]
+            - button "أشترك الآن" [ref=f6e1473] [cursor=pointer]
+          - generic [ref=f6e665]:
+            - generic [ref=f6e666]:
+              - heading "من نحن" [level=4] [ref=f6e1474]
+              - list [ref=f6e668]:
+                - listitem [ref=f6e669]:
+                  - link "عن الغرفة" [ref=f6e1475] [cursor=pointer]:
+                    - /url: /ar/about/about-chamber
+                - listitem [ref=f6e671]:
+                  - link "كلمة رئيس الغرفة" [ref=f6e1476] [cursor=pointer]:
+                    - /url: /ar/about/word-of-president
+                - listitem [ref=f6e673]:
+                  - link "الرؤية والرسالة" [ref=f6e1477] [cursor=pointer]:
+                    - /url: /ar/about/vision-message
+                - listitem [ref=f6e675]:
+                  - link "مجلس ادارة الغرفة" [ref=f6e1478] [cursor=pointer]:
+                    - /url: /ar/about/chamber-boards
+                - listitem [ref=f6e677]:
+                  - link "رؤساء الغرفة" [ref=f6e1479] [cursor=pointer]:
+                    - /url: /ar/about/chamber-presidents
+            - generic [ref=f6e679]:
+              - heading "خدمات الكترونية" [level=4] [ref=f6e1480]
+              - list [ref=f6e681]:
+                - listitem [ref=f6e682]:
+                  - link "محو سجل تجاري" [ref=f6e1481] [cursor=pointer]:
+                    - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+                - listitem [ref=f6e684]:
+                  - link "شهادة منشأ مصدر بضاعة" [ref=f6e1482] [cursor=pointer]:
+                    - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+                - listitem [ref=f6e686]:
+                  - link "طلب خدمة إختيارية" [ref=f6e1483] [cursor=pointer]:
+                    - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+                - listitem [ref=f6e688]:
+                  - link "شهادة ترخيص تجارة" [ref=f6e1484] [cursor=pointer]:
+                    - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+                - listitem [ref=f6e690]:
+                  - link "اصدار شهادة ادارية" [ref=f6e1485] [cursor=pointer]:
+                    - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+                - listitem [ref=f6e692]:
+                  - link "تعديل السجل التجاري" [ref=f6e1486] [cursor=pointer]:
+                    - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+            - generic [ref=f6e694]:
+              - heading "خدمات عامة" [level=4] [ref=f6e1487]
+              - list [ref=f6e696]:
+                - listitem [ref=f6e697]:
+                  - link "اتفاقات تجارية" [ref=f6e1488] [cursor=pointer]:
+                    - /url: /ar/another-services/commercial-agreements
+                - listitem [ref=f6e699]:
+                  - link "فرص تصديرية" [ref=f6e1489] [cursor=pointer]:
+                    - /url: /ar/another-services/export
+                - listitem [ref=f6e701]:
+                  - link "مناقصات" [ref=f6e1490] [cursor=pointer]:
+                    - /url: /ar/another-services/tenders
+                - listitem [ref=f6e703]:
+                  - link "فعاليات" [ref=f6e1491] [cursor=pointer]:
+                    - /url: /ar/another-services/events
+                - listitem [ref=f6e705]:
+                  - link "نماذج متنوعة" [ref=f6e1492] [cursor=pointer]:
+                    - /url: /ar/another-services/variousModels
+            - generic [ref=f6e707]:
+              - heading "استفسارات شائعة" [level=4] [ref=f6e1493]
+              - list [ref=f6e709]:
+                - listitem [ref=f6e710]:
+                  - generic [ref=f6e711] [cursor=pointer]: استفسارات عامة
+                - listitem [ref=f6e712]:
+                  - generic [ref=f6e713] [cursor=pointer]: إستفسارات الخدمات
+                - listitem [ref=f6e714]:
+                  - generic [ref=f6e715] [cursor=pointer]: إستفسارات الشُعب
+                - listitem [ref=f6e716]:
+                  - generic [ref=f6e717] [cursor=pointer]: إستفسارات السجلات
+        - generic [ref=f6e718]:
+          - list [ref=f6e721]:
+            - listitem [ref=f6e722]:
+              - link [ref=f6e1494] [cursor=pointer]:
+                - /url: https://www.facebook.com/alghrfh.altjaryh.balshrqyh/
+                - img "فيس بوك" [ref=f6e1495]
+          - generic [ref=f6e726]:
+            - heading "تواصل معنا" [level=4] [ref=f6e1496]
+            - list [ref=f6e728]:
+              - listitem [ref=f6e729]:
+                - generic [ref=f6e731]: "العنوان : 10 ش مدرسة الامريكان، المنتزه ، الزقازيق، الشرقية"
+              - listitem [ref=f6e732]:
+                - generic [ref=f6e734]: "التليفون : 2349744 055"
+              - listitem [ref=f6e735]:
+                - generic [ref=f6e737]: "البريد الالكتروني : it@sharcham.org"
+      - generic [ref=f6e739]:
+        - generic [ref=f6e741]:
+          - link [ref=f6e1497] [cursor=pointer]:
+            - /url: /
+            - img "Logo" [ref=f6e1498]
+          - generic [ref=f6e744]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f6e745]:
+          - generic [ref=f6e746]: ©
+          - generic [ref=f6e747]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13
+  - paragraph [ref=f6e750]: جاري التحميل...

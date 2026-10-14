@@ -1,0 +1,2 @@
+[INFO] 13-10-2026 13:05:24 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:NegativeCertificteRequest is Started
+[INFO] 13-10-2026 13:05:35 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed

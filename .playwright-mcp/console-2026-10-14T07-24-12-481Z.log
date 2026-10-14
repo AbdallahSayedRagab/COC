@@ -1,0 +1,13 @@
+[    1512ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[    3278ms] [LOG] frontend [Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    3362ms] [LOG] visualData [Object, Object, Object, Object, Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    3365ms] [LOG] eserviesss {data: Object, loading: false, networkStatus: 7} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:34
+[    3544ms] [LOG] BrandData {orgName: الغرفة التجارية المصرية بالشرقية, mainTitle: الغرفة التجارية المصرية بالشرقية , subTitle: Egyptian Chamber of Commerce in Sharqiyah, rights: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية با… التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13, logo: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[    4006ms] [WARNING] Failed to decode downloaded font: https://coc-portal-stage.apps.softprograms-eg.com/undefined @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[    4007ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008813135 @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[    4263ms] [LOG] Popup Ads: [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    7406ms] [LOG] breadcrumbs [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    7408ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    7451ms] [LOG] Updated Enabled Dates: [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    7612ms] [LOG] picast {flatData: Object, __typename: Bookings} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[    8027ms] [LOG] {totalCount: 3, items: Array(3)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27

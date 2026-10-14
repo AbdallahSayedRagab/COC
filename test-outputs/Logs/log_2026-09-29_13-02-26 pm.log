@@ -1,0 +1,15 @@
+[INFO] 29-09-2026 13:02:26 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is Uuser
+[INFO] 29-09-2026 13:02:26 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@type="password"] is Uuser@123
+[INFO] 29-09-2026 13:02:28 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 29-09-2026 13:02:34 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//ng-select)[1]
+[INFO] 29-09-2026 13:02:35 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //span[text()=' فرع الغرفه للخدمات الاختياريه  ']
+[INFO] 29-09-2026 13:02:35 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//ng-select)[2]
+[INFO] 29-09-2026 13:02:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //span[text()=' 1 ']
+[INFO] 29-09-2026 13:02:37 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //span[text()='تأكيد الاختيار']
+[INFO] 29-09-2026 13:02:43 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/booking.svg"]
+[INFO] 29-09-2026 13:02:43 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[@href="/managementsys/electronicbookingqueuemanagement?title=::elecbookingqueuemanagementsys"]
+[INFO] 29-09-2026 13:02:54 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //tr[td[normalize-space()='0229-09-20262']]//img[contains(@src,'more.svg')]
+[INFO] 29-09-2026 13:02:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[contains(concat(' ', normalize-space(@class), ' '), ' dropdown-menu ') and contains(concat(' ', normalize-space(@class), ' '), ' show ')]//button[normalize-space()='تعيين شباك']
+[INFO] 29-09-2026 13:02:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //ng-select[@id="windowSelect"]
+[INFO] 29-09-2026 13:02:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 29-09-2026 13:03:01 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[text()='تأكيد']

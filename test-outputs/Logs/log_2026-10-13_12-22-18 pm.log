@@ -1,0 +1,29 @@
+[INFO] 13-10-2026 12:22:18 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:ServicesRequest is Started
+[INFO] 13-10-2026 12:22:19 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 13-10-2026 12:22:19 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@type="password"] is 1q2w3E*
+[INFO] 13-10-2026 12:22:20 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 13-10-2026 12:22:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-10-2026 12:22:32 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[contains(@href, '/requests/unregisteredRequestList')]
+[INFO] 13-10-2026 12:22:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 13-10-2026 12:22:47 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: MainBranch
+[INFO] 13-10-2026 12:22:56 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[contains(text()," انشاء الطلب ")]
+[INFO] 13-10-2026 12:22:57 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //input-control[@label="رقم تحقيق الشخصية"]/input is 28801231231222
+[INFO] 13-10-2026 12:23:04 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]
+[INFO] 13-10-2026 12:23:05 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //ng-select[@id="elctCertificateTypeId"]
+[INFO] 13-10-2026 12:23:06 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 13-10-2026 12:23:08 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@class="add-btn"]
+[INFO] 13-10-2026 12:23:09 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 13-10-2026 12:23:10 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 13-10-2026 12:23:21 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 13-10-2026 12:23:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']
+[INFO] 13-10-2026 12:23:30 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //span[contains(normalize-space(), 'أرسال للتحصيل')]
+[INFO] 13-10-2026 12:23:37 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]
+[INFO] 13-10-2026 12:23:38 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/collections-icon.svg"]
+[INFO] 13-10-2026 12:23:41 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[@href="/collections/invoices?title=::Invoices"]
+[INFO] 13-10-2026 12:23:45 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]
+[INFO] 13-10-2026 12:23:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: WithdrawTheBill
+[INFO] 13-10-2026 12:23:52 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//input[@type="radio"])[1]
+[INFO] 13-10-2026 12:23:59 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[@type="button"]
+[INFO] 13-10-2026 12:24:00 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-10-2026 12:24:02 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //a[contains(@href, '/requests/unregisteredRequestList')]
+[INFO] 13-10-2026 12:24:02 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:ServicesRequest is Successed

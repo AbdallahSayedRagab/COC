@@ -1,0 +1,81 @@
+[    3861ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://coc-backoffice-stage.apps.softprograms-eg.com/account/login:0
+[    3941ms] [LOG] {ip: 84.36.152.98, city: Sharm el-Sheikh, region: South Sinai, country: EG, loc: 27.9158,34.3299} @ https://ipinfo.io/?callback=ng_jsonp_callback_0:0
+[   23441ms] [INFO] Information: Normalizing '/signalr-hubs/Notification' to 'https://coc-backoffice-stage.apps.softprograms-eg.com/signalr-hubs/Notification'. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:0
+[   24674ms] [INFO] Information: WebSocket connected to wss://coc-backoffice-stage.apps.softprograms-eg.com/signalr-hubs/Notification?access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3MTEzRDI4NzA2RDVGMkY3RDI1Q0VBRUMzOUZGNDhGIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3OTE5ODU0NjQsImV4cCI6MTgyMzUyMTQ2NCwiaXNzIjoiaHR0cHM6Ly9jb2MtYmFja29mZmljZS1zdGFnZS5hcHBzLnNvZnRwcm9ncmFtcy1lZy5jb20iLCJhdWQiOiJjb2MiLCJjbGllbnRfaWQiOiJjb2NfQXBwIiwic3ViIjoiOTA2NzBkM2EtNWE3Ny1kYTRlLTg2OWItYmU1NWMxMTk1MDZmIiwiYXV0aF90aW1lIjoxNzkxOTg1NDYzLCJpZHAiOiJsb2NhbCIsIlVzZXJTZWN1cml0eVN0YW1wIjoiWElWTFVCNUVFUUg3N1JVRUs3WUhPUTVDRVVRVUVPWUEiLCJyb2xlIjoiYWRtaW4iLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOiJGYWxzZSIsImVtYWlsIjoiYWRtaW5AYWJwLmkiLCJlbWFpbF92ZXJpZmllZCI6IlRydWUiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3OTE5ODU0NjQsInNjb3BlIjpbImNvYyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.LQGWnHK3fCfpfEjKdagWqz7fkJnbNfmmLXbPiue9PplCchHT6K9Alv4Tn7rXqxBRkUBUYj-AS1V4rp7GQN00BSxz_yKuQ_oz1KzOCyWSzWU2tru0kJ7L2HTtnLiy318mcl2oIn65KKe-xlB9G-koPhWFxmdznbnTDH_HA0Rf1xfitYkroF-JGHZbAxB054cxIM1e_uymWnmnItphrlifdar5y9ign5eQoeLE1g1HmvGnJ6N5-NJuehrZtUKrDLypbFNCb9l7l9aPFSbuV1HkF9Cw2DJ2dEQWC3_v_v8DE2bCSAlcwojcs-ngf8MrCUsDXM8lJr4MeAv2S3zCfdmc-w @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:0
+[   30229ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30232ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30234ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30239ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30242ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30245ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30250ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30254ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30257ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   30260ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   38908ms] [ERROR] ERROR TypeError: You provided 'undefined' where a stream was expected. You can provide an Observable, Promise, Array, or Iterable.
+    at P (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1133707)
+    at b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1097372)
+    at i.call (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1122692)
+    at x.subscribe (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1086541)
+    at Et.initForm (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:261051)
+    at new t (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:405088)
+    at new b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:1:1160956)
+    at new Et (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:258650)
+    at Et.ɵfac [as factory] (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:269721)
+    at Js (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1540450) @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   38912ms] [ERROR] ERROR TypeError: You provided 'undefined' where a stream was expected. You can provide an Observable, Promise, Array, or Iterable.
+    at P (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1133707)
+    at b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1097372)
+    at i.call (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1122692)
+    at x.subscribe (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1086541)
+    at Et.initForm (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:261336)
+    at new t (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:405088)
+    at new b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:1:1160956)
+    at new Et (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:258650)
+    at Et.ɵfac [as factory] (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:269721)
+    at Js (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1540450) @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   38915ms] [ERROR] ERROR TypeError: You provided 'undefined' where a stream was expected. You can provide an Observable, Promise, Array, or Iterable.
+    at P (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1133707)
+    at b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1097372)
+    at i.call (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1122692)
+    at x.subscribe (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1086541)
+    at Et.initForm (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:261635)
+    at new t (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:405088)
+    at new b (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:1:1160956)
+    at new Et (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:258650)
+    at Et.ɵfac [as factory] (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:269721)
+    at Js (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1540450) @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[   39758ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'id')
+    at b._next (https://coc-backoffice-stage.apps.softprograms-eg.com/292.71bf429814bc4244.js:1:466404)
+    at b.__tryOrUnsub (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1094024)
+    at b.next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1093253)
+    at n._next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1092436)
+    at n.next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1092210)
+    at t._next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1092436)
+    at t.next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1092210)
+    at t._next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1115071)
+    at t.next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1092210)
+    at t._next (https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:7:1113940) @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  104440ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  104441ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  127237ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  127238ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  199875ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  199876ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  209085ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  209086ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  400281ms] [INFO] Information: Normalizing '/signalr-hubs/Notification' to 'https://coc-backoffice-stage.apps.softprograms-eg.com/signalr-hubs/Notification'. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:0
+[  400448ms] [LOG] {ip: 84.36.152.98, city: Sharm el-Sheikh, region: South Sinai, country: EG, loc: 27.9158,34.3299} @ https://ipinfo.io/?callback=ng_jsonp_callback_0:0
+[  401716ms] [INFO] Information: WebSocket connected to wss://coc-backoffice-stage.apps.softprograms-eg.com/signalr-hubs/Notification?access_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3MTEzRDI4NzA2RDVGMkY3RDI1Q0VBRUMzOUZGNDhGIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3OTE5ODU0NjQsImV4cCI6MTgyMzUyMTQ2NCwiaXNzIjoiaHR0cHM6Ly9jb2MtYmFja29mZmljZS1zdGFnZS5hcHBzLnNvZnRwcm9ncmFtcy1lZy5jb20iLCJhdWQiOiJjb2MiLCJjbGllbnRfaWQiOiJjb2NfQXBwIiwic3ViIjoiOTA2NzBkM2EtNWE3Ny1kYTRlLTg2OWItYmU1NWMxMTk1MDZmIiwiYXV0aF90aW1lIjoxNzkxOTg1NDYzLCJpZHAiOiJsb2NhbCIsIlVzZXJTZWN1cml0eVN0YW1wIjoiWElWTFVCNUVFUUg3N1JVRUs3WUhPUTVDRVVRVUVPWUEiLCJyb2xlIjoiYWRtaW4iLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOiJGYWxzZSIsImVtYWlsIjoiYWRtaW5AYWJwLmkiLCJlbWFpbF92ZXJpZmllZCI6IlRydWUiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3OTE5ODU0NjQsInNjb3BlIjpbImNvYyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.LQGWnHK3fCfpfEjKdagWqz7fkJnbNfmmLXbPiue9PplCchHT6K9Alv4Tn7rXqxBRkUBUYj-AS1V4rp7GQN00BSxz_yKuQ_oz1KzOCyWSzWU2tru0kJ7L2HTtnLiy318mcl2oIn65KKe-xlB9G-koPhWFxmdznbnTDH_HA0Rf1xfitYkroF-JGHZbAxB054cxIM1e_uymWnmnItphrlifdar5y9ign5eQoeLE1g1HmvGnJ6N5-NJuehrZtUKrDLypbFNCb9l7l9aPFSbuV1HkF9Cw2DJ2dEQWC3_v_v8DE2bCSAlcwojcs-ngf8MrCUsDXM8lJr4MeAv2S3zCfdmc-w @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:0
+[  404022ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404024ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404027ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404031ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404032ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404036ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404039ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404041ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404043ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[  404045ms] [WARNING] The localization source separator (::) not found. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:6
+[ 1346632ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://coc-backoffice-stage.apps.softprograms-eg.com/account/login:0
+[ 1346728ms] [LOG] {ip: 84.36.152.98, city: Sharm el-Sheikh, region: South Sinai, country: EG, loc: 27.9158,34.3299} @ https://ipinfo.io/?callback=ng_jsonp_callback_0:0

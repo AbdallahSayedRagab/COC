@@ -1,0 +1,29 @@
+- generic [active] [ref=f5e2]:
+  - banner [ref=f5e3]:
+    - heading "Settings" [level=1] [ref=f5e8]
+    - generic [ref=f5e11]:
+      - button [aria-hidden] [ref=f5e12] [cursor=pointer]
+      - generic [ref=f5e13]:
+        - generic [aria-hidden] [ref=f5e14]: Search settings
+        - searchbox "Search settings" [ref=f5e15]
+  - generic [ref=f5e16]:
+    - navigation [ref=f5e19]:
+      - menu [ref=f5e20]:
+        - generic:
+          - menuitem "You and Google" [ref=f5e21] [cursor=pointer]
+          - menuitem "Autofill and passwords" [ref=f5e22] [cursor=pointer]
+          - menuitem "Privacy and security" [ref=f5e23] [cursor=pointer]
+          - menuitem "Performance" [ref=f5e24] [cursor=pointer]
+          - menuitem "AI innovations" [ref=f5e25] [cursor=pointer]
+          - menuitem "Appearance" [ref=f5e26] [cursor=pointer]
+          - menuitem "Search engine" [ref=f5e27] [cursor=pointer]
+          - menuitem "Default browser" [ref=f5e28] [cursor=pointer]
+          - menuitem "On startup" [ref=f5e29] [cursor=pointer]
+          - menuitem "Languages" [ref=f5e31] [cursor=pointer]
+          - menuitem "Downloads" [ref=f5e32] [cursor=pointer]
+          - menuitem "Accessibility" [ref=f5e33] [cursor=pointer]
+          - menuitem "System" [ref=f5e34] [cursor=pointer]
+          - menuitem "Reset settings" [ref=f5e35] [cursor=pointer]
+          - menuitem "Extensions" [ref=f5e37] [cursor=pointer]
+          - menuitem "About Chrome" [ref=f5e40] [cursor=pointer]
+    - main [ref=f5e41]

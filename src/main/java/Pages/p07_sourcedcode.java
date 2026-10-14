@@ -4,14 +4,6 @@ import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.util.List;
-
-import static Utilities.DataUtiles.getJsonData;
 
 public class p07_sourcedcode {
     private final WebDriver driver;
@@ -111,7 +103,12 @@ public class p07_sourcedcode {
         return this;
     }
 
-    public p07_sourcedcode confirmrequest() throws InterruptedException, AWTException {
+    public p07_sourcedcode FillAttachmentSection() {
+        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
+        return this;
+    }
+
+    public p07_sourcedcode confirmrequest() throws InterruptedException {
         Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
         Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;

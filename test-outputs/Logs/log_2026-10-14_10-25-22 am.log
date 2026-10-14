@@ -1,0 +1,28 @@
+[INFO] 14-10-2026 10:25:22 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:NormalReservationFromPortalWithoutLogin is Started
+[INFO] 14-10-2026 10:25:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //li[@ngbtooltip='أحجز ميعاد']/a
+[INFO] 14-10-2026 10:25:31 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text()='الخطوة التالية']
+[INFO] 14-10-2026 10:25:32 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='اسم مقدم الطلب']/following-sibling::*[1] is عبدالله سيد رجب
+[INFO] 14-10-2026 10:25:33 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم هاتف مقدم الطلب']/following-sibling::*[1] is 01148200717
+[INFO] 14-10-2026 10:25:34 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='جنسية مقدم الطلب']/following-sibling::*[1]
+[INFO] 14-10-2026 10:25:36 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='مصري']
+[INFO] 14-10-2026 10:25:37 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم تحقيق شخصية مقدم الطلب']/following-sibling::*[1] is 30001231231231
+[INFO] 14-10-2026 10:25:39 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]
+[INFO] 14-10-2026 10:25:40 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 10:25:41 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='اسم المُستفيد']/following-sibling::*[1] is Abdallah
+[INFO] 14-10-2026 10:25:43 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='جنسية المُستفيد']/following-sibling::*[1]
+[INFO] 14-10-2026 10:25:44 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='مصري']
+[INFO] 14-10-2026 10:25:45 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: //label[normalize-space(text())='رقم تحقيق شخصية المستفيد']/following-sibling::*[1] is 30001231231231
+[INFO] 14-10-2026 10:25:47 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: requestTypeId
+[INFO] 14-10-2026 10:25:49 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='طلب اصدار شهادة إدارية']
+[INFO] 14-10-2026 10:25:51 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[contains(normalize-space(text()),'الشهادة / الخدمة المطلوبة')]/following-sibling::*[1]//ng-select
+[INFO] 14-10-2026 10:25:52 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 10:25:53 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: branchId
+[INFO] 14-10-2026 10:25:55 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][normalize-space()='فرع الغرفه للخدمات الاختياريه']
+[INFO] 14-10-2026 10:25:56 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text()='الخطوة التالية']
+[INFO] 14-10-2026 10:25:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: elctReservationTypeId
+[INFO] 14-10-2026 10:26:10 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option']//span[normalize-space(text())='حجز عادي']
+[INFO] 14-10-2026 10:26:11 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //label[normalize-space(text())='تاريخ الحجز']/following-sibling::*[1]
+[INFO] 14-10-2026 10:26:14 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: (//table[@class='days weeks']//td[@role='gridcell']/span[not(contains(@class,'disabled')) and not(contains(@class,'is-other-month'))])[1]
+[INFO] 14-10-2026 10:26:15 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.id: elctAgendaDatePeriodId
+[INFO] 14-10-2026 10:26:17 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 10:26:21 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text()='تأكيد الحجز']

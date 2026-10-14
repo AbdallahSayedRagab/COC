@@ -1,0 +1,9 @@
+[     517ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile:0
+[    2322ms] [LOG] breadcrumbs [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    2390ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    2600ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[    2779ms] [LOG] BrandData {orgName: الغرفة التجارية المصرية بالشرقية, mainTitle: الغرفة التجارية المصرية بالشرقية , subTitle: Egyptian Chamber of Commerce in Sharqiyah, rights: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية با… التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13, logo: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[    2836ms] [WARNING] Failed to decode downloaded font: https://coc-portal-stage.apps.softprograms-eg.com/undefined @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile?page=Request:0
+[    2836ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008813135 @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile?page=Request:0
+[    2842ms] [LOG] eserviesss {data: Object, loading: false, networkStatus: 7} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:34
+[    2843ms] [LOG] eserviesss [Object, Object, Object, Object, Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/574.c5aa65c81de4a1ae.js:0

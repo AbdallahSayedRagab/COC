@@ -1,0 +1,13 @@
+[INFO] 13-10-2026 14:00:44 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:AddAdministrativeCertificateRequestByRequestMailPage is Started
+[INFO] 13-10-2026 14:00:44 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is Abdallah_Sayed
+[INFO] 13-10-2026 14:00:45 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input[@type="password"] is Abdallah_Sayed@123
+[INFO] 13-10-2026 14:00:46 [main] [Utilities.Utility.CLICKONELEMENTS(Utility.java:39)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 13-10-2026 14:00:57 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 13-10-2026 14:00:58 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //a[contains(@href,'/requests/requests-certificates-mailbox')]
+[INFO] 13-10-2026 14:01:12 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //span[@class="asset-icon" and contains(text(),'أضافة طلب ')]
+[INFO] 13-10-2026 14:01:14 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //input[@type="radio" and @id="طلب اصدار شهادة إدارية"]
+[INFO] 13-10-2026 14:01:22 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[text() = ' انشاء طلب ']
+[INFO] 13-10-2026 14:01:22 [main] [Utilities.Utility.SENDKEYS(Utility.java:71)] -  Data sent to  By.xpath: //input-control[@formcontrolname='applicantNationalId']//input is 30001231231231
+[INFO] 13-10-2026 14:01:29 [main] [Utilities.Utility.WatingLoadingCircle_And_CLICKONELEMENTS(Utility.java:50)] - Clicked on By.xpath: //button[@type='submit']
+[INFO] 13-10-2026 14:01:30 [main] [Utilities.Utility.WatingAndSENDKEYS(Utility.java:79)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is 1791887444
+[INFO] 13-10-2026 14:02:10 [main] [Listeners.IInvociedMethodListener.afterInvocation(IInvociedMethodListener.java:19)] - Test-Case:nullFailed

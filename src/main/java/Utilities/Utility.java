@@ -8,6 +8,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -173,6 +178,124 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
     public static By InputFieldXpath(String label){
         return By.xpath("By.xpath(\"//label[contains(normalize-space(.), '\"+label.trim()+\"')]/following::input[1]\");");
+    }
+
+    // ===================== المرفقات =====================
+    // الملف اللي بيترفع في كل المرفقات
+    public static final String AttachmentFilePath = "C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg";
+    // اقصى وقت لرفع مرفق واحد (السيرفر ساعات بيبقى بطيء)
+    private static final int AttachmentUploadTimeoutSeconds = 120;
+    // اي progress bar بيظهر وقت الرفع
+    private static final By UploadProgress = By.xpath("//mat-progress-bar | //*[@role='progressbar']");
+    // المرفق اللي اترفع فعليا: بيظهر كارت preview جواه صورة الـ alt بتاعها "id من السيرفر/اسم الملف"
+    private static final By UploadedAttachment = By.xpath("//div[contains(@class,'attachment-preview')]/img[contains(@alt,'/')]");
+
+    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton, By LoadingCircle) {
+        UploadAttachments(driver, AddAttachmentButton, LoadingCircle, AttachmentFilePath);
+    }
+
+    // بيرفع الملف على كل زرار مرفق موجود في الصفحة (لو مفيش مرفقات بيعدي)
+    // وبيستنى كل مرفق يترفع فعليا قبل ما يروح للي بعده - فلو مرفق مترفعش الميثود بتفشل وماحدش بيدوس تأكيد
+    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton, By LoadingCircle, String FilePath) {
+        if (!new File(FilePath).exists()) {
+            throw new IllegalArgumentException("Attachment file not found: " + FilePath);
+        }
+        WaitUntilNotBusy(driver, LoadingCircle, 60);
+
+        int total = driver.findElements(AddAttachmentButton).size();
+        LogsUtiles.info("Attachments to upload: " + total);
+
+        for (int i = 0; i < total; i++) {
+            // بندور على الزراير من جديد كل مرة عشان الصفحة بتعمل re-render بعد كل رفع
+            List<WebElement> buttons = driver.findElements(AddAttachmentButton);
+            int removed = total - buttons.size(); // لو الزرار بيختفي بعد ما المرفق يترفع
+            WebElement button = buttons.get(i - removed);
+            UploadFile(driver, button, LoadingCircle, FilePath);
+            LogsUtiles.info("Attachment " + (i + 1) + "/" + total + " uploaded");
+        }
+    }
+
+    // بيرفع ملف واحد من الزرار ده وبيستنى لحد ما يترفع فعليا
+    public static void UploadFile(WebDriver driver, WebElement UploadButton, By LoadingCircle, String FilePath) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WaitUntilNotBusy(driver, LoadingCircle, 60);
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", UploadButton);
+        int before = driver.findElements(UploadedAttachment).size();
+
+        // الزرار (openfilesbrowser) بيعمل input[type=file] مؤقت ويدوس عليه فتفتح نافذة الويندوز
+        // فبنمسك الـ input ده قبل ما يفتح النافذة ونحطه في الصفحة ونبعتله المسار مباشرة - اسرع وادق من Robot
+        js.executeScript(
+                "window.__autoFileInput = null;" +
+                "var orig = HTMLInputElement.prototype.click;" +
+                "HTMLInputElement.prototype.click = function () {" +
+                "  if (this.type === 'file') {" +
+                "    HTMLInputElement.prototype.click = orig;" +
+                "    this.style.display = 'block'; document.body.appendChild(this); window.__autoFileInput = this; return;" +
+                "  }" +
+                "  return orig.call(this);" +
+                "};");
+        WatingLoadingCircle_And_CLICKON_WebElement(driver, UploadButton, LoadingCircle);
+        WebElement fileInput = (WebElement) js.executeScript("return window.__autoFileInput;");
+
+        if (fileInput != null) {
+            fileInput.sendKeys(FilePath);
+            js.executeScript("arguments[0].remove(); window.__autoFileInput = null;", fileInput);
+        } else {
+            // احتياطي: لو الزرار فتح نافذة الويندوز بطريقة تانية بنستخدم Robot زي الاول
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection("\"" + FilePath + "\""), null);
+            try {
+                Robot robot = new Robot();
+                robot.delay(1500); // لحد ما نافذة اختيار الملف تفتح
+                robot.keyPress(KeyEvent.VK_CONTROL);
+                robot.keyPress(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_V);
+                robot.keyRelease(KeyEvent.VK_CONTROL);
+                robot.delay(500);
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
+            } catch (AWTException e) {
+                throw new RuntimeException("Robot could not be created for file upload", e);
+            }
+        }
+
+        WaitUntilAttachmentUploaded(driver, before, LoadingCircle);
+    }
+
+    // بيستنى لحد ما كارت المرفق الجديد يظهر (يعني السيرفر رجع id للملف) + مفيش لودينج ولا progress bar
+    // ولازم الحالة دي تفضل ثابتة مرتين ورا بعض عشان مايدوسش وهو لسه بيرفع
+    private static void WaitUntilAttachmentUploaded(WebDriver driver, int before, By LoadingCircle) {
+        int[] stableChecks = {0};
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(AttachmentUploadTimeoutSeconds), Duration.ofMillis(500))
+                    .ignoring(StaleElementReferenceException.class)
+                    .withMessage("Attachment was not uploaded within " + AttachmentUploadTimeoutSeconds + " seconds")
+                    .until(d -> {
+                        if (d.findElements(UploadedAttachment).size() > before && !IsBusy(d, LoadingCircle)) {
+                            return ++stableChecks[0] >= 2;
+                        }
+                        stableChecks[0] = 0;
+                        return false;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
+    }
+
+    private static boolean IsBusy(WebDriver driver, By LoadingCircle) {
+        return driver.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)
+                || driver.findElements(UploadProgress).stream().anyMatch(WebElement::isDisplayed);
+    }
+
+    private static void WaitUntilNotBusy(WebDriver driver, By LoadingCircle, int Seconds) {
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(Seconds), Duration.ofMillis(200))
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(d -> !IsBusy(d, LoadingCircle));
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
     }
 
     public static void PrintAndScreenShot (WebDriver driver, By Locator, By LoadingCircle, String ImageName) throws IOException {

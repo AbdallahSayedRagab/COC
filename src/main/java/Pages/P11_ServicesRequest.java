@@ -4,12 +4,6 @@ import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.util.List;
 
 public class P11_ServicesRequest {
     public P11_ServicesRequest (WebDriver driver){
@@ -68,42 +62,8 @@ public class P11_ServicesRequest {
     return this;
 }
 
-    public P11_ServicesRequest FillAttachmentSectionAndConfirmRequest() throws InterruptedException, AWTException {
-
-        List<WebElement> buttons = driver.findElements(AddAttachmentButton);
-        if (!buttons.isEmpty()) {
-    //            int size = driver.findElements(AddAttachmentButton).size();
-            for(int i = 0; i < buttons.size();i++) {
-                WebElement btn = buttons.get(i);
-                String path = "\"C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg\"";
-                Utility.WatingLoadingCircle_And_CLICKON_WebElement(driver, btn, Loading_Circle);
-                StringSelection StringSelection = new StringSelection(path);
-                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(StringSelection,null);
-
-                Robot robot = new Robot();
-                robot.delay(1000);
-
-                robot.keyPress(KeyEvent.VK_ENTER);
-                robot.keyRelease(KeyEvent.VK_ENTER);
-                robot.delay(500);
-
-    //                robot.keyPress(KeyEvent.VK_CONTROL);
-    //                robot.keyPress(KeyEvent.VK_C);
-    //                robot.keyRelease(KeyEvent.VK_C);
-    //                robot.keyRelease(KeyEvent.VK_CONTROL);
-    //                robot.delay(1000);
-
-                robot.keyPress(KeyEvent.VK_CONTROL);
-                robot.keyPress(KeyEvent.VK_V);
-                robot.keyRelease(KeyEvent.VK_V);
-                robot.keyRelease(KeyEvent.VK_CONTROL);
-                robot.delay(1000);
-
-                robot.keyPress(KeyEvent.VK_ENTER);
-                robot.keyRelease(KeyEvent.VK_ENTER);
-                robot.delay(10000);
-            }
-        }
+    public P11_ServicesRequest FillAttachmentSection() {
+        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
         return this;
     }
     public P11_ServicesRequest ConfirmRequest () throws InterruptedException {

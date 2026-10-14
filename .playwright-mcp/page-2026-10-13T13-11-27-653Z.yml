@@ -1,0 +1,190 @@
+- generic [ref=f7e4]:
+  - list [ref=f7e6]:
+    - listitem [ref=f7e7]:
+      - link [ref=f7e8] [cursor=pointer]:
+        - /url: /ar/another-services/divisions/categories
+    - listitem [ref=f7e12]:
+      - generic [ref=f7e13] [cursor=pointer]
+    - listitem [ref=f7e21]:
+      - generic [ref=f7e22] [cursor=pointer]
+  - generic:
+    - banner [ref=f7e27]:
+      - generic [ref=f7e28]:
+        - link [ref=f7e30] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=f7e31]
+        - generic [ref=f7e32]:
+          - list [ref=f7e33]:
+            - listitem [ref=f7e34]:
+              - link "الصفحة الرئيسية" [ref=f7e35] [cursor=pointer]:
+                - /url: /ar
+            - listitem [ref=f7e36]:
+              - link "من نحن" [ref=f7e38] [cursor=pointer]:
+                - /url: /ar/about
+            - listitem [ref=f7e41]:
+              - link "المركز الإعلامي" [ref=f7e43] [cursor=pointer]:
+                - /url: /ar/media-center
+            - listitem [ref=f7e46]:
+              - link "الخدمات الإلكترونية" [ref=f7e48] [cursor=pointer]:
+                - /url: /ar/eservices
+            - listitem [ref=f7e51]:
+              - link "تواصل معنا" [ref=f7e52] [cursor=pointer]:
+                - /url: /ar/contactus
+            - listitem [ref=f7e53]:
+              - generic [ref=f7e54]: استكشف المزيد
+          - list [ref=f7e60]:
+            - listitem [ref=f7e61]:
+              - generic [ref=f7e62]: عبدالله سيد رجب
+    - generic [ref=f7e67]:
+      - generic [ref=f7e69] [cursor=pointer]
+      - list [ref=f7e73]:
+        - listitem [ref=f7e74]:
+          - link "الصفحة الرئيسية" [ref=f7e75] [cursor=pointer]:
+            - /url: /ar
+        - listitem [ref=f7e76]:
+          - link "من نحن" [ref=f7e77] [cursor=pointer]:
+            - /url: /ar/about
+        - listitem [ref=f7e78]:
+          - link "المركز الإعلامي" [ref=f7e79] [cursor=pointer]:
+            - /url: /ar/media-center
+        - listitem [ref=f7e80]:
+          - link "تواصل معنا" [ref=f7e81] [cursor=pointer]:
+            - /url: /ar/contactus
+        - listitem
+      - generic [ref=f7e82]: تسجيل الخروج
+  - generic [ref=f7e88]:
+    - generic [ref=f7e94]:
+      - heading "الغرفة التجارية المصرية بالشرقية" [level=1] [ref=f7e95]
+      - paragraph [ref=f7e96]: Egyptian Chamber of Commerce in Sharqiyah
+      - separator [ref=f7e97]
+      - navigation "breadcrumbs" [ref=f7e99]: طلب خدمة إختيارية
+    - generic [ref=f7e102]:
+      - generic [ref=f7e103]:
+        - generic [ref=f7e105]:
+          - generic [ref=f7e106]:
+            - img "e-service1" [ref=f7e108]
+            - generic [ref=f7e109]: طلب خدمة إختيارية
+          - paragraph [ref=f7e111]:
+            - paragraph [ref=f7e112]: خدمة مراجعة إلكترونية للشهادات قبل تقديم الطلب، تتم المراجعة طبقا للمستندات المقدمة إلى الغرفة وعلى مسئولية مقدمها بناءً على طلبه ودون أدنى مسئولية على الغرفة التجارية
+        - generic [ref=f7e114]:
+          - generic [ref=f7e115]:
+            - img "e-service1" [ref=f7e117]
+            - generic [ref=f7e118]: المستندات المطلوبة لهذه الخدمة
+          - generic [ref=f7e120]:
+            - paragraph [ref=f7e121]:
+              - strong [ref=f7e122]: تعديل اسم تجارى - سمة تجارية – رأس مال
+            - list [ref=f7e123]:
+              - listitem [ref=f7e124]: توكيل (في حالة الوكالة)
+              - listitem [ref=f7e125]: يجب توافر بطاقة الرقم القومي
+              - listitem [ref=f7e126]: يجب توافر صورة ٢ صورة شخصية
+              - listitem [ref=f7e127]: بطاقة ضريبية أو وثيقة ضريبية (موضح بها العنوان المعدل او الفرع المضاف بنفس نشاط المركز الرئيسي أو الرئيسي الأخر نشاط مختلف عن المركز الرئيسي )
+              - listitem [ref=f7e128]: عقد تعديل الشركة موثق ( إثبات تاريخ أو تصديق على توقيع أو ملخصه مسجل ومشهر عنه)
+              - listitem [ref=f7e129]: تعديل مدة شركة أو حق إدارة وتوقيع
+        - generic [ref=f7e131]:
+          - heading "شروط وأحكام خدمة شهادة الاشتراك" [level=4] [ref=f7e132]
+          - paragraph [ref=f7e134]:
+            - strong [ref=f7e135]: ان استخراج الشهادة الإدارية من الغرفة التجارية يتم طبقا لقاعدة بيانات الغرفة التجارية والمستخرج الحديث من السجل التجاري المقدم إلى الغرفة وعلى مسئولية مقدمها بناءا على طلبه والمستندات المقدمة تحت مسئوليته ودون أدنى مسئولية على الغرفة التجارية.
+          - generic [ref=f7e136]:
+            - checkbox "اقبل بالشروط والاحكام" [checked] [active] [ref=f7e137]
+            - generic [ref=f7e138]: اقبل بالشروط والاحكام
+      - button "إبدا الخدمة الآن" [ref=f7e140] [cursor=pointer]
+  - generic [ref=f7e142] [cursor=pointer]
+  - contentinfo [ref=f7e148]:
+    - generic [ref=f7e150]:
+      - generic [ref=f7e151]:
+        - generic [ref=f7e155]:
+          - textbox "ادخل البريد الالكتروني الخاص بك حتي نرسل لك احدث الاخبار" [ref=f7e156]
+          - button "أشترك الآن" [ref=f7e158] [cursor=pointer]
+        - generic [ref=f7e159]:
+          - generic [ref=f7e160]:
+            - heading "من نحن" [level=4] [ref=f7e161]
+            - list [ref=f7e162]:
+              - listitem [ref=f7e163]:
+                - link "عن الغرفة" [ref=f7e164] [cursor=pointer]:
+                  - /url: /ar/about/about-chamber
+              - listitem [ref=f7e165]:
+                - link "كلمة رئيس الغرفة" [ref=f7e166] [cursor=pointer]:
+                  - /url: /ar/about/word-of-president
+              - listitem [ref=f7e167]:
+                - link "الرؤية والرسالة" [ref=f7e168] [cursor=pointer]:
+                  - /url: /ar/about/vision-message
+              - listitem [ref=f7e169]:
+                - link "مجلس ادارة الغرفة" [ref=f7e170] [cursor=pointer]:
+                  - /url: /ar/about/chamber-boards
+              - listitem [ref=f7e171]:
+                - link "رؤساء الغرفة" [ref=f7e172] [cursor=pointer]:
+                  - /url: /ar/about/chamber-presidents
+          - generic [ref=f7e173]:
+            - heading "خدمات الكترونية" [level=4] [ref=f7e174]
+            - list [ref=f7e175]:
+              - listitem [ref=f7e176]:
+                - link "محو سجل تجاري" [ref=f7e177] [cursor=pointer]:
+                  - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+              - listitem [ref=f7e178]:
+                - link "شهادة منشأ مصدر بضاعة" [ref=f7e179] [cursor=pointer]:
+                  - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+              - listitem [ref=f7e180]:
+                - link "طلب خدمة إختيارية" [ref=f7e181] [cursor=pointer]:
+                  - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+              - listitem [ref=f7e182]:
+                - link "شهادة ترخيص تجارة" [ref=f7e183] [cursor=pointer]:
+                  - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+              - listitem [ref=f7e184]:
+                - link "اصدار شهادة ادارية" [ref=f7e185] [cursor=pointer]:
+                  - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+              - listitem [ref=f7e186]:
+                - link "تعديل السجل التجاري" [ref=f7e187] [cursor=pointer]:
+                  - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+          - generic [ref=f7e188]:
+            - heading "خدمات عامة" [level=4] [ref=f7e189]
+            - list [ref=f7e190]:
+              - listitem [ref=f7e191]:
+                - link "اتفاقات تجارية" [ref=f7e192] [cursor=pointer]:
+                  - /url: /ar/another-services/commercial-agreements
+              - listitem [ref=f7e193]:
+                - link "فرص تصديرية" [ref=f7e194] [cursor=pointer]:
+                  - /url: /ar/another-services/export
+              - listitem [ref=f7e195]:
+                - link "مناقصات" [ref=f7e196] [cursor=pointer]:
+                  - /url: /ar/another-services/tenders
+              - listitem [ref=f7e197]:
+                - link "فعاليات" [ref=f7e198] [cursor=pointer]:
+                  - /url: /ar/another-services/events
+              - listitem [ref=f7e199]:
+                - link "نماذج متنوعة" [ref=f7e200] [cursor=pointer]:
+                  - /url: /ar/another-services/variousModels
+          - generic [ref=f7e201]:
+            - heading "استفسارات شائعة" [level=4] [ref=f7e202]
+            - list [ref=f7e203]:
+              - listitem [ref=f7e204]:
+                - generic [ref=f7e205] [cursor=pointer]: استفسارات عامة
+              - listitem [ref=f7e206]:
+                - generic [ref=f7e207] [cursor=pointer]: إستفسارات الخدمات
+              - listitem [ref=f7e208]:
+                - generic [ref=f7e209] [cursor=pointer]: إستفسارات الشُعب
+              - listitem [ref=f7e210]:
+                - generic [ref=f7e211] [cursor=pointer]: إستفسارات السجلات
+      - generic [ref=f7e212]:
+        - list [ref=f7e215]:
+          - listitem [ref=f7e216]:
+            - link [ref=f7e217] [cursor=pointer]:
+              - /url: https://www.facebook.com/alghrfh.altjaryh.balshrqyh/
+              - img "فيس بوك" [ref=f7e218]
+        - generic [ref=f7e220]:
+          - heading "تواصل معنا" [level=4] [ref=f7e221]
+          - list [ref=f7e222]:
+            - listitem [ref=f7e223]:
+              - generic [ref=f7e225]: "العنوان : 10 ش مدرسة الامريكان، المنتزه ، الزقازيق، الشرقية"
+            - listitem [ref=f7e226]:
+              - generic [ref=f7e228]: "التليفون : 2349744 055"
+            - listitem [ref=f7e229]:
+              - generic [ref=f7e231]: "البريد الالكتروني : it@sharcham.org"
+    - generic [ref=f7e233]:
+      - generic [ref=f7e235]:
+        - link [ref=f7e236] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=f7e237]
+        - generic [ref=f7e238]: الغرفة التجارية المصرية بالشرقية
+      - generic [ref=f7e239]:
+        - generic [ref=f7e240]: ©
+        - generic [ref=f7e241]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13

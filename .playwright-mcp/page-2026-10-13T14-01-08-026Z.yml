@@ -1,0 +1,67 @@
+- generic [active] [ref=f7e2]:
+  - banner [ref=f7e3]:
+    - heading "Settings" [level=1] [ref=f7e8]
+    - generic [ref=f7e11]:
+      - button [aria-hidden] [ref=f7e12] [cursor=pointer]
+      - generic [ref=f7e13]:
+        - generic [aria-hidden] [ref=f7e14]: Search settings
+        - searchbox "Search settings" [ref=f7e15]
+  - generic [ref=f7e16]:
+    - navigation [ref=f7e19]:
+      - menu [ref=f7e20]:
+        - generic:
+          - menuitem "You and Google" [ref=f7e21] [cursor=pointer]
+          - menuitem "Autofill and passwords" [ref=f7e22] [cursor=pointer]
+          - menuitem "Privacy and security" [ref=f7e23] [cursor=pointer]
+          - menuitem "Performance" [ref=f7e24] [cursor=pointer]
+          - menuitem "AI innovations" [ref=f7e25] [cursor=pointer]
+          - menuitem "Appearance" [ref=f7e26] [cursor=pointer]
+          - menuitem "Search engine" [ref=f7e27] [cursor=pointer]
+          - menuitem "Default browser" [ref=f7e28] [cursor=pointer]
+          - menuitem "On startup" [ref=f7e29] [cursor=pointer]
+          - menuitem "Languages" [ref=f7e31] [cursor=pointer]
+          - menuitem "Downloads" [ref=f7e32] [cursor=pointer]
+          - menuitem "Accessibility" [ref=f7e33] [cursor=pointer]
+          - menuitem "System" [ref=f7e34] [cursor=pointer]
+          - menuitem "Reset settings" [ref=f7e35] [cursor=pointer]
+          - menuitem "Extensions" [ref=f7e37] [cursor=pointer]
+          - menuitem "About Chrome" [ref=f7e40] [cursor=pointer]
+    - main [ref=f7e41]:
+      - generic [ref=f7e43]:
+        - generic [ref=f7e44]:
+          - button "Notifications subpage back button" [ref=f7e45] [cursor=pointer]
+          - heading "Notifications" [level=1] [ref=f7e46]
+          - generic "Filter sites on page" [ref=f7e49]:
+            - searchbox "Filter sites on page" [ref=f7e54]
+        - generic:
+          - generic [ref=f7e56]: Sites usually send notifications to let you know about breaking news or chat messages.
+          - generic [ref=f7e58]:
+            - heading "Default behavior" [level=2] [ref=f7e59]
+            - generic [ref=f7e60]: Sites automatically follow this setting when you visit them
+            - radiogroup "Default behavior" [ref=f7e61]:
+              - generic:
+                - generic:
+                  - generic [ref=f7e63] [cursor=pointer]:
+                    - radio "Sites can ask to send notifications" [ref=f7e64]
+                    - generic [aria-hidden] [ref=f7e69]: Sites can ask to send notifications
+                  - generic [ref=f7e70] [cursor=pointer]:
+                    - generic [ref=f7e71]:
+                      - radio "Don't allow sites to send notifications" [checked] [ref=f7e72]
+                      - generic [aria-hidden] [ref=f7e77]: Don't allow sites to send notifications
+                    - group
+          - generic [ref=f7e103]:
+            - generic [ref=f7e104]:
+              - heading "Customized behaviors" [level=2] [ref=f7e105]
+              - generic [ref=f7e106]: Sites listed below follow a custom setting instead of the default
+            - generic [ref=f7e108]:
+              - generic [ref=f7e109]:
+                - heading "Not allowed to send notifications" [level=3] [ref=f7e110]
+                - button "Add site to not-allowed list" [ref=f7e111] [cursor=pointer]:
+                  - generic [ref=f7e112]: Add
+              - generic [ref=f7e113]: No sites added
+            - generic [ref=f7e116]:
+              - generic [ref=f7e117]:
+                - heading "Allowed to send notifications" [level=3] [ref=f7e118]
+                - button "Add site to allowed list" [ref=f7e119] [cursor=pointer]:
+                  - generic [ref=f7e120]: Add
+              - generic [ref=f7e121]: No sites added

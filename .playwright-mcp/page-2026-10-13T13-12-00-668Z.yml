@@ -1,0 +1,224 @@
+- generic [ref=f7e1]:
+  - generic [ref=f7e4]:
+    - list [ref=f7e6]:
+      - listitem [ref=f7e7]:
+        - link [ref=f7e8] [cursor=pointer]:
+          - /url: /ar/another-services/divisions/categories
+      - listitem [ref=f7e12]:
+        - generic [ref=f7e13] [cursor=pointer]
+      - listitem [ref=f7e21]:
+        - generic [ref=f7e22] [cursor=pointer]
+    - generic:
+      - banner [ref=f7e27]:
+        - generic [ref=f7e28]:
+          - link [ref=f7e504] [cursor=pointer]:
+            - /url: /
+            - img "Logo" [ref=f7e505]
+          - generic [ref=f7e32]:
+            - list [ref=f7e33]:
+              - listitem [ref=f7e34]:
+                - link "الصفحة الرئيسية" [ref=f7e506] [cursor=pointer]:
+                  - /url: /ar
+              - listitem [ref=f7e36]:
+                - link "من نحن" [ref=f7e507] [cursor=pointer]:
+                  - /url: /ar/about
+              - listitem [ref=f7e41]:
+                - link "المركز الإعلامي" [ref=f7e508] [cursor=pointer]:
+                  - /url: /ar/media-center
+              - listitem [ref=f7e46]:
+                - link "الخدمات الإلكترونية" [ref=f7e509] [cursor=pointer]:
+                  - /url: /ar/eservices
+              - listitem [ref=f7e51]:
+                - link "تواصل معنا" [ref=f7e510] [cursor=pointer]:
+                  - /url: /ar/contactus
+              - listitem [ref=f7e53]:
+                - generic [ref=f7e54]: استكشف المزيد
+            - list [ref=f7e60]:
+              - listitem [ref=f7e61]:
+                - generic [ref=f7e62]: عبدالله سيد رجب
+      - generic [ref=f7e67]:
+        - generic [ref=f7e69] [cursor=pointer]
+        - list [ref=f7e73]:
+          - listitem [ref=f7e74]:
+            - link "الصفحة الرئيسية" [ref=f7e511] [cursor=pointer]:
+              - /url: /ar
+          - listitem [ref=f7e76]:
+            - link "من نحن" [ref=f7e512] [cursor=pointer]:
+              - /url: /ar/about
+          - listitem [ref=f7e78]:
+            - link "المركز الإعلامي" [ref=f7e513] [cursor=pointer]:
+              - /url: /ar/media-center
+          - listitem [ref=f7e80]:
+            - link "تواصل معنا" [ref=f7e514] [cursor=pointer]:
+              - /url: /ar/contactus
+          - listitem
+        - generic [ref=f7e82]: تسجيل الخروج
+    - generic [ref=f7e253]:
+      - generic [ref=f7e259]:
+        - heading "الغرفة التجارية المصرية بالشرقية" [level=1] [ref=f7e515]
+        - paragraph [ref=f7e261]: Egyptian Chamber of Commerce in Sharqiyah
+        - separator [ref=f7e262]
+        - navigation "breadcrumbs" [ref=f7e516]:
+          - link "الرئيسية" [ref=f7e517] [cursor=pointer]:
+            - /url: /
+          - text: ">"
+          - link "الخدمات الإلكترونية" [ref=f7e518] [cursor=pointer]:
+            - /url: /ar/eservices
+          - text: "> طلب خدمة إختيارية"
+      - generic [ref=f7e318]:
+        - generic [ref=f7e320]:
+          - generic [ref=f7e321]:
+            - button " بيانات طلب خدمة" [disabled]:
+              - generic: 
+              - generic: بيانات طلب خدمة
+          - button "2 المرفقات" [ref=f7e519] [cursor=pointer]:
+            - generic [ref=f7e447]: "2"
+            - generic [ref=f7e448]: المرفقات
+        - generic [ref=f7e449]:
+          - strong [ref=f7e450]: المرفقات
+          - generic [ref=f7e451]:
+            - generic [ref=f7e453]:
+              - generic [ref=f7e614]:
+                - button "حذف المجموعة" [ref=f7e615] [cursor=pointer]
+                - generic [ref=f7e619]:
+                  - generic [ref=f7e620]: رخصة تشغيل بنظام الاخطار
+                  - generic [ref=f7e624]:
+                    - generic [ref=f7e625]: x
+                    - generic [ref=f7e629] [cursor=pointer]
+                  - textbox "أضف ملاحظات" [ref=f7e633]
+              - generic [ref=f7e454]: اضافة مرفق
+            - generic [ref=f7e458]:
+              - generic [ref=f7e459] [cursor=pointer]: عودة للخطوة السابقة
+              - button "التالى" [ref=f7e520] [cursor=pointer]
+    - generic [ref=f7e142] [cursor=pointer]
+    - contentinfo [ref=f7e148]:
+      - generic [ref=f7e150]:
+        - generic [ref=f7e151]:
+          - generic [ref=f7e155]:
+            - textbox "ادخل البريد الالكتروني الخاص بك حتي نرسل لك احدث الاخبار" [ref=f7e521]
+            - button "أشترك الآن" [ref=f7e522] [cursor=pointer]
+          - generic [ref=f7e159]:
+            - generic [ref=f7e160]:
+              - heading "من نحن" [level=4] [ref=f7e523]
+              - list [ref=f7e162]:
+                - listitem [ref=f7e163]:
+                  - link "عن الغرفة" [ref=f7e524] [cursor=pointer]:
+                    - /url: /ar/about/about-chamber
+                - listitem [ref=f7e165]:
+                  - link "كلمة رئيس الغرفة" [ref=f7e525] [cursor=pointer]:
+                    - /url: /ar/about/word-of-president
+                - listitem [ref=f7e167]:
+                  - link "الرؤية والرسالة" [ref=f7e526] [cursor=pointer]:
+                    - /url: /ar/about/vision-message
+                - listitem [ref=f7e169]:
+                  - link "مجلس ادارة الغرفة" [ref=f7e527] [cursor=pointer]:
+                    - /url: /ar/about/chamber-boards
+                - listitem [ref=f7e171]:
+                  - link "رؤساء الغرفة" [ref=f7e528] [cursor=pointer]:
+                    - /url: /ar/about/chamber-presidents
+            - generic [ref=f7e173]:
+              - heading "خدمات الكترونية" [level=4] [ref=f7e529]
+              - list [ref=f7e175]:
+                - listitem [ref=f7e176]:
+                  - link "محو سجل تجاري" [ref=f7e530] [cursor=pointer]:
+                    - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+                - listitem [ref=f7e178]:
+                  - link "شهادة منشأ مصدر بضاعة" [ref=f7e531] [cursor=pointer]:
+                    - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+                - listitem [ref=f7e180]:
+                  - link "طلب خدمة إختيارية" [ref=f7e532] [cursor=pointer]:
+                    - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+                - listitem [ref=f7e182]:
+                  - link "شهادة ترخيص تجارة" [ref=f7e533] [cursor=pointer]:
+                    - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+                - listitem [ref=f7e184]:
+                  - link "اصدار شهادة ادارية" [ref=f7e534] [cursor=pointer]:
+                    - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+                - listitem [ref=f7e186]:
+                  - link "تعديل السجل التجاري" [ref=f7e535] [cursor=pointer]:
+                    - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+            - generic [ref=f7e188]:
+              - heading "خدمات عامة" [level=4] [ref=f7e536]
+              - list [ref=f7e190]:
+                - listitem [ref=f7e191]:
+                  - link "اتفاقات تجارية" [ref=f7e537] [cursor=pointer]:
+                    - /url: /ar/another-services/commercial-agreements
+                - listitem [ref=f7e193]:
+                  - link "فرص تصديرية" [ref=f7e538] [cursor=pointer]:
+                    - /url: /ar/another-services/export
+                - listitem [ref=f7e195]:
+                  - link "مناقصات" [ref=f7e539] [cursor=pointer]:
+                    - /url: /ar/another-services/tenders
+                - listitem [ref=f7e197]:
+                  - link "فعاليات" [ref=f7e540] [cursor=pointer]:
+                    - /url: /ar/another-services/events
+                - listitem [ref=f7e199]:
+                  - link "نماذج متنوعة" [ref=f7e541] [cursor=pointer]:
+                    - /url: /ar/another-services/variousModels
+            - generic [ref=f7e201]:
+              - heading "استفسارات شائعة" [level=4] [ref=f7e542]
+              - list [ref=f7e203]:
+                - listitem [ref=f7e204]:
+                  - generic [ref=f7e205] [cursor=pointer]: استفسارات عامة
+                - listitem [ref=f7e206]:
+                  - generic [ref=f7e207] [cursor=pointer]: إستفسارات الخدمات
+                - listitem [ref=f7e208]:
+                  - generic [ref=f7e209] [cursor=pointer]: إستفسارات الشُعب
+                - listitem [ref=f7e210]:
+                  - generic [ref=f7e211] [cursor=pointer]: إستفسارات السجلات
+        - generic [ref=f7e212]:
+          - list [ref=f7e215]:
+            - listitem [ref=f7e216]:
+              - link [ref=f7e543] [cursor=pointer]:
+                - /url: https://www.facebook.com/alghrfh.altjaryh.balshrqyh/
+                - img "فيس بوك" [ref=f7e544]
+          - generic [ref=f7e220]:
+            - heading "تواصل معنا" [level=4] [ref=f7e545]
+            - list [ref=f7e222]:
+              - listitem [ref=f7e223]:
+                - generic [ref=f7e225]: "العنوان : 10 ش مدرسة الامريكان، المنتزه ، الزقازيق، الشرقية"
+              - listitem [ref=f7e226]:
+                - generic [ref=f7e228]: "التليفون : 2349744 055"
+              - listitem [ref=f7e229]:
+                - generic [ref=f7e231]: "البريد الالكتروني : it@sharcham.org"
+      - generic [ref=f7e233]:
+        - generic [ref=f7e235]:
+          - link [ref=f7e546] [cursor=pointer]:
+            - /url: /
+            - img "Logo" [ref=f7e547]
+          - generic [ref=f7e238]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f7e239]:
+          - generic [ref=f7e240]: ©
+          - generic [ref=f7e241]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13
+  - dialog [ref=f7e635]:
+    - document:
+      - generic [ref=f7e638]:
+        - generic [ref=f7e639]:
+          - heading "تأكيد الإرسال" [level=5] [ref=f7e640]
+          - button [ref=f7e641] [cursor=pointer]
+        - generic [ref=f7e644]:
+          - generic [ref=f7e646]:
+            - generic [ref=f7e647]: تقديم الشهادة الى فرع *
+            - generic [ref=f7e649]:
+              - generic [ref=f7e677]:
+                - generic [ref=f7e678]: فرع الغرفه للخدمات الاختياريه
+                - combobox [ref=f7e650]:
+                  - textbox [ref=f7e651]
+              - generic "Clear all" [ref=f7e652] [cursor=pointer]:
+                - generic [aria-hidden]: ×
+              - generic [ref=f7e653] [cursor=pointer]
+          - generic [ref=f7e655]:
+            - generic [ref=f7e656]: صفة مقدم الطلب *
+            - generic [ref=f7e658]:
+              - combobox [expanded] [ref=f7e659]:
+                - textbox [active] [ref=f7e660]
+                - listbox "Options list" [ref=f7e679]:
+                  - generic [ref=f7e681]:
+                    - option "وكيل" [ref=f7e682] [cursor=pointer]
+                    - option "صاحب الشأن" [ref=f7e683] [cursor=pointer]
+              - generic "Clear all" [ref=f7e661] [cursor=pointer]:
+                - generic [aria-hidden]: ×
+              - generic [ref=f7e662] [cursor=pointer]
+        - generic [ref=f7e664]:
+          - button "إرسال" [disabled]
+          - button "الغاء" [ref=f7e665] [cursor=pointer]

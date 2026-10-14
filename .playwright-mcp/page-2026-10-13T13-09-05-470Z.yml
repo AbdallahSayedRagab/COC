@@ -1,0 +1,133 @@
+- generic [ref=f6e5]:
+  - banner [ref=f6e6]:
+    - generic [ref=f6e7]:
+      - generic [ref=f6e8]:
+        - generic [ref=f6e9]:
+          - img "logo" [ref=f6e10]
+          - generic [ref=f6e11]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f6e14]:
+          - generic [ref=f6e15]:
+            - generic [ref=f6e310]: توزيع الكتروني
+            - combobox [ref=f6e17]:
+              - textbox [active] [ref=f6e18]
+          - generic [ref=f6e19] [cursor=pointer]
+      - generic [ref=f6e20]:
+        - list [ref=f6e21]:
+          - listitem [ref=f6e22]:
+            - generic [ref=f6e23]: "10"
+        - generic [ref=f6e31] [cursor=pointer]
+  - generic [ref=f6e34]:
+    - generic [ref=f6e38]:
+      - list [ref=f6e40]:
+        - listitem [ref=f6e41] [cursor=pointer]
+        - listitem [ref=f6e44] [cursor=pointer]
+        - listitem [ref=f6e47] [cursor=pointer]
+        - listitem [ref=f6e50] [cursor=pointer]
+        - listitem [ref=f6e53] [cursor=pointer]
+        - listitem [ref=f6e56] [cursor=pointer]
+        - listitem [ref=f6e59] [cursor=pointer]
+        - listitem [ref=f6e62] [cursor=pointer]
+      - generic [ref=f6e202]:
+        - strong [ref=f6e203]: الخدمات المتاحة
+        - list [ref=f6e204]:
+          - listitem [ref=f6e311]:
+            - link "طلب شهادة ترخيص مزاولة تجارة" [ref=f6e312] [cursor=pointer]:
+              - /url: /requests/issueCommerciallist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5%20%D9%85%D8%B2%D8%A7%D9%88%D9%84%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9
+          - listitem [ref=f6e313]:
+            - link "طلب شهادة تعديل سجل" [ref=f6e314] [cursor=pointer]:
+              - /url: /requests/editCommercialList?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%20%D8%B3%D8%AC%D9%84
+          - listitem [ref=f6e315]:
+            - link "طلب شهادة محو سجل" [ref=f6e316] [cursor=pointer]:
+              - /url: /requests/removeCommercialList?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%AD%D9%88%20%D8%B3%D8%AC%D9%84
+          - listitem [ref=f6e317]:
+            - link "طلب اصدار شهادة إدارية" [ref=f6e318] [cursor=pointer]:
+              - /url: /requests/issueManagementList?title=%D8%B7%D9%84%D8%A8%20%D8%A7%D8%B5%D8%AF%D8%A7%D8%B1%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9
+          - listitem [ref=f6e319]:
+            - link "طلب شهادة مصدرر بضاعة" [ref=f6e320] [cursor=pointer]:
+              - /url: /requests/goodsOriginrequestslist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%B5%D8%AF%D8%B1%D8%B1%20%D8%A8%D8%B6%D8%A7%D8%B9%D8%A9
+          - listitem [ref=f6e321]:
+            - link "طلب سداد الاشتراكات" [ref=f6e322] [cursor=pointer]:
+              - /url: /requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA
+          - listitem [ref=f6e323]:
+            - link "طلب خدمات" [ref=f6e324] [cursor=pointer]:
+              - /url: /requests/unregisteredRequestList?title=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA
+          - listitem [ref=f6e325]:
+            - link "طلب خدمة اختيارية" [ref=f6e326] [cursor=pointer]:
+              - /url: /requests/electronic-reviews-requests?title=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%D9%8A%D8%A9
+          - listitem [ref=f6e327]:
+            - link "ادارة الطلبات والشهادات" [ref=f6e328] [cursor=pointer]:
+              - /url: /requests/management?title=%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA
+    - generic [ref=f6e70]:
+      - generic [ref=f6e72]:
+        - generic [ref=f6e74]:
+          - strong [ref=f6e75]: لوحة القيادة
+          - heading "اهلا بك !" [level=5] [ref=f6e76]
+        - generic [ref=f6e78]:
+          - generic [ref=f6e80]:
+            - generic [ref=f6e82]:
+              - generic [ref=f6e83]:
+                - img "requests" [ref=f6e85]
+                - text: الطلبات
+              - generic [ref=f6e86]:
+                - img "icon" [ref=f6e88]
+                - text: "1"
+            - generic [ref=f6e90]:
+              - generic [ref=f6e91]:
+                - img "logs" [ref=f6e93]
+                - text: السجلات
+              - generic [ref=f6e94]:
+                - img "icon" [ref=f6e96]
+                - text: "5"
+            - generic [ref=f6e98]:
+              - generic [ref=f6e99]:
+                - img "users" [ref=f6e101]
+                - text: المستخدمين
+              - generic [ref=f6e102]:
+                - img "icon" [ref=f6e104]
+                - text: "0"
+          - generic [ref=f6e106]:
+            - generic [ref=f6e109]:
+              - generic:
+                - heading "الطلبات" [level=4] [ref=f6e110]
+                - generic [ref=f6e111]: 13‏/10‏/2026 - 13‏/10‏/2026
+              - generic "مخطط الطلبات" [ref=f6e112]
+            - generic [ref=f6e116]:
+              - generic [ref=f6e330]:
+                - img [ref=f6e332]:
+                  - generic [ref=f6e334]: 0%
+                - heading "طلب شهادة محو سجل" [level=3] [ref=f6e335]
+                - generic [ref=f6e336]: 0 طلب
+              - generic [ref=f6e340]:
+                - img [ref=f6e342]:
+                  - generic [ref=f6e344]: 0%
+                - heading "طلب شهادة مصدرر بضاعة" [level=3] [ref=f6e345]
+                - generic [ref=f6e346]: 0 طلب
+              - generic [ref=f6e350]:
+                - img [ref=f6e352]:
+                  - generic [ref=f6e354]: 0%
+                - heading "طلب شهادة تعديل سجل" [level=3] [ref=f6e355]
+                - generic [ref=f6e356]: 0 طلب
+              - generic [ref=f6e360]:
+                - img [ref=f6e362]:
+                  - generic [ref=f6e364]: 0%
+                - heading "طلب اصدار شهادة إدارية" [level=3] [ref=f6e365]
+                - generic [ref=f6e366]: 0 طلب
+              - generic [ref=f6e370]:
+                - img [ref=f6e372]:
+                  - generic [ref=f6e374]: 0%
+                - heading "طلب شهادة ترخيص مزاولة تجارة" [level=3] [ref=f6e375]
+                - generic [ref=f6e376]: 0 طلب
+              - generic [ref=f6e380]:
+                - img [ref=f6e382]:
+                  - generic [ref=f6e384]: 0%
+                - heading "طلب سداد الاشتراكات" [level=3] [ref=f6e385]
+                - generic [ref=f6e386]: 0 طلب
+          - generic [ref=f6e178]:
+            - generic [ref=f6e181]: 0 طلب سداد الاشتراكات
+            - generic [ref=f6e183]: 5 سجل محصل
+            - generic [ref=f6e185]: 0 فاتورة
+      - contentinfo [ref=f6e187]:
+        - paragraph [ref=f6e189]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13 - v
+        - list [ref=f6e190]:
+          - listitem [ref=f6e191]: عن الغرفة
+          - listitem [ref=f6e192]: المساعدة

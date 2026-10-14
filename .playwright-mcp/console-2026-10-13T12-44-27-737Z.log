@@ -1,0 +1,66 @@
+[   10992ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://coc-portal-stage.apps.softprograms-eg.com/index.html:0
+[   12095ms] [LOG] BrandData {orgName: الغرفة التجارية المصرية بالشرقية, mainTitle: الغرفة التجارية المصرية بالشرقية , subTitle: Egyptian Chamber of Commerce in Sharqiyah, rights: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية با… التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13, logo: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[   12197ms] [LOG] frontend [Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   12202ms] [LOG] visualData [Object, Object, Object, Object, Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   12205ms] [LOG] eserviesss {data: Object, loading: false, networkStatus: 7} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:34
+[   12696ms] [WARNING] Failed to decode downloaded font: https://coc-portal-stage.apps.softprograms-eg.com/undefined @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[   12696ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008813135 @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[   12927ms] [LOG] Popup Ads: [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   18823ms] [LOG] breadcrumbs [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   18825ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   18938ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[   19615ms] [WARNING] Failed to decode downloaded font: https://coc-portal-stage.apps.softprograms-eg.com/undefined @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[   19615ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008813135 @ https://coc-portal-stage.apps.softprograms-eg.com/ar/home:0
+[   38569ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   38580ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   38582ms] [LOG] breadcrumbs [Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   38775ms] [LOG] gotoservice {data: Object, loading: false, networkStatus: 7} @ https://coc-portal-stage.apps.softprograms-eg.com/936.e3d98bed43c68d54.js:0
+[   38776ms] [LOG] breadcrumbs [Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   42292ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46842ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46847ms] [LOG] SKJDKJAS 21 @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46855ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46874ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46875ms] [LOG] breadcrumbs [Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46974ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46975ms] [LOG] breadcrumbs [Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   46976ms] [LOG] breadcrumbs [Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   58833ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   58834ms] [LOG] assssssssssss @ https://coc-portal-stage.apps.softprograms-eg.com/531.cf50c74b018114ef.js:0
+[   59414ms] [WARNING] SweetAlert2: Unknown parameter "showconfirmButton" @ https://coc-portal-stage.apps.softprograms-eg.com/104.8c96c9a28c10ce4d.js:0
+[   59581ms] [LOG] this.attachmentGroups [] @ https://coc-portal-stage.apps.softprograms-eg.com/531.cf50c74b018114ef.js:0
+[   62645ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'next')
+    at w.next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:7:258735)
+    at S._next (https://coc-portal-stage.apps.softprograms-eg.com/531.cf50c74b018114ef.js:1:8835)
+    at S.__tryOrUnsub (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:199226)
+    at S.next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:198455)
+    at d._next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197638)
+    at d.next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197412)
+    at M._next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197638)
+    at M.next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197412)
+    at M._next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197638)
+    at M.next (https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:42:197412) @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:41
+[   71803ms] [WARNING] SweetAlert2: Unknown parameter "showconfirmButton" @ https://coc-portal-stage.apps.softprograms-eg.com/104.8c96c9a28c10ce4d.js:0
+[   73394ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[   73553ms] [LOG] eserviesss [Object, Object, Object, Object, Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/574.c5aa65c81de4a1ae.js:0
+[  118925ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile?page=SpecialRequest:0
+[  120847ms] [LOG] breadcrumbs [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  120893ms] [LOG] extracted crumbs @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  121114ms] [LOG] BrandData {orgName: الغرفة التجارية المصرية بالشرقية, mainTitle: الغرفة التجارية المصرية بالشرقية , subTitle: Egyptian Chamber of Commerce in Sharqiyah, rights: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية با… التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13, logo: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  121163ms] [WARNING] Failed to decode downloaded font: https://coc-portal-stage.apps.softprograms-eg.com/undefined @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile?page=SpecialRequest:0
+[  121163ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008813135 @ https://coc-portal-stage.apps.softprograms-eg.com/ar/profile?page=SpecialRequest:0
+[  121179ms] [LOG] eserviesss {data: Object, loading: false, networkStatus: 7} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:34
+[  121180ms] [LOG] eserviesss [Object, Object, Object, Object, Object, Object, Object] @ https://coc-portal-stage.apps.softprograms-eg.com/574.c5aa65c81de4a1ae.js:0
+[  273575ms] [LOG] request det =>  {applicantId: e32d163a-7604-665c-c9a1-9e0399dd9d10, applicantIdType: null, applicantIdTypeName: null, applicantName: عبدالله سيد رجب, applicantNationalId: null} @ https://coc-portal-stage.apps.softprograms-eg.com/574.c5aa65c81de4a1ae.js:0
+[  278378ms] [LOG] breadcrumb yi @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  278429ms] [LOG] Updated Enabled Dates: [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  278515ms] [LOG] picast {flatData: Object, __typename: Bookings} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  279403ms] [LOG] {totalCount: 1, items: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  281038ms] [LOG] Updated Enabled Dates: [] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  284532ms] [LOG] {nameEn: Owner, nameAr: صاحب الشأن, descriptionEn: null, descriptionAr: null, lookupCategory: 1} dsadass @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  284634ms] [LOG] true asdsa @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  287518ms] [LOG] jjjj @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  294020ms] [LOG] {totalCount: 1, items: Array(1)} @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27
+[  394294ms] [LOG] Updated Enabled Dates: [Tue Oct 13 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 14 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 15 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Sun Oct 18 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Mon Oct 19 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Tue Oct 20 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 21 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 22 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Sun Oct 25 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Mon Oct 26 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Tue Oct 27 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 28 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 29 2026 03:00:00 GMT+0300 (Eastern European Summer Time)] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  394332ms] [LOG] Updated Enabled Dates: [Tue Oct 13 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 14 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 15 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Sun Oct 18 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Mon Oct 19 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Tue Oct 20 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 21 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 22 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Sun Oct 25 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Mon Oct 26 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Tue Oct 27 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Wed Oct 28 2026 03:00:00 GMT+0300 (Eastern European Summer Time), Thu Oct 29 2026 03:00:00 GMT+0300 (Eastern European Summer Time)] @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:6
+[  408025ms] [LOG] 7d47243a-91f4-2e41-1b4f-efc9e8db3b21 @ https://coc-portal-stage.apps.softprograms-eg.com/main.8ce937501f844965.js:27

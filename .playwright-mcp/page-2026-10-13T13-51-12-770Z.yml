@@ -1,0 +1,605 @@
+- generic [ref=e4]:
+  - list [ref=e6]:
+    - listitem [ref=e7]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: /ar/another-services/divisions/categories
+    - listitem [ref=e12]:
+      - generic [ref=e13] [cursor=pointer]
+    - listitem [ref=e21]:
+      - generic [ref=e22] [cursor=pointer]
+  - generic:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - link [ref=e30] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=e31]
+        - generic [ref=e32]:
+          - list [ref=e33]:
+            - listitem [ref=e34]:
+              - link "الصفحة الرئيسية" [ref=e35] [cursor=pointer]:
+                - /url: /ar
+            - listitem [ref=e36]:
+              - link "من نحن" [ref=e38] [cursor=pointer]:
+                - /url: /ar/about
+            - listitem [ref=e41]:
+              - link "المركز الإعلامي" [ref=e43] [cursor=pointer]:
+                - /url: /ar/media-center
+            - listitem [ref=e46]:
+              - link "الخدمات الإلكترونية" [ref=e48] [cursor=pointer]:
+                - /url: /ar/eservices
+            - listitem [ref=e51]:
+              - link "تواصل معنا" [ref=e52] [cursor=pointer]:
+                - /url: /ar/contactus
+            - listitem [ref=e53]:
+              - generic [ref=e54]: استكشف المزيد
+          - list [ref=e60]:
+            - listitem [ref=e792]:
+              - generic [ref=e793]: عبدالله سيد رجب
+    - generic [ref=e67]:
+      - generic [ref=e69] [cursor=pointer]
+      - list [ref=e73]:
+        - listitem [ref=e74]:
+          - link "الصفحة الرئيسية" [ref=e75] [cursor=pointer]:
+            - /url: /ar
+        - listitem [ref=e76]:
+          - link "من نحن" [ref=e77] [cursor=pointer]:
+            - /url: /ar/about
+        - listitem [ref=e78]:
+          - link "المركز الإعلامي" [ref=e79] [cursor=pointer]:
+            - /url: /ar/media-center
+        - listitem [ref=e80]:
+          - link "تواصل معنا" [ref=e81] [cursor=pointer]:
+            - /url: /ar/contactus
+        - listitem
+      - generic [ref=e797]: تسجيل الخروج
+  - generic [ref=e82]:
+    - generic [ref=e84]:
+      - generic [ref=e85]: سارع تسديد تتقدم الغرفة التجاريه برئاسة المهندس / محمد الزاهد رئيس مجلس ادارة الغرفه بخالص التهاني لجموع الشعب المصري العظيم و قواته المسلحه الباسله بمناسبة ذكري انتصارات حرب اكتوبر المجيده .. حفظ الله مصر
+      - img [ref=e87] [cursor=pointer]
+    - generic [ref=e89]:
+      - img "Hero" [ref=e91]
+      - generic [ref=e93]:
+        - heading "الغرفة التجارية المصرية بالشرقية" [level=1] [ref=e94]
+        - paragraph [ref=e95]: Egyptian Chamber of Commerce in Sharqiyah
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - 'link "<< الاستثمار: 76 اتفاقية منح وقروض خلال العام المالى السابق بإجمالى 6.2 مليار دولار" [ref=e100] [cursor=pointer]':
+          - /url: /ar/content/news-detail/1792d421-537d-4126-934a-e8f7d73e0f5b
+        - link "<< نهنئكم بنصر أكتوبر المجيد كل عام وانتم بخير" [ref=e101] [cursor=pointer]:
+          - /url: /ar/content/news-detail/572147ab-be4c-44e5-8d02-a41cc00f8b01
+      - heading "آخر الاخبار" [level=4] [ref=e102]
+      - generic [ref=e104]:
+        - generic [ref=e106]:
+          - tabpanel [ref=e107]:
+            - link "News الرئيس السيسي يهنىء أقباط مصر بالخارج بمناسبة عيد الميلاد المجيد 1 يناير 2026" [ref=e109] [cursor=pointer]:
+              - /url: /ar/content/news-detail/d7c1a471-90a1-4bb8-9542-710198049088
+              - img "News" [ref=e111]
+              - generic [ref=e112]:
+                - generic [ref=e113]: الرئيس السيسي يهنىء أقباط مصر بالخارج بمناسبة عيد الميلاد المجيد
+                - generic [ref=e114]: 1 يناير 2026
+          - tabpanel [ref=e119]:
+            - link "News نهنئكم بنصر أكتوبر المجيد كل عام وانتم بخير 6 أكتوبر 2025" [ref=e121] [cursor=pointer]:
+              - /url: /ar/content/news-detail/572147ab-be4c-44e5-8d02-a41cc00f8b01
+              - img "News" [ref=e123]
+              - generic [ref=e124]:
+                - generic [ref=e125]: نهنئكم بنصر أكتوبر المجيد كل عام وانتم بخير
+                - generic [ref=e126]: 6 أكتوبر 2025
+        - tablist [ref=e131]:
+          - tab "1 of 1" [selected] [ref=e132] [cursor=pointer]: "1"
+    - generic [ref=e133]:
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - heading "الخدمات الإلكترونية" [level=4] [ref=e137]
+          - paragraph [ref=e138]: تقدم الخدمات الإلكترونية الخاصة بالغرفة التجارية بالشرقية إطار مفهوم ل التعاملات الإلكترونية والتحول الرقمي ، والتي تُتيح بيئة عمل متطورة ومثالية يتمكّن العملاء من خلالها إنجاز أعمالهم بسرعة ويُسر من خلال توظيف أحدث الأنظمة المتطورة في تقنيات المعلومات ودون الحاجة إلى الحضور شخصيًا إلى فرع الغرفة بالشرقية.
+        - generic [ref=e140]:
+          - button "Previous" [ref=e141] [cursor=pointer]
+          - generic [ref=e143]:
+            - link [ref=e145] [cursor=pointer]:
+              - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+              - generic [ref=e148]: طلب خدمة إختيارية
+            - link [ref=e150] [cursor=pointer]:
+              - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+              - generic [ref=e153]: اصدار شهادة ادارية
+            - link [ref=e155] [cursor=pointer]:
+              - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+              - generic [ref=e158]: تعديل السجل التجاري
+            - link [ref=e160] [cursor=pointer]:
+              - /url: /ar/service-details/c38f30e7-11fb-4907-b697-78ca820a4125
+              - generic [ref=e163]: سداد اشتراكات
+            - link "e-service1 محو سجل تجاري" [ref=e868] [cursor=pointer]:
+              - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+              - img "e-service1" [ref=e869]
+              - generic [ref=e168]: محو سجل تجاري
+            - link "e-service1 شهادة منشأ مصدر بضاعة" [ref=e870] [cursor=pointer]:
+              - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+              - img "e-service1" [ref=e871]
+              - generic [ref=e173]: شهادة منشأ مصدر بضاعة
+            - link "e-service1 شهادة ترخيص تجارة" [ref=e872] [cursor=pointer]:
+              - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+              - img "e-service1" [ref=e873]
+              - generic [ref=e178]: شهادة ترخيص تجارة
+            - link "e-service1 طلب خدمة إختيارية" [ref=e874] [cursor=pointer]:
+              - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+              - img "e-service1" [ref=e875]
+              - generic [ref=e183]: طلب خدمة إختيارية
+            - link [ref=e876] [cursor=pointer]:
+              - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+              - generic [ref=e188]: اصدار شهادة ادارية
+            - link [ref=e878] [cursor=pointer]:
+              - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+              - generic [ref=e193]: تعديل السجل التجاري
+            - link [ref=e880] [cursor=pointer]:
+              - /url: /ar/service-details/c38f30e7-11fb-4907-b697-78ca820a4125
+              - generic [ref=e198]: سداد اشتراكات
+            - link [ref=e882] [cursor=pointer]:
+              - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+              - generic [ref=e203]: محو سجل تجاري
+            - link [ref=e840] [cursor=pointer]:
+              - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+              - generic [ref=e208]: شهادة منشأ مصدر بضاعة
+            - link [ref=e210] [cursor=pointer]:
+              - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+              - generic [ref=e213]: شهادة ترخيص تجارة
+            - link [ref=e215] [cursor=pointer]:
+              - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+              - generic [ref=e218]: طلب خدمة إختيارية
+            - link [ref=e220] [cursor=pointer]:
+              - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+              - generic [ref=e223]: اصدار شهادة ادارية
+            - link [ref=e225] [cursor=pointer]:
+              - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+              - generic [ref=e228]: تعديل السجل التجاري
+            - link [ref=e230] [cursor=pointer]:
+              - /url: /ar/service-details/c38f30e7-11fb-4907-b697-78ca820a4125
+              - generic [ref=e233]: سداد اشتراكات
+          - button "Next" [ref=e234] [cursor=pointer]
+      - link "المزيد" [ref=e236] [cursor=pointer]:
+        - /url: /ar/eservices
+    - generic [ref=e239]:
+      - heading "الفعاليات" [level=4] [ref=e240]
+      - generic [ref=e242]:
+        - button "Previous" [ref=e243] [cursor=pointer]
+        - generic [ref=e245]:
+          - generic [ref=e247]:
+            - link [ref=e249] [cursor=pointer]:
+              - /url: /ar/content/event/2e732c27-c1f0-4a4f-a791-0ccba4147ce6
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: من 3 فبراير 2026
+                - separator [ref=e254]
+                - generic [ref=e255]: الي 11 فبراير 2026
+              - strong [ref=e256]: فعاليات لدعم الشباب ورواد الأعمال
+              - list [ref=e257]:
+                - listitem [ref=e258]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e259]:
+                  - generic [ref=e260]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e262]:
+                  - generic [ref=e263]: "الشُعب المستفيدة:"
+                  - list [ref=e264]:
+                    - listitem [ref=e265]: شعبة التعدين و البترول
+                - listitem [ref=e266]:
+                  - list [ref=e267]:
+                    - listitem [ref=e268]:
+                      - generic [ref=e270]: M@GMAIL.COM
+                    - listitem [ref=e271]:
+                      - generic [ref=e273]: 012487474683 | 0100372378
+          - generic [ref=e275]:
+            - link [ref=e277] [cursor=pointer]:
+              - /url: /ar/content/event/47fdede2-8873-4b45-b6a1-dc2e53fbe2f6
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e281]: من 1 نوفمبر 2025
+                - separator [ref=e282]
+                - generic [ref=e283]: الي 30 نوفمبر 2025
+              - strong [ref=e284]: فعاليات تدريب وتوعية
+              - list [ref=e285]:
+                - listitem [ref=e286]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e287]:
+                  - generic [ref=e288]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e290]:
+                  - generic [ref=e291]: "الشُعب المستفيدة:"
+                  - list [ref=e292]:
+                    - listitem [ref=e293]: شعبة تجار الفاكهة
+                - listitem [ref=e294]:
+                  - list [ref=e295]:
+                    - listitem [ref=e296]:
+                      - generic [ref=e298]: it@sharcham.org
+                    - listitem [ref=e299]:
+                      - generic [ref=e301]: 2349744 044 | 84438346346
+          - generic [ref=e303]:
+            - link [ref=e807] [cursor=pointer]:
+              - /url: /ar/content/event/dc770599-6a18-4aa4-9463-b3d4530e5394
+            - generic [ref=e307]:
+              - generic [ref=e308]:
+                - generic [ref=e309]: من 14 أكتوبر 2025
+                - separator [ref=e310]
+                - generic [ref=e311]: الي 18 أكتوبر 2025
+              - strong [ref=e312]: فعاليات اقتصادية وتجارية
+              - list [ref=e313]:
+                - listitem [ref=e314]: "المنظم: الغرفة التجارية بمحافظة الشرقية"
+                - listitem [ref=e315]:
+                  - generic [ref=e316]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e318]:
+                  - generic [ref=e319]: "الشُعب المستفيدة:"
+                  - list [ref=e320]:
+                    - listitem [ref=e321]: شعبة البصريات
+                - listitem [ref=e322]:
+                  - list [ref=e323]:
+                    - listitem [ref=e324]:
+                      - generic [ref=e326]: it@sharcham.org
+                    - listitem [ref=e327]:
+                      - generic [ref=e329]: 2349744 055
+          - generic [ref=e331]:
+            - link [ref=e864] [cursor=pointer]:
+              - /url: /ar/content/event/2e732c27-c1f0-4a4f-a791-0ccba4147ce6
+            - generic [ref=e335]:
+              - generic [ref=e336]:
+                - generic [ref=e337]: من 3 فبراير 2026
+                - separator [ref=e338]
+                - generic [ref=e339]: الي 11 فبراير 2026
+              - strong [ref=e340]: فعاليات لدعم الشباب ورواد الأعمال
+              - list [ref=e341]:
+                - listitem [ref=e342]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e343]:
+                  - generic [ref=e344]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e346]:
+                  - generic [ref=e347]: "الشُعب المستفيدة:"
+                  - list [ref=e348]:
+                    - listitem [ref=e349]: شعبة التعدين و البترول
+                - listitem [ref=e350]:
+                  - list [ref=e351]:
+                    - listitem [ref=e352]:
+                      - generic [ref=e354]: M@GMAIL.COM
+                    - listitem [ref=e355]:
+                      - generic [ref=e357]: 012487474683 | 0100372378
+          - generic [ref=e359]:
+            - link [ref=e809] [cursor=pointer]:
+              - /url: /ar/content/event/47fdede2-8873-4b45-b6a1-dc2e53fbe2f6
+              - img "events" [ref=e810]
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - generic [ref=e365]: من 1 نوفمبر 2025
+                - separator [ref=e366]
+                - generic [ref=e367]: الي 30 نوفمبر 2025
+              - strong [ref=e368]: فعاليات تدريب وتوعية
+              - list [ref=e369]:
+                - listitem [ref=e370]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e371]:
+                  - generic [ref=e372]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e374]:
+                  - generic [ref=e375]: "الشُعب المستفيدة:"
+                  - list [ref=e376]:
+                    - listitem [ref=e377]: شعبة تجار الفاكهة
+                - listitem [ref=e378]:
+                  - list [ref=e379]:
+                    - listitem [ref=e380]:
+                      - generic [ref=e382]: it@sharcham.org
+                    - listitem [ref=e383]:
+                      - generic [ref=e385]: 2349744 044 | 84438346346
+          - generic [ref=e387]:
+            - link [ref=e866] [cursor=pointer]:
+              - /url: /ar/content/event/dc770599-6a18-4aa4-9463-b3d4530e5394
+              - img "events" [ref=e867]
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]: من 14 أكتوبر 2025
+                - separator [ref=e394]
+                - generic [ref=e395]: الي 18 أكتوبر 2025
+              - strong [ref=e396]: فعاليات اقتصادية وتجارية
+              - list [ref=e397]:
+                - listitem [ref=e398]: "المنظم: الغرفة التجارية بمحافظة الشرقية"
+                - listitem [ref=e399]:
+                  - generic [ref=e400]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e402]:
+                  - generic [ref=e403]: "الشُعب المستفيدة:"
+                  - list [ref=e404]:
+                    - listitem [ref=e405]: شعبة البصريات
+                - listitem [ref=e406]:
+                  - list [ref=e407]:
+                    - listitem [ref=e408]:
+                      - generic [ref=e410]: it@sharcham.org
+                    - listitem [ref=e411]:
+                      - generic [ref=e413]: 2349744 055
+          - generic [ref=e415]:
+            - link [ref=e417] [cursor=pointer]:
+              - /url: /ar/content/event/2e732c27-c1f0-4a4f-a791-0ccba4147ce6
+            - generic [ref=e419]:
+              - generic [ref=e420]:
+                - generic [ref=e421]: من 3 فبراير 2026
+                - separator [ref=e422]
+                - generic [ref=e423]: الي 11 فبراير 2026
+              - strong [ref=e424]: فعاليات لدعم الشباب ورواد الأعمال
+              - list [ref=e425]:
+                - listitem [ref=e426]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e427]:
+                  - generic [ref=e428]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e430]:
+                  - generic [ref=e431]: "الشُعب المستفيدة:"
+                  - list [ref=e432]:
+                    - listitem [ref=e433]: شعبة التعدين و البترول
+                - listitem [ref=e434]:
+                  - list [ref=e435]:
+                    - listitem [ref=e436]:
+                      - generic [ref=e438]: M@GMAIL.COM
+                    - listitem [ref=e439]:
+                      - generic [ref=e441]: 012487474683 | 0100372378
+          - generic [ref=e443]:
+            - link [ref=e445] [cursor=pointer]:
+              - /url: /ar/content/event/47fdede2-8873-4b45-b6a1-dc2e53fbe2f6
+            - generic [ref=e447]:
+              - generic [ref=e448]:
+                - generic [ref=e449]: من 1 نوفمبر 2025
+                - separator [ref=e450]
+                - generic [ref=e451]: الي 30 نوفمبر 2025
+              - strong [ref=e452]: فعاليات تدريب وتوعية
+              - list [ref=e453]:
+                - listitem [ref=e454]: "المنظم: الغرفة التجارية بالشرقية"
+                - listitem [ref=e455]:
+                  - generic [ref=e456]: "المكان :"
+                  - text: egypt
+                - listitem [ref=e458]:
+                  - generic [ref=e459]: "الشُعب المستفيدة:"
+                  - list [ref=e460]:
+                    - listitem [ref=e461]: شعبة تجار الفاكهة
+                - listitem [ref=e462]:
+                  - list [ref=e463]:
+                    - listitem [ref=e464]:
+                      - generic [ref=e466]: it@sharcham.org
+                    - listitem [ref=e467]:
+                      - generic [ref=e469]: 2349744 044 | 84438346346
+        - button "Next" [ref=e470] [cursor=pointer]
+    - generic [ref=e472]:
+      - generic [ref=e473]: الفرص التصديرية
+      - generic [ref=e475]:
+        - generic [ref=e478] [cursor=pointer]:
+          - heading "صناعات كيماوية المغرب والجزائر" [level=5] [ref=e479]
+          - generic [ref=e480]:
+            - generic [ref=e481]: "الشعب التجارية:"
+            - list [ref=e482]:
+              - listitem [ref=e483]: شعبة التعدين و البترول
+          - link [ref=e485]:
+            - /url: https://cms.apps.softprograms-eg.com/api/assets/coc-test/aadf04e1-9f7d-440e-876d-38c96952f5d6/
+            - img "PDF" [ref=e486]
+          - 'heading "التاريخ : 13‏/10‏/2025" [level=5] [ref=e487]'
+          - generic [ref=e488]: vaild
+        - generic [ref=e491] [cursor=pointer]:
+          - heading "فرص لمنتجات الملابس" [level=5] [ref=e492]
+          - generic [ref=e493]:
+            - generic [ref=e494]: "الشعب التجارية:"
+            - list [ref=e495]:
+              - listitem [ref=e496]: شعبة تجار الفاكهة
+          - 'heading "التاريخ : 30‏/09‏/2025" [level=5] [ref=e498]'
+          - generic [ref=e499]: vaild
+        - generic [ref=e502] [cursor=pointer]:
+          - heading "فتح أسواق جديدة في إفريقيا" [level=5] [ref=e503]
+          - generic [ref=e504]:
+            - generic [ref=e505]: "الشعب التجارية:"
+            - list [ref=e506]:
+              - listitem [ref=e507]: شعبة تجار الدهب
+          - link [ref=e509]:
+            - /url: https://cms.apps.softprograms-eg.com/api/assets/coc-test/0b0b1e2a-530c-4116-9737-83cb583f52f9/
+            - img "PDF" [ref=e510]
+          - 'heading "التاريخ : 30‏/09‏/2025" [level=5] [ref=e511]'
+          - generic [ref=e512]: vaild
+        - link "المزيد" [ref=e514] [cursor=pointer]:
+          - /url: /ar/another-services/export
+    - generic [ref=e516]:
+      - heading "الاتفاقات التجارية" [level=5] [ref=e517]
+      - generic [ref=e522]:
+        - button "Previous" [ref=e523] [cursor=pointer]
+        - generic [ref=e525]:
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - generic [ref=e530]: الشراكة المصرية الامريكية
+              - generic [ref=e531]: expired
+            - paragraph [ref=e533]: يعتبر اتفاق الشراكة المصرية الامريكية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+            - generic [ref=e534]:
+              - generic [ref=e535]:
+                - text: "الشُعب المستفيدة :"
+                - list [ref=e536]:
+                  - listitem [ref=e537]: شعبة تجار الدهب
+              - link [ref=e538] [cursor=pointer]:
+                - /url: /ar/another-services/commercial-agreements
+                - text: المزيد
+          - tabpanel [aria-hidden] [ref=e539]:
+            - generic [ref=e541]:
+              - generic [ref=e542]:
+                - generic [ref=e543]: الشراكة المصرية الاوروبية
+                - generic [ref=e544]: expired
+              - paragraph [ref=e546]: يعتبر اتفاق الشراكة المصرية الأوروبية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+              - generic [ref=e547]:
+                - generic [ref=e548]:
+                  - text: "الشُعب المستفيدة :"
+                  - list [ref=e549]:
+                    - listitem [ref=e550]: شعبة البصريات
+                - link [ref=e811] [cursor=pointer]:
+                  - /url: /ar/another-services/commercial-agreements
+                  - text: المزيد
+          - tabpanel [aria-hidden] [ref=e552]:
+            - generic [ref=e554]:
+              - generic [ref=e555]: الشراكة المصرية البريطانية
+              - paragraph [ref=e558]: يعتبر اتفاق الشراكة المصرية البريطانية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+              - generic [ref=e559]:
+                - generic [ref=e560]:
+                  - text: "الشُعب المستفيدة :"
+                  - list [ref=e561]:
+                    - listitem [ref=e562]: شعبة البصريات
+                - link [ref=e884] [cursor=pointer]:
+                  - /url: /ar/another-services/commercial-agreements
+                  - text: المزيد
+          - tabpanel [ref=e564]:
+            - generic [ref=e566]:
+              - generic [ref=e567]:
+                - generic [ref=e568]: الشراكة المصرية الامريكية
+                - generic [ref=e569]: expired
+              - paragraph [ref=e571]: يعتبر اتفاق الشراكة المصرية الامريكية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+              - generic [ref=e572]:
+                - generic [ref=e573]:
+                  - text: "الشُعب المستفيدة :"
+                  - list [ref=e574]:
+                    - listitem [ref=e575]: شعبة تجار الدهب
+                - link "المزيد" [ref=e885] [cursor=pointer]:
+                  - /url: /ar/another-services/commercial-agreements
+          - generic [ref=e579]:
+            - generic [ref=e580]:
+              - generic [ref=e581]: الشراكة المصرية الاوروبية
+              - generic [ref=e582]: expired
+            - paragraph [ref=e584]: يعتبر اتفاق الشراكة المصرية الأوروبية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+            - generic [ref=e585]:
+              - generic [ref=e586]:
+                - text: "الشُعب المستفيدة :"
+                - list [ref=e587]:
+                  - listitem [ref=e588]: شعبة البصريات
+              - link [ref=e589] [cursor=pointer]:
+                - /url: /ar/another-services/commercial-agreements
+                - text: المزيد
+          - generic [ref=e592]:
+            - generic [ref=e593]: الشراكة المصرية البريطانية
+            - paragraph [ref=e596]: يعتبر اتفاق الشراكة المصرية البريطانية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+            - generic [ref=e597]:
+              - generic [ref=e598]:
+                - text: "الشُعب المستفيدة :"
+                - list [ref=e599]:
+                  - listitem [ref=e600]: شعبة البصريات
+              - link [ref=e601] [cursor=pointer]:
+                - /url: /ar/another-services/commercial-agreements
+                - text: المزيد
+          - generic [ref=e604]:
+            - generic [ref=e605]:
+              - generic [ref=e606]: الشراكة المصرية الامريكية
+              - generic [ref=e607]: expired
+            - paragraph [ref=e609]: يعتبر اتفاق الشراكة المصرية الامريكية اتفاقًا لتحرير التجارة كان من ثماره تحويل العلاقات المصرية مع شريكها التجاري الأكبر والذي يضم أكثر من 500 مليون مستهلك. وبموجب هذه الشراكة، فتحت الدول الأعضاء بالاتحاد الأوروبي أسواقها أمام السلع المصرية المصنعة بينما تسعى مصر تدريجيًا للوصول إلى مستوى المنتجات الأوروبية الشبيهة. وتشهد الاتفاقية أيضًا المفاوضات الخاصة بتحرير تجارة المنتجات الزراعية، حيث يتمتع كل...
+            - generic [ref=e610]:
+              - generic [ref=e611]:
+                - text: "الشُعب المستفيدة :"
+                - list [ref=e612]:
+                  - listitem [ref=e613]: شعبة تجار الدهب
+              - link [ref=e614] [cursor=pointer]:
+                - /url: /ar/another-services/commercial-agreements
+                - text: المزيد
+        - button "Next" [ref=e615] [cursor=pointer]
+        - tablist [ref=e616]:
+          - tab "1 of 3" [ref=e617] [cursor=pointer]: "1"
+          - tab "2 of 3" [ref=e618] [cursor=pointer]: "2"
+          - tab "3 of 3" [selected] [ref=e619] [cursor=pointer]: "3"
+    - generic [ref=e622]:
+      - heading "الموسوعة" [level=4] [ref=e623]
+      - generic [ref=e624]:
+        - generic [ref=e626]:
+          - img "Law" [ref=e628]
+          - heading "القوانين والتشريعات" [level=5] [ref=e629]
+        - generic [ref=e631]:
+          - img "Law" [ref=e633]
+          - heading "أدلة الاتصالات" [level=5] [ref=e634]
+        - generic [ref=e636]:
+          - img "Law" [ref=e638]
+          - heading "دعم مصر" [level=5] [ref=e639]
+      - link "المزيد" [ref=e641] [cursor=pointer]:
+        - /url: /ar/another-services/encyclopedia/categories
+  - generic [ref=e643] [cursor=pointer]
+  - contentinfo [ref=e649]:
+    - generic [ref=e651]:
+      - generic [ref=e652]:
+        - generic [ref=e656]:
+          - textbox "ادخل البريد الالكتروني الخاص بك حتي نرسل لك احدث الاخبار" [ref=e657]
+          - button "أشترك الآن" [ref=e659] [cursor=pointer]
+        - generic [ref=e660]:
+          - generic [ref=e661]:
+            - heading "من نحن" [level=4] [ref=e662]
+            - list [ref=e663]:
+              - listitem [ref=e664]:
+                - link "عن الغرفة" [ref=e665] [cursor=pointer]:
+                  - /url: /ar/about/about-chamber
+              - listitem [ref=e666]:
+                - link "كلمة رئيس الغرفة" [ref=e667] [cursor=pointer]:
+                  - /url: /ar/about/word-of-president
+              - listitem [ref=e668]:
+                - link "الرؤية والرسالة" [ref=e669] [cursor=pointer]:
+                  - /url: /ar/about/vision-message
+              - listitem [ref=e670]:
+                - link "مجلس ادارة الغرفة" [ref=e671] [cursor=pointer]:
+                  - /url: /ar/about/chamber-boards
+              - listitem [ref=e672]:
+                - link "رؤساء الغرفة" [ref=e673] [cursor=pointer]:
+                  - /url: /ar/about/chamber-presidents
+          - generic [ref=e674]:
+            - heading "خدمات الكترونية" [level=4] [ref=e675]
+            - list [ref=e676]:
+              - listitem [ref=e677]:
+                - link "محو سجل تجاري" [ref=e678] [cursor=pointer]:
+                  - /url: /ar/service-details/ff48806e-7c1a-4013-aa8c-9ef7f65616c3
+              - listitem [ref=e679]:
+                - link "شهادة منشأ مصدر بضاعة" [ref=e680] [cursor=pointer]:
+                  - /url: /ar/service-details/eb2a56b1-91bd-4adf-8734-cf598b9a528d
+              - listitem [ref=e681]:
+                - link "طلب خدمة إختيارية" [ref=e682] [cursor=pointer]:
+                  - /url: /ar/service-details/790ce6c7-366f-434d-9023-58ad11a265be
+              - listitem [ref=e683]:
+                - link "شهادة ترخيص تجارة" [ref=e684] [cursor=pointer]:
+                  - /url: /ar/service-details/cd1d25c5-510b-44bc-8294-ddde591c4aba
+              - listitem [ref=e685]:
+                - link "اصدار شهادة ادارية" [ref=e686] [cursor=pointer]:
+                  - /url: /ar/service-details/37f5c932-d861-43a8-99bc-9fd9410412e4
+              - listitem [ref=e687]:
+                - link "تعديل السجل التجاري" [ref=e688] [cursor=pointer]:
+                  - /url: /ar/service-details/147eab37-ee75-49d7-b480-dacfdc702fd9
+          - generic [ref=e689]:
+            - heading "خدمات عامة" [level=4] [ref=e690]
+            - list [ref=e691]:
+              - listitem [ref=e692]:
+                - link "اتفاقات تجارية" [ref=e693] [cursor=pointer]:
+                  - /url: /ar/another-services/commercial-agreements
+              - listitem [ref=e694]:
+                - link "فرص تصديرية" [ref=e695] [cursor=pointer]:
+                  - /url: /ar/another-services/export
+              - listitem [ref=e696]:
+                - link "مناقصات" [ref=e697] [cursor=pointer]:
+                  - /url: /ar/another-services/tenders
+              - listitem [ref=e698]:
+                - link "فعاليات" [ref=e699] [cursor=pointer]:
+                  - /url: /ar/another-services/events
+              - listitem [ref=e700]:
+                - link "نماذج متنوعة" [ref=e701] [cursor=pointer]:
+                  - /url: /ar/another-services/variousModels
+          - generic [ref=e702]:
+            - heading "استفسارات شائعة" [level=4] [ref=e703]
+            - list [ref=e704]:
+              - listitem [ref=e705]:
+                - generic [ref=e706] [cursor=pointer]: استفسارات عامة
+              - listitem [ref=e707]:
+                - generic [ref=e708] [cursor=pointer]: إستفسارات الخدمات
+              - listitem [ref=e709]:
+                - generic [ref=e710] [cursor=pointer]: إستفسارات الشُعب
+              - listitem [ref=e711]:
+                - generic [ref=e712] [cursor=pointer]: إستفسارات السجلات
+      - generic [ref=e713]:
+        - list [ref=e716]:
+          - listitem [ref=e717]:
+            - link [ref=e718] [cursor=pointer]:
+              - /url: https://www.facebook.com/alghrfh.altjaryh.balshrqyh/
+              - img "فيس بوك" [ref=e719]
+        - generic [ref=e721]:
+          - heading "تواصل معنا" [level=4] [ref=e722]
+          - list [ref=e723]:
+            - listitem [ref=e724]:
+              - generic [ref=e726]: "العنوان : 10 ش مدرسة الامريكان، المنتزه ، الزقازيق، الشرقية"
+            - listitem [ref=e727]:
+              - generic [ref=e729]: "التليفون : 2349744 055"
+            - listitem [ref=e730]:
+              - generic [ref=e732]: "البريد الالكتروني : it@sharcham.org"
+    - generic [ref=e734]:
+      - generic [ref=e736]:
+        - link [ref=e737] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=e738]
+        - generic [ref=e739]: الغرفة التجارية المصرية بالشرقية
+      - generic [ref=e740]:
+        - generic [ref=e741]: ©
+        - generic [ref=e742]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13

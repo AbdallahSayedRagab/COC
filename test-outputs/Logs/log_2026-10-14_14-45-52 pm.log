@@ -1,0 +1,43 @@
+[INFO] 14-10-2026 14:45:52 [main] [Listeners.ITestResultListener.onTestStart(ITestResultListener.java:10)] - Test-Case:SourceCodeRequest is Started
+[INFO] 14-10-2026 14:45:53 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input[@formcontrolname="username"] is admin
+[INFO] 14-10-2026 14:45:54 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input[@type="password"] is 1q2w3E*
+[INFO] 14-10-2026 14:45:54 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //button[@type="submit"]
+[INFO] 14-10-2026 14:46:08 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //img[@src="../../assets/images/certificates-icon.svg"]
+[INFO] 14-10-2026 14:46:10 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //a[@href="/requests/goodsOriginrequestslist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%B5%D8%AF%D8%B1%D8%B1%20%D8%A8%D8%B6%D8%A7%D8%B9%D8%A9"]
+[INFO] 14-10-2026 14:46:12 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //img[@src="../../../assets/images/circle-plus-white.svg"]
+[INFO] 14-10-2026 14:46:23 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='applicantNationalId']//input is 30001231231231
+[INFO] 14-10-2026 14:46:24 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //button[@type='submit']
+[INFO] 14-10-2026 14:46:30 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: (//input[@name="recordNumber"])[1] is 1768985937
+[INFO] 14-10-2026 14:46:37 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: (//tr[@cdk-describedby-host="0"]/td)[1]
+[INFO] 14-10-2026 14:46:42 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: (//div[contains(@class, 'form-accordion-head')])[1]
+[INFO] 14-10-2026 14:46:43 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='دولة المستورد']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:43 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:43 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //label[normalize-space(text())='دولة المنشأ']/following-sibling::*[1] is مصر
+[INFO] 14-10-2026 14:46:43 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='مصدر البضاعه']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:44 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:44 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='importerName']//input is Abdallah
+[INFO] 14-10-2026 14:46:44 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='importerAddress']//input is Cairo
+[INFO] 14-10-2026 14:46:44 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: (//input[@formcontrolname='sameCompany'])[1]
+[INFO] 14-10-2026 14:46:45 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: (//input[@formcontrolname='sameAddress'])[1]
+[INFO] 14-10-2026 14:46:45 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: (//div[contains(@class, 'form-accordion-head')])[3]
+[INFO] 14-10-2026 14:46:45 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='category']//input is electronics
+[INFO] 14-10-2026 14:46:45 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='signsAndNo']//input is hp
+[INFO] 14-10-2026 14:46:45 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='packagesTypesAndCounts']//input is 22
+[INFO] 14-10-2026 14:46:46 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='netWeight']//input is 30
+[INFO] 14-10-2026 14:46:46 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='totalWeight']//input is 60
+[INFO] 14-10-2026 14:46:46 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='totalValue']//input is 200
+[INFO] 14-10-2026 14:46:46 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='نوعية الطرود']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:47 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:47 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='وحدة الوزن']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:47 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:47 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='العملة']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:48 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:48 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //button[@type='button']
+[INFO] 14-10-2026 14:46:49 [main] [Utilities.Utility.WaitUntilReady_And_SENDKEYS(Utility.java:113)] -  Data sent to  By.xpath: //input-control[@formcontrolname='certificatesCount']//input is 2
+[INFO] 14-10-2026 14:46:49 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='تصديق توقيع']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:50 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:50 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //label[normalize-space(text())='لغة الشهادة']/following-sibling::*[1]
+[INFO] 14-10-2026 14:46:50 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //div[@role='option'][1]
+[INFO] 14-10-2026 14:46:50 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //span[contains(text(),"تاكيد الطلب")]
+[INFO] 14-10-2026 14:46:51 [main] [Utilities.Utility.WaitUntilReady_And_CLICK(Utility.java:92)] - Clicked on By.xpath: //button[contains(text()," اقبل الطلب")]
+[INFO] 14-10-2026 14:46:51 [main] [Listeners.ITestResultListener.onTestSuccess(ITestResultListener.java:14)] - Test-Case:SourceCodeRequest is Successed

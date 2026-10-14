@@ -1,0 +1,141 @@
+- generic [ref=f4e5]:
+  - banner [ref=f4e6]:
+    - generic [ref=f4e7]:
+      - generic [ref=f4e8]:
+        - generic [ref=f4e9]:
+          - img "logo" [ref=f4e10]
+          - generic [ref=f4e11]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f4e14]:
+          - generic [ref=f4e15]:
+            - generic [ref=f4e320]: توزيع الكتروني
+            - combobox [ref=f4e17]:
+              - textbox [ref=f4e18]
+          - generic [ref=f4e28] [cursor=pointer]
+      - generic [ref=f4e29]:
+        - list [ref=f4e30]:
+          - listitem [ref=f4e31]:
+            - generic [ref=f4e32]: "10"
+        - generic [ref=f4e40] [cursor=pointer]
+  - generic [ref=f4e43]:
+    - list [ref=f4e49]:
+      - listitem [ref=f4e50] [cursor=pointer]
+      - listitem [ref=f4e53] [cursor=pointer]
+      - listitem [ref=f4e56] [cursor=pointer]
+      - listitem [ref=f4e59] [cursor=pointer]
+      - listitem [ref=f4e62] [cursor=pointer]
+      - listitem [ref=f4e65] [cursor=pointer]
+      - listitem [ref=f4e68] [cursor=pointer]
+      - listitem [ref=f4e71] [cursor=pointer]
+    - generic [ref=f4e100]:
+      - generic [ref=f4e442]:
+        - generic [ref=f4e443]:
+          - generic [ref=f4e444]:
+            - strong [ref=f4e445]: الفروع
+            - list [ref=f4e446]:
+              - listitem [ref=f4e447]: الادارة/
+              - listitem [ref=f4e448]: الفروع
+          - list [ref=f4e450]:
+            - listitem [ref=f4e451] [cursor=pointer]
+            - listitem [ref=f4e457] [cursor=pointer]
+        - generic [ref=f4e461]:
+          - generic [ref=f4e462]:
+            - textbox "ابحث" [ref=f4e467]:
+              - /placeholder: "ابحث "
+            - list [ref=f4e469]:
+              - listitem [ref=f4e470]:
+                - button "تصفية" [ref=f4e471] [cursor=pointer]
+              - listitem [ref=f4e475]:
+                - button "إضافة جديد" [ref=f4e476] [cursor=pointer]
+          - generic [ref=f4e479]:
+            - table [ref=f4e481]:
+              - rowgroup [ref=f4e482]:
+                - row [ref=f4e483]:
+                  - columnheader "الكود" [ref=f4e484]
+                  - columnheader "الاسم بالعربية" [ref=f4e485]
+                  - columnheader "الاسم بالانجليزية" [ref=f4e486]
+                  - columnheader "الوصف بالعربية" [ref=f4e487]
+                  - columnheader "الوصف بالانجليزية" [ref=f4e488]
+                  - columnheader "تفعيل الحجز الالكتروني" [ref=f4e489]
+                  - columnheader "قيمة تلقائية" [ref=f4e490]
+                  - columnheader "حالة الفرع" [ref=f4e491]
+                  - columnheader "الاجراءات" [ref=f4e492]
+              - rowgroup [ref=f4e493]:
+                - row [ref=f4e494]:
+                  - cell "04" [ref=f4e495]
+                  - cell "توزيع الكتروني" [ref=f4e496]
+                  - cell "توزيع الكتروني" [ref=f4e497]
+                  - cell "توزيع الكتروني" [ref=f4e498]
+                  - cell "توزيع الكتروني" [ref=f4e499]
+                  - cell "غير مُفعل" [ref=f4e500]
+                  - cell "غير مُفعل" [ref=f4e502]
+                  - cell "نشط" [ref=f4e504]
+                  - cell [ref=f4e505]:
+                    - generic [ref=f4e506] [cursor=pointer]
+                    - button [ref=f4e515] [cursor=pointer]
+                - row [ref=f4e517]:
+                  - cell "0" [ref=f4e518]
+                  - cell "الفرع الرئيسي بالزقازيق" [ref=f4e519]
+                  - cell "zagazig main branch" [ref=f4e520]
+                  - cell "الفرع الرئيسي بالزقازيق" [ref=f4e521]
+                  - cell "zagazig main branch" [ref=f4e522]
+                  - cell "غير مُفعل" [ref=f4e523]
+                  - cell "غير مُفعل" [ref=f4e525]
+                  - cell "نشط" [ref=f4e527]
+                  - cell [ref=f4e528]:
+                    - generic [ref=f4e529] [cursor=pointer]
+                    - button [ref=f4e538] [cursor=pointer]
+                - row [ref=f4e540]:
+                  - cell "08" [ref=f4e541]
+                  - cell "فرع الزقازيق الرئيسي" [ref=f4e542]
+                  - cell "zagazig main branch" [ref=f4e543]
+                  - cell "فرع الزقازيق الرئيسي" [ref=f4e544]
+                  - cell "zagazig main branch" [ref=f4e545]
+                  - cell "مُفعل" [ref=f4e546]
+                  - cell "غير مُفعل" [ref=f4e548]
+                  - cell "نشط" [ref=f4e550]
+                  - cell [ref=f4e551]:
+                    - generic [ref=f4e552] [cursor=pointer]
+                    - button [ref=f4e561] [cursor=pointer]
+                - row [ref=f4e563]:
+                  - cell "02" [ref=f4e564]
+                  - cell "فرع الغرفه للخدمات الاختياريه" [ref=f4e565]
+                  - cell "فرع الغرفه للخدمات الاختياريه" [ref=f4e566]
+                  - cell "فرع الغرفه للخدمات الاختياريه" [ref=f4e567]
+                  - cell "Investment branch" [ref=f4e568]
+                  - cell "مُفعل" [ref=f4e569]
+                  - cell "مُفعل" [ref=f4e571]
+                  - cell "نشط" [ref=f4e573]
+                  - cell [ref=f4e574]:
+                    - generic [ref=f4e575] [cursor=pointer]
+                    - button [ref=f4e584] [cursor=pointer]
+                - row [ref=f4e586]:
+                  - cell "2" [ref=f4e587]
+                  - cell "فرع العاشر من رمضان" [ref=f4e588]
+                  - cell "ramadan" [ref=f4e589]
+                  - cell "فرع العاشر من رمضان" [ref=f4e590]
+                  - cell "ramadan" [ref=f4e591]
+                  - cell "غير مُفعل" [ref=f4e592]
+                  - cell "غير مُفعل" [ref=f4e594]
+                  - cell "نشط" [ref=f4e596]
+                  - cell [ref=f4e597]:
+                    - generic [ref=f4e598] [cursor=pointer]
+                    - button [ref=f4e607] [cursor=pointer]
+            - generic [ref=f4e610]:
+              - button "" [disabled]
+              - button "" [disabled]
+              - generic [ref=f4e611]:
+                - button "1" [ref=f4e612] [cursor=pointer]
+                - button "2" [ref=f4e613] [cursor=pointer]
+              - button "" [ref=f4e614] [cursor=pointer]
+              - button "" [ref=f4e616] [cursor=pointer]
+              - generic [ref=f4e619] [cursor=pointer]:
+                - generic [ref=f4e620]:
+                  - combobox
+                - generic [ref=f4e621]: "5"
+                - button "dropdown trigger" [ref=f4e622]:
+                  - generic [ref=f4e623]: 
+      - contentinfo [ref=f4e314]:
+        - paragraph [ref=f4e316]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13 - v
+        - list [ref=f4e317]:
+          - listitem [ref=f4e318]: عن الغرفة
+          - listitem [ref=f4e319]: المساعدة

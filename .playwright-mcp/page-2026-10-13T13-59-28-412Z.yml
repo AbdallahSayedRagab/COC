@@ -1,0 +1,43 @@
+- generic [active] [ref=f4e2]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e6]:
+      - button "Main menu" [ref=f4e7] [cursor=pointer]
+      - heading "Google Password Manager" [level=1] [ref=f4e9]
+    - button "Search passwords" [ref=f4e13] [cursor=pointer]
+    - button "Help" [ref=f4e16] [cursor=pointer]
+  - group [ref=f4e17]:
+    - generic [ref=f4e19]:
+      - heading "Settings" [level=2] [ref=f4e20]
+      - generic [ref=f4e21]:
+        - generic [ref=f4e23] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f4e25]: Offer to save passwords and passkeys
+          - switch "Offer to save passwords and passkeys" [ref=f4e26]
+        - generic [ref=f4e38] [cursor=pointer]:
+          - generic [ref=f4e39]:
+            - generic [aria-hidden] [ref=f4e40]: Sign in automatically
+            - generic [ref=f4e41]: Google Password Manager remembers how you signed in and automatically signs you in when possible. When off, you'll be asked for confirmation every time.
+          - switch "Sign in automatically. Google Password Manager remembers how you signed in and automatically signs you in when possible. When off, you'll be asked for confirmation every time." [checked] [ref=f4e42]
+        - generic [ref=f4e46]:
+          - generic [ref=f4e47]:
+            - generic [ref=f4e48]: Import passwords
+            - generic [ref=f4e49]: To import passwords to Google Password Manager on this device, select a CSV file.
+          - button "Select file" [ref=f4e50] [cursor=pointer]
+        - generic [ref=f4e53]:
+          - generic [ref=f4e54]:
+            - generic [ref=f4e55]: Export passwords
+            - generic [ref=f4e56]: After you're done using the downloaded file, delete it so that others who use this device can't see your passwords.
+          - button "Download file" [ref=f4e57] [cursor=pointer]
+        - generic [ref=f4e59] [cursor=pointer]:
+          - generic [ref=f4e60]:
+            - generic [aria-hidden] [ref=f4e61]: Add shortcut
+            - generic [aria-hidden] [ref=f4e62]: To get here quicker, add a shortcut to Google Password Manager
+          - link "Add shortcut To get here quicker, add a shortcut to Google Password Manager" [ref=f4e63]
+        - generic [ref=f4e64]:
+          - generic [ref=f4e65]:
+            - generic [ref=f4e66]:
+              - generic [ref=f4e67]: Delete all Google Password Manager data
+              - generic [ref=f4e68]: Passwords, passkeys, and other data will be permanently deleted from Google Password Manager
+            - button "Delete data" [ref=f4e69] [cursor=pointer]
+          - generic:
+            - generic: Cancel
+            - generic: Delete

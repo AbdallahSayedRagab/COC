@@ -1,0 +1,102 @@
+- generic [ref=f6e5]:
+  - banner [ref=f6e6]:
+    - generic [ref=f6e7]:
+      - generic [ref=f6e8]:
+        - generic [ref=f6e9]:
+          - img "logo" [ref=f6e10]
+          - generic [ref=f6e11]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f6e14]:
+          - generic [ref=f6e15]:
+            - generic [ref=f6e511]: فرع الغرفه للخدمات الاختياريه
+            - combobox [ref=f6e17]:
+              - textbox [active] [ref=f6e18]
+          - generic [ref=f6e19] [cursor=pointer]
+      - generic [ref=f6e20]:
+        - list [ref=f6e21]:
+          - listitem [ref=f6e22]:
+            - generic [ref=f6e23]: "10"
+        - generic [ref=f6e31] [cursor=pointer]
+  - generic [ref=f6e34]:
+    - list [ref=f6e40]:
+      - listitem [ref=f6e41] [cursor=pointer]
+      - listitem [ref=f6e44] [cursor=pointer]
+      - listitem [ref=f6e47] [cursor=pointer]
+      - listitem [ref=f6e50] [cursor=pointer]
+      - listitem [ref=f6e53] [cursor=pointer]
+      - listitem [ref=f6e56] [cursor=pointer]
+      - listitem [ref=f6e59] [cursor=pointer]
+      - listitem [ref=f6e62] [cursor=pointer]
+    - generic [ref=f6e70]:
+      - generic [ref=f6e513]:
+        - generic [ref=f6e515]:
+          - strong [ref=f6e516]: لوحة القيادة
+          - heading "اهلا بك !" [level=5] [ref=f6e517]
+        - generic [ref=f6e519]:
+          - generic [ref=f6e521]:
+            - generic [ref=f6e523]:
+              - generic [ref=f6e524]:
+                - img "requests" [ref=f6e526]
+                - text: الطلبات
+              - generic [ref=f6e527]:
+                - img "icon" [ref=f6e529]
+                - text: "38"
+            - generic [ref=f6e531]:
+              - generic [ref=f6e532]:
+                - img "logs" [ref=f6e534]
+                - text: السجلات
+              - generic [ref=f6e535]:
+                - img "icon" [ref=f6e537]
+                - text: "5"
+            - generic [ref=f6e539]:
+              - generic [ref=f6e540]:
+                - img "users" [ref=f6e542]
+                - text: المستخدمين
+              - generic [ref=f6e543]:
+                - img "icon" [ref=f6e545]
+                - text: "0"
+          - generic [ref=f6e547]:
+            - generic [ref=f6e550]:
+              - generic:
+                - heading "الطلبات" [level=4] [ref=f6e551]
+                - generic [ref=f6e552]: 13‏/10‏/2026 - 13‏/10‏/2026
+              - generic "مخطط الطلبات" [ref=f6e553]
+            - generic [ref=f6e557]:
+              - generic [ref=f6e559]:
+                - img [ref=f6e561]:
+                  - generic [ref=f6e564]: 8%
+                - heading "طلب شهادة محو سجل" [level=3] [ref=f6e565]
+                - generic [ref=f6e566]: 3 طلب
+              - generic [ref=f6e570]:
+                - img [ref=f6e572]:
+                  - generic [ref=f6e575]: 8%
+                - heading "طلب شهادة مصدرر بضاعة" [level=3] [ref=f6e576]
+                - generic [ref=f6e577]: 3 طلب
+              - generic [ref=f6e581]:
+                - img [ref=f6e583]:
+                  - generic [ref=f6e586]: 8%
+                - heading "طلب شهادة تعديل سجل" [level=3] [ref=f6e587]
+                - generic [ref=f6e588]: 3 طلب
+              - generic [ref=f6e592]:
+                - img [ref=f6e594]:
+                  - generic [ref=f6e597]: 13%
+                - heading "طلب اصدار شهادة إدارية" [level=3] [ref=f6e598]
+                - generic [ref=f6e599]: 5 طلب
+              - generic [ref=f6e603]:
+                - img [ref=f6e605]:
+                  - generic [ref=f6e608]: 21%
+                - heading "طلب شهادة ترخيص مزاولة تجارة" [level=3] [ref=f6e609]
+                - generic [ref=f6e610]: 8 طلب
+              - generic [ref=f6e614]:
+                - img [ref=f6e616]:
+                  - generic [ref=f6e619]: 8%
+                - heading "طلب سداد الاشتراكات" [level=3] [ref=f6e620]
+                - generic [ref=f6e621]: 3 طلب
+          - generic [ref=f6e625]:
+            - generic [ref=f6e628]: 3 طلب سداد الاشتراكات
+            - generic [ref=f6e630]: 5 سجل محصل
+            - generic [ref=f6e632]: 17 فاتورة
+      - contentinfo [ref=f6e187]:
+        - paragraph [ref=f6e189]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13 - v
+        - list [ref=f6e190]:
+          - listitem [ref=f6e191]: عن الغرفة
+          - listitem [ref=f6e192]: المساعدة

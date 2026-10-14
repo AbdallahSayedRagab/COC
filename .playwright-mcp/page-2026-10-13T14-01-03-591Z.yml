@@ -1,0 +1,87 @@
+- generic [active] [ref=f6e2]:
+  - banner [ref=f6e3]:
+    - heading "Settings" [level=1] [ref=f6e8]
+    - generic [ref=f6e11]:
+      - button [aria-hidden] [ref=f6e12] [cursor=pointer]
+      - generic [ref=f6e13]:
+        - generic [aria-hidden] [ref=f6e14]: Search settings
+        - searchbox "Search settings" [ref=f6e15]
+  - generic [ref=f6e16]:
+    - navigation [ref=f6e19]:
+      - menu [ref=f6e20]:
+        - generic:
+          - menuitem "You and Google" [ref=f6e21] [cursor=pointer]
+          - menuitem "Autofill and passwords" [ref=f6e22] [cursor=pointer]
+          - menuitem "Privacy and security" [ref=f6e23] [cursor=pointer]
+          - menuitem "Performance" [ref=f6e24] [cursor=pointer]
+          - menuitem "AI innovations" [ref=f6e25] [cursor=pointer]
+          - menuitem "Appearance" [ref=f6e26] [cursor=pointer]
+          - menuitem "Search engine" [ref=f6e27] [cursor=pointer]
+          - menuitem "Default browser" [ref=f6e28] [cursor=pointer]
+          - menuitem "On startup" [ref=f6e29] [cursor=pointer]
+          - menuitem "Languages" [ref=f6e31] [cursor=pointer]
+          - menuitem "Downloads" [ref=f6e32] [cursor=pointer]
+          - menuitem "Accessibility" [ref=f6e33] [cursor=pointer]
+          - menuitem "System" [ref=f6e34] [cursor=pointer]
+          - menuitem "Reset settings" [ref=f6e35] [cursor=pointer]
+          - menuitem "Extensions" [ref=f6e37] [cursor=pointer]
+          - menuitem "About Chrome" [ref=f6e40] [cursor=pointer]
+    - main [ref=f6e41]:
+      - generic [ref=f6e43]:
+        - generic:
+          - generic [ref=f6e45]:
+            - heading "Preferred languages" [level=2] [ref=f6e47]
+            - generic [ref=f6e49]:
+              - generic [ref=f6e50]:
+                - generic [ref=f6e51]:
+                  - generic [ref=f6e52]: Websites in your languages
+                  - generic [ref=f6e53]: Let websites know the languages you speak. They'll show content in those languages, when possible.
+                - button "Add languages" [ref=f6e54] [cursor=pointer]
+              - list [ref=f6e56]:
+                - listitem [ref=f6e57]:
+                  - generic [ref=f6e58]:
+                    - text: 1. English (United States)
+                    - generic [ref=f6e59]: This language is used when translating pages
+                    - generic [ref=f6e60]: This language is used to display menus, settings, alerts, and other text in Chrome
+                  - button "More actions" [ref=f6e61] [cursor=pointer]
+                - listitem [ref=f6e62]:
+                  - generic [ref=f6e63]: 2. English
+                  - button "More actions" [ref=f6e64] [cursor=pointer]
+          - generic [ref=f6e66]:
+            - heading "Spell check" [level=2] [ref=f6e68]
+            - generic [ref=f6e70]:
+              - generic [ref=f6e72] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f6e74]: Check for spelling errors when you type text on web pages
+                - switch "Check for spelling errors when you type text on web pages" [checked] [ref=f6e75]
+              - group [ref=f6e139]:
+                - generic:
+                  - radiogroup [ref=f6e79]:
+                    - generic:
+                      - generic:
+                        - generic [ref=f6e80] [cursor=pointer]:
+                          - radio "Basic spell check" [checked] [ref=f6e81]
+                          - generic [ref=f6e84]: Basic spell check
+                        - generic [ref=f6e85] [cursor=pointer]:
+                          - radio "Enhanced spell check" [ref=f6e86]
+                          - generic [ref=f6e88]:
+                            - text: Enhanced spell check
+                            - generic [ref=f6e89]: Uses the same spell checker that’s used in Google search. Text you type in the browser is sent to Google.
+                  - generic [ref=f6e91]:
+                    - generic [ref=f6e92]: Use spell check for
+                    - list [ref=f6e93]:
+                      - listitem [ref=f6e94]:
+                        - generic [ref=f6e95] [cursor=pointer]: English (United States)
+                        - switch "English (United States)" [checked] [ref=f6e96] [cursor=pointer]
+                      - listitem [ref=f6e99]:
+                        - generic [ref=f6e100] [cursor=pointer]: English
+                        - switch "English" [ref=f6e101] [cursor=pointer]
+                  - generic [ref=f6e104] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f6e106]: Customize spell check
+                    - link "Customize spell check" [ref=f6e107]
+          - generic [ref=f6e109]:
+            - heading "Google Translate" [level=2] [ref=f6e111]
+            - generic [ref=f6e114] [cursor=pointer]:
+              - generic [ref=f6e115]:
+                - generic [aria-hidden] [ref=f6e116]: Use Google Translate
+                - generic [ref=f6e117]: When on, Google Translate will offer to translate sites into your preferred language. It can also automatically translate sites.
+              - switch "Use Google Translate" [ref=f6e118]

@@ -1,0 +1,179 @@
+- generic [ref=f6e5]:
+  - banner [ref=f6e6]:
+    - generic [ref=f6e7]:
+      - generic [ref=f6e8]:
+        - generic [ref=f6e9]:
+          - img "logo" [ref=f6e10]
+          - generic [ref=f6e11]: الغرفة التجارية المصرية بالشرقية
+        - generic [ref=f6e14]:
+          - generic [ref=f6e15]:
+            - generic [ref=f6e511]: فرع الغرفه للخدمات الاختياريه
+            - combobox [ref=f6e17]:
+              - textbox [ref=f6e18]
+          - generic [ref=f6e19] [cursor=pointer]
+      - generic [ref=f6e20]:
+        - list [ref=f6e21]:
+          - listitem [ref=f6e22]:
+            - generic [ref=f6e23]: "10"
+        - generic [ref=f6e31] [cursor=pointer]
+  - generic [ref=f6e34]:
+    - list [ref=f6e40]:
+      - listitem [ref=f6e41] [cursor=pointer]
+      - listitem [ref=f6e44] [cursor=pointer]
+      - listitem [ref=f6e47] [cursor=pointer]
+      - listitem [ref=f6e50] [cursor=pointer]
+      - listitem [ref=f6e53] [cursor=pointer]
+      - listitem [ref=f6e56] [cursor=pointer]
+      - listitem [ref=f6e59] [cursor=pointer]
+      - listitem [ref=f6e62] [cursor=pointer]
+    - generic [ref=f6e70]:
+      - generic [ref=f6e657]:
+        - generic [ref=f6e658]:
+          - generic [ref=f6e659]:
+            - strong [ref=f6e660]: طلب خدمة اختيارية
+            - list [ref=f6e661]:
+              - listitem [ref=f6e662]: طلبات /
+              - listitem [ref=f6e663]: طلب خدمة اختيارية/
+              - listitem [ref=f6e664]: الصندوق الوارد
+          - list [ref=f6e666]:
+            - listitem [ref=f6e667] [cursor=pointer]
+            - listitem [ref=f6e673] [cursor=pointer]
+        - generic [ref=f6e677]:
+          - list [ref=f6e679]:
+            - listitem [ref=f6e680]:
+              - generic [ref=f6e683] [cursor=pointer]:
+                - radio "صندوق الوارد" [checked]
+                - text: صندوق الوارد
+            - listitem [ref=f6e684]:
+              - generic [ref=f6e687] [cursor=pointer]:
+                - radio "صندوق الصادر"
+                - text: صندوق الصادر
+          - generic [ref=f6e688]:
+            - generic [ref=f6e691]:
+              - textbox "ابحث" [ref=f6e693]:
+                - /placeholder: "ابحث "
+              - generic [ref=f6e694]:
+                - generic [ref=f6e695]:
+                  - radio [checked] [ref=f6e696]
+                  - generic [ref=f6e697]: الكل
+                - generic [ref=f6e698]:
+                  - radio [ref=f6e699]
+                  - generic [ref=f6e700]: البوابة الالكترونية
+                - generic [ref=f6e701]:
+                  - radio [ref=f6e702]
+                  - generic [ref=f6e703]: النظام الداخلي
+                - generic [ref=f6e704]:
+                  - radio [ref=f6e705]
+                  - generic [ref=f6e706]: الموبايل
+                - generic [ref=f6e707]:
+                  - radio [ref=f6e708]
+                  - generic [ref=f6e709]: خدمات متميزة
+            - list [ref=f6e711]:
+              - listitem [ref=f6e712]:
+                - button "تصفية" [ref=f6e713] [cursor=pointer]
+          - generic [ref=f6e719]:
+            - table [ref=f6e721]:
+              - rowgroup [ref=f6e722]:
+                - row [ref=f6e723]:
+                  - columnheader [ref=f6e724]
+                  - columnheader [ref=f6e725]
+                  - columnheader "رقم الطلب" [ref=f6e726]
+                  - columnheader "أسم مقدم الطلب" [ref=f6e727]
+                  - columnheader "البريد الالكتروني" [ref=f6e728]
+                  - columnheader "رقم الهاتف" [ref=f6e729]
+                  - columnheader "تاريخ الطلب" [ref=f6e730]
+                  - columnheader "حالة الطلب" [ref=f6e731]
+                  - columnheader "الاجراءات" [ref=f6e732]
+              - rowgroup [ref=f6e733]:
+                - row [ref=f6e734]:
+                  - cell [ref=f6e735]
+                  - cell [ref=f6e736]
+                  - cell "1791897090" [ref=f6e738]
+                  - cell "عبدالله سيد رجب" [ref=f6e740]
+                  - cell "Abdallah@coc.net" [ref=f6e741]
+                  - cell "01123232333" [ref=f6e742]
+                  - cell "منذ 47 ثانية" [ref=f6e743]
+                  - cell "تم ارسال الطلب" [ref=f6e744]
+                  - cell [ref=f6e747]:
+                    - list [ref=f6e748]:
+                      - listitem [ref=f6e749] [cursor=pointer]
+                      - listitem [ref=f6e754] [cursor=pointer]:
+                        - button "المزيد" [ref=f6e756]
+                - row [ref=f6e757]:
+                  - cell [ref=f6e758]
+                  - cell [ref=f6e759]
+                  - cell "1791895514" [ref=f6e761]
+                  - cell "عبدالله سيد رجب" [ref=f6e763]
+                  - cell "Abdallah@coc.net" [ref=f6e764]
+                  - cell "01123232333" [ref=f6e765]
+                  - cell "منذ 27 دقيقة" [ref=f6e766]
+                  - cell "تم حجز موعد إستلام" [ref=f6e767]
+                  - cell [ref=f6e770]:
+                    - list [ref=f6e771]:
+                      - listitem [ref=f6e772] [cursor=pointer]
+                      - listitem [ref=f6e777] [cursor=pointer]:
+                        - button "المزيد" [ref=f6e779]
+                - row [ref=f6e780]:
+                  - cell [ref=f6e781]
+                  - cell [ref=f6e782]
+                  - cell "1791210822" [ref=f6e784]
+                  - cell "عبدالله سيد رجب" [ref=f6e786]
+                  - cell "Abdallah@coc.net" [ref=f6e787]
+                  - cell "01123232333" [ref=f6e788]
+                  - cell "منذ 8 أيام" [ref=f6e789]
+                  - cell "تم رفض الطلب للمراجعة" [ref=f6e790]
+                  - cell [ref=f6e793]:
+                    - list [ref=f6e794]:
+                      - listitem [ref=f6e795] [cursor=pointer]
+                      - listitem [ref=f6e800] [cursor=pointer]:
+                        - button "المزيد" [ref=f6e802]
+                - row [ref=f6e803]:
+                  - cell [ref=f6e804]
+                  - cell [ref=f6e805]
+                  - cell "1790509207" [ref=f6e807]
+                  - cell "yuserfourtwenty" [ref=f6e809]
+                  - cell "asd@aa.cc" [ref=f6e810]
+                  - cell "01121212222" [ref=f6e811]
+                  - cell "منذ 16 يومًا" [ref=f6e812]
+                  - cell "تم حجز موعد إستلام" [ref=f6e813]
+                  - cell [ref=f6e816]:
+                    - list [ref=f6e817]:
+                      - listitem [ref=f6e818] [cursor=pointer]
+                      - listitem [ref=f6e823] [cursor=pointer]:
+                        - button "المزيد" [ref=f6e825]
+                - row [ref=f6e826]:
+                  - cell [ref=f6e827]
+                  - cell [ref=f6e828]
+                  - cell "1787230128" [ref=f6e830]
+                  - cell "yuserfourtwenty" [ref=f6e832]
+                  - cell "asd@aa.cc" [ref=f6e833]
+                  - cell "01121212222" [ref=f6e834]
+                  - cell "منذ شهرين" [ref=f6e835]
+                  - cell "تم رفض الطلب للمراجعة" [ref=f6e836]
+                  - cell [ref=f6e839]:
+                    - list [ref=f6e840]:
+                      - listitem [ref=f6e841] [cursor=pointer]
+                      - listitem [ref=f6e846] [cursor=pointer]:
+                        - button "المزيد" [ref=f6e848]
+            - generic [ref=f6e850]:
+              - button "" [disabled]
+              - button "" [disabled]
+              - generic [ref=f6e851]:
+                - button "1" [ref=f6e852] [cursor=pointer]
+                - button "2" [ref=f6e853] [cursor=pointer]
+                - button "3" [ref=f6e854] [cursor=pointer]
+                - button "4" [ref=f6e855] [cursor=pointer]
+                - button "5" [ref=f6e856] [cursor=pointer]
+              - button "" [ref=f6e857] [cursor=pointer]
+              - button "" [ref=f6e859] [cursor=pointer]
+              - generic [ref=f6e862] [cursor=pointer]:
+                - generic [ref=f6e863]:
+                  - combobox
+                - generic [ref=f6e864]: "5"
+                - button "dropdown trigger" [ref=f6e865]:
+                  - generic [ref=f6e866]: 
+      - contentinfo [ref=f6e187]:
+        - paragraph [ref=f6e189]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13 - v
+        - list [ref=f6e190]:
+          - listitem [ref=f6e191]: عن الغرفة
+          - listitem [ref=f6e192]: المساعدة

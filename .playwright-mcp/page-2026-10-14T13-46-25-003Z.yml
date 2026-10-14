@@ -1,0 +1,269 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e43]:
+    - banner [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img "logo" [ref=e922]
+            - generic [ref=e49]: الغرفة التجارية المصرية بالشرقية
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: فرع الغرفه للخدمات الاختياريه
+              - combobox [ref=e55]:
+                - textbox [ref=e56]
+            - generic [ref=e57] [cursor=pointer]
+        - generic [ref=e58]:
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - generic [ref=e61]: "1"
+          - generic [ref=e69] [cursor=pointer]
+    - generic [ref=e72]:
+      - list [ref=e78]:
+        - listitem [ref=e79] [cursor=pointer]
+        - listitem [ref=e82] [cursor=pointer]
+        - listitem [ref=e85] [cursor=pointer]
+        - listitem [ref=e88] [cursor=pointer]
+        - listitem [ref=e91] [cursor=pointer]
+        - listitem [ref=e94] [cursor=pointer]
+        - listitem [ref=e97] [cursor=pointer]
+        - listitem [ref=e100] [cursor=pointer]
+      - generic [ref=e108]:
+        - generic [ref=e501]:
+          - generic [ref=e503]:
+            - generic [ref=e504]:
+              - generic [ref=e505]:
+                - strong [ref=e506]: طلب شهادة مصدرر بضاعة
+                - list [ref=e679]:
+                  - listitem [ref=e680]: طلبات الشهادات/
+                  - listitem [ref=e681]: طلب شهادة مصدرر بضاعة /
+                  - listitem [ref=e682]: الصندوق الوارد/
+                  - listitem [ref=e683]: أضافة طلب
+              - generic [ref=e507]: رجوع
+            - generic [ref=e512]:
+              - strong [ref=e514]: رقم الطلب :1791985481 | تاريخ الطلب :2026/10/14 04:44 م | مصدر الطلب :النظام الداخلي
+              - generic [ref=e515]: جديد
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - strong [ref=e520]: بيانات مُقدم الطلب
+                - generic [ref=e684]:
+                  - generic [ref=e685] [cursor=pointer]
+                  - generic [ref=e689] [cursor=pointer]
+              - generic [ref=e698]:
+                - list [ref=e699]:
+                  - listitem [ref=e700]:
+                    - generic [ref=e701]: "نوع تحقيق الشخصية :"
+                    - strong [ref=e704]: بطاقة رقم قومي
+                  - listitem [ref=e705]:
+                    - generic [ref=e706]: "رقم تحقيق الشخصية :"
+                    - strong [ref=e709]: "30001231231231"
+                  - listitem [ref=e710]:
+                    - generic [ref=e711]: عبدالله سيد رجب
+                - list [ref=e714]:
+                  - listitem [ref=e715]:
+                    - generic [ref=e716]: Abdallah@coc.net
+                  - listitem [ref=e719]:
+                    - generic [ref=e720]: "01155626504"
+                  - listitem [ref=e723]:
+                    - generic [ref=e724]: "صفة مقدم الطلب :"
+                    - strong [ref=e727]: صاحب الشأن
+            - generic [ref=e556]:
+              - generic [ref=e558]:
+                - strong [ref=e559]: بيانات السجل التجاري
+                - generic [ref=e563]:
+                  - generic [ref=e564]:
+                    - radio "سجل مقيد بالغرفة" [checked] [ref=e923]
+                    - generic [ref=e566] [cursor=pointer]: سجل مقيد بالغرفة
+                  - generic [ref=e567]:
+                    - radio "سجل مقيد بغرفة أخري" [ref=e924]
+                    - generic [ref=e569] [cursor=pointer]: سجل مقيد بغرفة أخري
+                - generic [ref=e570]:
+                  - generic [ref=e571]:
+                    - textbox "ابحث برقم السجل" [ref=e925]:
+                      - /placeholder: "ابحث برقم السجل  "
+                    - list [ref=e577]:
+                      - listitem [ref=e578]:
+                        - button "تصفية" [ref=e926] [cursor=pointer]
+                  - generic [ref=e816]:
+                    - generic [ref=e817]:
+                      - strong [ref=e819]: بيانات السجل التجاري
+                      - list [ref=e821]:
+                        - listitem [ref=e822]
+                        - listitem [ref=e824]
+                        - listitem
+                    - generic [ref=e830]:
+                      - list [ref=e831]:
+                        - listitem [ref=e832]:
+                          - generic [ref=e835]: "رقم السجل : 1768985937"
+                        - listitem [ref=e836]:
+                          - generic [ref=e838]: "مكتب السجل : ل"
+                        - listitem [ref=e839]:
+                          - generic [ref=e841]: "الاسم التجاري: Test"
+                        - listitem [ref=e842]:
+                          - generic [ref=e844]: "السمة التجارية: Test"
+                      - list [ref=e845]:
+                        - listitem [ref=e846]:
+                          - generic [ref=e848]: "العنوان : Test St"
+                        - listitem [ref=e849]:
+                          - generic [ref=e850] [cursor=pointer]: "اجمالي المستحقات : 0 جنيه"
+                        - listitem [ref=e853]:
+                          - generic [ref=e855]: "راس المال : 100000 ج.م"
+                        - listitem [ref=e856]:
+                          - generic [ref=e858]: "النشاط الضريبى: DescriptionTest"
+                        - listitem [ref=e859]:
+                          - generic [ref=e860]: "حاله السجل : نشط"
+              - strong [ref=e864] [cursor=pointer]: الادارات (بيانات الشركاء)
+            - generic [ref=e583]:
+              - strong [ref=e584]: بيانات اصدار شهادة مصدر بضاعة
+              - generic [ref=e585]:
+                - generic [ref=e588]:
+                  - generic [ref=e589] [cursor=pointer]: البيانات التجارية
+                  - generic [ref=e942]:
+                    - generic [ref=e944]:
+                      - generic [ref=e945]:
+                        - text: أسم المستورد
+                        - generic [ref=e946]: "*"
+                      - textbox [ref=e947]
+                    - generic [ref=e949]:
+                      - generic [ref=e950]:
+                        - text: دولة المستورد
+                        - generic [ref=e951]: "*"
+                      - generic [ref=e954]:
+                        - combobox [ref=e955]:
+                          - textbox [ref=e956]
+                        - generic [ref=e957] [cursor=pointer]
+                    - generic [ref=e959]:
+                      - generic [ref=e960]:
+                        - text: عنوان المستورد
+                        - generic [ref=e961]: "*"
+                      - textbox [ref=e962]
+                    - generic [ref=e963]:
+                      - generic [ref=e964]: الشركة المنتجة
+                      - generic [ref=e965]: ::اختر
+                      - generic [ref=e966]:
+                        - radio "نفس الشركة" [ref=e967]
+                        - text: نفس الشركة
+                      - generic [ref=e968]:
+                        - radio "شركة اخرى" [checked] [ref=e969]
+                        - text: شركة اخرى
+                      - textbox [ref=e971]
+                    - generic [ref=e972]:
+                      - generic [ref=e973]: عنوان الشركة
+                      - generic [ref=e974]: ::اختر
+                      - generic [ref=e975]:
+                        - radio "نفس الشركة" [ref=e976]
+                        - text: نفس الشركة
+                      - generic [ref=e977]:
+                        - radio "شركة اخرى" [checked] [ref=e978]
+                        - text: شركة اخرى
+                      - textbox [ref=e980]
+                    - generic [ref=e982]:
+                      - generic [ref=e983]:
+                        - text: دولة المنشأ
+                        - generic [ref=e984]: "*"
+                      - textbox [ref=e985]
+                    - generic [ref=e987]:
+                      - generic [ref=e988]:
+                        - text: مصدر البضاعه
+                        - generic [ref=e989]: "*"
+                      - generic [ref=e992]:
+                        - generic [ref=e993]:
+                          - generic [ref=e994]: مصدر بضاعة محلي
+                          - combobox [ref=e995]:
+                            - textbox [ref=e996]
+                        - generic "Clear all" [ref=e997] [cursor=pointer]:
+                          - generic [aria-hidden]: ×
+                        - generic [ref=e998] [cursor=pointer]
+                - generic [ref=e592]: بيانات الشحن
+                - generic [ref=e598]: الاصناف
+            - generic [ref=e605]:
+              - strong [ref=e606]: بيانات الشهادة
+              - generic [ref=e609]:
+                - generic [ref=e610]:
+                  - generic [ref=e611]:
+                    - text: نوع الشهادة
+                    - generic [ref=e612]: "*"
+                  - generic [ref=e614]:
+                    - generic [ref=e734]:
+                      - generic [ref=e735]: شهادة مصدر بضاعة اجنبي
+                      - combobox [ref=e615]:
+                        - textbox [ref=e616]
+                    - generic "Clear all" [ref=e927] [cursor=pointer]:
+                      - generic [aria-hidden]: ×
+                    - generic [ref=e617] [cursor=pointer]
+                - generic [ref=e619]:
+                  - generic [ref=e620]:
+                    - text: عدد الشهادات
+                    - generic [ref=e621]: "*"
+                  - spinbutton [ref=e622]: "1"
+                - generic [ref=e624]:
+                  - generic [ref=e625]:
+                    - text: تصديق توقيع
+                    - generic [ref=e626]: "*"
+                  - generic [ref=e739]:
+                    - generic [ref=e740]:
+                      - generic [ref=e741]: "0"
+                      - combobox [ref=e742]:
+                        - textbox [ref=e743]
+                    - generic "Clear all" [ref=e928] [cursor=pointer]:
+                      - generic [aria-hidden]: ×
+                    - generic [ref=e745] [cursor=pointer]
+                - generic [ref=e634]:
+                  - generic [ref=e635]:
+                    - text: لغة الشهادة
+                    - generic [ref=e636]: "*"
+                  - generic [ref=e748]:
+                    - combobox [ref=e749]:
+                      - textbox [ref=e750]
+                    - generic [ref=e751] [cursor=pointer]
+                - generic [ref=e648]:
+                  - checkbox "طباعة بيانات الشحن"
+                  - generic [ref=e649] [cursor=pointer]
+                  - generic [ref=e650]: طباعة بيانات الشحن
+                - generic [ref=e653]:
+                  - checkbox "طباعة العلامات والأرقام"
+                  - generic [ref=e654] [cursor=pointer]
+                  - generic [ref=e655]: طباعة العلامات والأرقام
+            - generic [ref=e657]:
+              - generic [ref=e659]:
+                - generic [ref=e660]:
+                  - generic [ref=e661]: المرفقات
+                  - generic [ref=e886]: تحميل جميع المرفقات
+                - generic [ref=e890]:
+                  - heading "السجل الصناعي" [level=4] [ref=e929]
+                  - generic [ref=e893]:
+                    - generic [ref=e897]:
+                      - img "f6722dc7-050a-4067-b126-015563f92d8f/attach-test.jpg" [ref=e930]
+                      - button "×" [ref=e931] [cursor=pointer]
+                    - button "+" [ref=e932] [cursor=pointer]
+                  - generic [ref=e901]:
+                    - generic [ref=e902]: ملاحظات العميل
+                    - textbox [disabled] [ref=e903]
+                  - generic [ref=e904]:
+                    - generic [ref=e905]: ملاحظات الغرفة
+                    - textbox [ref=e906]
+                - generic [ref=e662] [cursor=pointer]: اضافة مرفق
+              - generic [ref=e765]:
+                - generic [ref=e767]:
+                  - generic [ref=e768]: لكي تستطيع ان تاخذ قرار علي هذا الطلب لابد من ان تقم بسحب الطلب اولا.
+                  - generic [ref=e771]:
+                    - checkbox "اسحب الطلب" [checked] [ref=e933]
+                    - text: اسحب الطلب
+                - list [ref=e774]:
+                  - listitem [ref=e775]:
+                    - button "تاكيد الطلب" [ref=e934] [cursor=pointer]
+                  - listitem [ref=e778]:
+                    - button "حذف" [ref=e935] [cursor=pointer]
+                  - listitem [ref=e781]:
+                    - button "حفظ" [ref=e936] [cursor=pointer]
+                  - listitem [ref=e783]:
+                    - button "أعادة تعيين الحقول" [ref=e937] [cursor=pointer]
+          - list [ref=e668]:
+            - listitem [ref=e669] [cursor=pointer]
+            - listitem [ref=e671] [cursor=pointer]
+            - listitem [ref=e673] [cursor=pointer]
+        - contentinfo [ref=e109]:
+          - paragraph [ref=e111]: 2025 جميع الحقوق محفوظة للغرفة التجارية المصرية بالشرقية تم التطوير بواسطة شركة سوفت بروجرمز تكنولوجي V.4.13 - v
+          - list [ref=e112]:
+            - listitem [ref=e113]: عن الغرفة
+            - listitem [ref=e114]: المساعدة
+  - button "Choose File" [ref=e938]

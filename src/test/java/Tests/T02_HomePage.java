@@ -40,7 +40,7 @@ public class T02_HomePage {
                         DataUtiles.getJsonData("Data","Description"))
                 .FillCapitalDataSection(DataUtiles.getJsonData("Data","Capital"))
                 .FillBusinessLocationSection(DataUtiles.getJsonData("Data","NameOfSt"))
-                .FillCertificateData().FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile()
+                .FillCertificateData().FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile()
                 .ReviewRequest().SendingRequestToCollect()
                 .PayingFirstBill().Select_BusinessLicense().ReceivingTheCertificate();
 
@@ -63,7 +63,7 @@ public class T02_HomePage {
 //                ,DataUtiles.getJsonData("Data","Password"));
         new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).SelectSectionToEdit().FillCertificateData()
-                .FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
+                .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
     }
 
@@ -87,7 +87,7 @@ public class T02_HomePage {
 //                ,DataUtiles.getJsonData("Data","Password"));
         new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
-                .FillAttachmentSectionAndConfirmRequest().SaveRequestNumberInJsonFile()
+                .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile()
                 .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
                 .Select_RemoveRequest().ReceivingTheCertificate();
 
@@ -109,6 +109,7 @@ public class T02_HomePage {
                 .Certificatecount("2")
                 .Signatureauthentication()
                 .Certificatelanguage()
+                .FillAttachmentSection()
                 .confirmrequest();
     }
 
@@ -132,7 +133,7 @@ public class T02_HomePage {
 //    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //            ,DataUtiles.getJsonData("Data","Password"));
     new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
-            .SelectServicesData().ConfirmRequest().SendingRequestToCollect()
+            .SelectServicesData().FillAttachmentSection().ConfirmRequest().SendingRequestToCollect()
             .PayingFirstBill().Select_ServicesRequest();
 
 }
@@ -153,7 +154,7 @@ public class T02_HomePage {
 //                ,DataUtiles.getJsonData("Data","Password"));
     new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
             .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
-            .FillAttachmentSectionAndConfirmRequest()
+            .FillAttachmentSection().ConfirmRequest()
             .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
             .Select_NegativeRequest().ReceivingTheCertificate();
 
@@ -172,8 +173,8 @@ public class T02_HomePage {
     }
     @Test (priority = 9)
     public void payingsub() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-            ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//            ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectTheRecorsMangements()
                .SearchOfRecordNumber(DataUtiles.getJsonData("Data","Record"))
                .ClickOnEditRequest()
