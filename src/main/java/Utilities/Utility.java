@@ -27,61 +27,94 @@ public class Utility {
 //        driver.findElement(Locator).click();
 //
 //    }
+    // اللودينج بتاع الباك اوفيس والبورتال - بيستخدم في CLICKONELEMENTS و SENDKEYS اللي مش بتاخد LoadingCircle
+    private static final By AnyLoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"] | //div[contains(@class,'ngx-spinner-overlay')]");
+
         @Step("Clicking On :{Locator}")
     public static void CLICKONELEMENTS(WebDriver driver, By Locator ) throws InterruptedException {
-            Scrolling.ScrollToElement(driver,Locator);
-            new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(Locator));
-        driver.findElement(Locator).click();
-//        new WebDriverWait(driver, Duration.ofSeconds(3));
-//        Thread.sleep(1500L);
-        ((JavascriptExecutor) driver).executeAsyncScript(
-                "var callback = arguments[arguments.length - 1]; setTimeout(callback, 1000);");
-        LogsUtiles.info("Clicked on " + Locator.toString());
-
+        WaitUntilReady_And_CLICK(driver,Locator,AnyLoadingCircle);
     }
 
 public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By Locator, By LoadingCircle) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-    wait.until(ExpectedConditions.elementToBeClickable(Locator));
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
-    Scrolling.ScrollToElement(driver,Locator);
-    driver.findElement(Locator).click();
-    wait.until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
-    LogsUtiles.info("Clicked on " + Locator.toString());
+    WaitUntilReady_And_CLICK(driver,Locator,LoadingCircle);
 }
     public static void WatingLoadingCircle_And_CLICKON_WebElement(
             WebDriver driver, WebElement element, By loadingCircle) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingCircle));
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                    .ignoring(ElementClickInterceptedException.class)
+                    .ignoring(ElementNotInteractableException.class)
+                    .until(d -> {
+                        if (d.findElements(loadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        if (!element.isDisplayed() || !element.isEnabled()) return false;
+                        element.click();
+                        return true;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
     }
 
     public static void CLICKONVISIBLEELEMENTS(WebDriver driver, By Locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(Locator));
-        driver.findElement(Locator).click();
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOfElementLocated(Locator));
+        WaitUntilReady_And_CLICK(driver,Locator,AnyLoadingCircle);
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(Locator));
 
     }
     //    @Step("Adding Data On: {Locator}")
     public static void SENDKEYS(WebDriver driver, By Locator, String text) {
-        Scrolling.ScrollToElement(driver,Locator);
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(elementToBeClickable(Locator));
-        driver.findElement(Locator).sendKeys(text);
-        LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
-
+        WaitUntilReady_And_SENDKEYS(driver,Locator,AnyLoadingCircle,text);
     }
     public static void WatingAndSENDKEYS(WebDriver driver, By Locator, By LoadingCircle , String text) {
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(visibilityOfElementLocated(Locator));
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
-        Scrolling.ScrollToElement(driver,Locator);
-        driver.findElement(Locator).sendKeys(text);
-        LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
+        WaitUntilReady_And_SENDKEYS(driver,Locator,LoadingCircle,text);
+    }
 
+    // بيستنى لحد 60 ثانية بس بيدوس اول ما العنصر يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
+    public static void WaitUntilReady_And_CLICK(WebDriver driver, By Locator, By LoadingCircle) {
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                    .ignoring(StaleElementReferenceException.class)
+                    .ignoring(ElementClickInterceptedException.class)
+                    .ignoring(ElementNotInteractableException.class)
+                    .until(d -> {
+                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        WebElement element = d.findElement(Locator);
+                        if (!element.isDisplayed() || !element.isEnabled()) return false;
+                        Scrolling.ScrollToElement(d,Locator);
+                        element.click();
+                        return true;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
+        LogsUtiles.info("Clicked on " + Locator.toString());
+    }
+
+    // بيستنى لحد 60 ثانية بس بيكتب اول ما الحقل يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
+    public static void WaitUntilReady_And_SENDKEYS(WebDriver driver, By Locator, By LoadingCircle, String text) {
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                    .ignoring(StaleElementReferenceException.class)
+                    .ignoring(ElementNotInteractableException.class)
+                    .until(d -> {
+                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        WebElement element = d.findElement(Locator);
+                        if (!element.isDisplayed() || !element.isEnabled()) return false;
+                        Scrolling.ScrollToElement(d,Locator);
+                        element.sendKeys(text);
+                        return true;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
+        LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
     }
 
     public static void SELECT(WebDriver driver, By locator, int index) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200));
         wait.until(elementToBeClickable(locator));
         Scrolling.ScrollToElement(driver,locator);
         WebElement dropdownElement = driver.findElement(locator);
@@ -90,10 +123,20 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
 
     public static String GETTEXT(WebDriver driver, By Locator , By LoadingCircle ) {
-//        new WebDriverWait(driver, Duration.ofSeconds(5)).until(elementToBeClickable(Locator));
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
-        String Text = new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(Locator)).getText();
+        // بيستنى لحد 60 ثانية بس بيقرا النص اول ما اللودينج يختفي والعنصر يظهر
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        String Text;
+        try {
+            Text = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                    .ignoring(StaleElementReferenceException.class)
+                    .until(d -> {
+                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return null;
+                        WebElement element = d.findElement(Locator);
+                        return element.isDisplayed() ? element.getText() : null;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
         LogsUtiles.info(" Data of " + Locator.toString() + " is " + Text);
         return Text ;
     }
@@ -115,7 +158,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
 
     public static void WaitForPageLoad (WebDriver driver) {
-        new WebDriverWait(driver, Duration.ofSeconds(20))
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
                 .until(webDriver -> ((JavascriptExecutor) webDriver)
                                 .executeScript("return document.readyState")
                                 .equals("complete"));
@@ -125,10 +168,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
     public static void SelectFirstEnableDayinCalender (WebDriver driver, By LoadingCircle) throws InterruptedException {
        By locator = By.xpath("//table[@class='days weeks']//span[@class='ng-star-inserted'][1]");
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(visibilityOfElementLocated(locator));
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(LoadingCircle));
-        Scrolling.ScrollToElement(driver,locator);
-        WatingLoadingCircle_And_CLICKONELEMENTS(driver,locator,LoadingCircle);
+        WaitUntilReady_And_CLICK(driver,locator,LoadingCircle);
     }
 
     public static By InputFieldXpath(String label){
@@ -142,7 +182,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
         WatingLoadingCircle_And_CLICKONELEMENTS(driver, Locator, LoadingCircle);
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200));
 
         // 1) ننتظر تاب جديد يتفتح
         wait.until(d -> d.getWindowHandles().size() > oldHandles.size());

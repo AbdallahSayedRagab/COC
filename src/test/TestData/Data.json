@@ -35,9 +35,9 @@
   "Expiration_M": "11",
   "Expiration_Y": "2025",
   "requestNumber": "1768985937",
-  "BusinessLicenseRequestNumber": "1791887444",
-  "RecordNumber": "1791887444",
-  "EditRequestNumber": "1791887701",
+  "BusinessLicenseRequestNumber": "1791978584",
+  "RecordNumber": "1791978584",
+  "EditRequestNumber": "1791978791",
   "desccatogery": "electronics",
   "Trademarks": "hp",
   "Numberofparcels": "22",
@@ -45,7 +45,12 @@
   "Totalweight": "60",
   "Totalvalue": "200",
   "country": "مصر",
-  "RemoveRequestNumber": "1791887959",
+  "PortalEmail": "Abdallah@coc.net",
+  "PortalPassword": "Abdallah@123",
+  "ChamberBranch": "فرع الغرفه للخدمات الاختياريه",
+  "SpecialServiceRequestNumber": "1791898969",
+  "RemoveRequestNumber": "1791979020",
   "ReservationNumber": "0229-09-20262",
-  "WindowCode": "1"
+  "WindowCode": "1",
+  "PortalReservationNumber": "0214-10-202610"
 }

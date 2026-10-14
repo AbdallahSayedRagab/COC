@@ -21,6 +21,7 @@ public class P09_PaymentOfSubscriptions {
     private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
     private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
     private final By saveamedicalprovider=By.xpath("//button[@type='submit']");
+    private final By FirstSubscriptionItemCheckBox = By.xpath("(//table[contains(@class, 'subscription')]//tbody//tr//input[@type='checkbox'])[1]");
     public P09_PaymentOfSubscriptions EnterThePersonalIdentificationNumber(String personalidentifier) {
         Utility.SENDKEYS(driver, Personalidentificationnumber, personalidentifier);
         return this;
@@ -53,6 +54,16 @@ public class P09_PaymentOfSubscriptions {
         } else {
             System.out.println("No subscription years found to click.");
         }
+        return this;
+    }
+
+    public P09_PaymentOfSubscriptions ClickOnFirstSubscriptionItem() {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstSubscriptionItemCheckBox, Loading_Circle);
+        return this;
+    }
+
+    public P09_PaymentOfSubscriptions ViewFirstRequest() {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ViewButton, Loading_Circle);
         return this;
     }
 

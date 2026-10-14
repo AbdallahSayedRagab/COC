@@ -95,8 +95,8 @@ public class T02_HomePage {
 
     @Test (priority = 6)
     public void SourceCodeRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
                 new P02_Dashboard(driver).selectthesourcecode()
                 .ClickOnAddNewRequest_Button()
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
@@ -114,8 +114,8 @@ public class T02_HomePage {
 
     @Test (priority = 7)
     public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
                 new P02_Dashboard(driver).selectTheAdministrativeCertificate()
                 .ClickOnAddNewRequest_Button()
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
@@ -129,8 +129,8 @@ public class T02_HomePage {
 
     @Test (priority = 8)
     public void ServicesRequest() throws InterruptedException, AWTException {
-    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-            ,DataUtiles.getJsonData("Data","Password"));
+//    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//            ,DataUtiles.getJsonData("Data","Password"));
     new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
             .SelectServicesData().ConfirmRequest().SendingRequestToCollect()
             .PayingFirstBill().Select_ServicesRequest();
@@ -149,8 +149,8 @@ public class T02_HomePage {
 
    @Test (priority = 10)
    public void NegativeCertificteRequest() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
     new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
             .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
             .FillAttachmentSectionAndConfirmRequest()
@@ -183,15 +183,16 @@ public class T02_HomePage {
               .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
               .clickonsavedmedicalprovider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","Record"))
-              .ClickOnLastYear()
+              .ClickOnFirstSubscriptionItem()
               .ConfirmRequest()
-              .SendingRequestToCollect();
+              .SendingRequestToCollect().PayingFirstBill()
+              .selectThePaymentOfSubscriptions().ViewFirstRequest();
     }
 
     @Test (priority = 13)
     public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","UserName")
-                ,DataUtiles.getJsonData("Data","UserPassword"));
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","UserName")
+//                ,DataUtiles.getJsonData("Data","UserPassword"));
         new P02_Dashboard(driver).SelectRequestsAndCertificatesMailPage()
                 .AddAdministrationRequest()
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
