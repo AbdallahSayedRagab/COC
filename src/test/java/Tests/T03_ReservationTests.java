@@ -1,8 +1,8 @@
 package Tests;
 
 import DriverFactory.DriverFactoryClass;
-import Pages.P01_LoginPage;
-import Pages.P02_Dashboard;
+import Pages.BackofficePages.P01_LoginPage;
+import Pages.BackofficePages.P02_Dashboard;
 import Utilities.DataUtiles;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;

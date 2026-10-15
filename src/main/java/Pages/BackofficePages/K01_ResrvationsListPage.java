@@ -1,4 +1,4 @@
-package Pages;
+package Pages.BackofficePages;
 
 import Utilities.JsonUtil;
 import Utilities.Utility;

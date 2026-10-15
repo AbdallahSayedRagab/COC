@@ -1,4 +1,4 @@
-package Pages;
+package Pages.PortalPages;
 
 import Utilities.JsonUtil;
 import Utilities.Utility;

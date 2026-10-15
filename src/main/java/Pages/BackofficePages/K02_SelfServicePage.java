@@ -1,4 +1,4 @@
-package Pages;
+package Pages.BackofficePages;
 
 import Utilities.Utility;
 import org.openqa.selenium.By;

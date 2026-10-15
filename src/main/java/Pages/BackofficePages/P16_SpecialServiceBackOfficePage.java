@@ -1,4 +1,6 @@
-package Pages;
+package Pages.BackofficePages;
+
+import Pages.PortalPages.P15_SpecialServicePortalPage;
 
 import Utilities.Utility;
 import Utilities.Validations;
