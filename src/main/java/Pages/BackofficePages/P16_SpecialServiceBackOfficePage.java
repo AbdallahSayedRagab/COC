@@ -1,6 +1,6 @@
 package Pages.BackofficePages;
 
-import Pages.PortalPages.P15_SpecialServicePortalPage;
+import Pages.PortalPages.U08_SpecialServiceRequestPage;
 
 import Utilities.Utility;
 import Utilities.Validations;
@@ -71,10 +71,10 @@ public class P16_SpecialServiceBackOfficePage {
         return this;
     }
 
-    public P15_SpecialServicePortalPage BackToPortalWindow () {
+    public U08_SpecialServiceRequestPage BackToPortalWindow () {
         driver.close();
         driver.switchTo().window(driver.getWindowHandles().iterator().next());
-        return new P15_SpecialServicePortalPage(driver);
+        return new U08_SpecialServiceRequestPage(driver);
     }
 
 }

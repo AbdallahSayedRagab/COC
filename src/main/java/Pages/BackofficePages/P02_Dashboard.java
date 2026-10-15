@@ -21,6 +21,7 @@ public class P02_Dashboard {
     private final By ServicesRequest_FSM = By.xpath("//a[contains(@href, '/requests/unregisteredRequestList')]");
     private final By DivisionEditRequest_FSM = By.xpath("//a[contains(@href, '/requests/recordDivisionRequestList')]");
     private final By RecordsManagement = By.xpath("//a[@href=\"/records/list?title=::records\"]");
+    private final By StatementForm_FSM = By.xpath("//a[@href=\"/records/statement?title=::statement-request\"]");
     private final By Payingsubscriptions = By.xpath("//a[@href=\"/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA\"]");
     private final By ReservationIcon = By.xpath("//img[@src=\"../../assets/images/booking.svg\"]");
     private final By ReservationsPage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys\"]");
@@ -65,10 +66,16 @@ public class P02_Dashboard {
         Utility.CLICKONELEMENTS(driver,Payingsubscriptions);
         return new P09_PaymentOfSubscriptions(driver);
     }
-    public R013_RecordsManagement SelectTheRecorsMangements() throws InterruptedException {
+    public R01_RecordsManagement SelectTheRecorsMangements() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Records,LoadingCircle);
         Utility.CLICKONELEMENTS(driver,RecordsManagement);
-        return new R013_RecordsManagement(driver);
+        return new R01_RecordsManagement(driver);
+    }
+
+    public R02_StatementFormPage SelectStatementFormPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Records,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,StatementForm_FSM,LoadingCircle);
+        return new R02_StatementFormPage(driver);
     }
 
 

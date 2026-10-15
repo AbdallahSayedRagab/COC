@@ -1,0 +1,229 @@
+package Tests;
+
+import DriverFactory.DriverFactoryClass;
+import Listeners.IInvociedMethodListener;
+import Listeners.ITestResultListener;
+import Pages.BackofficePages.*;
+import Utilities.DataUtiles;
+import Utilities.Utility;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.*;
+
+import java.awt.*;
+import java.io.IOException;
+
+import static DriverFactory.DriverFactoryClass.SetupDriver;
+import static DriverFactory.DriverFactoryClass.getdriver;
+
+@Listeners({IInvociedMethodListener.class , ITestResultListener.class})
+public class T02_BackofficeCases {
+    private WebDriver driver ;
+    @BeforeClass
+    public void setupdriver () throws IOException {
+        SetupDriver(DataUtiles.getPropertyValue("environment","BROWSER"));
+        driver = DriverFactoryClass.getdriver();
+        getdriver().get(DataUtiles.getPropertyValue("environment","BASE_URL"));
+        Utility.WaitForPageLoad(driver);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+
+    }
+
+    @Test (priority = 1)
+    public void BusinessLicenseRequest () throws InterruptedException, AWTException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).Select_BusinessLicense()
+                .ClickOnAddNewRequest_Button().ChooseFacilityNature_And_CreateRequest()
+                .FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
+                .FillLegalDataSection(DataUtiles.getJsonData("Data","TradeName"),
+                        DataUtiles.getJsonData("Data" , "CommercialFeature"))
+                .FillMembersSection().FillActivitiesDataSection(DataUtiles.getJsonData("Data","TaxCardNum"),
+                        DataUtiles.getJsonData("Data","Description"))
+                .FillCapitalDataSection(DataUtiles.getJsonData("Data","Capital"))
+                .FillBusinessLocationSection(DataUtiles.getJsonData("Data","NameOfSt"))
+                .FillCertificateData().FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile()
+                .ReviewRequest().SendingRequestToCollect()
+                .PayingFirstBill().Select_BusinessLicense().ReceivingTheCertificate();
+
+    }
+
+    @Test (priority = 2)
+    public void CreateRecordEffect() throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new V01_CreateRecordEffectPage(driver).AddNewEffectToCreateNewRecord()
+                .FillDataForRecordAndCreateEffect(DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
+                        DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber"),
+                        DataUtiles.getJsonData("Data","BusinessLicenseRequestNumber")    )
+                .ConfirmAndApproveTheRecord();
+    }
+
+    @Test (priority = 3)
+    public void EditRequest () throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
+                .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).SelectSectionToEdit().FillCertificateData()
+                .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
+                .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
+    }
+
+    @Test (priority = 4)
+    public void EditRecordEffect() throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new V02_EditRecordEffectPage(driver).AddNewEffectToEditNewRecord()
+                .FillDataForRecordAndCreateEditEffect(
+                        DataUtiles.getJsonData("Data","RecordNumber"),
+                        DataUtiles.getJsonData("Data","EditRequestNumber"),
+                        DataUtiles.getJsonData("Data","EditRequestNumber"))
+                .ConfirmAndApproveTheRecord();
+    }
+
+
+
+    @Test (priority = 5)
+    public void RemoveRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"))
+                .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
+                .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile()
+                .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+                .Select_RemoveRequest().ReceivingTheCertificate();
+
+    }
+
+    @Test (priority = 6)
+    public void SourceCodeRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+                new P02_Dashboard(driver).selectthesourcecode()
+                .ClickOnAddNewRequest_Button()
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .clickonsavedmedicalprovider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","requestNumber"))
+                .FillTheCommericalData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"),
+                        DataUtiles.getJsonData("Data","country"))
+                .FillTheItemSection(DataUtiles.getJsonData("Data","desccatogery"),DataUtiles.getJsonData("Data","Trademarks"),DataUtiles.getJsonData("Data","Numberofparcels")
+                ,DataUtiles.getJsonData("Data","netweight"),DataUtiles.getJsonData("Data","Totalweight"),DataUtiles.getJsonData("Data","Totalvalue"))
+                .Certificatecount("2")
+                .Signatureauthentication()
+                .Certificatelanguage()
+                .FillAttachmentSection()
+                .confirmrequest();
+    }
+
+    @Test (priority = 7)
+    public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+                new P02_Dashboard(driver).selectTheAdministrativeCertificate()
+                .ClickOnAddNewRequest_Button()
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .ClickOnSavedMedicalProvider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+                .EnterTheAdministrativeCertificateDetails("Test")
+                .SendCeriticateTo("Office")
+                .ConfirmRequest().ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+                        .selectTheAdministrativeCertificate().ReceivingTheCertificate();
+    }
+
+    @Test (priority = 8)
+    public void ServicesRequest() throws InterruptedException, AWTException {
+//    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//            ,DataUtiles.getJsonData("Data","Password"));
+    new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+            .SelectServicesData().FillAttachmentSection().ConfirmRequest().SendingRequestToCollect()
+            .PayingFirstBill().Select_ServicesRequest();
+
+}
+//    @Test (priority = 9)
+//    public void DivisionEditRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+//        new P12_DivisionEditRequestPage(driver).CreateNewDivisionEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+//                .ChoosingRecord(DataUtiles.getJsonData("Data","Record")).FillDivisionDataSection()
+//                .FillAttachmentSection().ConfirmRequest().ReviewRequest()
+//                .SendingRequestToCollect().PayingFirstBill().Select_DivisionRequest();
+//
+//    }
+
+   @Test (priority = 10)
+   public void NegativeCertificteRequest() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+    new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"))
+            .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
+            .FillAttachmentSection().ConfirmRequest()
+            .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
+            .Select_NegativeRequest().ReceivingTheCertificate();
+
+}
+    @Test (priority = 14)
+    public void RemoveRecordEffect() throws InterruptedException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//                ,DataUtiles.getJsonData("Data","Password"));
+        new V03_RemoveRecordEffectPage(driver).AddNewEffectToRemoveNewRecord()
+                .FillDataForRecordAndCreateRemoveEffect(
+                        DataUtiles.getJsonData("Data","RecordNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"),
+                        DataUtiles.getJsonData("Data","RemoveRequestNumber"))
+                .ConfirmAndApproveTheRecord();
+    }
+    @Test (priority = 9)
+    public void payingsub() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+//            ,DataUtiles.getJsonData("Data","Password"));
+        new P02_Dashboard(driver).SelectTheRecorsMangements()
+               .SearchOfRecordNumber(DataUtiles.getJsonData("Data","Record"))
+               .ClickOnEditRequest()
+               .OutstandingSubscriptions("youssef","229")
+               .ClickOnPayingSub()
+               .ClickOnAddNewRequest_Button()
+              .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+              .clickonsavedmedicalprovider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","Record"))
+              .ClickOnFirstSubscriptionItem()
+              .ConfirmRequest()
+              .SendingRequestToCollect().PayingFirstBill()
+              .selectThePaymentOfSubscriptions().ViewFirstRequest();
+    }
+
+    @Test (priority = 13)
+    public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
+//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","UserName")
+//                ,DataUtiles.getJsonData("Data","UserPassword"));
+        new P02_Dashboard(driver).SelectRequestsAndCertificatesMailPage()
+                .AddAdministrationRequest()
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .ClickOnSavedMedicalProvider()
+                .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
+                .EnterTheAdministrativeCertificateDetails("Test")
+                .SendCeriticateTo("Office")
+                .ConfirmRequest();
+    }
+
+    @Test (priority = 15)
+    public void StatementFormRequest() throws IOException, InterruptedException {
+        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password"));
+        new P02_Dashboard(driver).SelectStatementFormPage()
+                .AddNewStatementForm()
+                .SearchByCommercialNameAndSelectFirstRecord(DataUtiles.getJsonData("Data","TradeName"))
+                .FillStatementDataAndConfirm(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","TestData"),
+                        DataUtiles.getJsonData("Data","TestData"))
+                .PrintStatementForm("StatementFormPrint");
+    }
+
+
+        @AfterClass
+    public void quit () {
+//        driver.quit();
+    }
+}
+
+
+
+

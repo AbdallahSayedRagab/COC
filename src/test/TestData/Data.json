@@ -9,7 +9,7 @@
   "ID": "30001231231231",
   "NegativeID": "28801231231222",
   "TestData": "Test",
-  "TradeName": "Test",
+  "TradeName": "عبدالله سيد",
   "CommercialFeature": "Test",
   "Capital": "100000",
   "TaxCardNum": "123123123",
@@ -48,9 +48,17 @@
   "PortalEmail": "Abdallah@coc.net",
   "PortalPassword": "Abdallah@123",
   "ChamberBranch": "فرع الغرفه للخدمات الاختياريه",
-  "SpecialServiceRequestNumber": "1791898969",
+  "Governorate": "الشرقية",
+  "PortalSubscriptionRecordNumber": "33033",
+  "SpecialServiceRequestNumber": "1792064508",
   "RemoveRequestNumber": "1791989317",
   "ReservationNumber": "0229-09-20262",
   "WindowCode": "1",
-  "PortalReservationNumber": "0214-10-202610"
+  "PortalReservationNumber": "0215-10-202612",
+  "PortalBusinessLicenseRequestNumber": "1792064144",
+  "PortalEditRecordRequestNumber": "1792064239",
+  "PortalRemoveRecordRequestNumber": "1792064298",
+  "PortalAdministrativeCertificateRequestNumber": "1792064351",
+  "PortalSourceOfGoodsRequestNumber": "1792064394",
+  "PortalPaymentOfSubscriptionsRequestNumber": "1792058283"
 }

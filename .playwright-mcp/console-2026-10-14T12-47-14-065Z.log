@@ -1,3 +1,0 @@
-[    2410ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://coc-backoffice-stage.apps.softprograms-eg.com/account/login:0
-[    2442ms] [LOG] {ip: 154.191.89.65, city: Cairo, region: Cairo, country: EG, loc: 30.0626,31.2497} @ https://ipinfo.io/?callback=ng_jsonp_callback_0:0
-[   17427ms] [INFO] Information: Normalizing '/signalr-hubs/Notification' to 'https://coc-backoffice-stage.apps.softprograms-eg.com/signalr-hubs/Notification'. @ https://coc-backoffice-stage.apps.softprograms-eg.com/main.30889e946e598a5c.js:0

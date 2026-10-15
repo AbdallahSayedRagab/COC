@@ -22,6 +22,8 @@ public class DriverFactoryClass {
             case "chrome":
                 ChromeOptions Options = new ChromeOptions();
                 Options.addArguments("--start-maximized");
+                // دايما يفتح Incognito عشان مايبقاش فيه session محفوظة
+                Options.addArguments("--incognito");
                 Options.addArguments("--force-device-scale-factor=0.75");
                 // Disable all Chrome native popups/bubbles (passwords, translate, notifications, infobars)
                 Options.addArguments("--disable-features=PasswordLeakDetection,Translate,TranslateUI");
@@ -47,6 +49,8 @@ public class DriverFactoryClass {
             case "edge":
                 EdgeOptions Optionss = new EdgeOptions();
                 Optionss.addArguments("--start-maximized");
+                // دايما يفتح InPrivate عشان مايبقاش فيه session محفوظة
+                Optionss.addArguments("-inprivate");
                 driverThreadLocal.set(new EdgeDriver(Optionss));
                 break;
 
