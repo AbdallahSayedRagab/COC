@@ -27,24 +27,19 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Utility {
-//    public static void CLICKONELEMENTS(WebDriver driver, By Locator ) throws InterruptedException {
-//        Waits.WaitForElementClickable(driver,Locator,10);
-//        driver.findElement(Locator).click();
-//
-//    }
-    // اللودينج بتاع الباك اوفيس والبورتال - بيستخدم في CLICKONELEMENTS و SENDKEYS اللي مش بتاخد LoadingCircle
-    private static final By AnyLoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"] | //div[contains(@class,'ngx-spinner-overlay')]");
+
+    public static final By Loader = By.xpath("//mat-spinner[@mode=\"indeterminate\"] | //div[contains(@class,'ngx-spinner-overlay')] | //app-spinner//div[contains(@class,'cssload-container')]");
 
         @Step("Clicking On :{Locator}")
     public static void CLICKONELEMENTS(WebDriver driver, By Locator ) throws InterruptedException {
-        WaitUntilReady_And_CLICK(driver,Locator,AnyLoadingCircle);
+        WaitUntilReady_And_CLICK(driver,Locator);
     }
 
-public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By Locator, By LoadingCircle) {
-    WaitUntilReady_And_CLICK(driver,Locator,LoadingCircle);
+public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By Locator) {
+    WaitUntilReady_And_CLICK(driver,Locator);
 }
     public static void WatingLoadingCircle_And_CLICKON_WebElement(
-            WebDriver driver, WebElement element, By loadingCircle) {
+            WebDriver driver, WebElement element) {
 
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
@@ -52,7 +47,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                     .ignoring(ElementClickInterceptedException.class)
                     .ignoring(ElementNotInteractableException.class)
                     .until(d -> {
-                        if (d.findElements(loadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
                         if (!element.isDisplayed() || !element.isEnabled()) return false;
                         element.click();
                         return true;
@@ -63,20 +58,20 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
 
     public static void CLICKONVISIBLEELEMENTS(WebDriver driver, By Locator) {
-        WaitUntilReady_And_CLICK(driver,Locator,AnyLoadingCircle);
+        WaitUntilReady_And_CLICK(driver,Locator);
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(Locator));
 
     }
     //    @Step("Adding Data On: {Locator}")
     public static void SENDKEYS(WebDriver driver, By Locator, String text) {
-        WaitUntilReady_And_SENDKEYS(driver,Locator,AnyLoadingCircle,text);
+        WaitUntilReady_And_SENDKEYS(driver,Locator,text);
     }
-    public static void WatingAndSENDKEYS(WebDriver driver, By Locator, By LoadingCircle , String text) {
-        WaitUntilReady_And_SENDKEYS(driver,Locator,LoadingCircle,text);
+    public static void WatingAndSENDKEYS(WebDriver driver, By Locator, String text) {
+        WaitUntilReady_And_SENDKEYS(driver,Locator,text);
     }
 
     // بيستنى لحد 60 ثانية بس بيدوس اول ما العنصر يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
-    public static void WaitUntilReady_And_CLICK(WebDriver driver, By Locator, By LoadingCircle) {
+    public static void WaitUntilReady_And_CLICK(WebDriver driver, By Locator) {
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
             new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
@@ -84,7 +79,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                     .ignoring(ElementClickInterceptedException.class)
                     .ignoring(ElementNotInteractableException.class)
                     .until(d -> {
-                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
                         WebElement element = d.findElement(Locator);
                         if (!element.isDisplayed() || !element.isEnabled()) return false;
                         Scrolling.ScrollToElement(d,Locator);
@@ -98,14 +93,14 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
 
     // بيستنى لحد 60 ثانية بس بيكتب اول ما الحقل يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
-    public static void WaitUntilReady_And_SENDKEYS(WebDriver driver, By Locator, By LoadingCircle, String text) {
+    public static void WaitUntilReady_And_SENDKEYS(WebDriver driver, By Locator, String text) {
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
             new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
                     .ignoring(StaleElementReferenceException.class)
                     .ignoring(ElementNotInteractableException.class)
                     .until(d -> {
-                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                        if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
                         WebElement element = d.findElement(Locator);
                         if (!element.isDisplayed() || !element.isEnabled()) return false;
                         Scrolling.ScrollToElement(d,Locator);
@@ -127,7 +122,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         dropdown.selectByIndex(index);
     }
 
-    public static String GETTEXT(WebDriver driver, By Locator , By LoadingCircle ) {
+    public static String GETTEXT(WebDriver driver, By Locator ) {
         // بيستنى لحد 60 ثانية بس بيقرا النص اول ما اللودينج يختفي والعنصر يظهر
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         String Text;
@@ -135,7 +130,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             Text = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
                     .ignoring(StaleElementReferenceException.class)
                     .until(d -> {
-                        if (d.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)) return null;
+                        if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) return null;
                         WebElement element = d.findElement(Locator);
                         return element.isDisplayed() ? element.getText() : null;
                     });
@@ -171,9 +166,9 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
 
     }
-    public static void SelectFirstEnableDayinCalender (WebDriver driver, By LoadingCircle) throws InterruptedException {
+    public static void SelectFirstEnableDayinCalender (WebDriver driver) throws InterruptedException {
        By locator = By.xpath("//table[@class='days weeks']//span[@class='ng-star-inserted'][1]");
-        WaitUntilReady_And_CLICK(driver,locator,LoadingCircle);
+        WaitUntilReady_And_CLICK(driver,locator);
     }
 
     public static By InputFieldXpath(String label){
@@ -190,17 +185,17 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     // المرفق اللي اترفع فعليا: بيظهر كارت preview جواه صورة الـ alt بتاعها "id من السيرفر/اسم الملف"
     private static final By UploadedAttachment = By.xpath("//div[contains(@class,'attachment-preview')]/img[contains(@alt,'/')]");
 
-    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton, By LoadingCircle) {
-        UploadAttachments(driver, AddAttachmentButton, LoadingCircle, AttachmentFilePath);
+    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton) {
+        UploadAttachments(driver, AddAttachmentButton, AttachmentFilePath);
     }
 
     // بيرفع الملف على كل زرار مرفق موجود في الصفحة (لو مفيش مرفقات بيعدي)
     // وبيستنى كل مرفق يترفع فعليا قبل ما يروح للي بعده - فلو مرفق مترفعش الميثود بتفشل وماحدش بيدوس تأكيد
-    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton, By LoadingCircle, String FilePath) {
+    public static void UploadAttachments(WebDriver driver, By AddAttachmentButton, String FilePath) {
         if (!new File(FilePath).exists()) {
             throw new IllegalArgumentException("Attachment file not found: " + FilePath);
         }
-        WaitUntilNotBusy(driver, LoadingCircle, 60);
+        WaitUntilNotBusy(driver, 60);
 
         int total = driver.findElements(AddAttachmentButton).size();
         LogsUtiles.info("Attachments to upload: " + total);
@@ -210,15 +205,15 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             List<WebElement> buttons = driver.findElements(AddAttachmentButton);
             int removed = total - buttons.size(); // لو الزرار بيختفي بعد ما المرفق يترفع
             WebElement button = buttons.get(i - removed);
-            UploadFile(driver, button, LoadingCircle, FilePath);
+            UploadFile(driver, button, FilePath);
             LogsUtiles.info("Attachment " + (i + 1) + "/" + total + " uploaded");
         }
     }
 
     // بيرفع ملف واحد من الزرار ده وبيستنى لحد ما يترفع فعليا
-    public static void UploadFile(WebDriver driver, WebElement UploadButton, By LoadingCircle, String FilePath) {
+    public static void UploadFile(WebDriver driver, WebElement UploadButton, String FilePath) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        WaitUntilNotBusy(driver, LoadingCircle, 60);
+        WaitUntilNotBusy(driver, 60);
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", UploadButton);
         int before = driver.findElements(UploadedAttachment).size();
 
@@ -234,7 +229,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                 "  }" +
                 "  return orig.call(this);" +
                 "};");
-        WatingLoadingCircle_And_CLICKON_WebElement(driver, UploadButton, LoadingCircle);
+        WatingLoadingCircle_And_CLICKON_WebElement(driver, UploadButton);
         WebElement fileInput = (WebElement) js.executeScript("return window.__autoFileInput;");
 
         if (fileInput != null) {
@@ -258,12 +253,12 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             }
         }
 
-        WaitUntilAttachmentUploaded(driver, before, LoadingCircle);
+        WaitUntilAttachmentUploaded(driver, before);
     }
 
     // بيستنى لحد ما كارت المرفق الجديد يظهر (يعني السيرفر رجع id للملف) + مفيش لودينج ولا progress bar
     // ولازم الحالة دي تفضل ثابتة مرتين ورا بعض عشان مايدوسش وهو لسه بيرفع
-    private static void WaitUntilAttachmentUploaded(WebDriver driver, int before, By LoadingCircle) {
+    private static void WaitUntilAttachmentUploaded(WebDriver driver, int before) {
         int[] stableChecks = {0};
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
@@ -271,7 +266,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                     .ignoring(StaleElementReferenceException.class)
                     .withMessage("Attachment was not uploaded within " + AttachmentUploadTimeoutSeconds + " seconds")
                     .until(d -> {
-                        if (d.findElements(UploadedAttachment).size() > before && !IsBusy(d, LoadingCircle)) {
+                        if (d.findElements(UploadedAttachment).size() > before && !IsBusy(d)) {
                             return ++stableChecks[0] >= 2;
                         }
                         stableChecks[0] = 0;
@@ -282,28 +277,28 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         }
     }
 
-    private static boolean IsBusy(WebDriver driver, By LoadingCircle) {
-        return driver.findElements(LoadingCircle).stream().anyMatch(WebElement::isDisplayed)
+    private static boolean IsBusy(WebDriver driver) {
+        return driver.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)
                 || driver.findElements(UploadProgress).stream().anyMatch(WebElement::isDisplayed);
     }
 
-    private static void WaitUntilNotBusy(WebDriver driver, By LoadingCircle, int Seconds) {
+    private static void WaitUntilNotBusy(WebDriver driver, int Seconds) {
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
             new WebDriverWait(driver, Duration.ofSeconds(Seconds), Duration.ofMillis(200))
                     .ignoring(StaleElementReferenceException.class)
-                    .until(d -> !IsBusy(d, LoadingCircle));
+                    .until(d -> !IsBusy(d));
         } finally {
             driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         }
     }
 
-    public static void PrintAndScreenShot (WebDriver driver, By Locator, By LoadingCircle, String ImageName) throws IOException {
+    public static void PrintAndScreenShot (WebDriver driver, By Locator, String ImageName) throws IOException {
 
         String originalWindow = driver.getWindowHandle();
         Set<String> oldHandles = driver.getWindowHandles();
 
-        WatingLoadingCircle_And_CLICKONELEMENTS(driver, Locator, LoadingCircle);
+        WatingLoadingCircle_And_CLICKONELEMENTS(driver, Locator);
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200));
 

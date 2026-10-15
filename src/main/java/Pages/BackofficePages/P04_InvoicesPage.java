@@ -13,7 +13,6 @@ public class P04_InvoicesPage {
 
     private final By CollectingIcon = By.xpath("//img[@src=\"../../assets/images/collections-icon.svg\"]");
     private final By InvoicesScreenIcon = By.xpath("//a[@href=\"/collections/invoices?title=::Invoices\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By PullTheRequest = By.id("WithdrawTheBill");
     private final By CashType = By.xpath("(//input[@type=\"radio\"])[1]");
@@ -22,12 +21,12 @@ public class P04_InvoicesPage {
 
 
     public P02_Dashboard PayingFirstBill(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CollectingIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,InvoicesScreenIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CashType,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PaidButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CollectingIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,InvoicesScreenIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CashType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PaidButton);
         return new P02_Dashboard (driver);
     }
 }

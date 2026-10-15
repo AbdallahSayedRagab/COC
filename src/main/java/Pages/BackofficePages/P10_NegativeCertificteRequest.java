@@ -14,7 +14,6 @@ public class P10_NegativeCertificteRequest {
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SendCertificateToNameField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الي الاسم']/following-sibling::*[1]");
@@ -35,9 +34,9 @@ public class P10_NegativeCertificteRequest {
 
 
     public P10_NegativeCertificteRequest CreateNewNegativeRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NegativeRequest_FSM,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NegativeRequest_FSM);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
         return this;
     }
     public P10_NegativeCertificteRequest Validate_EditRequestURL () throws InterruptedException {
@@ -46,19 +45,19 @@ public class P10_NegativeCertificteRequest {
     }
 
     public P10_NegativeCertificteRequest FillAndSaveDataOfApplicant (String NegativeID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,Loading_Circle,NegativeID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,NegativeID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
         return this;
     }
 
     public P10_NegativeCertificteRequest FillCertificateData (String TestData) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,SendCertificateToNameField,Loading_Circle,TestData);
-        Utility.WatingAndSENDKEYS(driver,SendCertificateToEntityField,Loading_Circle,TestData);
+        Utility.WatingAndSENDKEYS(driver,SendCertificateToNameField,TestData);
+        Utility.WatingAndSENDKEYS(driver,SendCertificateToEntityField,TestData);
         return this;
     }
 
     public P10_NegativeCertificteRequest FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
+        Utility.UploadAttachments(driver, AddAttachmentButton);
         return this;
     }
 
@@ -70,26 +69,26 @@ public class P10_NegativeCertificteRequest {
 
 
     public P10_NegativeCertificteRequest ReviewRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
 
         return this;
     }
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
 
     public P10_NegativeCertificteRequest ReceivingTheCertificate () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
         return this;
     }
 

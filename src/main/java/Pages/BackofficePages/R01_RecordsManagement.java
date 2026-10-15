@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 public class R01_RecordsManagement {
 
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By ReviewRequest = By.xpath("//a[@href=\"/records/view/8ec81e3a-3618-ea53-2ef2-e5a182ef3334\"]");
     private final By OutstandingSbscriptions = By.xpath("//label[normalize-space(text())='نوع البند']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -27,18 +26,18 @@ public class R01_RecordsManagement {
     }
 
     public R01_RecordsManagement SearchOfRecordNumber(String record) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver, RecordNumber, Loading_Circle, record);
+        Utility.WatingAndSENDKEYS(driver, RecordNumber, record);
         driver.findElement(RecordNumber).sendKeys(Keys.ENTER);
         return this;
     }
 
     public R01_RecordsManagement ClickOnAddNewRequest_Button() throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddNewRequest_Button, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddNewRequest_Button);
         return this;
     }
 
     public R01_RecordsManagement ClickOnEditRequest() {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ReviewRequest, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ReviewRequest);
         return this;
     }
 
@@ -49,13 +48,13 @@ public class R01_RecordsManagement {
         Utility.CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.SENDKEYS(driver, DueAmount, amount);
         Utility.SENDKEYS(driver, ItemName, item);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddSubscriptionItemButton, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddSubscriptionItemButton);
 
         return this;
     }
 
     public P09_PaymentOfSubscriptions ClickOnPayingSub() throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
         Utility.CLICKONELEMENTS(driver,Payingsubscriptions);
         return new P09_PaymentOfSubscriptions(driver);
 }

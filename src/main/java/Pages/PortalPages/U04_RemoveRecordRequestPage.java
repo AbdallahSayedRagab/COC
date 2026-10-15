@@ -14,7 +14,6 @@ public class U04_RemoveRecordRequestPage {
     public U04_RemoveRecordRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -42,21 +41,21 @@ public class U04_RemoveRecordRequestPage {
     public U04_RemoveRecordRequestPage StartTheService () {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
         if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox,Loading_Circle);
+            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
         }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
         return this;
     }
 
     public U04_RemoveRecordRequestPage SelectFirstRecord () {
-        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData);
         return this;
     }
 
     public U04_RemoveRecordRequestPage FillRemovalReason (String Reason) {
-        Utility.WaitUntilReady_And_SENDKEYS(driver,RemovalReasonField,Loading_Circle,Reason);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRemovalReason,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,RemovalReasonField,Reason);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRemovalReason);
         return this;
     }
 
@@ -64,27 +63,27 @@ public class U04_RemoveRecordRequestPage {
         // اول محافظة في الليستة مفيهاش مكاتب سجل فبنختار المحافظة بالاسم
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
         By GovernorateChoice = By.xpath("//div[@role='option'][normalize-space()='" + Governorate + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToGovernorateField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,GovernorateChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,CommercialRegistryOfficeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCertificateData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToGovernorateField);
+        Utility.WaitUntilReady_And_CLICK(driver,GovernorateChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,CommercialRegistryOfficeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCertificateData);
         return this;
     }
 
     public U04_RemoveRecordRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton,Loading_Circle);
+        Utility.UploadAttachments(driver,AddAttachmentButton);
         return this;
     }
 
     public U04_RemoveRecordRequestPage SendTheRequestAndSaveRequestNumber () {
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         // نفس البوب اب بيتغير من رسالة التأكيد لرسالة "تم ارسال" فبنستنى الرسالة الجديدة
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(PopUpMessage,"تم ارسال"));
-        String Message = Utility.GETTEXT(driver,PopUpMessage,Loading_Circle);
+        String Message = Utility.GETTEXT(driver,PopUpMessage);
         String requestNumber = Message.replaceAll("[^0-9]", "");
         Validations.ValidationTrue(!requestNumber.isEmpty(), "Request number not found in: " + Message);
         JsonUtil.writeValue("PortalRemoveRecordRequestNumber", requestNumber);

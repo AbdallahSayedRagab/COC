@@ -12,7 +12,6 @@ public class P03_BusinessLicensePage {
     }
     private WebDriver driver;
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By  FacilityNature_Choice  = By.xpath("//label[contains(text(), ' مركز رئيسى')]");
     private final By  CreateRequest_Button  = By.xpath("//button[contains(text(), ' انشاء الطلب ')]");
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
@@ -56,7 +55,7 @@ public class P03_BusinessLicensePage {
     private final By fff = By.xpath("");
 
     public P03_BusinessLicensePage ClickOnAddNewRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
         return this;
     }
 
@@ -72,64 +71,64 @@ public class P03_BusinessLicensePage {
     }
 
     public P03_BusinessLicensePage FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
         return this;
     }
 
     public P03_BusinessLicensePage FillLegalDataSection (String TradeName , String CommercialFeature ) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection);
         Utility.CLICKONELEMENTS(driver,FacilityClassificationField);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FacilityTypeField,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,TradeNameField,Loading_Circle,TradeName);
-        Utility.WatingAndSENDKEYS(driver,CommercialFeatureField,Loading_Circle,CommercialFeature);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FacilityTypeField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingAndSENDKEYS(driver,TradeNameField,TradeName);
+        Utility.WatingAndSENDKEYS(driver,CommercialFeatureField,CommercialFeature);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection);
         return this;
     }
 
     public P03_BusinessLicensePage FillMembersSection () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection);
         Utility.CLICKONELEMENTS(driver,LegalStatus);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddMemberButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddMemberButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection);
         return this;
     }
 
     public P03_BusinessLicensePage FillCapitalDataSection (String Capital) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CapitalData,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,CapitalDataField,Loading_Circle,Capital);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CapitalData,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CapitalData);
+        Utility.WatingAndSENDKEYS(driver,CapitalDataField,Capital);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CapitalData);
         return this;
     }
 
     public P03_BusinessLicensePage FillActivitiesDataSection (String TaxCardNum, String Description) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,TaxCardNumber,Loading_Circle,TaxCardNum);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DataOfStartingActivity,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FixedDateForAnyCalendar,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,ActivityDescription,Loading_Circle,Description);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivityField,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddActivityButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DepartmentName,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddDepartNameButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData);
+        Utility.WatingAndSENDKEYS(driver,TaxCardNumber,TaxCardNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DataOfStartingActivity);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FixedDateForAnyCalendar);
+        Utility.WatingAndSENDKEYS(driver,ActivityDescription,Description);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivityField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddActivityButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DepartmentName);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddDepartNameButton);
 
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData);
         return this;
     }
 
     public  P03_BusinessLicensePage FillBusinessLocationSection(String NameOfSt){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BusinessLocationSection,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstِِAdministrativeField,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SecondAdministrativeField,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,StreetName,Loading_Circle,NameOfSt);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BusinessLocationSection,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BusinessLocationSection);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstِِAdministrativeField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SecondAdministrativeField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingAndSENDKEYS(driver,StreetName,NameOfSt);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BusinessLocationSection);
         return this;
 
 
@@ -142,7 +141,7 @@ public class P03_BusinessLicensePage {
     }
 
     public P03_BusinessLicensePage FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
+        Utility.UploadAttachments(driver, AddAttachmentButton);
         return this;
     }
 
@@ -154,7 +153,7 @@ public class P03_BusinessLicensePage {
 
     public P03_BusinessLicensePage SaveRequestNumberInJsonFile() {
 
-        String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
+        String requestNumber = Utility.GETTEXT(driver,RequestNumber);
         JsonUtil.writeValue("BusinessLicenseRequestNumber", requestNumber);
         JsonUtil.writeValue("RecordNumber", requestNumber);
 
@@ -163,25 +162,25 @@ public class P03_BusinessLicensePage {
 
 
     public P03_BusinessLicensePage ReviewRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
 
     public P03_BusinessLicensePage ReceivingTheCertificate () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
         return this;
     }
 

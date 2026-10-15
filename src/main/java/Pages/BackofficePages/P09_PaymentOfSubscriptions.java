@@ -12,7 +12,6 @@ public class P09_PaymentOfSubscriptions {
     private final WebDriver driver;
     private final By Personalidentificationnumber = By.xpath("//input-control[@formcontrolname='applicantNationalId']//input");
     private final By SearchingOfRecordNumField = By.xpath("(//input[@name=\"recordNumber\"])[1]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
@@ -32,9 +31,9 @@ public class P09_PaymentOfSubscriptions {
     }
 
     public P09_PaymentOfSubscriptions SearchOnRecordNumber(String recordnumber) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver, SearchingOfRecordNumField, Loading_Circle, recordnumber);
+        Utility.WatingAndSENDKEYS(driver, SearchingOfRecordNumField, recordnumber);
         driver.findElement(SearchingOfRecordNumField).sendKeys(Keys.ENTER);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstRowForRecordsResult, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstRowForRecordsResult);
         return this;
     }
 
@@ -58,12 +57,12 @@ public class P09_PaymentOfSubscriptions {
     }
 
     public P09_PaymentOfSubscriptions ClickOnFirstSubscriptionItem() {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstSubscriptionItemCheckBox, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstSubscriptionItemCheckBox);
         return this;
     }
 
     public P09_PaymentOfSubscriptions ViewFirstRequest() {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ViewButton, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ViewButton);
         return this;
     }
 
@@ -73,18 +72,18 @@ public class P09_PaymentOfSubscriptions {
         return this;
     }
     public P09_PaymentOfSubscriptions ClickOnAddNewRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
         return this;
     }
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
     public P09_PaymentOfSubscriptions clickonsavedmedicalprovider() throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider);
         return this;
     }
 }

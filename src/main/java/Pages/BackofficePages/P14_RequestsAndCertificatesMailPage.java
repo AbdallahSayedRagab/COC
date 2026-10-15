@@ -13,14 +13,13 @@ public class P14_RequestsAndCertificatesMailPage {
     private final By AddRequestButton = By.xpath("//span[@class=\"asset-icon\" and contains(text(),'أضافة طلب ')]");
     private final By SelectAdministrationRequestFromPopUp = By.xpath("//input[@type=\"radio\" and @id=\"طلب اصدار شهادة إدارية\"]");
     private final By CreateRequestFromPopUp = By.xpath("//button[text() = ' انشاء طلب ']");
-    private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
 
 
 
     public p08_Requestforissuanceofanadministrativecertificate AddAdministrationRequest (){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddRequestButton,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SelectAdministrationRequestFromPopUp,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CreateRequestFromPopUp,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddRequestButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SelectAdministrationRequestFromPopUp);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CreateRequestFromPopUp);
         return new p08_Requestforissuanceofanadministrativecertificate (driver);
     }
 

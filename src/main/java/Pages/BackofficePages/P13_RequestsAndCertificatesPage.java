@@ -16,7 +16,6 @@ public class P13_RequestsAndCertificatesPage {
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
     private final By FilterButton = By.xpath("//Button[@type=\"submit\"]");
     private final By CompleteReservationButton = By.xpath("//a[text()=' حجز موعد استكمال ']");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By ServicesList = By.xpath("//ng-select[@id=\"elctCertificateTypeId\"]");
@@ -46,21 +45,21 @@ private final By ReservationTypeList = By.xpath("//ng-select[@formcontrolname=\"
 
     public P13_RequestsAndCertificatesPage CompleteReservationForLastReservation(String NumOfReservation) throws InterruptedException {
 
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterListButton,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,ReservationNumberField,Loading_Circle,NumOfReservation);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterButton,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequstNumber,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CompleteReservationButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterListButton);
+        Utility.WatingAndSENDKEYS(driver,ReservationNumberField,NumOfReservation);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FilterButton);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequstNumber);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CompleteReservationButton);
 
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
-        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar);
+        Utility.SelectFirstEnableDayinCalender(driver);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton);
 
 
         return this;

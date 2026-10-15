@@ -14,7 +14,6 @@ public class U06_SourceOfGoodsRequestPage {
     public U06_SourceOfGoodsRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -64,77 +63,77 @@ public class U06_SourceOfGoodsRequestPage {
     public U06_SourceOfGoodsRequestPage StartTheService () {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
         if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox,Loading_Circle);
+            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
         }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage SelectFirstRecord () {
-        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage FillBasicData (String ImporterName , String ImporterAddress , String CountryOfOrigin) {
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterNameField,Loading_Circle,ImporterName);
-        Utility.WaitUntilReady_And_CLICK(driver,ImporterCountryField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterAddressField,Loading_Circle,ImporterAddress);
-        Utility.WaitUntilReady_And_CLICK(driver,SameProducingCompanyChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SameCompanyAddressChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,CountryOfOriginField,Loading_Circle,CountryOfOrigin);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfBasicData,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfShippingData,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterNameField,ImporterName);
+        Utility.WaitUntilReady_And_CLICK(driver,ImporterCountryField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterAddressField,ImporterAddress);
+        Utility.WaitUntilReady_And_CLICK(driver,SameProducingCompanyChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,SameCompanyAddressChoice);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,CountryOfOriginField,CountryOfOrigin);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfBasicData);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfShippingData);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage FillItemSection (String Description , String Marks , String NumberOfParcels ,
                                                          String NetWeight , String TotalWeight , String TotalValue) {
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ItemDescriptionField,Loading_Circle,Description);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,MarksAndNumbersField,Loading_Circle,Marks);
-        Utility.WaitUntilReady_And_CLICK(driver,ParcelTypeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,NumberOfParcelsField,Loading_Circle,NumberOfParcels);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,NetWeightField,Loading_Circle,NetWeight);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,TotalWeightField,Loading_Circle,TotalWeight);
-        Utility.WaitUntilReady_And_CLICK(driver,WeightUnitField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,TotalValueField,Loading_Circle,TotalValue);
-        Utility.WaitUntilReady_And_CLICK(driver,CurrencyField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AddItemButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfItems,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,ItemDescriptionField,Description);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,MarksAndNumbersField,Marks);
+        Utility.WaitUntilReady_And_CLICK(driver,ParcelTypeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,NumberOfParcelsField,NumberOfParcels);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,NetWeightField,NetWeight);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,TotalWeightField,TotalWeight);
+        Utility.WaitUntilReady_And_CLICK(driver,WeightUnitField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,TotalValueField,TotalValue);
+        Utility.WaitUntilReady_And_CLICK(driver,CurrencyField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,AddItemButton);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfItems);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage FillCertificateData (String Branch , String CertificatesCount) {
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
         // عدد الشهادات بيبقى فيه 0 جاهز فلازم يتمسح الاول
         driver.findElement(CertificatesCountField).clear();
-        Utility.WaitUntilReady_And_SENDKEYS(driver,CertificatesCountField,Loading_Circle,CertificatesCount);
-        Utility.WaitUntilReady_And_CLICK(driver,SignatureAuthenticationField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,CertificateLanguageField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCertificateData,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,CertificatesCountField,CertificatesCount);
+        Utility.WaitUntilReady_And_CLICK(driver,SignatureAuthenticationField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,CertificateLanguageField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCertificateData);
         return this;
     }
 
     // لو فيه نوع مرفق بيرفع عليه الملف ولو مفيش بيعدي
     public U06_SourceOfGoodsRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton,Loading_Circle);
+        Utility.UploadAttachments(driver,AddAttachmentButton);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage SendTheRequestAndSaveRequestNumber () {
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         // نفس البوب اب بيتغير من رسالة التأكيد لرسالة "تم ارسال" فبنستنى الرسالة الجديدة
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(PopUpMessage,"تم ارسال"));
-        String Message = Utility.GETTEXT(driver,PopUpMessage,Loading_Circle);
+        String Message = Utility.GETTEXT(driver,PopUpMessage);
         String requestNumber = Message.replaceAll("[^0-9]", "");
         Validations.ValidationTrue(!requestNumber.isEmpty(), "Request number not found in: " + Message);
         JsonUtil.writeValue("PortalSourceOfGoodsRequestNumber", requestNumber);

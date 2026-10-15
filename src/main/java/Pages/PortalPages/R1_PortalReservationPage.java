@@ -18,7 +18,6 @@ public class R1_PortalReservationPage {
     public R1_PortalReservationPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By NextStepButton = By.xpath("//button[text()='الخطوة التالية']");
     private final By NumberOfApplicant_Field = By.xpath("//label[normalize-space(text())='رقم هاتف مقدم الطلب']/following-sibling::*[1]");
     private final By ApplicantAttribute_Field = By.xpath("//label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]");
@@ -58,24 +57,24 @@ public class R1_PortalReservationPage {
     private void ClearAndTypePhoneNumber (String phoneNumber) {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(NumberOfApplicant_Field));
         driver.findElement(NumberOfApplicant_Field).clear();
-        Utility.WaitUntilReady_And_SENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,NumberOfApplicant_Field,phoneNumber);
     }
 
     public R1_PortalReservationPage CreateNormalReservationWithoutLogin (String Name , String phoneNumber , String BeneficiaryName , String ID , String Branch) throws InterruptedException {
-        Utility.WaitUntilReady_And_CLICK(driver,BookAppointmentIcon,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
+        Utility.WaitUntilReady_And_CLICK(driver,BookAppointmentIcon);
+        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,Applicant_Name_Field,Name);
         ClearAndTypePhoneNumber(phoneNumber);
-        Utility.WaitUntilReady_And_CLICK(driver,NationalityOfApplicant_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
+        Utility.WaitUntilReady_And_CLICK(driver,NationalityOfApplicant_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,ApplicantID_Field,ID);
         FillBeneficiaryAndNormalReservationData(BeneficiaryName,ID,Branch);
         return this;
     }
 
     public R1_PortalReservationPage CreateNormalReservation (String phoneNumber , String BeneficiaryName , String ID , String Branch) throws InterruptedException {
-        Utility.WaitUntilReady_And_CLICK(driver,BookAppointmentIcon,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,BookAppointmentIcon);
+        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
         ClearAndTypePhoneNumber(phoneNumber);
         FillBeneficiaryAndNormalReservationData(BeneficiaryName,ID,Branch);
         return this;
@@ -83,40 +82,40 @@ public class R1_PortalReservationPage {
 
     private void FillBeneficiaryAndNormalReservationData (String BeneficiaryName , String ID , String Branch) throws InterruptedException {
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,ApplicantAttribute_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryName_Field,Loading_Circle,BeneficiaryName);
-        Utility.WaitUntilReady_And_CLICK(driver,BeneficiaryNationality_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryID_Field,Loading_Circle,ID);
-        Utility.WaitUntilReady_And_CLICK(driver,RequestType_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AdministrationRequest,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,CertificateType_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Branch_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NormalReservationType,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,PeriodsList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmReservationButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,ApplicantAttribute_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryName_Field,BeneficiaryName);
+        Utility.WaitUntilReady_And_CLICK(driver,BeneficiaryNationality_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryID_Field,ID);
+        Utility.WaitUntilReady_And_CLICK(driver,RequestType_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,AdministrationRequest);
+        Utility.WaitUntilReady_And_CLICK(driver,CertificateType_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,Branch_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList);
+        Utility.WaitUntilReady_And_CLICK(driver,NormalReservationType);
+        Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
+        Utility.WaitUntilReady_And_CLICK(driver,PeriodsList);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmReservationButton);
     }
 
     public R1_PortalReservationPage ConfirmReservation (String phoneNumber , String BeneficiaryName , String ID) throws InterruptedException {
-        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
         ClearAndTypePhoneNumber(phoneNumber);
-        Utility.WaitUntilReady_And_CLICK(driver,ApplicantAttribute_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryName_Field,Loading_Circle,BeneficiaryName);
-        Utility.WaitUntilReady_And_CLICK(driver,BeneficiaryNationality_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryID_Field,Loading_Circle,ID);
+        Utility.WaitUntilReady_And_CLICK(driver,ApplicantAttribute_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryName_Field,BeneficiaryName);
+        Utility.WaitUntilReady_And_CLICK(driver,BeneficiaryNationality_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,EgyptianNation);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,BeneficiaryID_Field,ID);
         // نوع الطلب: طلب خدمة اختيارية
-        Utility.WaitUntilReady_And_CLICK(driver,RequestType_Field,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SpecialServiceRequestType,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,RequestType_Field);
+        Utility.WaitUntilReady_And_CLICK(driver,SpecialServiceRequestType);
         // بعده الشهادة / الخدمة المطلوبة: الشهادات بتحمل بعد نوع الطلب (والسيرفر ساعات بيتأخر)
         // فبنفتح الليستة وناخد اول اختيار لو ظهر ولو لسه مظهرش بنعيد المحاولة
         // والاختيار لازم يفضل ثابت مرتين ورا بعض لان الليستة لما تحمل بتمسح الاختيار القديم
@@ -128,7 +127,7 @@ public class R1_PortalReservationPage {
                 .until(d -> {
                     if (!d.findElements(SelectedCertificateType).isEmpty()) return ++stableChecks[0] >= 2;
                     stableChecks[0] = 0;
-                    if (d.findElements(Loading_Circle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                    if (d.findElements(Utility.Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
                     if (d.findElements(Option1ForAnyList).isEmpty()) {
                         d.findElement(CertificateType_Field).click();
                         return false;
@@ -136,14 +135,14 @@ public class R1_PortalReservationPage {
                     d.findElement(Option1ForAnyList).click();
                     return false;
                 });
-        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,PeriodsList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmReservationButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
+        Utility.WaitUntilReady_And_CLICK(driver,PeriodsList);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmReservationButton);
         return this;
     }
 
@@ -155,7 +154,7 @@ public class R1_PortalReservationPage {
     }
 
     public R1_PortalReservationPage PrintReservationData (String ScreenShotName) throws IOException {
-        Utility.PrintAndScreenShot(driver,PrintReservationButton,Loading_Circle,ScreenShotName);
+        Utility.PrintAndScreenShot(driver,PrintReservationButton,ScreenShotName);
         return this;
     }
 

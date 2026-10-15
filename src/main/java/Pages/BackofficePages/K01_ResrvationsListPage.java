@@ -26,7 +26,6 @@ public class K01_ResrvationsListPage {
     private final By AdministrationRequest = By.xpath("//div[@role='option']//span[normalize-space(text())='طلب اصدار شهادة إدارية']");
     private final By CertificateType_Field = By.xpath("//label[normalize-space(text())='نوع الشهادة']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By OptionsButton = By.xpath("(//button[@id=\"optionBtn\"])[1]");
     private final By ConfirmAttendanceButtonForFirstReserv = By.xpath("(//button[text()=' تأكيد الحضور '])[last()]");
     private final By ConfirmAttendanceButtonOnPopUp = By.xpath("//button[text()='تأكيد الحضور']");
@@ -56,91 +55,91 @@ public class K01_ResrvationsListPage {
 
 
     public K01_ResrvationsListPage CreateNormalReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
-       Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
-        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
+       Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button);
+        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Name);
+        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,phoneNumber);
         Utility.CLICKONELEMENTS(driver,NationalityOfApplicant_Field);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
-        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar);
+        Utility.SelectFirstEnableDayinCalender(driver);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton);
 
         return this;
     }
 
     public P04_InvoicesPage CreateVIPReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
-        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button);
+        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Name);
+        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,phoneNumber);
         Utility.CLICKONELEMENTS(driver,NationalityOfApplicant_Field);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
-        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar);
+        Utility.SelectFirstEnableDayinCalender(driver);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton);
 
         return new P04_InvoicesPage(driver);
     }
 
     public K01_ResrvationsListPage ConfirmFirstReservationInTable() throws InterruptedException {
 
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp);
         return this;
     }
     public K01_ResrvationsListPage PrintReservationData (String ScreenShotName) throws InterruptedException, IOException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
-        Utility.PrintAndScreenShot(driver,PrintButtonForFirstReserv,Loading_Circle,ScreenShotName);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton);
+        Utility.PrintAndScreenShot(driver,PrintButtonForFirstReserv,ScreenShotName);
         return this;
     }
 
     public K01_ResrvationsListPage PrintQueueData (String ScreenShotName) throws InterruptedException, IOException {
 
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PrintQueueDaraAfterAttending,Loading_Circle);
-        Utility.PrintAndScreenShot(driver,PrintQueueDaraAfterAttending,Loading_Circle,ScreenShotName);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PrintQueueDaraAfterAttending);
+        Utility.PrintAndScreenShot(driver,PrintQueueDaraAfterAttending,ScreenShotName);
         return this;
     }
 
     public K01_ResrvationsListPage ReschedulingReservation () throws InterruptedException, IOException {
 
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReschedulingButtonForFirstReserv,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar,Loading_Circle);
-        Utility.SelectFirstEnableDayinCalender(driver,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitReschedulingButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReschedulingButtonForFirstReserv);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,VIPReservationType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar);
+        Utility.SelectFirstEnableDayinCalender(driver);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitReschedulingButton);
         return this;
     }
     public K01_ResrvationsListPage SaveReservationNumberInJsonFile() {
-        String NumberOfReservation = Utility.GETTEXT(driver,ReservationNumber,Loading_Circle);
+        String NumberOfReservation = Utility.GETTEXT(driver,ReservationNumber);
         JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
         JsonUtil.writeValue("ReservationNumber", NumberOfReservation);
         return this;

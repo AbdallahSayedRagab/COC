@@ -16,7 +16,6 @@ public class P11_ServicesRequest {
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
     private final By WithoutRecordRequest_Button = By.id("MainBranch");
     private final By CreateRequestButton = By.xpath("//button[contains(text(),\" انشاء الطلب \")]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By ServicesList = By.xpath("//ng-select[@id=\"elctCertificateTypeId\"]");
@@ -37,11 +36,11 @@ public class P11_ServicesRequest {
 
 
     public P11_ServicesRequest CreateNewServicesRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ServicesRequest_FSM,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WithoutRecordRequest_Button,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CreateRequestButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ServicesRequest_FSM);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WithoutRecordRequest_Button);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CreateRequestButton);
         return this;
     }
     public P11_ServicesRequest Validate_EditRequestURL () throws InterruptedException {
@@ -50,8 +49,8 @@ public class P11_ServicesRequest {
 }
 
     public P11_ServicesRequest FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-    Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,Loading_Circle,ID);
-    Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button,Loading_Circle);
+    Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
+    Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
     return this;
 }
 
@@ -63,7 +62,7 @@ public class P11_ServicesRequest {
 }
 
     public P11_ServicesRequest FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
+        Utility.UploadAttachments(driver, AddAttachmentButton);
         return this;
     }
     public P11_ServicesRequest ConfirmRequest () throws InterruptedException {
@@ -73,27 +72,27 @@ public class P11_ServicesRequest {
     }
 
 //    public P11_ServicesRequest ReviewRequest () throws InterruptedException {
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-////        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+////        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
 //
 //    return this;
 //}
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
 
 
 //    public P11_ServicesRequest ReceivingTheCertificate () throws InterruptedException {
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+//        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
 //        return this;
 //    }
 

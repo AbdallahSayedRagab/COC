@@ -10,7 +10,6 @@ import java.awt.*;
 public class p08_Requestforissuanceofanadministrativecertificate {
     private final WebDriver driver;
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By SearchingOfRecordNumField = By.xpath("(//input[@name=\"recordNumber\"])[1]");
     private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By Personalidentificationnumber=By.xpath("//input-control[@formcontrolname='applicantNationalId']//input");
@@ -31,13 +30,13 @@ public class p08_Requestforissuanceofanadministrativecertificate {
         this.driver=driver;
     }
     public p08_Requestforissuanceofanadministrativecertificate ClickOnAddNewRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
         return this;
     }
     public p08_Requestforissuanceofanadministrativecertificate SearchOnRecordNumber(String recordnumber) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,Loading_Circle,recordnumber);
+        Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,recordnumber);
         driver.findElement(SearchingOfRecordNumField).sendKeys(Keys.ENTER);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult);
         return this;
     }
 
@@ -46,7 +45,7 @@ public class p08_Requestforissuanceofanadministrativecertificate {
         return this;
     }
     public p08_Requestforissuanceofanadministrativecertificate ClickOnSavedMedicalProvider() throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider);
         return this;
     }
 
@@ -66,26 +65,26 @@ public class p08_Requestforissuanceofanadministrativecertificate {
 
     }
     public p08_Requestforissuanceofanadministrativecertificate ReviewRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
 
         return this;
     }
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
 
     public p08_Requestforissuanceofanadministrativecertificate ReceivingTheCertificate () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
         return this;
     }
 

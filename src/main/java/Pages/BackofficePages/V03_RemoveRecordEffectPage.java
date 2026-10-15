@@ -14,7 +14,6 @@ public class V03_RemoveRecordEffectPage {
     private final By AddEffectButton = By.xpath("//span[contains(text(), 'التأثير علي سجل')]");
     private final By RemoveRecordButton = By.id("remove");
     private final By ConfirmingEffectButton = By.xpath("//button[contains(text(), ' انشاء التأثير ')]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
 //    private final By RecordNumField = By.xpath("//label[normalize-space(text())='رقم السجل']/following-sibling::*[1]");
     private final By SignatureNumberInRecordField = By.xpath("//label[normalize-space(text())='رقم التأشير في السجل']/following-sibling::*[1]");
@@ -40,40 +39,40 @@ public class V03_RemoveRecordEffectPage {
 
 
     public V03_RemoveRecordEffectPage AddNewEffectToRemoveNewRecord() {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RecordsListIcon, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, EffectsPageButton, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddEffectButton, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RemoveRecordButton, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ConfirmingEffectButton, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RecordsListIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, EffectsPageButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AddEffectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, RemoveRecordButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ConfirmingEffectButton);
         return this;
     }
 
     public V03_RemoveRecordEffectPage FillDataForRecordAndCreateRemoveEffect( String RecordNum ,String SignatureNumber, String CertificateNum, String RemoveNum ) {
 
-        Utility.WatingAndSENDKEYS(driver, SignatureNumberInRecordField, Loading_Circle,SignatureNumber);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DateOfSigntureField,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FixedDateForAnyCalendar,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver, SearchingOfCertificateNumField, Loading_Circle,CertificateNum);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SearchButton , Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstRowForCertificateResult, Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,Loading_Circle,RecordNum);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SearchButton , Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, OfficeOfRemove, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,RemoveNumber,Loading_Circle,RemoveNum);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SendingEffectButton, Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver, SignatureNumberInRecordField,SignatureNumber);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DateOfSigntureField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FixedDateForAnyCalendar);
+        Utility.WatingAndSENDKEYS(driver, SearchingOfCertificateNumField,CertificateNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SearchButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, FirstRowForCertificateResult);
+        Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,RecordNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SearchButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, OfficeOfRemove);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingAndSENDKEYS(driver,RemoveNumber,RemoveNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, SendingEffectButton);
 
         return this;
     }
 
     public V03_RemoveRecordEffectPage ConfirmAndApproveTheRecord() {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptButton, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApprovedButton, Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp, Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApprovedButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OkButtonOfPopUp);
         return this;
     }
 }

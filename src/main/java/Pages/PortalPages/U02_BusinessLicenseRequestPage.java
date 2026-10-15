@@ -14,7 +14,6 @@ public class U02_BusinessLicenseRequestPage {
     public U02_BusinessLicenseRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By FacilityNature_Choice = By.xpath("//label[contains(text(), ' مركز رئيسى')]");
@@ -74,50 +73,50 @@ public class U02_BusinessLicenseRequestPage {
     public U02_BusinessLicenseRequestPage StartTheService () {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
         if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox,Loading_Circle);
+            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
         }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FacilityNature_Choice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,CreateRequest_Button,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        Utility.WaitUntilReady_And_CLICK(driver,FacilityNature_Choice);
+        Utility.WaitUntilReady_And_CLICK(driver,CreateRequest_Button);
         return this;
     }
 
     public U02_BusinessLicenseRequestPage FillLegalDataSection (String TradeName) {
-        Utility.WaitUntilReady_And_CLICK(driver,FacilityClassificationField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FacilityTypeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,TradeNameField,Loading_Circle,TradeName);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfLegalData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FacilityClassificationField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,FacilityTypeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,TradeNameField,TradeName);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfLegalData);
         return this;
     }
 
     public U02_BusinessLicenseRequestPage AddPartnerFromAccountData () {
-        Utility.WaitUntilReady_And_CLICK(driver,AddPartnerButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfManagement,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,AddPartnerButton);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfManagement);
         return this;
     }
 
     public U02_BusinessLicenseRequestPage FillActivitiesDataSection (String TaxCardNum , String Description) {
-        Utility.WaitUntilReady_And_SENDKEYS(driver,TaxCardNumberField,Loading_Circle,TaxCardNum);
-        Utility.WaitUntilReady_And_CLICK(driver,CompanyEstablishmentDateField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ActivityDescriptionField,Loading_Circle,Description);
-        Utility.WaitUntilReady_And_CLICK(driver,MainActivityField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SubActivityField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ActivityField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ActivityStartDateField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AddActivityButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,DivisionNameField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,DivisionAddingDateField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AddDivisionButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfActivities,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,TaxCardNumberField,TaxCardNum);
+        Utility.WaitUntilReady_And_CLICK(driver,CompanyEstablishmentDateField);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,ActivityDescriptionField,Description);
+        Utility.WaitUntilReady_And_CLICK(driver,MainActivityField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,SubActivityField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,ActivityField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,ActivityStartDateField);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
+        Utility.WaitUntilReady_And_CLICK(driver,AddActivityButton);
+        Utility.WaitUntilReady_And_CLICK(driver,DivisionNameField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,DivisionAddingDateField);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
+        Utility.WaitUntilReady_And_CLICK(driver,AddDivisionButton);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfActivities);
         return this;
     }
 
@@ -125,19 +124,19 @@ public class U02_BusinessLicenseRequestPage {
         // الحقل بيبقى فيه 0 جاهز فلازم يتمسح الاول
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(CapitalField));
         driver.findElement(CapitalField).clear();
-        Utility.WaitUntilReady_And_SENDKEYS(driver,CapitalField,Loading_Circle,Capital);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCapital,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,CapitalField,Capital);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfCapital);
         return this;
     }
 
     public U02_BusinessLicenseRequestPage FillBusinessLocationSection (String NameOfSt) {
-        Utility.WaitUntilReady_And_CLICK(driver,FirstAdministrativeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SecondAdministrativeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,StreetNameField,Loading_Circle,NameOfSt);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfBusinessLocation,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfDocuments,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstAdministrativeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,SecondAdministrativeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,StreetNameField,NameOfSt);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfBusinessLocation);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfDocuments);
         return this;
     }
 
@@ -145,31 +144,31 @@ public class U02_BusinessLicenseRequestPage {
         // اول محافظة في الليستة مفيهاش مكاتب سجل فبنختار المحافظة بالاسم
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
         By GovernorateChoice = By.xpath("//div[@role='option'][normalize-space()='" + Governorate + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToGovernorateField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,GovernorateChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,CommercialRegistryOfficeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SaveAndContinueButton,Loading_Circle);
-        String requestNumber = Utility.GETTEXT(driver,PopUpMessage,Loading_Circle).replaceAll("[^0-9]", "");
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToGovernorateField);
+        Utility.WaitUntilReady_And_CLICK(driver,GovernorateChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,CommercialRegistryOfficeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,SaveAndContinueButton);
+        String requestNumber = Utility.GETTEXT(driver,PopUpMessage).replaceAll("[^0-9]", "");
         JsonUtil.writeValue("PortalBusinessLicenseRequestNumber", requestNumber);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return this;
     }
 
     // لو فيه نوع مرفق بيرفع عليه الملف ولو مفيش بيعدي
     public U02_BusinessLicenseRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton,Loading_Circle);
+        Utility.UploadAttachments(driver,AddAttachmentButton);
         return this;
     }
 
     public U02_BusinessLicenseRequestPage SendTheRequestAndValidateIt (String RequestNumber) {
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         // نفس البوب اب بيتغير من رسالة التأكيد لرسالة "تم ارسال" فبنستنى الرسالة الجديدة
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(PopUpMessage,"تم ارسال"));
-        String Message = Utility.GETTEXT(driver,PopUpMessage,Loading_Circle);
+        String Message = Utility.GETTEXT(driver,PopUpMessage);
         Validations.ValidationTrue(Message.contains("تم ارسال") && Message.contains(RequestNumber), "Request was not sent: " + Message);
         return this;
     }

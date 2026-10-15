@@ -25,7 +25,6 @@ public class K02_SelfServicePage {
     //    private final By ApplicantAttribute_Field = By.xpath("//label[normalize-space(text())='صفة مقدم الطلب']/following-sibling::*[1]");
 //    private final By OwnerAttribute = By.xpath("//div[@role='option']//span[normalize-space(text())='صاحب الشأن']");
 
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By OptionsButton = By.xpath("(//button[@id=\"optionBtn\"])[1]");
     private final By ConfirmAttendanceButton= By.xpath("//button[text()=' تأكيد الحضور ']");
     private final By FirstReservationInConfirmingPage = By.xpath("(//div[@class=\"reservation-card reservation-available\"])[1]");
@@ -45,21 +44,21 @@ public class K02_SelfServicePage {
 
 
     public K02_SelfServicePage CreateTodayReservation (String Name , String phoneNumber , String ID) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,TodayReservation_Button,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Loading_Circle,Name);
-        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,Loading_Circle,phoneNumber);
-        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmTheReservationButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,TodayReservation_Button);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType);
+        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Name);
+        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,phoneNumber);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmTheReservationButton);
 
         return this;
     }
 
     public K02_SelfServicePage ConfirmAttendReservation (String ID) throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButton,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NextButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstReservationInConfirmingPage,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButton);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NextButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstReservationInConfirmingPage);
 
 
         return this;

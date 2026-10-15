@@ -16,7 +16,6 @@ public class K03_QueuePage {
     private final By ListOfAvailableWindows = By.xpath("//ng-select[@id=\"windowSelect\"]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By ConfirmButtonAtPopUp = By.xpath("//a[text()='تأكيد']");
-    private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
 
 
 
@@ -28,17 +27,17 @@ public class K03_QueuePage {
     private void ClickOn3DotsIconOfLastReservation() {
         String bookingNumber = DataUtiles.getJsonData("Data", "ReservationNumber"); // غيّر المفتاح لو مختلف عندك
         By moreIcon = ThreeDotsIcon(bookingNumber);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, moreIcon,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, moreIcon);
     }
 
 
 
     public K03_QueuePage AssigningReservationToAvailableWindow () {
         ClickOn3DotsIconOfLastReservation();
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AssignWindowButton,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ListOfAvailableWindows,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ConfirmButtonAtPopUp,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AssignWindowButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ListOfAvailableWindows);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ConfirmButtonAtPopUp);
         return this;
     }
 }

@@ -19,7 +19,6 @@ public class U01_PortalDashboard {
     public U01_PortalDashboard(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
 
     // تسجيل الدخول والخروج
     private final By AccountMenu = By.xpath("//span[contains(@class,'header-link') and text()='الحساب']");
@@ -70,15 +69,15 @@ public class U01_PortalDashboard {
                 .ignoring(ElementNotInteractableException.class)
                 .ignoring(ElementClickInterceptedException.class)
                 .until(d -> {
-                    if (d.findElements(Loading_Circle).stream().anyMatch(WebElement::isDisplayed)) return false;
+                    if (d.findElements(Utility.Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
                     if (!d.findElements(LoginLink).isEmpty() && d.findElement(LoginLink).isDisplayed()) return true;
                     d.findElement(AccountMenu).click();
                     return false;
                 });
-        Utility.WaitUntilReady_And_CLICK(driver,LoginLink,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,Portal_Email,Loading_Circle,Email);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,Portal_Password,Loading_Circle,Password);
-        Utility.WaitUntilReady_And_CLICK(driver,Portal_LoginButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,LoginLink);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,Portal_Email,Email);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,Portal_Password,Password);
+        Utility.WaitUntilReady_And_CLICK(driver,Portal_LoginButton);
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(Portal_LoginButton));
         return this;
     }

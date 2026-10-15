@@ -21,7 +21,6 @@ public class U08_SpecialServiceRequestPage {
     public U08_SpecialServiceRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
@@ -53,35 +52,35 @@ public class U08_SpecialServiceRequestPage {
     public U08_SpecialServiceRequestPage StartTheService () throws InterruptedException {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
         if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox,Loading_Circle);
+            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
         }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return this;
     }
 
     public U08_SpecialServiceRequestPage FillRequestDataAndSaveRequestNumber (String TestData) throws InterruptedException {
-        Utility.WaitUntilReady_And_CLICK(driver,RequestTypeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,FacilityClassificationField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,RecordOfficeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,RecordNumberField,Loading_Circle,TestData);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,RequestDetailsField,Loading_Circle,TestData);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButton,Loading_Circle);
-        String requestNumber = Utility.GETTEXT(driver,RequestNumberText,Loading_Circle).replaceAll("[^0-9]", "");
+        Utility.WaitUntilReady_And_CLICK(driver,RequestTypeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,FacilityClassificationField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,RecordOfficeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,RecordNumberField,TestData);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,RequestDetailsField,TestData);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButton);
+        String requestNumber = Utility.GETTEXT(driver,RequestNumberText).replaceAll("[^0-9]", "");
         JsonUtil.writeValue("SpecialServiceRequestNumber", requestNumber);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return this;
     }
 
     public U08_SpecialServiceRequestPage FillAttachmentSection (String TestData) throws InterruptedException, AWTException {
-        Utility.WaitUntilReady_And_CLICK(driver,AddAttachmentCard,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AttachmentTypeField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,AddAttachmentTypeButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,UploadFileButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,AddAttachmentCard);
+        Utility.WaitUntilReady_And_CLICK(driver,AttachmentTypeField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,AddAttachmentTypeButton);
+        Utility.WaitUntilReady_And_CLICK(driver,UploadFileButton);
 
         String path = "\"C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg\"";
         StringSelection StringSelection = new StringSelection(path);
@@ -100,19 +99,19 @@ public class U08_SpecialServiceRequestPage {
         robot.keyRelease(KeyEvent.VK_ENTER);
         robot.delay(5000);
 
-        Utility.WaitUntilReady_And_SENDKEYS(driver,AttachmentNotesField,Loading_Circle,TestData);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments,Loading_Circle);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,AttachmentNotesField,TestData);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments);
         return this;
     }
 
     public U08_SpecialServiceRequestPage ConfirmSendingTheRequest (String Branch) throws InterruptedException {
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ApplicantCapacityField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
+        Utility.WaitUntilReady_And_CLICK(driver,ApplicantCapacityField);
+        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return this;
     }
 
@@ -125,17 +124,17 @@ public class U08_SpecialServiceRequestPage {
     }
 
     public U08_SpecialServiceRequestPage SearchOnRequestInSpecialServices (String RequestNumber) throws InterruptedException {
-        new WebDriverWait(driver, Duration.ofSeconds(180)).until(ExpectedConditions.invisibilityOfElementLocated(Loading_Circle));
-        Utility.WaitUntilReady_And_SENDKEYS(driver,SearchByRequestNumberField,Loading_Circle,RequestNumber);
+        new WebDriverWait(driver, Duration.ofSeconds(180)).until(ExpectedConditions.invisibilityOfElementLocated(Utility.Loader));
+        Utility.WaitUntilReady_And_SENDKEYS(driver,SearchByRequestNumberField,RequestNumber);
         return this;
     }
 
     public R1_PortalReservationPage ViewRequestAndBookAppointment (String RequestNumber) throws InterruptedException {
         // قايمة الخدمات المتميزة ساعات بتتأخر في التحميل
         new WebDriverWait(driver, Duration.ofSeconds(180), Duration.ofMillis(500)).until(ExpectedConditions.visibilityOfElementLocated(ViewButtonOfRequest(RequestNumber)));
-        Utility.WaitUntilReady_And_CLICK(driver,ViewButtonOfRequest(RequestNumber),Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,PrintCertificateAndBookAppointmentButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,ViewButtonOfRequest(RequestNumber));
+        Utility.WaitUntilReady_And_CLICK(driver,PrintCertificateAndBookAppointmentButton);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return new R1_PortalReservationPage(driver);
     }
 

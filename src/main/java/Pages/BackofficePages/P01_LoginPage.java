@@ -15,7 +15,6 @@ public class P01_LoginPage {
     private final By Login_Email = By.xpath("//input[@formcontrolname=\"username\"]");
     private final By Login_Password = By.xpath("//input[@type=\"password\"]");
     private final By Login_button = By.xpath("//button[@type=\"submit\"]");
-    private final By LoadingCircle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By BranchList = By.xpath("(//ng-select)[1]");
     private final By ChamberBranchChoice = By.xpath("//span[text()=' فرع الغرفه للخدمات الاختياريه  ']");
     private final By WindowList = By.xpath("(//ng-select)[2]");
@@ -40,11 +39,11 @@ public class P01_LoginPage {
         Utility.SENDKEYS(driver,Login_Email,EMAIL);
         Utility.SENDKEYS(driver,Login_Password,password);
         Utility.CLICKONELEMENTS(driver,Login_button);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ChamberBranchChoice,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WindowList,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalWindowChoice,LoadingCircle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConFirmChoiceButton,LoadingCircle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ChamberBranchChoice);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WindowList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalWindowChoice);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConFirmChoiceButton);
 
         return new P02_Dashboard( driver);
     }

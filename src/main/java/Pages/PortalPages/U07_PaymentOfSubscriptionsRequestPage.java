@@ -15,7 +15,6 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     public U07_PaymentOfSubscriptionsRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//div[contains(@class,'ngx-spinner-overlay')]");
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
@@ -43,9 +42,9 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     public U07_PaymentOfSubscriptionsRequestPage StartTheService () {
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
         if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox,Loading_Circle);
+            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
         }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
         return this;
     }
 
@@ -53,36 +52,36 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     public U07_PaymentOfSubscriptionsRequestPage SearchOnRecordAndSelectFirstResult (String RecordNumber) {
         // نستنى جدول سجلات الحساب يحمل الاول عشان مايمسحش نتيجة البحث
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(FirstRecordInSearchResults));
-        Utility.WaitUntilReady_And_SENDKEYS(driver,RecordNumberField,Loading_Circle,RecordNumber);
+        Utility.WaitUntilReady_And_SENDKEYS(driver,RecordNumberField,RecordNumber);
         // التالى بيعمل بحث برقم السجل
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData);
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(FirstRecordInSearchResults,RecordNumber));
-        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData);
         return this;
     }
 
     public U07_PaymentOfSubscriptionsRequestPage SelectFirstSubscriptionItem () {
-        Utility.WaitUntilReady_And_CLICK(driver,FirstSubscriptionItem,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfSubscriptionItems,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,FirstSubscriptionItem);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfSubscriptionItems);
         return this;
     }
 
     public U07_PaymentOfSubscriptionsRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments,Loading_Circle);
+        Utility.UploadAttachments(driver,AddAttachmentButton);
+        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments);
         return this;
     }
 
     public U07_PaymentOfSubscriptionsRequestPage SelectBranch (String Branch) {
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
-        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField,Loading_Circle);
-        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendCertificateToBranchField);
+        Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
         return this;
     }
 
     public U07_PaymentOfSubscriptionsRequestPage SendTheRequestAndSaveRequestNumber () {
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
         // يا اما بوب اب التأكيد يظهر يا اما رسالة ان البند اتختار قبل كده في طلب تاني
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.or(
                 ExpectedConditions.visibilityOfElementLocated(ConfirmButtonOfPopUp),
@@ -92,10 +91,10 @@ public class U07_PaymentOfSubscriptionsRequestPage {
             LogsUtiles.info("Subscription item was already sent before: " + Message);
             return this;
         }
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp,Loading_Circle);
+        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         // نفس البوب اب بيتغير من رسالة التأكيد لرسالة "تم ارسال" فبنستنى الرسالة الجديدة
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(PopUpMessage,"تم ارسال"));
-        String Message = Utility.GETTEXT(driver,PopUpMessage,Loading_Circle);
+        String Message = Utility.GETTEXT(driver,PopUpMessage);
         String requestNumber = Message.replaceAll("[^0-9]", "");
         Validations.ValidationTrue(!requestNumber.isEmpty(), "Request number not found in: " + Message);
         JsonUtil.writeValue("PortalPaymentOfSubscriptionsRequestNumber", requestNumber);

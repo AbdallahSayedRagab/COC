@@ -11,7 +11,6 @@ public class P16_SpecialServiceBackOfficePage {
     public P16_SpecialServiceBackOfficePage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By BranchList = By.xpath("(//ng-select)[1]");
     private final By SelectedBranch = By.xpath("(//ng-select)[1]//span[contains(@class,'ng-value-label')]");
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
@@ -32,41 +31,41 @@ public class P16_SpecialServiceBackOfficePage {
 
     public P16_SpecialServiceBackOfficePage SelectBranch (String Branch) throws InterruptedException {
         Utility.WaitForPageLoad(driver);
-        if (!Utility.GETTEXT(driver,SelectedBranch,Loading_Circle).trim().equals(Branch)) {
+        if (!Utility.GETTEXT(driver,SelectedBranch).trim().equals(Branch)) {
             By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
-            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList,Loading_Circle);
-            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchChoice,Loading_Circle);
+            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList);
+            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchChoice);
             Utility.WaitForPageLoad(driver);
         }
         return this;
     }
 
     public P16_SpecialServiceBackOfficePage OpenSpecialServiceRequests () {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SpecialServiceRequest_FSM,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SpecialServiceRequest_FSM);
         return this;
     }
 
     public P16_SpecialServiceBackOfficePage AcceptTheRequest (String RequestNumber , String TestData) {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber),Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,Loading_Circle,TestData);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber));
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,TestData);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
 
     public P16_SpecialServiceBackOfficePage ApproveTheRequest (String RequestNumber , String TestData) {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber),Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApproveRequestButton,Loading_Circle);
-        Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,Loading_Circle,TestData);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber));
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApproveRequestButton);
+        Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,TestData);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;
     }
 
     public P16_SpecialServiceBackOfficePage ValidateRequestIsApproved (String RequestNumber) {
-        String Status = Utility.GETTEXT(driver,StatusOfRequest(RequestNumber),Loading_Circle).trim();
+        String Status = Utility.GETTEXT(driver,StatusOfRequest(RequestNumber)).trim();
         Validations.ValidateEquals(Status,"تم الموافقة على الطلب");
         return this;
     }

@@ -4,12 +4,12 @@ import Utilities.JsonUtil;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.util.NoSuchElementException;
 
 
 public class P05_EditRequestPage {
@@ -22,7 +22,6 @@ public class P05_EditRequestPage {
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By EditRequest_FSM = By.xpath("//a[contains(@href, '/requests/editCommercialList')]");
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Loading_Circle = By.xpath("//mat-spinner[@mode=\"indeterminate\"]");
     private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
     private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SearchForRecord_Field = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
@@ -45,9 +44,9 @@ public class P05_EditRequestPage {
 
 
     public P05_EditRequestPage CreateNewEditRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditRequest_FSM,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditRequest_FSM);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
         return this;
     }
     public P05_EditRequestPage Validate_EditRequestURL () throws InterruptedException {
@@ -56,20 +55,20 @@ public class P05_EditRequestPage {
     }
 
     public P05_EditRequestPage FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,Loading_Circle,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button,Loading_Circle);
+        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
         return this;
     }
 
     public P05_EditRequestPage ChoosingRecord (String RecordNumber){
-        Utility.WatingAndSENDKEYS(driver,SearchForRecord_Field,Loading_Circle,RecordNumber);
+        Utility.WatingAndSENDKEYS(driver,SearchForRecord_Field,RecordNumber);
          driver.findElement(SearchForRecord_Field).sendKeys(Keys.ENTER);
-         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult,Loading_Circle);
+         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult);
         return this;
     }
 
     public P05_EditRequestPage SelectSectionToEdit (){
-    Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CheckBoxOFLegalData,Loading_Circle);
+    Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CheckBoxOFLegalData);
         return this;
     }
 
@@ -80,7 +79,7 @@ public class P05_EditRequestPage {
     }
 
     public P05_EditRequestPage FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton, Loading_Circle);
+        Utility.UploadAttachments(driver, AddAttachmentButton);
         return this;
     }
 
@@ -92,39 +91,41 @@ public class P05_EditRequestPage {
 
     public P05_EditRequestPage SaveRequestNumberInJsonFile() {
 
-        String requestNumber = Utility.GETTEXT(driver,RequestNumber,Loading_Circle);
+        String requestNumber = Utility.GETTEXT(driver,RequestNumber);
         JsonUtil.writeValue("EditRequestNumber", requestNumber);
         return this;
     }
 
     public P05_EditRequestPage ReviewRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        // بوب اب التحذير بيظهر في حالات بس: بنستنى اللودر يخلص وبعدين ندور عليه ثانيتين بس
+        // لو ظهر بندوس عليه ولو مظهرش بنكمل على طول - وفي الحالتين بندوس اقبل الطلب
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(Utility.Loader));
         try {
-                Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptButtonOfWarningPopUp, Loading_Circle);
-                Utility.CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
-
-        } catch (NoSuchElementException | TimeoutException e) {
-            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP, Loading_Circle);
-
+            new WebDriverWait(driver, Duration.ofSeconds(2), Duration.ofMillis(200))
+                    .until(ExpectedConditions.elementToBeClickable(AcceptButtonOfWarningPopUp)).click();
+        } catch (TimeoutException e) {
+            // مفيش بوب اب تحذير
         }
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
 
         return this;
     }
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
         return new P04_InvoicesPage(driver);
     }
 
     public P05_EditRequestPage ReceivingTheCertificate () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest,Loading_Circle);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton,Loading_Circle);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
         return this;
     }
 
