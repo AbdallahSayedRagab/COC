@@ -16,6 +16,7 @@ public class p08_Requestforissuanceofanadministrativecertificate {
     private final By saveamedicalprovider=By.xpath("//button[@type='submit']");
     private final By TextArea=By.xpath("//input-control[@formcontrolname='certificateAbout']//textarea");
     private final By CertificateToMe=By.xpath("//input-control[@formcontrolname='certificateFor']//input");
+    private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
     private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
     private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
@@ -46,6 +47,11 @@ public class p08_Requestforissuanceofanadministrativecertificate {
     }
     public p08_Requestforissuanceofanadministrativecertificate ClickOnSavedMedicalProvider() throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider);
+        return this;
+    }
+
+    public p08_Requestforissuanceofanadministrativecertificate FillAttachmentSection() {
+        Utility.UploadAttachments(driver, AddAttachmentButton);
         return this;
     }
 

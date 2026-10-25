@@ -12,7 +12,7 @@ public class P04_InvoicesPage {
     private WebDriver driver;
 
     private final By CollectingIcon = By.xpath("//img[@src=\"../../assets/images/collections-icon.svg\"]");
-    private final By InvoicesScreenIcon = By.xpath("//a[@href=\"/collections/invoices?title=::Invoices\"]");
+    private final By InvoicesScreenIcon = By.xpath("//a[contains(@href,'/collections/invoices')]");
     private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
     private final By PullTheRequest = By.id("WithdrawTheBill");
     private final By CashType = By.xpath("(//input[@type=\"radio\"])[1]");

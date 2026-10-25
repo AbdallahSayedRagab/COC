@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 public class R01_RecordsManagement {
 
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By ReviewRequest = By.xpath("//a[@href=\"/records/view/8ec81e3a-3618-ea53-2ef2-e5a182ef3334\"]");
     private final By OutstandingSbscriptions = By.xpath("//label[normalize-space(text())='نوع البند']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By DueAmount = By.xpath("//input-control[@formcontrolname='value']//input");
@@ -19,7 +18,7 @@ public class R01_RecordsManagement {
     private final By FixedDateOfYear = By.xpath("//td[@role='gridcell']/span[contains(text(), \"٢٠٢١\")]");
     private final By RecordNumber = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
-    private final By Payingsubscriptions = By.xpath("//a[@href=\"/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA\"]");
+    private final By Payingsubscriptions = By.xpath("//a[contains(@href,'/requests/membership-collection-requests')]");
 
     public R01_RecordsManagement(WebDriver driver) {
         this.driver = driver;
@@ -36,7 +35,9 @@ public class R01_RecordsManagement {
         return this;
     }
 
-    public R01_RecordsManagement ClickOnEditRequest() {
+    // زرار العرض بتاع صف السجل اللي رقمه جاي من الجيسون
+    public R01_RecordsManagement ClickOnEditRequest(String record) {
+        By ReviewRequest = By.xpath("//tr[td[normalize-space()='" + record + "']]//a[contains(@href,'/records/view/')]");
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ReviewRequest);
         return this;
     }

@@ -69,6 +69,22 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     public static void WatingAndSENDKEYS(WebDriver driver, By Locator, String text) {
         WaitUntilReady_And_SENDKEYS(driver,Locator,text);
     }
+    // بيمسح الحقل (Ctrl+A ثم Delete عشان Angular يحس بالتغيير) وبعدين يكتب
+    public static void ClearAndSENDKEYS(WebDriver driver, By Locator, String text) {
+        WaitUntilReady_And_SENDKEYS(driver,Locator,Keys.chord(Keys.CONTROL,"a") + Keys.DELETE + text);
+    }
+
+    // بيانات مقدم الطلب (نفس الحقول في كل صفحات الطلبات في الباك أوفيس)
+    private static final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
+    private static final By ApplicantPhone_Field = By.xpath("//input-control[@label=\"رقم الهاتف\"]/input");
+    private static final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
+
+    public static void FillAndSaveDataOfApplicant(WebDriver driver, String ID, String Phone) {
+        // الـ Tab بيخرج من الحقل فالموقع يدور على الرقم القومي ويظهر حقل رقم الهاتف
+        WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID + Keys.TAB);
+        ClearAndSENDKEYS(driver,ApplicantPhone_Field,Phone);
+        WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
+    }
 
     // بيستنى لحد 60 ثانية بس بيدوس اول ما العنصر يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
     public static void WaitUntilReady_And_CLICK(WebDriver driver, By Locator) {

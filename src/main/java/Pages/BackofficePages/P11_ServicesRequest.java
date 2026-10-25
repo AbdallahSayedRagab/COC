@@ -16,8 +16,6 @@ public class P11_ServicesRequest {
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
     private final By WithoutRecordRequest_Button = By.id("MainBranch");
     private final By CreateRequestButton = By.xpath("//button[contains(text(),\" انشاء الطلب \")]");
-    private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
-    private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By ServicesList = By.xpath("//ng-select[@id=\"elctCertificateTypeId\"]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By AddServiceButton = By.xpath("//button[@class=\"add-btn\"]");
@@ -48,9 +46,8 @@ public class P11_ServicesRequest {
     return this;
 }
 
-    public P11_ServicesRequest FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-    Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
-    Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
+    public P11_ServicesRequest FillAndSaveDataOfApplicant (String ID , String Phone) throws InterruptedException {
+    Utility.FillAndSaveDataOfApplicant(driver,ID,Phone);
     return this;
 }
 

@@ -11,23 +11,25 @@ public class P02_Dashboard {
     private WebDriver driver;
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By Records = By.xpath("//img[@src=\"../../assets/images/records-icon.svg\"]");
-    private final By BusinessLicenseRequest_FSM = By.xpath("//a[@href=\"/requests/issueCommerciallist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5%20%D9%85%D8%B2%D8%A7%D9%88%D9%84%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9\"]");
+    private final By BusinessLicenseRequest_FSM = By.xpath("//a[contains(@href,'/requests/issueCommerciallist')]");
     private final By EditRequest_FSM = By.xpath("//a[contains(@href, '/requests/editCommercialList')]");
     private final By RemoveRequest_FSM = By.xpath("//a[contains(@href, '/requests/removeCommercialList')]");
-    private final By  Sourceofgoods=By.xpath("//a[@href=\"/requests/goodsOriginrequestslist?title=%D8%B7%D9%84%D8%A8%20%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D9%85%D8%B5%D8%AF%D8%B1%D8%B1%20%D8%A8%D8%B6%D8%A7%D8%B9%D8%A9\"]");
+    private final By  Sourceofgoods=By.xpath("//a[contains(@href,'/requests/goodsOriginrequestslist')]");
     private final By  Administrativecertificate =By.xpath("//a[contains(@href,'/requests/issueManagementList')]");
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By ServicesRequest_FSM = By.xpath("//a[contains(@href, '/requests/unregisteredRequestList')]");
     private final By DivisionEditRequest_FSM = By.xpath("//a[contains(@href, '/requests/recordDivisionRequestList')]");
-    private final By RecordsManagement = By.xpath("//a[@href=\"/records/list?title=::records\"]");
-    private final By StatementForm_FSM = By.xpath("//a[@href=\"/records/statement?title=::statement-request\"]");
-    private final By Payingsubscriptions = By.xpath("//a[@href=\"/requests/membership-collection-requests?title=%D8%B7%D9%84%D8%A8%20%D8%B3%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA\"]");
+    private final By RecordsManagement = By.xpath("//a[contains(@href,'/records/list')]");
+    private final By StatementForm_FSM = By.xpath("//a[contains(@href,'/records/statement')]");
+    private final By Payingsubscriptions = By.xpath("//a[contains(@href,'/requests/membership-collection-requests')]");
     private final By ReservationIcon = By.xpath("//img[@src=\"../../assets/images/booking.svg\"]");
-    private final By ReservationsPage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingmanagement?title=::elecbookingmanagementsys\"]");
-    private final By SelfService_FSM = By.xpath("//a[@href=\"/managementsys/selfservicemanagement?title=::SelfService\"]");
-    private final By RequestsAndCertificates_FSM = By.xpath("//a[@href=\"/requests/management?title=%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA\"]");
+    private final By ReservationsPage_FSM = By.xpath("//a[contains(@href,'/managementsys/electronicbookingmanagement')]");
+    private final By SelfService_FSM = By.xpath("//a[contains(@href,'/managementsys/selfservicemanagement')]");
+    private final By RequestsAndCertificates_FSM = By.xpath("//a[contains(@href,'/requests/management')]");
     private final By RequestsAndCertificatesMail_FSM = By.xpath("//a[contains(@href,'/requests/requests-certificates-mailbox')]");
-    private final By QueuePage_FSM = By.xpath("//a[@href=\"/managementsys/electronicbookingqueuemanagement?title=::elecbookingqueuemanagementsys\"]");
+    private final By QueuePage_FSM = By.xpath("//a[contains(@href,'/managementsys/electronicbookingqueuemanagement')]");
+    private final By ProfileIcon = By.xpath("//div[contains(@class,'header-user')]//a[contains(@class,'dropdown-toggle')]");
+    private final By LogoutButton = By.xpath("//a[contains(@class,'logout')]");
 
 
 
@@ -117,6 +119,12 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsAndCertificatesMail_FSM);
         return new P14_RequestsAndCertificatesMailPage(driver);
+    }
+
+    public P01_LoginPage Logout (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ProfileIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LogoutButton);
+        return new P01_LoginPage(driver);
     }
 
     public K03_QueuePage SelectQueuePage (){

@@ -22,8 +22,6 @@ public class P05_EditRequestPage {
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By EditRequest_FSM = By.xpath("//a[contains(@href, '/requests/editCommercialList')]");
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
-    private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SearchForRecord_Field = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
     private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By CheckBoxOFLegalData = By.xpath("(//input[@type=\"checkbox\"])[1]");
@@ -54,9 +52,8 @@ public class P05_EditRequestPage {
         return this;
     }
 
-    public P05_EditRequestPage FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
+    public P05_EditRequestPage FillAndSaveDataOfApplicant (String ID , String Phone) throws InterruptedException {
+        Utility.FillAndSaveDataOfApplicant(driver,ID,Phone);
         return this;
     }
 

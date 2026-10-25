@@ -14,8 +14,6 @@ public class P03_BusinessLicensePage {
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
     private final By  FacilityNature_Choice  = By.xpath("//label[contains(text(), ' مركز رئيسى')]");
     private final By  CreateRequest_Button  = By.xpath("//button[contains(text(), ' انشاء الطلب ')]");
-    private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
-    private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By LegalDataSection = By.xpath("//span[contains(text(), \"البيانات القانونية\")]");
     private final By FacilityClassificationField = By.xpath("//label[contains(text(), \"تصنيف المنشاة\")]/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -70,9 +68,8 @@ public class P03_BusinessLicensePage {
         return this;
     }
 
-    public P03_BusinessLicensePage FillAndSaveDataOfApplicant (String ID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
+    public P03_BusinessLicensePage FillAndSaveDataOfApplicant (String ID , String Phone) throws InterruptedException {
+        Utility.FillAndSaveDataOfApplicant(driver,ID,Phone);
         return this;
     }
 

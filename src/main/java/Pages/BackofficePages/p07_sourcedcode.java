@@ -72,16 +72,17 @@ public class p07_sourcedcode {
     }
 
     public p07_sourcedcode FillTheCommericalData(String name,String address,String country ) throws InterruptedException {
+        // بالترتيب اللي ظاهر في الصفحة
         Utility.CLICKONELEMENTS(driver,Commercialdata);
-       Utility.CLICKONELEMENTS(driver,importerycountry);
+        Utility.SENDKEYS(driver,importername,name);
+        Utility.CLICKONELEMENTS(driver,importerycountry);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.SENDKEYS(driver,importeraddress,address);
+        Utility.CLICKONELEMENTS(driver,samecompany);
+        Utility.CLICKONELEMENTS(driver,sameaddress);
         Utility.SENDKEYS(driver,countryoforigin,country);
         Utility.CLICKONELEMENTS(driver,Thesourceofthegoods);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
-        Utility.SENDKEYS(driver,importername,name);
-       Utility.SENDKEYS(driver,importeraddress,address);
-       Utility.CLICKONELEMENTS(driver,samecompany);
-       Utility.CLICKONELEMENTS(driver,sameaddress);
         return this;
     }
 
@@ -114,17 +115,18 @@ public class p07_sourcedcode {
     }
 
     public p07_sourcedcode FillTheItemSection(String desccatogery,String Trademarks,String Numberofparcels,String netweight,String Totalweight,String Totalvalue) throws InterruptedException {
+        // بالترتيب اللي ظاهر في الصفحة
         Utility.CLICKONELEMENTS(driver,item);
         Utility.SENDKEYS(driver,descraptincatogey,desccatogery);
         Utility.SENDKEYS(driver,signedandno,Trademarks);
+        Utility.CLICKONELEMENTS(driver,Parcelquality);
+        Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         Utility.SENDKEYS(driver,typescount,Numberofparcels);
         Utility.SENDKEYS(driver,Netweight,netweight);
         Utility.SENDKEYS(driver,totalWeight,Totalweight);
-        Utility.SENDKEYS(driver,totalValue,Totalvalue);
-        Utility.CLICKONELEMENTS(driver,Parcelquality);
-        Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         Utility.CLICKONELEMENTS(driver,weightunit);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.SENDKEYS(driver,totalValue,Totalvalue);
         Utility.CLICKONELEMENTS(driver,Currency);
         Utility.CLICKONELEMENTS(driver,Option1ForAnyList);
         Utility.CLICKONELEMENTS(driver,additem);

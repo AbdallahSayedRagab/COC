@@ -14,8 +14,6 @@ public class P10_NegativeCertificteRequest {
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By NegativeRequest_FSM = By.xpath("//a[contains(@href, '/requests/negative-request-list')]");
     private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
-    private final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
     private final By SendCertificateToNameField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الي الاسم']/following-sibling::*[1]");
     private final By SendCertificateToEntityField = By.xpath("//label[normalize-space(text())='تقديم الشهادة الي الجهة']/following-sibling::*[1]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -44,9 +42,8 @@ public class P10_NegativeCertificteRequest {
         return this;
     }
 
-    public P10_NegativeCertificteRequest FillAndSaveDataOfApplicant (String NegativeID) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,NegativeID);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
+    public P10_NegativeCertificteRequest FillAndSaveDataOfApplicant (String NegativeID , String Phone) throws InterruptedException {
+        Utility.FillAndSaveDataOfApplicant(driver,NegativeID,Phone);
         return this;
     }
 
