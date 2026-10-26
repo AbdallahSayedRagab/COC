@@ -24,7 +24,8 @@ public class U08_SpecialServiceRequestPage {
     private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
     private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
-    private final By RequestTypeField = By.xpath("//label[normalize-space(text())='نوع الطلب']/following-sibling::*[1]");
+    // اول ليستة في الخطوة الاولى - اسمها بيتغير فمش بنعتمد على الاسم
+    private final By RequestTypeField = By.xpath("(//div[@id='test-l-1']//ng-select)[1]");
     private final By FacilityClassificationField = By.xpath("//label[normalize-space(text())='تصنيف المنشاة']/following-sibling::*[1]");
     private final By RecordOfficeField = By.xpath("//label[normalize-space(text())='مكتب السجل']/following-sibling::*[1]");
     private final By RecordNumberField = By.xpath("//label[normalize-space(text())='رقم السجل']/following-sibling::*[1]");

@@ -17,7 +17,9 @@ public class P16_SpecialServiceBackOfficePage {
     private final By SpecialServiceRequest_FSM = By.xpath("//a[contains(@href, '/requests/electronic-reviews-requests')]");
     private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
     private final By AcceptRequestButton = By.xpath("//button[text()='قبول الطلب']");
-    private final By ApproveRequestButton = By.xpath("//button[text()='الموافقة علي الطلب']");
+    // الزرار الاخضر في كل مرحلة (تقدير الرسوم ثم الموافقة علي الطلب) - مش بنعتمد على الاسم عشان بيتغير
+    private final By EstimateFeesButton = By.xpath("//button[contains(@class,'btn-success')]");
+    private final By ApproveRequestButton = By.xpath("//button[contains(@class,'btn-success')]");
     private final By NotesFieldOfPopUp = By.xpath("//textarea[@formcontrolname=\"notes\"]");
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),' اقبل الطلب')]");
 
@@ -50,6 +52,15 @@ public class P16_SpecialServiceBackOfficePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber));
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
+        Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,TestData);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
+        return this;
+    }
+
+    public P16_SpecialServiceBackOfficePage EstimateTheFees (String RequestNumber , String TestData) {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButtonOfRequest(RequestNumber));
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EstimateFeesButton);
         Utility.WatingAndSENDKEYS(driver,NotesFieldOfPopUp,TestData);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
         return this;

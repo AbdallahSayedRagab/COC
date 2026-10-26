@@ -3,6 +3,9 @@ package Pages.BackofficePages;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class P02_Dashboard {
     public P02_Dashboard (WebDriver driver){
@@ -30,6 +33,7 @@ public class P02_Dashboard {
     private final By QueuePage_FSM = By.xpath("//a[contains(@href,'/managementsys/electronicbookingqueuemanagement')]");
     private final By ProfileIcon = By.xpath("//div[contains(@class,'header-user')]//a[contains(@class,'dropdown-toggle')]");
     private final By LogoutButton = By.xpath("//a[contains(@class,'logout')]");
+    private final By Login_Email = By.xpath("//input[@formcontrolname=\"username\"]");
 
 
 
@@ -122,8 +126,13 @@ public class P02_Dashboard {
     }
 
     public P01_LoginPage Logout (){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ProfileIcon);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LogoutButton);
+        // نستنى الصفحة تحدد حالتها: يا صفحة تسجيل الدخول (مش عامل دخول) يا ايقونة البروفايل (عامل دخول)
+        new WebDriverWait(driver, Duration.ofSeconds(180), Duration.ofMillis(200)).until(d ->
+                !d.findElements(Login_Email).isEmpty() || !d.findElements(ProfileIcon).isEmpty());
+        if (!driver.findElements(ProfileIcon).isEmpty()) {
+            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ProfileIcon);
+            Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LogoutButton);
+        }
         return new P01_LoginPage(driver);
     }
 

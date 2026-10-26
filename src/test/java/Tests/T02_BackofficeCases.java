@@ -180,7 +180,7 @@ public class T02_BackofficeCases {
         new P02_Dashboard(driver).SelectTheRecorsMangements()
                .SearchOfRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
                .ClickOnEditRequest(DataUtiles.getJsonData("Data","RecordNumber"))
-               .OutstandingSubscriptions("youssef","229")
+               .OutstandingSubscriptions(" ","229")
                .ClickOnPayingSub()
                .ClickOnAddNewRequest_Button()
               .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))

@@ -114,6 +114,7 @@ public class T04_PortalCases {
         new P16_SpecialServiceBackOfficePage(driver).SelectBranch(DataUtiles.getJsonData("Data","ChamberBranch"))
                 .OpenSpecialServiceRequests()
                 .AcceptTheRequest(DataUtiles.getJsonData("Data","SpecialServiceRequestNumber"),DataUtiles.getJsonData("Data","TestData"))
+                .EstimateTheFees(DataUtiles.getJsonData("Data","SpecialServiceRequestNumber"),DataUtiles.getJsonData("Data","TestData"))
                 .ApproveTheRequest(DataUtiles.getJsonData("Data","SpecialServiceRequestNumber"),DataUtiles.getJsonData("Data","TestData"))
                 .ValidateRequestIsApproved(DataUtiles.getJsonData("Data","SpecialServiceRequestNumber"))
                 .BackToPortalWindow().OpenSpecialServicesInMyAccount()
