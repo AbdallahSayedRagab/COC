@@ -20,6 +20,8 @@ public class P01_LoginPage {
     private final By WindowList = By.xpath("(//ng-select)[2]");
     private final By NormalWindowChoice = By.xpath("//span[text()=' 1 ']");
     private final By ConFirmChoiceButton = By.xpath("//span[text()='تأكيد الاختيار']");
+    private final By ProfileIcon = By.xpath("//div[contains(@class,'header-user')]//a[contains(@class,'dropdown-toggle')]");
+    private final By LoggedInUserName = By.xpath("//div[contains(@class,'user-dropdown-head-text')]/p");
 
 
 
@@ -31,6 +33,15 @@ public class P01_LoginPage {
         Utility.SENDKEYS(driver,Login_Password,password);
         Utility.CLICKONELEMENTS(driver,Login_button);
         return new P02_Dashboard( driver);
+    }
+
+    // تسجيل الدخول بالمستخدم الجديد في الباك اوفيس: بيدخل وبيتأكد من اسم المستخدم اللي ظاهر في منيو البروفايل
+    public P02_Dashboard LoginWithNewBackOfficeUser (String UserName , String Password) throws InterruptedException {
+        Login(UserName,Password);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ProfileIcon);
+        Validations.ValidateEquals(Utility.GETTEXT(driver,LoggedInUserName).trim(),UserName);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ProfileIcon);
+        return new P02_Dashboard(driver);
     }
 
     public P02_Dashboard LoginAndChooseWindow (String EMAIL ,String password) throws InterruptedException {

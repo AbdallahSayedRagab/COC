@@ -1,5 +1,6 @@
 package Pages.PortalPages;
 
+import Utilities.JsonUtil;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -28,6 +29,12 @@ public class U01_PortalDashboard {
     private final By Portal_LoginButton = By.xpath("//button[contains(@class,'login-btn')]");
     private final By UserNameMenu = By.xpath("//ul[contains(@class,'user-dropdown')]/preceding-sibling::div//span[contains(@class,'header-link')]");
     private final By LogoutLink = By.xpath("//ul[contains(@class,'user-dropdown')]//span[text()='تسجيل الخروج']");
+
+    // نافذة تغيير كلمة السر اللي بتظهر في اول دخول لمستخدم اتعمل من الباك اوفيس
+    private final By ChangePasswordPopUp = By.xpath("//app-change-password-for-first-time");
+    private final By NewPassword_Field = By.xpath("//input-control[@label=\"كلمة السر الجديدة\"]/input");
+    private final By ConfirmNewPassword_Field = By.xpath("//input-control[@label=\"تأكيد كلمة السر الجديدة\"]/input");
+    private final By ChangePassword_Button = By.xpath("//app-change-password-for-first-time//button[@type=\"submit\"]");
 
     // منيو الخدمات الالكترونية
     private final By EServices_Header = By.xpath("//a[@href=\"/ar/eservices\"]");
@@ -79,6 +86,26 @@ public class U01_PortalDashboard {
         Utility.WaitUntilReady_And_SENDKEYS(driver,Portal_Password,Password);
         Utility.WaitUntilReady_And_CLICK(driver,Portal_LoginButton);
         new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(Portal_LoginButton));
+        return this;
+    }
+
+    // تسجيل الدخول بالمستخدم الجديد في البورتال
+    // اول دخول بيطلب تغيير كلمة السر: بنغيرها للكلمة الثابتة ونسجلها في الجيسون، والموقع مش بيدخل بعدها فبندخل تاني
+    // ولو المستخدم غير كلمته قبل كده النافذة مش بتظهر وبيدخل على طول
+    public U01_PortalDashboard LoginWithNewPortalUser (String UserName , String Password , String NewPassword) {
+        LoginToPortal(UserName,Password);
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(d ->
+                !d.findElements(ChangePasswordPopUp).isEmpty() || !d.findElements(LogoutLink).isEmpty());
+        if (!driver.findElements(ChangePasswordPopUp).isEmpty()) {
+            Utility.WaitUntilReady_And_SENDKEYS(driver,NewPassword_Field,NewPassword);
+            Utility.WaitUntilReady_And_SENDKEYS(driver,ConfirmNewPassword_Field,NewPassword);
+            Utility.WaitUntilReady_And_CLICK(driver,ChangePassword_Button);
+            new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.invisibilityOfElementLocated(ChangePasswordPopUp));
+            JsonUtil.writeValue("NewPasswordPortal",NewPassword);
+            LoginToPortal(UserName,NewPassword);
+        }
+        // لينك تسجيل الخروج موجود بس لما الدخول يتم فعلا - لو مظهرش الكيس بتفشل هنا
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.presenceOfElementLocated(LogoutLink));
         return this;
     }
 

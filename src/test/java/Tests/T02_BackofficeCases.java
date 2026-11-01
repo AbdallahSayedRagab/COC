@@ -220,6 +220,38 @@ public class T02_BackofficeCases {
                 .PrintStatementForm("StatementFormPrint");
     }
 
+    @Test (priority = 16)
+    public void AddNewBackOfficeUser() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectBackOfficeUsersPage()
+                .PrepareUniqueUserData(DataUtiles.getJsonData("Data","NewBackOfficeUserFullName"),
+                        DataUtiles.getJsonData("Data","NewBackOfficeUserBaseName"),
+                        DataUtiles.getJsonData("Data","NewUsersPassword"))
+                .ClickOnAddNewUser()
+                .FillDataOfNewUser(DataUtiles.getJsonData("Data","NewBackOfficeUserRole"),
+                        DataUtiles.getJsonData("Data","ChamberBranch"))
+                .SaveUserAndDataInJsonFile()
+                .SearchByNameAndValidateUser();
+    }
+
+    @Test (priority = 17)
+    public void AddNewPortalUser() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectPortalUsersPage()
+                .PrepareUniqueUserData(DataUtiles.getJsonData("Data","NewPortalUserFullName"))
+                .ClickOnAddNewUser()
+                .FillDataOfNewUser(DataUtiles.getJsonData("Data","Number"))
+                .SaveUserAndDataInJsonFile()
+                .SearchByNameAndValidateUser()
+                .ConfirmUser();
+    }
+
+    @Test (priority = 18, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
+    public void LoginWithNewBackOfficeUser() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().LoginWithNewBackOfficeUser(DataUtiles.getJsonData("Data","NewUsernameBackOffice"),
+                DataUtiles.getJsonData("Data","NewPasswordBackOffice"));
+    }
+
 
         @AfterClass
     public void quit () {

@@ -34,6 +34,9 @@ public class P02_Dashboard {
     private final By ProfileIcon = By.xpath("//div[contains(@class,'header-user')]//a[contains(@class,'dropdown-toggle')]");
     private final By LogoutButton = By.xpath("//a[contains(@class,'logout')]");
     private final By Login_Email = By.xpath("//input[@formcontrolname=\"username\"]");
+    private final By ManagementIcon = By.xpath("//img[@src=\"../../assets/images/people.svg\"]");
+    private final By BackOfficeUsers_FSM = By.xpath("//a[contains(@href,'/users-management/admin/list')]");
+    private final By PortalUsers_FSM = By.xpath("//a[contains(@href,'/management/user/list')]");
 
 
 
@@ -140,6 +143,18 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationIcon);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,QueuePage_FSM);
         return new K03_QueuePage(driver);
+    }
+
+    public S01_BackOfficeUsersPage SelectBackOfficeUsersPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ManagementIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BackOfficeUsers_FSM);
+        return new S01_BackOfficeUsersPage(driver);
+    }
+
+    public S02_PortalUsersPage SelectPortalUsersPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ManagementIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PortalUsers_FSM);
+        return new S02_PortalUsersPage(driver);
     }
 
 }

@@ -85,12 +85,38 @@ public class P03_BusinessLicensePage {
         return this;
     }
 
+    // نفس اللي فوق بس بيختار تصنيف المنشأة بالاسم (فردية / الاموال / الاشخاص) بدل اول اختيار
+    public P03_BusinessLicensePage FillLegalDataSection (String TradeName , String CommercialFeature , String Classification) throws InterruptedException {
+        By ClassificationChoice = By.xpath("//div[@role='option'][contains(normalize-space(),'" + Classification + "')]");
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection);
+        Utility.CLICKONELEMENTS(driver,FacilityClassificationField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ClassificationChoice);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FacilityTypeField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingAndSENDKEYS(driver,TradeNameField,TradeName);
+        Utility.WatingAndSENDKEYS(driver,CommercialFeatureField,CommercialFeature);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,LegalDataSection);
+        return this;
+    }
+
     public P03_BusinessLicensePage FillMembersSection () throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection);
         Utility.CLICKONELEMENTS(driver,LegalStatus);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddMemberButton);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MembersSection);
+        return this;
+    }
+
+    // سكشن الاعضاء اسمه بيتغير حسب تصنيف المنشأة (المالك / الشركاء / الإدارة) وكذلك زرار الاضافة
+    public P03_BusinessLicensePage FillMembersSection (String SectionName , String AddButtonText) throws InterruptedException {
+        By Section = By.xpath("//span[normalize-space()='" + SectionName + "']");
+        By AddButton = By.xpath("//span[normalize-space()='" + AddButtonText + "']");
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Section);
+        Utility.CLICKONELEMENTS(driver,LegalStatus);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Section);
         return this;
     }
 
@@ -114,6 +140,24 @@ public class P03_BusinessLicensePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddDepartNameButton);
 
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData);
+        return this;
+    }
+
+    // في الشركات خانة التاريخ اسمها "تاريخ تأسيس الشركة" بدل "تاريخ بدء النشاط" فبنبعت اسمها
+    public P03_BusinessLicensePage FillActivitiesDataSection (String TaxCardNum, String Description, String StartDateLabel) throws InterruptedException {
+        By StartDateField = By.xpath("//label[normalize-space(text())='" + StartDateLabel + "']/following-sibling::*[1]");
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData);
+        Utility.WatingAndSENDKEYS(driver,TaxCardNumber,TaxCardNum);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,StartDateField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FixedDateForAnyCalendar);
+        Utility.WatingAndSENDKEYS(driver,ActivityDescription,Description);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivityField);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddActivityButton);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,DepartmentName);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddDepartNameButton);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ActivitiesData);
         return this;
     }

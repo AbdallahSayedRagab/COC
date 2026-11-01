@@ -145,6 +145,13 @@ public class T04_PortalCases {
                 .PrintReservationData("NormalReservationFromPortalWithLogin");
     }
 
+    @Test (priority = 10, description = "تسجيل الدخول بالمستخدم الجديد في البورتال")
+    public void LoginWithNewPortalUser () {
+        new U01_PortalDashboard(driver).LoginWithNewPortalUser(DataUtiles.getJsonData("Data","NewUsernamePortal"),
+                DataUtiles.getJsonData("Data","NewPasswordPortal"),
+                DataUtiles.getJsonData("Data","NewUsersPassword"));
+    }
+
     @AfterMethod
     public void quit () {
         DriverFactoryClass.Quit();

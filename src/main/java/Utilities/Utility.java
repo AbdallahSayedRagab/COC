@@ -129,6 +129,28 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
     }
 
+    // بيكتب في السيرش ويستنى الجدول يتفلتر فعلا: كل الصفوف فيها الكلمة (او مفيش صفوف) ومفيش لودينج
+    // الشاشات دي بتبعت طلب مع كل حركة كيبورد والردود مش بترجع بالترتيب، فرد قديم ممكن يرجع الجدول كامل
+    // عشان كده لو الجدول لسه مش متفلتر بندوس End عشان يتبعت طلب جديد بالقيمة الكاملة
+    public static void SearchInTable(WebDriver driver, By SearchField, By TableRows, String Text) {
+        ClearAndSENDKEYS(driver,SearchField,Text);
+        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofSeconds(2))
+                .ignoring(StaleElementReferenceException.class)
+                .until(d -> {
+                    if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) return false;
+                    boolean IsFiltered = IsTableFilteredBy(d,TableRows,Text);
+                    if (!IsFiltered) {
+                        d.findElement(SearchField).sendKeys(Keys.END);
+                    }
+                    return IsFiltered;
+                });
+    }
+
+    public static boolean IsTableFilteredBy(WebDriver driver, By TableRows, String Text) {
+        return driver.findElements(TableRows).stream()
+                .allMatch(Row -> Row.getText().toLowerCase().contains(Text.toLowerCase()));
+    }
+
     public static void SELECT(WebDriver driver, By locator, int index) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200));
         wait.until(elementToBeClickable(locator));
@@ -228,10 +250,15 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
     // بيرفع ملف واحد من الزرار ده وبيستنى لحد ما يترفع فعليا
     public static void UploadFile(WebDriver driver, WebElement UploadButton, String FilePath) {
+        UploadFile(driver, UploadButton, FilePath, UploadedAttachment);
+    }
+
+    // نفس الرفع للشاشات اللي المرفق المرفوع بيظهر فيها بشكل مختلف عن كارت الـ preview
+    public static void UploadFile(WebDriver driver, WebElement UploadButton, String FilePath, By UploadedFileLocator) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WaitUntilNotBusy(driver, 60);
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", UploadButton);
-        int before = driver.findElements(UploadedAttachment).size();
+        int before = driver.findElements(UploadedFileLocator).size();
 
         // الزرار (openfilesbrowser) بيعمل input[type=file] مؤقت ويدوس عليه فتفتح نافذة الويندوز
         // فبنمسك الـ input ده قبل ما يفتح النافذة ونحطه في الصفحة ونبعتله المسار مباشرة - اسرع وادق من Robot
@@ -269,12 +296,12 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             }
         }
 
-        WaitUntilAttachmentUploaded(driver, before);
+        WaitUntilAttachmentUploaded(driver, UploadedFileLocator, before);
     }
 
     // بيستنى لحد ما كارت المرفق الجديد يظهر (يعني السيرفر رجع id للملف) + مفيش لودينج ولا progress bar
     // ولازم الحالة دي تفضل ثابتة مرتين ورا بعض عشان مايدوسش وهو لسه بيرفع
-    private static void WaitUntilAttachmentUploaded(WebDriver driver, int before) {
+    private static void WaitUntilAttachmentUploaded(WebDriver driver, By UploadedFileLocator, int before) {
         int[] stableChecks = {0};
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
         try {
@@ -282,7 +309,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                     .ignoring(StaleElementReferenceException.class)
                     .withMessage("Attachment was not uploaded within " + AttachmentUploadTimeoutSeconds + " seconds")
                     .until(d -> {
-                        if (d.findElements(UploadedAttachment).size() > before && !IsBusy(d)) {
+                        if (d.findElements(UploadedFileLocator).size() > before && !IsBusy(d)) {
                             return ++stableChecks[0] >= 2;
                         }
                         stableChecks[0] = 0;
