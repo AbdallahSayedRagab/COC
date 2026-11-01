@@ -220,7 +220,7 @@ public class T02_BackofficeCases {
                 .PrintStatementForm("StatementFormPrint");
     }
 
-    @Test (priority = 16)
+    @Test (priority = 18)
     public void AddNewBackOfficeUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectBackOfficeUsersPage()
@@ -229,12 +229,12 @@ public class T02_BackofficeCases {
                         DataUtiles.getJsonData("Data","NewUsersPassword"))
                 .ClickOnAddNewUser()
                 .FillDataOfNewUser(DataUtiles.getJsonData("Data","NewBackOfficeUserRole"),
-                        DataUtiles.getJsonData("Data","ChamberBranch"))
+                        DataUtiles.getJsonData("Data","NewBranchName"))
                 .SaveUserAndDataInJsonFile()
                 .SearchByNameAndValidateUser();
     }
 
-    @Test (priority = 17)
+    @Test (priority = 19)
     public void AddNewPortalUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectPortalUsersPage()
@@ -246,7 +246,38 @@ public class T02_BackofficeCases {
                 .ConfirmUser();
     }
 
-    @Test (priority = 18, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
+    @Test (priority = 16)
+    public void AddNewBranch() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectBranchesPage()
+                .PrepareUniqueBranchData(DataUtiles.getJsonData("Data","NewBranchBaseName"))
+                .ClickOnAddNewBranch()
+                .FillCodeAndNames()
+                .FillWorkData(DataUtiles.getJsonData("Data","NewBranchStartTime"),
+                        DataUtiles.getJsonData("Data","NewBranchEndTime"),
+                        DataUtiles.getJsonData("Data","NewBranchPaper"),
+                        DataUtiles.getJsonData("Data","NewBranchMaxRequests"),
+                        DataUtiles.getJsonData("Data","NewBranchAlertMinutes"),
+                        DataUtiles.getJsonData("Data","NewBranchReleaseMinutes"))
+                .SelectRequestTypes(DataUtiles.getJsonData("Data","NewBranchRequestTypes"))
+                .SelectWorkDays(DataUtiles.getJsonData("Data","NewBranchWorkDays"))
+                .SaveBranchAndDataInJsonFile()
+                .SearchByNameAndValidateBranch();
+    }
+
+    @Test (priority = 17)
+    public void SetupElcBranch() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectElcBranchesPage()
+                .SearchOnBranchAndOpenEdit(DataUtiles.getJsonData("Data","NewBranchName"))
+                .FillBranchSettings()
+                .AddWindowsWithPeriods(DataUtiles.getJsonData("Data","ElcWindows"))
+                .SetupAgendaFromFirstToLastDay()
+                .ValidateBranchWindowsAndAgenda(DataUtiles.getJsonData("Data","NewBranchName"),
+                        DataUtiles.getJsonData("Data","ElcWindowsCount"));
+    }
+
+    @Test (priority = 20, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
     public void LoginWithNewBackOfficeUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().LoginWithNewBackOfficeUser(DataUtiles.getJsonData("Data","NewUsernameBackOffice"),
                 DataUtiles.getJsonData("Data","NewPasswordBackOffice"));

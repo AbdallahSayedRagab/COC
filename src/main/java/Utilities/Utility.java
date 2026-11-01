@@ -151,6 +151,15 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
                 .allMatch(Row -> Row.getText().toLowerCase().contains(Text.toLowerCase()));
     }
 
+    // حقل الوقت شكل كتابته بيتغير حسب لغة الجهاز (12 او 24 ساعة) فبنحط القيمة مباشرة ونبلغ Angular بالتغيير
+    public static void SetValueByJavaScript(WebDriver driver, By Locator, String Value) {
+        WebElement Element = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(d -> d.findElement(Locator));
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].value = arguments[1];" +
+                "arguments[0].dispatchEvent(new Event('input', {bubbles: true}));" +
+                "arguments[0].dispatchEvent(new Event('change', {bubbles: true}));", Element, Value);
+    }
+
     public static void SELECT(WebDriver driver, By locator, int index) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200));
         wait.until(elementToBeClickable(locator));

@@ -37,6 +37,8 @@ public class P02_Dashboard {
     private final By ManagementIcon = By.xpath("//img[@src=\"../../assets/images/people.svg\"]");
     private final By BackOfficeUsers_FSM = By.xpath("//a[contains(@href,'/users-management/admin/list')]");
     private final By PortalUsers_FSM = By.xpath("//a[contains(@href,'/management/user/list')]");
+    private final By Branches_FSM = By.xpath("//a[contains(@href,'/branches')]");
+    private final By ElcBranches_FSM = By.xpath("//a[contains(@href,'/elcBranches')]");
 
 
 
@@ -155,6 +157,18 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ManagementIcon);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PortalUsers_FSM);
         return new S02_PortalUsersPage(driver);
+    }
+
+    public S03_BranchesPage SelectBranchesPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ManagementIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Branches_FSM);
+        return new S03_BranchesPage(driver);
+    }
+
+    public S04_ElcBranchesPage SelectElcBranchesPage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ManagementIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ElcBranches_FSM);
+        return new S04_ElcBranchesPage(driver);
     }
 
 }
