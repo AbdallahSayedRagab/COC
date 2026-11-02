@@ -1,9 +1,91 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Main Suite">
 
-    <test name="Smoke Test">
+    <test name="01 Login">
         <classes>
-            <class name="Tests.T03_ReservationTests"/>
+            <class name="Tests.T01_Login">
+                <methods>
+                    <include name="ValidLogin"/>
+                    <include name="InvalidLogin"/>
+                    <include name="LoginAsWindowUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="02 Backoffice">
+        <classes>
+            <class name="Tests.T02_BackofficeCases">
+                <methods>
+                    <!-- التجهيز: فرع ثم يوزر ثم الدخول بيه ثم اعدادات الحجز -->
+                    <include name="AddNewBranch"/>
+                    <include name="AddNewBackOfficeUser"/>
+                    <include name="AddNewPortalUser"/>
+                    <include name="LoginWithNewBackOfficeUser"/>
+                    <include name="SetupElcBranch"/>
+                    <!-- دورة السجل: بتكمل على نفس الجلسة من غير تسجيل دخول -->
+                    <include name="BusinessLicenseRequest"/>
+                    <include name="CreateRecordEffect"/>
+                    <include name="EditRequest"/>
+                    <include name="EditRecordEffect"/>
+                    <include name="RemoveRequest"/>
+                    <include name="SourceCodeRequest"/>
+                    <include name="AdministrativeCertificateRequest"/>
+                    <include name="ServicesRequest"/>
+                    <include name="payingsub"/>
+                    <include name="NegativeCertificteRequest"/>
+                    <include name="StatementFormRequest"/>
+                    <include name="AddAdministrativeCertificateRequestByRequestMailPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="03 Reservations">
+        <classes>
+            <class name="Tests.T03_ReservationTests">
+                <methods>
+                    <include name="AddNormalReservation"/>
+                    <include name="AddVIPReservation"/>
+                    <include name="AddReservationAndPrintReservationData"/>
+                    <include name="ConfirmReservationAndPrintQueueData"/>
+                    <include name="AddReservationAndRescheduleIt"/>
+                    <include name="CreateReservationFromSelfServicePage"/>
+                    <include name="ConfirmAttendForReservationFromSelfServicePage"/>
+                    <include name="AssignNormalWindow"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="04 Portal">
+        <classes>
+            <class name="Tests.T04_PortalCases">
+                <methods>
+                    <!-- لازم الاول: بتغير كلمة السر في اول دخول وباقي الكيسز بتدخل بنفس اليوزر -->
+                    <include name="LoginWithNewPortalUser"/>
+                    <include name="BusinessLicenseRequestFromPortal"/>
+                    <include name="EditRecordRequestFromPortal"/>
+                    <include name="RemoveRecordRequestFromPortal"/>
+                    <include name="AdministrativeCertificateRequestFromPortal"/>
+                    <include name="SourceOfGoodsRequestFromPortal"/>
+                    <include name="PaymentOfSubscriptionsRequestFromPortal"/>
+                    <include name="SpecialServiceRequestFromPortalAndApproveItFromBackOffice"/>
+                    <include name="NormalReservationFromPortalWithoutLogin"/>
+                    <include name="NormalReservationFromPortalWithLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- آخر حاجة في السايكل كلها: بتمسح السجل، والبورتال لازم يلاقيه قبلها -->
+    <test name="05 Remove Record">
+        <classes>
+            <class name="Tests.T02_BackofficeCases">
+                <methods>
+                    <include name="RemoveRecordEffect"/>
+                </methods>
+            </class>
         </classes>
     </test>
 

@@ -71,7 +71,7 @@ public class S02_PortalUsersPage {
 
     // الرقم القومي: بيبدأ من اللي بعد آخر رقم في الجيسون ويزود لحد ما يلاقي رقم مش موجود في الشاشة
     // الموقع بيقبل زيادة 1 لان آخر رقم مش رقم تحقق، وتاريخ الميلاد وكود المحافظة مش بيتغيروا مع الزيادة
-    // الاسم بياخد نفس الرقم من آخر 5 خانات عشان ميتكررش
+    // الاسم بياخد نفس الرقم من آخر 5 خانات عشان ميتكررش، بس بالحروف لان فورم الطلبات بيرفض الارقام في اسم مقدم الطلب
     public S02_PortalUsersPage PrepareUniqueUserData (String FullName) {
         WaitForListToLoad();
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OpenFilterPanel_Button);
@@ -80,9 +80,18 @@ public class S02_PortalUsersPage {
             NationalId++;
         }
         NewNationalId = String.valueOf(NationalId);
-        NewFullName = FullName + " " + (NationalId % 100000);
+        NewFullName = FullName + " " + NumberAsLetters(NationalId % 100000);
         ResetFilter();
         return this;
+    }
+
+    // كل رقم بيتحول لحرف: 0=A و 1=B ... فمثلا 12 تبقى BC
+    private String NumberAsLetters (long Number) {
+        StringBuilder Letters = new StringBuilder();
+        for (char Digit : String.valueOf(Number).toCharArray()) {
+            Letters.append((char) ('A' + (Digit - '0')));
+        }
+        return Letters.toString();
     }
 
     // لازم اول تحميل للجدول يخلص قبل السيرش - لو رد التحميل رجع بعد السيرش بيغطي على نتيجته

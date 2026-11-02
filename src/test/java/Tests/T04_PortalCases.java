@@ -30,7 +30,7 @@ public class T04_PortalCases {
 
     @Test (priority = 1)
     public void BusinessLicenseRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenBusinessLicenseRequest().StartTheService()
                 .FillLegalDataSection(DataUtiles.getJsonData("Data","TradeName"))
                 .AddPartnerFromAccountData()
@@ -44,7 +44,7 @@ public class T04_PortalCases {
 
     @Test (priority = 2)
     public void EditRecordRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenEditRecordRequest().StartTheService()
                 .SelectFirstRecord()
                 .SelectLegalDataToEdit()
@@ -55,7 +55,7 @@ public class T04_PortalCases {
 
     @Test (priority = 3)
     public void RemoveRecordRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenRemoveRecordRequest().StartTheService()
                 .SelectFirstRecord()
                 .FillRemovalReason(DataUtiles.getJsonData("Data","TestData"))
@@ -66,7 +66,7 @@ public class T04_PortalCases {
 
     @Test (priority = 4)
     public void AdministrativeCertificateRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenAdministrativeCertificateRequest().StartTheService()
                 .SelectFirstRecord()
                 .FillCertificateDetails(DataUtiles.getJsonData("Data","TestData"))
@@ -77,7 +77,7 @@ public class T04_PortalCases {
 
     @Test (priority = 5)
     public void SourceOfGoodsRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenSourceOfGoodsRequest().StartTheService()
                 .SelectFirstRecord()
                 .FillBasicData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"),
@@ -92,9 +92,9 @@ public class T04_PortalCases {
 
     @Test (priority = 6)
     public void PaymentOfSubscriptionsRequestFromPortal () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"))
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"))
                 .OpenPaymentOfSubscriptionsRequest().StartTheService()
-                .SearchOnRecordAndSelectFirstResult(DataUtiles.getJsonData("Data","PortalSubscriptionRecordNumber"))
+                .SearchOnRecordAndSelectFirstResult(DataUtiles.getJsonData("Data","RecordNumber"))
                 .SelectFirstSubscriptionItem()
                 .FillAttachmentSection()
                 .SelectBranch(DataUtiles.getJsonData("Data","ChamberBranch"))
@@ -130,22 +130,22 @@ public class T04_PortalCases {
     public void NormalReservationFromPortalWithoutLogin () throws InterruptedException, IOException {
         new R1_PortalReservationPage(driver).CreateNormalReservationWithoutLogin(DataUtiles.getJsonData("Data","Full Name"),
                         DataUtiles.getJsonData("Data","Number"),DataUtiles.getJsonData("Data","First Name"),
-                        DataUtiles.getJsonData("Data","ID"),DataUtiles.getJsonData("Data","ChamberBranch"))
+                        DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","ChamberBranch"))
                 .SaveReservationNumberInJsonFile()
                 .PrintReservationData("NormalReservationFromPortalWithoutLogin");
     }
 
     @Test (priority = 9)
     public void NormalReservationFromPortalWithLogin () throws InterruptedException, IOException {
-        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","PortalEmail"),DataUtiles.getJsonData("Data","PortalPassword"));
+        new U01_PortalDashboard(driver).LoginToPortal(DataUtiles.getJsonData("Data","NewUsernamePortal"),DataUtiles.getJsonData("Data","NewPasswordPortal"));
         new R1_PortalReservationPage(driver).CreateNormalReservation(DataUtiles.getJsonData("Data","Number"),
-                        DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","ID"),
+                        DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","NewNationalIdPortal"),
                         DataUtiles.getJsonData("Data","ChamberBranch"))
                 .SaveReservationNumberInJsonFile()
                 .PrintReservationData("NormalReservationFromPortalWithLogin");
     }
 
-    @Test (priority = 10, description = "تسجيل الدخول بالمستخدم الجديد في البورتال")
+    @Test (priority = 0, description = "تسجيل الدخول بالمستخدم الجديد في البورتال")
     public void LoginWithNewPortalUser () {
         new U01_PortalDashboard(driver).LoginWithNewPortalUser(DataUtiles.getJsonData("Data","NewUsernamePortal"),
                 DataUtiles.getJsonData("Data","NewPasswordPortal"),

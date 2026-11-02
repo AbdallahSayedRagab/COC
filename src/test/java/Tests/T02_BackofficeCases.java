@@ -28,12 +28,11 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 1)
+    @Test (priority = 6)
     public void BusinessLicenseRequest () throws InterruptedException, AWTException {
-        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password")).Select_BusinessLicense()
+        new P02_Dashboard(driver).Select_BusinessLicense()
                 .ClickOnAddNewRequest_Button().ChooseFacilityNature_And_CreateRequest()
-                .FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"),DataUtiles.getJsonData("Data","Number"))
+                .FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","Number"))
                 .FillLegalDataSection(DataUtiles.getJsonData("Data","TradeName"),
                         DataUtiles.getJsonData("Data" , "CommercialFeature"))
                 .FillMembersSection().FillActivitiesDataSection(DataUtiles.getJsonData("Data","TaxCardNum"),
@@ -46,7 +45,7 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 7)
     public void CreateRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -57,17 +56,17 @@ public class T02_BackofficeCases {
                 .ConfirmAndApproveTheRecord();
     }
 
-    @Test (priority = 3)
+    @Test (priority = 8)
     public void EditRequest () throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
-        new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"),DataUtiles.getJsonData("Data","Number"))
+        new P05_EditRequestPage(driver).CreateNewEditRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","Number"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).SelectSectionToEdit().FillCertificateData()
                 .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile().ReviewRequest()
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
     }
 
-    @Test (priority = 4)
+    @Test (priority = 9)
     public void EditRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -81,11 +80,11 @@ public class T02_BackofficeCases {
 
 
 
-    @Test (priority = 5)
+    @Test (priority = 10)
     public void RemoveRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
-        new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","ID"),DataUtiles.getJsonData("Data","Number"))
+        new P06_RemoveRecordPage(driver).CreateNewRemoveRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","Number"))
                 .ChoosingRecord(DataUtiles.getJsonData("Data","RecordNumber")).FillCertificateData()
                 .FillAttachmentSection().ConfirmRequest().SaveRequestNumberInJsonFile()
                 .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
@@ -93,13 +92,13 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 6)
+    @Test (priority = 11)
     public void SourceCodeRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
                 new P02_Dashboard(driver).selectthesourcecode()
                 .ClickOnAddNewRequest_Button()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","NewNationalIdPortal"))
                 .clickonsavedmedicalprovider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
                 .FillTheCommericalData(DataUtiles.getJsonData("Data","First Name"),DataUtiles.getJsonData("Data","City"),
@@ -114,13 +113,13 @@ public class T02_BackofficeCases {
                 .selectthesourcecode().ReceivingTheCertificate();
     }
 
-    @Test (priority = 7)
+    @Test (priority = 12)
     public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
                 new P02_Dashboard(driver).selectTheAdministrativeCertificate()
                 .ClickOnAddNewRequest_Button()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","NewNationalIdPortal"))
                 .ClickOnSavedMedicalProvider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
                 .EnterTheAdministrativeCertificateDetails("Test")
@@ -130,11 +129,11 @@ public class T02_BackofficeCases {
                         .selectTheAdministrativeCertificate().ReceivingTheCertificate();
     }
 
-    @Test (priority = 8)
+    @Test (priority = 13)
     public void ServicesRequest() throws InterruptedException, AWTException {
 //    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //            ,DataUtiles.getJsonData("Data","Password"));
-    new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"),DataUtiles.getJsonData("Data","Number"))
+    new P11_ServicesRequest(driver).CreateNewServicesRequest().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","Number"))
             .SelectServicesData().FillAttachmentSection().ConfirmRequest().SendingRequestToCollect()
             .PayingFirstBill().Select_ServicesRequest();
 
@@ -150,21 +149,22 @@ public class T02_BackofficeCases {
 //
 //    }
 
-   @Test (priority = 10)
+   @Test (priority = 15)
    public void NegativeCertificteRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
-    new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NegativeID"),DataUtiles.getJsonData("Data","Number"))
+    new P10_NegativeCertificteRequest(driver).CreateNewNegativeRequest_Button().FillAndSaveDataOfApplicant(DataUtiles.getJsonData("Data","NewNationalIdPortal"),DataUtiles.getJsonData("Data","Number"))
             .FillCertificateData(DataUtiles.getJsonData("Data","TestData"))
             .FillAttachmentSection().ConfirmRequest()
             .ReviewRequest().SendingRequestToCollect().PayingFirstBill()
             .Select_NegativeRequest().ReceivingTheCertificate();
 
 }
-    @Test (priority = 14)
+    @Test (priority = 18)
     public void RemoveRecordEffect() throws InterruptedException {
-//        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-//                ,DataUtiles.getJsonData("Data","Password"));
+        // الكيس اللي قبلها بتدخل بمستخدم البريد، فلازم نرجع للمستخدم الجديد
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","NewUsernameBackOffice")
+                ,DataUtiles.getJsonData("Data","NewPasswordBackOffice"));
         new V03_RemoveRecordEffectPage(driver).AddNewEffectToRemoveNewRecord()
                 .FillDataForRecordAndCreateRemoveEffect(
                         DataUtiles.getJsonData("Data","RecordNumber"),
@@ -173,17 +173,19 @@ public class T02_BackofficeCases {
                         DataUtiles.getJsonData("Data","RemoveRequestNumber"))
                 .ConfirmAndApproveTheRecord();
     }
-    @Test (priority = 9)
+    @Test (priority = 14)
     public void payingsub() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //            ,DataUtiles.getJsonData("Data","Password"));
         new P02_Dashboard(driver).SelectTheRecorsMangements()
                .SearchOfRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
                .ClickOnEditRequest(DataUtiles.getJsonData("Data","RecordNumber"))
-               .OutstandingSubscriptions(" ","229")
+               .OutstandingSubscriptions(" ","229","2021")
+               .OutstandingSubscriptions(" ","230","2022")
+               .OutstandingSubscriptions(" ","231","2023")
                .ClickOnPayingSub()
                .ClickOnAddNewRequest_Button()
-              .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+              .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","NewNationalIdPortal"))
               .clickonsavedmedicalprovider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
               .ClickOnFirstSubscriptionItem()
@@ -192,13 +194,13 @@ public class T02_BackofficeCases {
               .selectThePaymentOfSubscriptions().ViewFirstRequest();
     }
 
-    @Test (priority = 13)
+    @Test (priority = 17)
     public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","MailPageUsername")
                 ,DataUtiles.getJsonData("Data","MailPagePassword"));
         new P02_Dashboard(driver).SelectRequestsAndCertificatesMailPage()
                 .AddAdministrationRequest()
-                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","ID"))
+                .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","NewNationalIdPortal"))
                 .ClickOnSavedMedicalProvider()
                 .SearchOnRecordNumber(DataUtiles.getJsonData("Data","RecordNumber"))
                 .EnterTheAdministrativeCertificateDetails("Test")
@@ -207,7 +209,7 @@ public class T02_BackofficeCases {
                 .ConfirmRequest();
     }
 
-    @Test (priority = 15)
+    @Test (priority = 16)
     public void StatementFormRequest() throws IOException, InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -220,7 +222,7 @@ public class T02_BackofficeCases {
                 .PrintStatementForm("StatementFormPrint");
     }
 
-    @Test (priority = 18)
+    @Test (priority = 2)
     public void AddNewBackOfficeUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectBackOfficeUsersPage()
@@ -234,7 +236,7 @@ public class T02_BackofficeCases {
                 .SearchByNameAndValidateUser();
     }
 
-    @Test (priority = 19)
+    @Test (priority = 3)
     public void AddNewPortalUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectPortalUsersPage()
@@ -246,7 +248,7 @@ public class T02_BackofficeCases {
                 .ConfirmUser();
     }
 
-    @Test (priority = 16)
+    @Test (priority = 1)
     public void AddNewBranch() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectBranchesPage()
@@ -265,10 +267,9 @@ public class T02_BackofficeCases {
                 .SearchByNameAndValidateBranch();
     }
 
-    @Test (priority = 17)
+    @Test (priority = 5)
     public void SetupElcBranch() throws InterruptedException {
-        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
-                ,DataUtiles.getJsonData("Data","Password")).SelectElcBranchesPage()
+        new P02_Dashboard(driver).SelectElcBranchesPage()
                 .SearchOnBranchAndOpenEdit(DataUtiles.getJsonData("Data","NewBranchName"))
                 .FillBranchSettings()
                 .AddWindowsWithPeriods(DataUtiles.getJsonData("Data","ElcWindows"))
@@ -277,7 +278,7 @@ public class T02_BackofficeCases {
                         DataUtiles.getJsonData("Data","ElcWindowsCount"));
     }
 
-    @Test (priority = 20, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
+    @Test (priority = 4, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
     public void LoginWithNewBackOfficeUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().LoginWithNewBackOfficeUser(DataUtiles.getJsonData("Data","NewUsernameBackOffice"),
                 DataUtiles.getJsonData("Data","NewPasswordBackOffice"));

@@ -15,7 +15,6 @@ public class R01_RecordsManagement {
     private final By AddSubscriptionItemButton = By.xpath("//button[contains(text(), ' اضافة بند اشتراك آخر')]");
     private final WebDriver driver;
     private final By YearsField = By.xpath("//label[normalize-space(text())='السنة']/following-sibling::*[1]");
-    private final By FixedDateOfYear = By.xpath("//td[@role='gridcell']/span[contains(text(), \"٢٠٢١\")]");
     private final By RecordNumber = By.xpath("//input[@placeholder=\"ابحث برقم السجل  \"]");
     private final By RequestsIcon = By.xpath("//img[@src=\"../../assets/images/certificates-icon.svg\"]");
     private final By Payingsubscriptions = By.xpath("//a[contains(@href,'/requests/membership-collection-requests')]");
@@ -42,9 +41,18 @@ public class R01_RecordsManagement {
         return this;
     }
 
-    public R01_RecordsManagement OutstandingSubscriptions(String item, String amount) throws InterruptedException {
+    // السنة في الكالندر بتظهر بالارقام العربية فبنحولها: 2021 تبقى ٢٠٢١
+    private By YearInCalendar(String year) {
+        StringBuilder ArabicYear = new StringBuilder();
+        for (char Digit : year.toCharArray()) {
+            ArabicYear.append((char) ('٠' + (Digit - '0')));
+        }
+        return By.xpath("//td[@role='gridcell']/span[contains(text(), \"" + ArabicYear + "\")]");
+    }
+
+    public R01_RecordsManagement OutstandingSubscriptions(String item, String amount, String year) throws InterruptedException {
         Utility.CLICKONELEMENTS(driver, YearsField);
-        Utility.CLICKONELEMENTS(driver, FixedDateOfYear);
+        Utility.CLICKONELEMENTS(driver, YearInCalendar(year));
         Utility.CLICKONELEMENTS(driver, OutstandingSbscriptions);
         Utility.CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.SENDKEYS(driver, DueAmount, amount);

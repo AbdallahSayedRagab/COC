@@ -249,10 +249,20 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
 
         for (int i = 0; i < total; i++) {
             // بندور على الزراير من جديد كل مرة عشان الصفحة بتعمل re-render بعد كل رفع
-            List<WebElement> buttons = driver.findElements(AddAttachmentButton);
-            int removed = total - buttons.size(); // لو الزرار بيختفي بعد ما المرفق يترفع
-            WebElement button = buttons.get(i - removed);
-            UploadFile(driver, button, FilePath);
+            // ولو الصفحة بنت القسم من جديد وقت الرفع (Stale) بنمسك الزرار الجديد ونعيد لحد 3 مرات
+            for (int attempt = 1; ; attempt++) {
+                WaitUntilNotBusy(driver, 60);
+                List<WebElement> buttons = driver.findElements(AddAttachmentButton);
+                int removed = total - buttons.size(); // لو الزرار بيختفي بعد ما المرفق يترفع
+                WebElement button = buttons.get(i - removed);
+                try {
+                    UploadFile(driver, button, FilePath);
+                    break;
+                } catch (StaleElementReferenceException e) {
+                    if (attempt == 3) throw e;
+                    LogsUtiles.info("Attachment button re-rendered, retrying: attempt " + attempt);
+                }
+            }
             LogsUtiles.info("Attachment " + (i + 1) + "/" + total + " uploaded");
         }
     }

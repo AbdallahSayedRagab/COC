@@ -24,11 +24,11 @@ public class P16_SpecialServiceBackOfficePage {
     private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),' اقبل الطلب')]");
 
     private By ViewButtonOfRequest (String RequestNumber) {
-        return By.xpath("//tr[.//span[normalize-space()='" + RequestNumber + "']]//li[.//*[local-name()='svg' and contains(@class,'view-icon')]]");
+        return By.xpath("//tr[td[normalize-space()='" + RequestNumber + "']]//li[.//*[local-name()='svg' and contains(@class,'view-icon')]]");
     }
 
     private By StatusOfRequest (String RequestNumber) {
-        return By.xpath("//tr[.//span[normalize-space()='" + RequestNumber + "']]//td[contains(@class,'table-actions')]//span");
+        return By.xpath("//tr[td[normalize-space()='" + RequestNumber + "']]//td[contains(@class,'table-actions')]//span");
     }
 
     public P16_SpecialServiceBackOfficePage SelectBranch (String Branch) throws InterruptedException {

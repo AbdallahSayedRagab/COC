@@ -69,7 +69,11 @@ public class S03_BranchesPage {
 
         String LastCode = JsonUtil.readValue("NewBranchCode");
         String Code = LastCode == null ? "K0" : NextCode(LastCode);
-        while (UsedCodes.contains(Code)) {
+        // 936 هو عدد كل الاكواد الممكنة (26 حرف × 36): لو كلها مستخدمة الكيس بتقف برسالة واضحة
+        for (int Tried = 0; UsedCodes.contains(Code); Tried++) {
+            if (Tried == 936) {
+                throw new IllegalStateException("All branch codes are used, delete some test branches");
+            }
             Code = NextCode(Code);
         }
 
@@ -85,11 +89,18 @@ public class S03_BranchesPage {
         return this;
     }
 
-    // حقل الكود بياخد حرفين بس، فبعد K9 بينتقل للحرف اللي بعده: L0
+    // حقل الكود بياخد خانتين بس: الاولى حرف والتانية رقم او حرف
+    // بعد K9 بيروح KA وبعد KZ بيروح L0، وبعد ZZ بيلف من الاول لـ A0
     private String NextCode (String Code) {
-        char Letter = Code.charAt(0);
-        int Digit = Code.charAt(1) - '0';
-        return Digit == 9 ? (char) (Letter + 1) + "0" : Letter + String.valueOf(Digit + 1);
+        String Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String SecondChars = "0123456789" + Letters;
+        int LetterIndex = Letters.indexOf(Code.charAt(0));
+        int SecondIndex = SecondChars.indexOf(Code.charAt(1)) + 1;
+        if (SecondIndex == SecondChars.length()) {
+            SecondIndex = 0;
+            LetterIndex = (LetterIndex + 1) % Letters.length();
+        }
+        return "" + Letters.charAt(LetterIndex) + SecondChars.charAt(SecondIndex);
     }
 
     // لوحة التصفية مفيهاش الكود، فبنقرا كل صفحات الجدول (عددهم قليل)

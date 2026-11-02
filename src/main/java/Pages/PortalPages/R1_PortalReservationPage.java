@@ -80,6 +80,21 @@ public class R1_PortalReservationPage {
         return this;
     }
 
+    // لو نوع الحجز ثابت (القايمة مقفولة عليه) بنسيبه ونروح للتاريخ على طول، ولو مش ثابت بنفتح القايمة ونختار
+    private void SelectReservationTypeIfNotFixed (By ReservationTypeChoice) {
+        String ListClass = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                .ignoring(StaleElementReferenceException.class)
+                .until(d -> {
+                    if (d.findElements(Utility.Loader).stream().anyMatch(WebElement::isDisplayed)) return null;
+                    WebElement List = d.findElement(ReservationTypeList);
+                    return List.isDisplayed() ? List.getDomAttribute("class") : null;
+                });
+        if (!ListClass.contains("ng-select-disabled")) {
+            Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList);
+            Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeChoice);
+        }
+    }
+
     private void FillBeneficiaryAndNormalReservationData (String BeneficiaryName , String ID , String Branch) throws InterruptedException {
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
         Utility.WaitUntilReady_And_CLICK(driver,ApplicantAttribute_Field);
@@ -95,8 +110,7 @@ public class R1_PortalReservationPage {
         Utility.WaitUntilReady_And_CLICK(driver,Branch_Field);
         Utility.WaitUntilReady_And_CLICK(driver,BranchChoice);
         Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList);
-        Utility.WaitUntilReady_And_CLICK(driver,NormalReservationType);
+        SelectReservationTypeIfNotFixed(NormalReservationType);
         Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar);
         Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
         Utility.WaitUntilReady_And_CLICK(driver,PeriodsList);
@@ -136,8 +150,7 @@ public class R1_PortalReservationPage {
                     return false;
                 });
         Utility.WaitUntilReady_And_CLICK(driver,NextStepButton);
-        Utility.WaitUntilReady_And_CLICK(driver,ReservationTypeList);
-        Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
+        SelectReservationTypeIfNotFixed(Option1ForAnyList);
         Utility.WaitUntilReady_And_CLICK(driver,ReservationCalendar);
         Utility.WaitUntilReady_And_CLICK(driver,FirstAvailableDay);
         Utility.WaitUntilReady_And_CLICK(driver,PeriodsList);
