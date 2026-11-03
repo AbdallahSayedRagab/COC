@@ -20,6 +20,11 @@ public class K03_QueuePage {
 
 
 
+    // رسالة النجاح "تم تعيين الشباك كود N إلى الحجز رقم ..." بعد التأكيد
+    private By AssignSuccessMessage(String ReservationNumber) {
+        return By.xpath("//*[contains(text(),'تم تعيين الشباك') and contains(text(),'" + ReservationNumber + "')]");
+    }
+
     private By ThreeDotsIcon(String ReservationNumber) {
         return By.xpath("//tr[td[normalize-space()='" + ReservationNumber + "']]//img[contains(@src,'more.svg')]");
     }
@@ -38,6 +43,8 @@ public class K03_QueuePage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ListOfAvailableWindows);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, Option1ForAnyList);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, ConfirmButtonAtPopUp);
+        // بيستنى رسالة النجاح عشان الكيس ما يقفلش المتصفح قبل ما التعيين يتحفظ
+        Utility.GETTEXT(driver, AssignSuccessMessage(DataUtiles.getJsonData("Data", "ReservationNumber")));
         return this;
     }
 }

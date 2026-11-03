@@ -117,11 +117,36 @@ public class T03_ReservationTests {
 //    }
 
     @Test(priority = 9)
-    public void AssignNormalWindow () throws InterruptedException {
+    public void AssignWindowToReservationFromQueuePage () throws InterruptedException {
+        // مستخدم الشباك بيعمل حجز عادي النهارده واول فترة على فرعه، ويأكد الحضور، وبعدين يعينه على شباك من شاشة الدور
         new P01_LoginPage(driver).LoginAndChooseWindow(DataUtiles.getJsonData("Data","WindowUserName")
-                ,DataUtiles.getJsonData("Data","WindowPassword"))
-                .SelectQueuePage().AssigningReservationToAvailableWindow();
+                ,DataUtiles.getJsonData("Data","WindowUserPassword"),DataUtiles.getJsonData("Data","WindowUserBranch"))
+                .SelectReservationsPage()
+                .CreateTodayNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","NewNationalIdPortal"))
+                .SaveReservationNumberInJsonFile()
+                .ConfirmFirstReservationInTable()
+                .CloseQueueNumberPopUp();
+        new P02_Dashboard(driver).SelectQueuePage().AssigningReservationToAvailableWindow();
+        // انهاء الحجز من خدمة الجمهور في نفس الجلسة (تسجيل دخول جديد بيلغي التعيين) عشان الشباك يفضى للرن الجاي
+        new P02_Dashboard(driver).SelectCitizenServicePage().FinishCurrentReservation();
 
+    }
+
+    @Test(priority = 10)
+    public void CallNextReservationFromCitizenService () throws InterruptedException {
+        // مستخدم الشباك بيعمل حجز عادي النهارده واول فترة، ويأكد الحضور من ادارة الحجوزات، وبعدين من خدمة الجمهور يستدعي الحجز التالي ويدوس انهاء
+        new P01_LoginPage(driver).LoginAndChooseWindow(DataUtiles.getJsonData("Data","WindowUserName")
+                ,DataUtiles.getJsonData("Data","WindowUserPassword"),DataUtiles.getJsonData("Data","WindowUserBranch"))
+                .SelectReservationsPage()
+                .CreateTodayNormalReservation(DataUtiles.getJsonData("Data","Full Name"),
+                        DataUtiles.getJsonData("Data","Number"),
+                        DataUtiles.getJsonData("Data","NewNationalIdPortal"))
+                .SaveReservationNumberInJsonFile()
+                .ConfirmFirstReservationInTable()
+                .CloseQueueNumberPopUp();
+        new P02_Dashboard(driver).SelectCitizenServicePage().CallNextReservation().FinishCurrentReservation();
     }
 
 

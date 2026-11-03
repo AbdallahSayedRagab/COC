@@ -28,7 +28,7 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 6)
+    @Test (priority = 8)
     public void BusinessLicenseRequest () throws InterruptedException, AWTException {
         new P02_Dashboard(driver).Select_BusinessLicense()
                 .ClickOnAddNewRequest_Button().ChooseFacilityNature_And_CreateRequest()
@@ -45,7 +45,7 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 7)
+    @Test (priority = 9)
     public void CreateRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -56,7 +56,7 @@ public class T02_BackofficeCases {
                 .ConfirmAndApproveTheRecord();
     }
 
-    @Test (priority = 8)
+    @Test (priority = 10)
     public void EditRequest () throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -66,7 +66,7 @@ public class T02_BackofficeCases {
                 .SendingRequestToCollect().PayingFirstBill().Select_EditRequest().ReceivingTheCertificate();
     }
 
-    @Test (priority = 9)
+    @Test (priority = 11)
     public void EditRecordEffect() throws InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -80,7 +80,7 @@ public class T02_BackofficeCases {
 
 
 
-    @Test (priority = 10)
+    @Test (priority = 12)
     public void RemoveRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -92,7 +92,7 @@ public class T02_BackofficeCases {
 
     }
 
-    @Test (priority = 11)
+    @Test (priority = 13)
     public void SourceCodeRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -113,7 +113,7 @@ public class T02_BackofficeCases {
                 .selectthesourcecode().ReceivingTheCertificate();
     }
 
-    @Test (priority = 12)
+    @Test (priority = 14)
     public void AdministrativeCertificateRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -129,7 +129,7 @@ public class T02_BackofficeCases {
                         .selectTheAdministrativeCertificate().ReceivingTheCertificate();
     }
 
-    @Test (priority = 13)
+    @Test (priority = 15)
     public void ServicesRequest() throws InterruptedException, AWTException {
 //    new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //            ,DataUtiles.getJsonData("Data","Password"));
@@ -149,7 +149,7 @@ public class T02_BackofficeCases {
 //
 //    }
 
-   @Test (priority = 15)
+   @Test (priority = 17)
    public void NegativeCertificteRequest() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -160,7 +160,7 @@ public class T02_BackofficeCases {
             .Select_NegativeRequest().ReceivingTheCertificate();
 
 }
-    @Test (priority = 18)
+    @Test (priority = 20)
     public void RemoveRecordEffect() throws InterruptedException {
         // الكيس اللي قبلها بتدخل بمستخدم البريد، فلازم نرجع للمستخدم الجديد
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","NewUsernameBackOffice")
@@ -173,7 +173,7 @@ public class T02_BackofficeCases {
                         DataUtiles.getJsonData("Data","RemoveRequestNumber"))
                 .ConfirmAndApproveTheRecord();
     }
-    @Test (priority = 14)
+    @Test (priority = 16)
     public void payingsub() throws InterruptedException, AWTException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //            ,DataUtiles.getJsonData("Data","Password"));
@@ -194,10 +194,10 @@ public class T02_BackofficeCases {
               .selectThePaymentOfSubscriptions().ViewFirstRequest();
     }
 
-    @Test (priority = 17)
+    @Test (priority = 19)
     public void AddAdministrativeCertificateRequestByRequestMailPage() throws InterruptedException, AWTException {
-        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","MailPageUsername")
-                ,DataUtiles.getJsonData("Data","MailPagePassword"));
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","MailUserName")
+                ,DataUtiles.getJsonData("Data","MailUserPassword"));
         new P02_Dashboard(driver).SelectRequestsAndCertificatesMailPage()
                 .AddAdministrationRequest()
                 .EnterThePersonalIdentificationNumber(DataUtiles.getJsonData("Data","NewNationalIdPortal"))
@@ -209,7 +209,7 @@ public class T02_BackofficeCases {
                 .ConfirmRequest();
     }
 
-    @Test (priority = 16)
+    @Test (priority = 18)
     public void StatementFormRequest() throws IOException, InterruptedException {
 //        new P01_LoginPage(driver).Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
 //                ,DataUtiles.getJsonData("Data","Password"));
@@ -236,7 +236,42 @@ public class T02_BackofficeCases {
                 .SearchByNameAndValidateUser();
     }
 
+    // يوزر بريد الطلبات والشهادات (آلية العمل توزيع إلكتروني) - بيستخدم في اي كيس فيها بريد الطلبات والشهادات
     @Test (priority = 3)
+    public void AddNewMailUser() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectBackOfficeUsersPage()
+                .PrepareUniqueUserData(DataUtiles.getJsonData("Data","MailUserFullName"),
+                        DataUtiles.getJsonData("Data","MailUserBaseName"),
+                        DataUtiles.getJsonData("Data","NewUsersPassword"),
+                        "MailUserName","MailUserPassword")
+                .ClickOnAddNewUser()
+                .FillDataOfNewUser(DataUtiles.getJsonData("Data","NewBackOfficeUserRole"),
+                        DataUtiles.getJsonData("Data","NewBranchName"),
+                        DataUtiles.getJsonData("Data","MailUserOperation"))
+                .SaveUserAndDataInJsonFile()
+                .SearchByNameAndValidateUser();
+    }
+
+    // يوزر الشباك (آلية العمل خدمة جمهور) - بيستخدم في اي كيس فيها دخول بالشباك
+    @Test (priority = 4)
+    public void AddNewWindowUser() throws InterruptedException {
+        new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
+                ,DataUtiles.getJsonData("Data","Password")).SelectBackOfficeUsersPage()
+                .PrepareUniqueUserData(DataUtiles.getJsonData("Data","WindowUserFullName"),
+                        DataUtiles.getJsonData("Data","WindowUserBaseName"),
+                        DataUtiles.getJsonData("Data","NewUsersPassword"),
+                        "WindowUserName","WindowUserPassword")
+                .ClickOnAddNewUser()
+                .FillDataOfNewUser(DataUtiles.getJsonData("Data","NewBackOfficeUserRole"),
+                        DataUtiles.getJsonData("Data","NewBranchName"),
+                        DataUtiles.getJsonData("Data","WindowUserOperation"))
+                .SaveUserAndDataInJsonFile()
+                .SaveUserBranchInJsonFile("WindowUserBranch")
+                .SearchByNameAndValidateUser();
+    }
+
+    @Test (priority = 5)
     public void AddNewPortalUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().Login(DataUtiles.getJsonData("Data","ValidLoginEmail")
                 ,DataUtiles.getJsonData("Data","Password")).SelectPortalUsersPage()
@@ -267,7 +302,7 @@ public class T02_BackofficeCases {
                 .SearchByNameAndValidateBranch();
     }
 
-    @Test (priority = 5)
+    @Test (priority = 7)
     public void SetupElcBranch() throws InterruptedException {
         new P02_Dashboard(driver).SelectElcBranchesPage()
                 .SearchOnBranchAndOpenEdit(DataUtiles.getJsonData("Data","NewBranchName"))
@@ -278,7 +313,7 @@ public class T02_BackofficeCases {
                         DataUtiles.getJsonData("Data","ElcWindowsCount"));
     }
 
-    @Test (priority = 4, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
+    @Test (priority = 6, description = "تسجيل الدخول بالمستخدم الجديد في الباك اوفيس")
     public void LoginWithNewBackOfficeUser() throws InterruptedException {
         new P02_Dashboard(driver).Logout().LoginWithNewBackOfficeUser(DataUtiles.getJsonData("Data","NewUsernameBackOffice"),
                 DataUtiles.getJsonData("Data","NewPasswordBackOffice"));
@@ -287,7 +322,7 @@ public class T02_BackofficeCases {
 
         @AfterClass
     public void quit () {
-//        driver.quit();
+        driver.quit();
     }
 }
 

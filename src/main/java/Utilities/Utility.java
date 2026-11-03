@@ -218,6 +218,15 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         WaitUntilReady_And_CLICK(driver,locator);
     }
 
+    // بيختار اليوم الحالي بالظبط في التقويم (الأرقام في التقويم بالعربي ٠-٩) - لو النهارده مقفول (اجازة) الكيس بيفشل
+    public static void SelectTodayInCalender (WebDriver driver) {
+        String Today = String.valueOf(java.time.LocalDate.now().getDayOfMonth());
+        StringBuilder ArabicToday = new StringBuilder();
+        for (char c : Today.toCharArray()) ArabicToday.append((char) ('٠' + (c - '0')));
+        By locator = By.xpath("//table[@class='days weeks']//span[@class='ng-star-inserted' and (normalize-space()='" + ArabicToday + "' or normalize-space()='" + Today + "')]");
+        WaitUntilReady_And_CLICK(driver,locator);
+    }
+
     public static By InputFieldXpath(String label){
         return By.xpath("By.xpath(\"//label[contains(normalize-space(.), '\"+label.trim()+\"')]/following::input[1]\");");
     }

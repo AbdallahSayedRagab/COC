@@ -27,17 +27,23 @@ public class S01_BackOfficeUsersPage {
     private final By AllowedRequestSourcesList = By.xpath("//select-control[@label=\"مصادر الطلبات المسموح بها\"]//ng-select");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By UserDataTitle = By.xpath("//strong[normalize-space()='بيانات المستخدم']");
-    private final By MailBox_Radio = By.xpath("//label[normalize-space()='صندوق بريد']/preceding-sibling::input[@formcontrolname=\"operation\"]");
     private final By AddUser_Button = By.xpath("//button[@type=\"submit\" and normalize-space()='اضافة']");
 
     // حقول ليها قيمة افتراضية في الفورم - اللوكيتر موجود بس مش بنغير قيمتها
     private final By IsActive_Switch = By.xpath("//input[@formcontrolname=\"isActive\"]");
-    private final By ElectronicDistribution_Radio = By.xpath("//label[normalize-space()='توزيع إلكتروني']/preceding-sibling::input[@formcontrolname=\"operation\"]");
-    private final By CustomerService_Radio = By.xpath("//label[normalize-space()='خدمة جمهور']/preceding-sibling::input[@formcontrolname=\"operation\"]");
 
     private String NewFullName;
     private String NewUserName;
     private String NewPassword;
+    private String NewBranch;
+    // مفاتيح الجيسون اللي بيتحفظ فيها اليوزر (العادي: NewUsernameBackOffice - بريد الطلبات: MailUserName - الشباك: WindowUserName)
+    private String UserNameKey;
+    private String PasswordKey;
+
+    // آلية العمل: صندوق بريد - توزيع إلكتروني - خدمة جمهور
+    private By OperationRadio (String Operation) {
+        return By.xpath("//label[normalize-space()='" + Operation + "']/preceding-sibling::input[@formcontrolname=\"operation\"]");
+    }
 
     private By UserRowByUserName (String UserName) {
         return By.xpath("//table//tbody/tr[td[3][normalize-space()='" + UserName + "']]");
@@ -47,11 +53,20 @@ public class S01_BackOfficeUsersPage {
         return By.xpath("//table//tbody/tr[td[1][normalize-space()='" + FullName + "']]/td[3]");
     }
 
-    // بيبدأ من الرقم اللي بعد آخر مستخدم متسجل في الجيسون ويزود لحد ما يلاقي اسم مش موجود في الشاشة
+    // اليوزر العادي (AutoUser)
     public S01_BackOfficeUsersPage PrepareUniqueUserData (String FullName , String BaseUserName , String Password) {
+        return PrepareUniqueUserData(FullName, BaseUserName, Password, "NewUsernameBackOffice", "NewPasswordBackOffice");
+    }
+
+    // بيبدأ من الرقم اللي بعد آخر مستخدم متسجل في الجيسون ويزود لحد ما يلاقي اسم مش موجود في الشاشة
+    // (لو آخر يوزر في الجيسون مش من نفس النوع - زي يوزر قديم متسجل بايدينا - بيبدأ من 1)
+    public S01_BackOfficeUsersPage PrepareUniqueUserData (String FullName , String BaseUserName , String Password ,
+                                                          String UserNameKey , String PasswordKey) {
+        this.UserNameKey = UserNameKey;
+        this.PasswordKey = PasswordKey;
         WaitForListToLoad();
-        String LastUserName = JsonUtil.readValue("NewUsernameBackOffice");
-        String LastNumber = LastUserName == null ? "" : LastUserName.replaceAll("\\D","");
+        String LastUserName = JsonUtil.readValue(UserNameKey);
+        String LastNumber = LastUserName == null || !LastUserName.startsWith(BaseUserName) ? "" : LastUserName.substring(BaseUserName.length()).replaceAll("\\D","");
         int Number = LastNumber.isEmpty() ? 1 : Integer.parseInt(LastNumber) + 1;
         while (IsUserNameFoundInList(BaseUserName + Number)) {
             Number++;
@@ -77,7 +92,13 @@ public class S01_BackOfficeUsersPage {
         return this;
     }
 
+    // اليوزر العادي: آلية العمل صندوق بريد
     public S01_BackOfficeUsersPage FillDataOfNewUser (String Role , String Branch) {
+        return FillDataOfNewUser(Role, Branch, "صندوق بريد");
+    }
+
+    public S01_BackOfficeUsersPage FillDataOfNewUser (String Role , String Branch , String Operation) {
+        NewBranch = Branch;
         By RoleChoice = By.xpath("//div[@role='option'][normalize-space()='" + Role + "']");
         By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
         Utility.WatingAndSENDKEYS(driver,FullName_Field,NewFullName);
@@ -85,7 +106,7 @@ public class S01_BackOfficeUsersPage {
         Utility.WatingAndSENDKEYS(driver,UserName_Field,NewUserName);
         Utility.WatingAndSENDKEYS(driver,Password_Field,NewPassword);
         // الراديو قبل القوايم عشان القايمة المفتوحة بتغطي عليه
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,MailBox_Radio);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OperationRadio(Operation));
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RolesList);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RoleChoice);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchesList);
@@ -108,8 +129,14 @@ public class S01_BackOfficeUsersPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddUser_Button);
         // بعد الحفظ بيرجع لشاشة مستخدمين النظام - لو الحفظ فشل الجدول مش هيظهر والكيس هتفشل هنا ومش هنحفظ حاجة
         WaitForListToLoad();
-        JsonUtil.writeValue("NewUsernameBackOffice",NewUserName);
-        JsonUtil.writeValue("NewPasswordBackOffice",NewPassword);
+        JsonUtil.writeValue(UserNameKey,NewUserName);
+        JsonUtil.writeValue(PasswordKey,NewPassword);
+        return this;
+    }
+
+    // فرع اليوزر (يوزر الشباك بيختاره في الدخول بالشباك)
+    public S01_BackOfficeUsersPage SaveUserBranchInJsonFile (String BranchKey) {
+        JsonUtil.writeValue(BranchKey,NewBranch);
         return this;
     }
 

@@ -32,7 +32,7 @@ public class K01_ResrvationsListPage {
     private final By PrintButtonForFirstReserv = By.xpath("(//button[text()=' طباعة '])[last()]");
     private final By PrintQueueDaraAfterAttending = By.xpath("//button[text()='طباعة']");
     private final By ReschedulingButtonForFirstReserv = By.xpath("(//button[text()=' اعادة جدولة الحجز '])[last()]");
-
+    private final By ClosePopUpButton = By.xpath("//button[contains(@class,'swal2-close')]");
 
     // locators المستفيد
     private final By BeneficiaryName_Field = By.xpath("//label[normalize-space(text())='اسم المُستفيد']/following-sibling::*[1]");
@@ -78,6 +78,31 @@ public class K01_ResrvationsListPage {
         return this;
     }
 
+    // حجز عادي في اليوم الحالي واول فترة متاحة (الفترات بتبدأ من الوقت الحالي)
+    public K01_ResrvationsListPage CreateTodayNormalReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button);
+        Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Name);
+        Utility.WatingAndSENDKEYS(driver,NumberOfApplicant_Field,phoneNumber);
+        Utility.CLICKONELEMENTS(driver,NationalityOfApplicant_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EgyptianNation);
+        Utility.WatingAndSENDKEYS(driver,ApplicantID_Field,ID);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ApplicantAttribute_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OwnerAttribute);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AdministrationRequest);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CertificateType_Field);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationTypeList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalReservationType);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationCalendar);
+        Utility.SelectTodayInCalender(driver);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PeriodsList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Option1ForAnyList);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SubmitButton);
+
+        return this;
+    }
+
     public P04_InvoicesPage CreateVIPReservation(String Name , String phoneNumber , String ID) throws InterruptedException {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,Add_Reservation_Button);
         Utility.WatingAndSENDKEYS(driver,Applicant_Name_Field,Name);
@@ -107,6 +132,11 @@ public class K01_ResrvationsListPage {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,OptionsButton);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonForFirstReserv);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConfirmAttendanceButtonOnPopUp);
+        return this;
+    }
+    // بيقفل popup "تم تسجيل حضور مقدم الطلب ... وحجز دور برقم" اللي بيظهر بعد تأكيد الحضور
+    public K01_ResrvationsListPage CloseQueueNumberPopUp() {
+        Utility.CLICKONVISIBLEELEMENTS(driver,ClosePopUpButton);
         return this;
     }
     public K01_ResrvationsListPage PrintReservationData (String ScreenShotName) throws InterruptedException, IOException {

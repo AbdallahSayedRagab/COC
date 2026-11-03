@@ -29,6 +29,7 @@ public class P02_Dashboard {
     private final By ReservationsPage_FSM = By.xpath("//a[contains(@href,'/managementsys/electronicbookingmanagement')]");
     private final By SelfService_FSM = By.xpath("//a[contains(@href,'/managementsys/selfservicemanagement')]");
     private final By RequestsAndCertificates_FSM = By.xpath("//a[contains(@href,'/requests/management')]");
+    private final By CitizenService_FSM = By.xpath("//a[contains(@href,'/requests/citizen-service')]");
     private final By RequestsAndCertificatesMail_FSM = By.xpath("//a[contains(@href,'/requests/requests-certificates-mailbox')]");
     private final By QueuePage_FSM = By.xpath("//a[contains(@href,'/managementsys/electronicbookingqueuemanagement')]");
     private final By ProfileIcon = By.xpath("//div[contains(@class,'header-user')]//a[contains(@class,'dropdown-toggle')]");
@@ -116,6 +117,12 @@ public class P02_Dashboard {
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ReservationIcon);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SelfService_FSM);
         return new K02_SelfServicePage(driver);
+    }
+
+    public K04_CitizenServicePage SelectCitizenServicePage (){
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RequestsIcon);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,CitizenService_FSM);
+        return new K04_CitizenServicePage(driver);
     }
 
     public P13_RequestsAndCertificatesPage SelectRequestsAndCertificatesPage (){

@@ -49,7 +49,7 @@ public class T01_Login {
     @Test
     public void LoginAsWindowUser () throws InterruptedException {
         new P01_LoginPage(driver).LoginAndChooseWindow(DataUtiles.getJsonData("Data","WindowUserName")
-                ,DataUtiles.getJsonData("Data","WindowPassword"));
+                ,DataUtiles.getJsonData("Data","WindowUserPassword"),DataUtiles.getJsonData("Data","WindowUserBranch"));
 
     }
 //    @Test
@@ -66,7 +66,7 @@ public class T01_Login {
 
     @AfterMethod
     public void quit () {
-//        driver.quit();
+        driver.quit();
     }
 }
 

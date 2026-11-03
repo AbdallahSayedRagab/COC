@@ -20,6 +20,8 @@
                     <!-- التجهيز: فرع ثم يوزر ثم الدخول بيه ثم اعدادات الحجز -->
                     <include name="AddNewBranch"/>
                     <include name="AddNewBackOfficeUser"/>
+                    <include name="AddNewMailUser"/>
+                    <include name="AddNewWindowUser"/>
                     <include name="AddNewPortalUser"/>
                     <include name="LoginWithNewBackOfficeUser"/>
                     <include name="SetupElcBranch"/>
@@ -52,7 +54,8 @@
                     <include name="AddReservationAndRescheduleIt"/>
                     <include name="CreateReservationFromSelfServicePage"/>
                     <include name="ConfirmAttendForReservationFromSelfServicePage"/>
-                    <include name="AssignNormalWindow"/>
+                    <include name="AssignWindowToReservationFromQueuePage"/>
+                    <include name="CallNextReservationFromCitizenService"/>
                 </methods>
             </class>
         </classes>

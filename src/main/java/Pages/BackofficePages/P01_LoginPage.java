@@ -16,7 +16,6 @@ public class P01_LoginPage {
     private final By Login_Password = By.xpath("//input[@type=\"password\"]");
     private final By Login_button = By.xpath("//button[@type=\"submit\"]");
     private final By BranchList = By.xpath("(//ng-select)[1]");
-    private final By ChamberBranchChoice = By.xpath("//span[text()=' فرع الغرفه للخدمات الاختياريه  ']");
     private final By WindowList = By.xpath("(//ng-select)[2]");
     private final By NormalWindowChoice = By.xpath("//span[text()=' 1 ']");
     private final By ConFirmChoiceButton = By.xpath("//span[text()='تأكيد الاختيار']");
@@ -44,14 +43,14 @@ public class P01_LoginPage {
         return new P02_Dashboard(driver);
     }
 
-    public P02_Dashboard LoginAndChooseWindow (String EMAIL ,String password) throws InterruptedException {
-//        String EMAIL =DataUtils.getJsonData("Data","ValidLoginEmail");
-//        String password =DataUtils.getJsonData("Data","Password");
+    // الدخول بيوزر الشباك: بيختار فرع اليوزر (WindowUserBranch) وشباك 1
+    public P02_Dashboard LoginAndChooseWindow (String EMAIL ,String password , String Branch) throws InterruptedException {
+        By BranchChoice = By.xpath("//div[@role='option'][normalize-space()='" + Branch + "']");
         Utility.SENDKEYS(driver,Login_Email,EMAIL);
         Utility.SENDKEYS(driver,Login_Password,password);
         Utility.CLICKONELEMENTS(driver,Login_button);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchList);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ChamberBranchChoice);
+        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,BranchChoice);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,WindowList);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,NormalWindowChoice);
         Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ConFirmChoiceButton);
