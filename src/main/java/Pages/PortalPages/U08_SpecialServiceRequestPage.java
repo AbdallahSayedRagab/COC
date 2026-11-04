@@ -7,13 +7,12 @@ import Utilities.JsonUtil;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -81,24 +80,10 @@ public class U08_SpecialServiceRequestPage {
         Utility.WaitUntilReady_And_CLICK(driver,AttachmentTypeField);
         Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
         Utility.WaitUntilReady_And_CLICK(driver,AddAttachmentTypeButton);
-        Utility.WaitUntilReady_And_CLICK(driver,UploadFileButton);
-
-        String path = "\"C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg\"";
-        StringSelection StringSelection = new StringSelection(path);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(StringSelection,null);
-
-        Robot robot = new Robot();
-        robot.delay(1000);
-
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-        robot.delay(1000);
-
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-        robot.delay(5000);
+        // نفس رفع باقي المرفقات (صورة COC من المشروع) - شغال من عندك ومن الـ Pipeline
+        WebElement UploadButton = new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200))
+                .until(ExpectedConditions.visibilityOfElementLocated(UploadFileButton));
+        Utility.UploadFile(driver, UploadButton, Utility.AttachmentFilePath, null);
 
         Utility.WaitUntilReady_And_SENDKEYS(driver,AttachmentNotesField,TestData);
         Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments);

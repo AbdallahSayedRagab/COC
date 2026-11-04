@@ -21,7 +21,17 @@ public class DriverFactoryClass {
         {
             case "chrome":
                 ChromeOptions Options = new ChromeOptions();
-                Options.addArguments("--start-maximized");
+                if (IsHeadless()) {
+                    // على الـ Pipeline (لينكس من غير شاشة وبيوزر root) - من غيرهم Chrome بيقفل اول ما يفتح
+                    Options.addArguments("--headless=new");
+                    Options.addArguments("--no-sandbox");
+                    Options.addArguments("--disable-dev-shm-usage");
+                    Options.addArguments("--disable-gpu");
+                    // بديل --start-maximized اللي مالوش لازمة في الـ headless
+                    Options.addArguments("--window-size=1920,1080");
+                } else {
+                    Options.addArguments("--start-maximized");
+                }
                 // دايما يفتح Incognito عشان مايبقاش فيه session محفوظة
                 Options.addArguments("--incognito");
                 Options.addArguments("--force-device-scale-factor=0.75");
@@ -63,6 +73,12 @@ public class DriverFactoryClass {
 
         }
     }
+    // headless لو اتبعت -Dheadless=true او شغالين على Pipeline (Bitbucket بيعرف متغير CI لوحده) - من عندك بيفتح عادي
+    public static boolean IsHeadless() {
+        return Boolean.parseBoolean(System.getProperty("headless", "false"))
+                || System.getenv("CI") != null;
+    }
+
     public static WebDriver getdriver (){
         return driverThreadLocal.get();
     }

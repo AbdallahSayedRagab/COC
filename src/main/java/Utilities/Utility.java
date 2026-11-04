@@ -232,8 +232,9 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
     }
 
     // ===================== المرفقات =====================
-    // الملف اللي بيترفع في كل المرفقات
-    public static final String AttachmentFilePath = "C:\\Users\\AcTiVE\\Desktop\\pexels-sulimansallehi-1704488 - Copy (4).jpg";
+    // الملف اللي بيترفع في كل المرفقات - جوه المشروع عشان يتلاقي من عندك ومن الـ Pipeline
+    public static final String AttachmentFilePath =
+            new File(System.getProperty("user.dir"), "src/test/TestData/COC.jpg").getAbsolutePath();
     // اقصى وقت لرفع مرفق واحد (السيرفر ساعات بيبقى بطيء)
     private static final int AttachmentUploadTimeoutSeconds = 120;
     // اي progress bar بيظهر وقت الرفع
@@ -306,6 +307,13 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         if (fileInput != null) {
             fileInput.sendKeys(FilePath);
             js.executeScript("arguments[0].remove(); window.__autoFileInput = null;", fileInput);
+        } else if (DriverFactory.DriverFactoryClass.IsHeadless()) {
+            // في الـ headless مفيش نافذة ويندوز ولا Robot - بنبعت المسار لآخر input file في الصفحة
+            List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='file']"));
+            if (inputs.isEmpty()) {
+                throw new RuntimeException("No file input found for upload in headless mode");
+            }
+            inputs.get(inputs.size() - 1).sendKeys(FilePath);
         } else {
             // احتياطي: لو الزرار فتح نافذة الويندوز بطريقة تانية بنستخدم Robot زي الاول
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection("\"" + FilePath + "\""), null);
@@ -324,7 +332,12 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             }
         }
 
-        WaitUntilAttachmentUploaded(driver, UploadedFileLocator, before);
+        if (UploadedFileLocator == null) {
+            // شاشات مالهاش شكل ثابت للمرفق المرفوع: بنستنى اللودينج والـ progress يخلصوا بس
+            WaitUntilNotBusy(driver, AttachmentUploadTimeoutSeconds);
+        } else {
+            WaitUntilAttachmentUploaded(driver, UploadedFileLocator, before);
+        }
     }
 
     // بيستنى لحد ما كارت المرفق الجديد يظهر (يعني السيرفر رجع id للملف) + مفيش لودينج ولا progress bar
