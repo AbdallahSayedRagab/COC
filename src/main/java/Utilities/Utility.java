@@ -287,7 +287,7 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WaitUntilNotBusy(driver, 60);
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", UploadButton);
-        int before = driver.findElements(UploadedFileLocator).size();
+        int before = UploadedFileLocator == null ? 0 : driver.findElements(UploadedFileLocator).size();
 
         // الزرار (openfilesbrowser) بيعمل input[type=file] مؤقت ويدوس عليه فتفتح نافذة الويندوز
         // فبنمسك الـ input ده قبل ما يفتح النافذة ونحطه في الصفحة ونبعتله المسار مباشرة - اسرع وادق من Robot
