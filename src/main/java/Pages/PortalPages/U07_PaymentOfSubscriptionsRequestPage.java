@@ -2,6 +2,7 @@ package Pages.PortalPages;
 
 import Utilities.JsonUtil;
 import Utilities.LogsUtiles;
+import Utilities.PortalBasedFunctions;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -15,8 +16,6 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     public U07_PaymentOfSubscriptionsRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
-    private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
     private final By PopUpMessage = By.xpath("//div[@id=\"swal2-html-container\"]");
 
@@ -30,7 +29,6 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     private final By NextButtonOfSubscriptionItems = By.xpath("//div[@id='test-l-2']//button[contains(text(),'التالى')]");
 
     // 3- المرفقات
-    private final By AddAttachmentButton = By.xpath("//div[@id='test-l-3']//button[@title=\"إضافة ملف جديد\"]");
     private final By NextButtonOfAttachments = By.xpath("//div[@id='test-l-3']//button[contains(text(),'التالى')]");
 
     // 4- تقديم الطلب
@@ -40,11 +38,7 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     private final By SameItemSelectedBeforeMessage = By.xpath("//div[contains(@class,'toast-message') and contains(text(),'نفس البند')]");
 
     public U07_PaymentOfSubscriptionsRequestPage StartTheService () {
-        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
-        if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
-        }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        PortalBasedFunctions.StartTheService(driver);
         return this;
     }
 
@@ -68,7 +62,7 @@ public class U07_PaymentOfSubscriptionsRequestPage {
     }
 
     public U07_PaymentOfSubscriptionsRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton);
+        PortalBasedFunctions.FillAttachmentSection(driver,3);
         Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfAttachments);
         return this;
     }

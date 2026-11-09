@@ -1,5 +1,6 @@
 package Pages.BackofficePages;
 
+import Utilities.BackofficeBasedFunctions;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -20,15 +21,6 @@ public class P11_ServicesRequest {
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
     private final By AddServiceButton = By.xpath("//button[@class=\"add-btn\"]");
 
-    private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
-    private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
-    private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
-    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
-    private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
-    private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
-    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
-    private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
-    private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
 //    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تم التسليم\")]");
 //    private final By RequestNumber = By.xpath("(//td/a[@class=\"ng-star-inserted\"])[1]");
 
@@ -47,7 +39,7 @@ public class P11_ServicesRequest {
 }
 
     public P11_ServicesRequest FillAndSaveDataOfApplicant (String ID , String Phone) throws InterruptedException {
-    Utility.FillAndSaveDataOfApplicant(driver,ID,Phone);
+    BackofficeBasedFunctions.FillAndSaveDataOfApplicant(driver,ID,Phone);
     return this;
 }
 
@@ -59,12 +51,11 @@ public class P11_ServicesRequest {
 }
 
     public P11_ServicesRequest FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton);
+        BackofficeBasedFunctions.FillAttachmentSection(driver);
         return this;
     }
     public P11_ServicesRequest ConfirmRequest () throws InterruptedException {
-        Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
-        Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
+        BackofficeBasedFunctions.ConfirmRequest(driver);
         return this;
     }
 
@@ -78,10 +69,7 @@ public class P11_ServicesRequest {
 //}
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
+        BackofficeBasedFunctions.SendingRequestToCollect(driver);
         return new P04_InvoicesPage(driver);
     }
 

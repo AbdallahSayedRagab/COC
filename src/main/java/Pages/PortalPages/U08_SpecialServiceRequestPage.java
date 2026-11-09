@@ -4,6 +4,7 @@ import Pages.BackofficePages.P01_LoginPage;
 
 import Utilities.DataUtiles;
 import Utilities.JsonUtil;
+import Utilities.PortalBasedFunctions;
 import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,8 +21,6 @@ public class U08_SpecialServiceRequestPage {
     public U08_SpecialServiceRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
-    private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
     // اول ليستة في الخطوة الاولى - اسمها بيتغير فمش بنعتمد على الاسم
     private final By RequestTypeField = By.xpath("(//div[@id='test-l-1']//ng-select)[1]");
@@ -50,11 +49,8 @@ public class U08_SpecialServiceRequestPage {
     }
 
     public U08_SpecialServiceRequestPage StartTheService () throws InterruptedException {
-        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
-        if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
-        }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        // بعد ابدأ الخدمة بيظهر بوب اب تأكيد
+        PortalBasedFunctions.StartTheService(driver,ConfirmButtonOfPopUp);
         Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
         return this;
     }

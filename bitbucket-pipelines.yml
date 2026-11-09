@@ -1,0 +1,21 @@
+# تشغيل التستات على Bitbucket Pipelines - بيشتغل headless لوحده لان Bitbucket بيعرف متغير CI
+# الصورة فيها Java 17 و Maven و Chrome، والـ chromedriver بينزله Selenium لوحده
+image: markhobson/maven-chrome:jdk-17
+
+pipelines:
+  # بيتشغل يدوي: Pipelines > Run pipeline > run-tests
+  # مش مع كل push عشان الرن بياخد حوالي ساعة وبيعمل داتا جديدة على السيرفر
+  custom:
+    run-tests:
+      - step:
+          name: Run testng.xml
+          max-time: 120
+          caches:
+            - maven
+          script:
+            - mvn clean test -Dheadless=true
+          # تقارير التستات + سكرين شوت الكيسز اللي فشلت + اللوجز
+          artifacts:
+            - target/surefire-reports/**
+            - src/main/java/Shots/**
+            - test-outputs/Logs/**

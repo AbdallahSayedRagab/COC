@@ -1,28 +1,15 @@
 package Pages.PortalPages;
 
-import Utilities.JsonUtil;
+import Utilities.PortalBasedFunctions;
 import Utilities.Utility;
-import Utilities.Validations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class U06_SourceOfGoodsRequestPage {
     public U06_SourceOfGoodsRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
-    private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
-    private final By ConfirmButtonOfPopUp = By.xpath("//button[contains(@class,'swal2-confirm')]");
-    private final By PopUpMessage = By.xpath("//div[@id=\"swal2-html-container\"]");
-
-    // 1- بيانات السجل (الجدول بيعرض سجلات الحساب لوحده)
-    private final By FirstRecordInSearchResults = By.xpath("(//div[@id='test-l-1']//table/tbody/tr)[1]");
-    private final By NextButtonOfRecordData = By.xpath("//div[@id='test-l-1']//button[contains(text(),'التالى')]");
 
     // 2- البيانات الاساسية
     private final By ImporterNameField = By.xpath("//label[normalize-space(text())='اسم المستورد']/following-sibling::*[1]");
@@ -56,27 +43,20 @@ public class U06_SourceOfGoodsRequestPage {
     private final By CertificateLanguageField = By.xpath("//label[normalize-space(text())='لغة الشهادة']/following-sibling::*[1]");
     private final By NextButtonOfCertificateData = By.xpath("//div[@id='test-l-5']//button[contains(text(),'التالى')]");
 
-    // 6- المرفقات
-    private final By AddAttachmentButton = By.xpath("//div[@id='test-l-6']//button[@title=\"إضافة ملف جديد\"]");
-    private final By SendRequestButton = By.xpath("//div[@id='test-l-6']//button[contains(text(),'ارسال الطلب')]");
-
     public U06_SourceOfGoodsRequestPage StartTheService () {
-        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
-        if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
-        }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        PortalBasedFunctions.StartTheService(driver);
         return this;
     }
 
+    // 1- بيانات السجل (الجدول بيعرض سجلات الحساب لوحده)
     public U06_SourceOfGoodsRequestPage SelectFirstRecord () {
-        Utility.WaitUntilReady_And_CLICK(driver,FirstRecordInSearchResults);
-        Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfRecordData);
+        PortalBasedFunctions.SelectFirstRecord(driver);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage FillBasicData (String ImporterName , String ImporterAddress , String CountryOfOrigin) {
-        Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterNameField,ImporterName);
+        // المرحلة دي بتحمل بيانات السجل بعد ما تظهر وبتمسح اسم المستورد لو اتكتب بدري
+        Utility.WaitUntilReady_And_SENDKEYS_AndCheckValue(driver,ImporterNameField,ImporterName);
         Utility.WaitUntilReady_And_CLICK(driver,ImporterCountryField);
         Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
         Utility.WaitUntilReady_And_SENDKEYS(driver,ImporterAddressField,ImporterAddress);
@@ -122,21 +102,14 @@ public class U06_SourceOfGoodsRequestPage {
         return this;
     }
 
-    // لو فيه نوع مرفق بيرفع عليه الملف ولو مفيش بيعدي
+    // 6- المرفقات: لو فيه نوع مرفق بيرفع عليه الملف ولو مفيش بيعدي
     public U06_SourceOfGoodsRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton);
+        PortalBasedFunctions.FillAttachmentSection(driver,6);
         return this;
     }
 
     public U06_SourceOfGoodsRequestPage SendTheRequestAndSaveRequestNumber () {
-        Utility.WaitUntilReady_And_CLICK(driver,SendRequestButton);
-        Utility.WaitUntilReady_And_CLICK(driver,ConfirmButtonOfPopUp);
-        // نفس البوب اب بيتغير من رسالة التأكيد لرسالة "تم ارسال" فبنستنى الرسالة الجديدة
-        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.textToBePresentInElementLocated(PopUpMessage,"تم ارسال"));
-        String Message = Utility.GETTEXT(driver,PopUpMessage);
-        String requestNumber = Message.replaceAll("[^0-9]", "");
-        Validations.ValidationTrue(!requestNumber.isEmpty(), "Request number not found in: " + Message);
-        JsonUtil.writeValue("PortalSourceOfGoodsRequestNumber", requestNumber);
+        PortalBasedFunctions.SendTheRequestAndSaveRequestNumber(driver,6,"PortalSourceOfGoodsRequestNumber");
         return this;
     }
 

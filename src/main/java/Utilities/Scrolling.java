@@ -46,7 +46,10 @@ public class Scrolling {
                         "const outside = r.top < 0 || r.left < 0 ||" +
                         "  r.bottom > (window.innerHeight || document.documentElement.clientHeight) ||" +
                         "  r.right  > (window.innerWidth  || document.documentElement.clientWidth);" +
-                        "if (outside) el.scrollIntoView({block:'center', inline:'center'});",
+                        // او لو جوه الشاشة بس فيه حاجة مغطياه (زي الهيدر الثابت في البورتال) فالضغطة بتروح للحاجة دي
+                        "const onTop = outside ? null : document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);" +
+                        "const covered = onTop !== null && onTop !== el && !el.contains(onTop) && !onTop.contains(el);" +
+                        "if (outside || covered) el.scrollIntoView({block:'center', inline:'center'});",
                 driver.findElement(Locator));
     }
 }

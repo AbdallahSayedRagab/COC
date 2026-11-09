@@ -74,18 +74,6 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
         WaitUntilReady_And_SENDKEYS(driver,Locator,Keys.chord(Keys.CONTROL,"a") + Keys.DELETE + text);
     }
 
-    // بيانات مقدم الطلب (نفس الحقول في كل صفحات الطلبات في الباك أوفيس)
-    private static final By PersonalIdentificationNumber_Field = By.xpath("//input-control[@label=\"رقم تحقيق الشخصية\"]/input");
-    private static final By ApplicantPhone_Field = By.xpath("//input-control[@label=\"رقم الهاتف\"]/input");
-    private static final By SaveApplicantData_Button = By.xpath("//button[contains(text(),'حفظ جميع بيانات مقدم الطلب')]");
-
-    public static void FillAndSaveDataOfApplicant(WebDriver driver, String ID, String Phone) {
-        // الـ Tab بيخرج من الحقل فالموقع يدور على الرقم القومي ويظهر حقل رقم الهاتف
-        WatingAndSENDKEYS(driver,PersonalIdentificationNumber_Field,ID + Keys.TAB);
-        ClearAndSENDKEYS(driver,ApplicantPhone_Field,Phone);
-        WatingLoadingCircle_And_CLICKONELEMENTS(driver,SaveApplicantData_Button);
-    }
-
     // بيستنى لحد 60 ثانية بس بيدوس اول ما العنصر يبقى جاهز واللودينج يختفي (من غير sleep ثابت)
     public static void WaitUntilReady_And_CLICK(WebDriver driver, By Locator) {
         driver.manage().timeouts().implicitlyWait(Duration.ZERO);
@@ -127,6 +115,36 @@ public static void WatingLoadingCircle_And_CLICKONELEMENTS(WebDriver driver, By 
             driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         }
         LogsUtiles.info(" Data sent to  " + Locator.toString() + " is " + text);
+    }
+
+    // بيكتب في الحقل ويتأكد ان الكلام فضل موجود فيه
+    // بعض الفورمز بتعيد تحميل نفسها بعد الاختيار من ليستة فبتمسح اللي اتكتب قبلها، فلو الحقل اتمسح بيكتب تاني
+    // والقيمة لازم تفضل ثابتة 4 مرات ورا بعض (حوالي ثانيتين) من غير لودينج عشان نتأكد ان الفورم خلص تحميل
+    public static void WaitUntilReady_And_SENDKEYS_AndCheckValue(WebDriver driver, By Locator, String text) {
+        WaitUntilReady_And_SENDKEYS(driver,Locator,text);
+        int[] stableChecks = {0};
+        driver.manage().timeouts().implicitlyWait(Duration.ZERO);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(500))
+                    .ignoring(StaleElementReferenceException.class)
+                    .withMessage("Value of " + Locator + " did not stay: " + text)
+                    .until(d -> {
+                        if (d.findElements(Loader).stream().anyMatch(WebElement::isDisplayed)) {
+                            stableChecks[0] = 0;
+                            return false;
+                        }
+                        String Value = d.findElement(Locator).getDomProperty("value");
+                        if (text.equals(Value)) {
+                            return ++stableChecks[0] >= 4;
+                        }
+                        stableChecks[0] = 0;
+                        LogsUtiles.info("Value of " + Locator + " was cleared by the page, typing it again");
+                        ClearAndSENDKEYS(d,Locator,text);
+                        return false;
+                    });
+        } finally {
+            driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+        }
     }
 
     // بيكتب في السيرش ويستنى الجدول يتفلتر فعلا: كل الصفوف فيها الكلمة (او مفيش صفوف) ومفيش لودينج

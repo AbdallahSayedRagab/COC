@@ -1,1 +1,0 @@
-{"uuid":"e3d0d934-205e-46a0-9722-04e994a32fe6","name":"Tests.T04_PortalCases.quit","children":["b711b531-3202-4827-9202-72a98d93b83e"],"description":"","befores":[],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1792064277955,"stop":1792064279399}],"start":1792064277955,"stop":1792064279399}

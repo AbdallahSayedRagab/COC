@@ -36,6 +36,10 @@ build/
 
 ### Mac OS ###
 .DS_Store
+### نتايج الرن (اللوجز - Allure - صور الكيسز اللي فشلت) بتتعمل من جديد كل رن ###
+test-outputs/
+src/main/java/Shots/
+
 ### Claude Code / Playwright (temp) ###
 .idea/claudeCodeEditorTabs.xml
 .playwright-mcp/

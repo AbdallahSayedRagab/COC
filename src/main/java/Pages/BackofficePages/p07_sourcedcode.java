@@ -1,8 +1,8 @@
 package Pages.BackofficePages;
 
+import Utilities.BackofficeBasedFunctions;
 import Utilities.Utility;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class p07_sourcedcode {
@@ -10,9 +10,6 @@ public class p07_sourcedcode {
     public p07_sourcedcode(WebDriver driver) {
         this.driver=driver;
     }
-    private final By SearchingOfRecordNumField = By.xpath("(//input[@name=\"recordNumber\"])[1]");
-    private final By AddNewRequest_Button = By.xpath("//img[@src=\"../../../assets/images/circle-plus-white.svg\"]");
-    private final By Personalidentificationnumber=By.xpath("//input-control[@formcontrolname='applicantNationalId']//input");
     private final By descraptincatogey=By.xpath("//input-control[@formcontrolname='category']//input");
     private final By importername=By.xpath("//input-control[@formcontrolname='importerName']//input");
     private final By importeraddress=By.xpath("//input-control[@formcontrolname='importerAddress']//input");
@@ -29,45 +26,31 @@ public class p07_sourcedcode {
     private final By Parcelquality=By.xpath("//label[normalize-space(text())='نوعية الطرود']/following-sibling::*[1]");
     private final By weightunit=By.xpath("//label[normalize-space(text())='وحدة الوزن']/following-sibling::*[1]");
     private final By Currency =By.xpath("//label[normalize-space(text())='العملة']/following-sibling::*[1]");
-    private final By saveamedicalprovider=By.xpath("//button[@type='submit']");
     private final By Commercialdata=By.xpath("(//div[contains(@class, 'form-accordion-head')])[1]");
     private final By item=By.xpath("(//div[contains(@class, 'form-accordion-head')])[3]");
     private final By samecompany=By.xpath("(//input[@formcontrolname='sameCompany'])[1]");
     private final By sameaddress=By.xpath("(//input[@formcontrolname='sameAddress'])[1]");
-    private final By FirstRowForRecordsResult = By.xpath("(//tr[@cdk-describedby-host=\"0\"]/td)[1]");
     private final By certificatesCount=By.xpath("//input-control[@formcontrolname='certificatesCount']//input");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
-    private final By AddAttachmentButton = By.xpath("//button[@title=\"إضافة ملف جديد\"]");
-    private final By ConfirmRequestButton = By.xpath("//span[contains(text(),\"تاكيد الطلب\")]");
-    private final By AcceptRequestButtonOfPopUP = By.xpath("//button[contains(text(),\" اقبل الطلب\")]");
     private final By additem=By.xpath("//button[@type='button']");
-    private final By EditButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'edit-icon')]])[1]");
-    private final By PullTheRequest = By.xpath("//label[contains(normalize-space(), 'اسحب الطلب')]//input[@type='checkbox']");
-    private final By AcceptRequestButton = By.xpath("//span[contains(text(),\"أقبل الطلب\")]");
-    private final By ViewButton = By.xpath("(//li[.//*[local-name()='svg' and contains(@class,'view-icon')]])[1]");
-    private final By SendToCollectButton = By.xpath("//span[contains(normalize-space(), 'أرسال للتحصيل')]");
-    private final By SendToCollectButtonPouUp = By.xpath("//button[contains(normalize-space(), 'ارسل الطلب للتحصيل')]");
-    private final By RecieveCertificateButton = By.xpath("//button[contains(text(), \"تسليم الشهادة\")]");
 
     public p07_sourcedcode ClickOnAddNewRequest_Button () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AddNewRequest_Button);
+        BackofficeBasedFunctions.ClickOnAddNewRequest_Button(driver);
         return this;
     }
 
     public p07_sourcedcode SearchOnRecordNumber(String recordnumber) throws InterruptedException {
-        Utility.WatingAndSENDKEYS(driver,SearchingOfRecordNumField,recordnumber);
-        driver.findElement(SearchingOfRecordNumField).sendKeys(Keys.ENTER);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,FirstRowForRecordsResult);
+        BackofficeBasedFunctions.SearchOnRecordNumber(driver,recordnumber);
         return this;
     }
 
     public p07_sourcedcode EnterThePersonalIdentificationNumber(String personalidentifier){
-    Utility.SENDKEYS(driver,Personalidentificationnumber,personalidentifier);
-    return this;
+        BackofficeBasedFunctions.EnterThePersonalIdentificationNumber(driver,personalidentifier);
+        return this;
     }
 
     public p07_sourcedcode clickonsavedmedicalprovider() throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,saveamedicalprovider);
+        BackofficeBasedFunctions.ClickOnSavedMedicalProvider(driver);
         return this;
     }
 
@@ -104,13 +87,12 @@ public class p07_sourcedcode {
     }
 
     public p07_sourcedcode FillAttachmentSection() {
-        Utility.UploadAttachments(driver, AddAttachmentButton);
+        BackofficeBasedFunctions.FillAttachmentSection(driver);
         return this;
     }
 
     public p07_sourcedcode confirmrequest() throws InterruptedException {
-        Utility.CLICKONELEMENTS(driver, ConfirmRequestButton);
-        Utility.CLICKONELEMENTS(driver,AcceptRequestButtonOfPopUP);
+        BackofficeBasedFunctions.ConfirmRequest(driver);
         return this;
     }
 
@@ -133,26 +115,17 @@ public class p07_sourcedcode {
         return this;
     }
     public p07_sourcedcode ReviewRequest () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,EditButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,AcceptRequestButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver, AcceptRequestButtonOfPopUP);
-
+        BackofficeBasedFunctions.ReviewRequest(driver);
         return this;
     }
 
     public P04_InvoicesPage SendingRequestToCollect(){
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,SendToCollectButtonPouUp);
+        BackofficeBasedFunctions.SendingRequestToCollect(driver);
         return new P04_InvoicesPage(driver);
     }
 
     public p07_sourcedcode ReceivingTheCertificate () throws InterruptedException {
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,ViewButton);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,PullTheRequest);
-        Utility.WatingLoadingCircle_And_CLICKONELEMENTS(driver,RecieveCertificateButton);
+        BackofficeBasedFunctions.ReceivingTheCertificate(driver);
         return this;
     }
 

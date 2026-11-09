@@ -1,6 +1,7 @@
 package Pages.PortalPages;
 
 import Utilities.JsonUtil;
+import Utilities.PortalBasedFunctions;
 import Utilities.Utility;
 import Utilities.Validations;
 import org.openqa.selenium.By;
@@ -14,8 +15,6 @@ public class U02_BusinessLicenseRequestPage {
     public U02_BusinessLicenseRequestPage(WebDriver driver) { this.driver = driver;}
     private WebDriver driver;
 
-    private final By AcceptConditionsCheckBox = By.xpath("//input[@formcontrolname=\"conditions\"]");
-    private final By StartServiceButton = By.xpath("//button[contains(text(),' إبدا الخدمة الآن ')]");
     private final By FacilityNature_Choice = By.xpath("//label[contains(text(), ' مركز رئيسى')]");
     private final By CreateRequest_Button = By.xpath("//button[contains(text(), ' انشاء الطلب ')]");
     private final By Option1ForAnyList = By.xpath("//div[@role='option'][1]");
@@ -67,15 +66,11 @@ public class U02_BusinessLicenseRequestPage {
     private final By SaveAndContinueButton = By.xpath("//button[contains(text(),'حفظ ومتابعة')]");
 
     // 8- المرفقات
-    private final By AddAttachmentButton = By.xpath("//div[@id='test-l-8']//button[@title=\"إضافة ملف جديد\"]");
     private final By SendRequestButton = By.xpath("//div[@id='test-l-8']//button[contains(text(),'ارسال الطلب')]");
 
     public U02_BusinessLicenseRequestPage StartTheService () {
-        new WebDriverWait(driver, Duration.ofSeconds(60), Duration.ofMillis(200)).until(ExpectedConditions.visibilityOfElementLocated(AcceptConditionsCheckBox));
-        if (!driver.findElement(AcceptConditionsCheckBox).isSelected()) {
-            Utility.WaitUntilReady_And_CLICK(driver,AcceptConditionsCheckBox);
-        }
-        Utility.WaitUntilReady_And_CLICK(driver,StartServiceButton);
+        // بعد ابدأ الخدمة بيظهر اختيار طبيعة المنشأة
+        PortalBasedFunctions.StartTheService(driver,FacilityNature_Choice);
         Utility.WaitUntilReady_And_CLICK(driver,FacilityNature_Choice);
         Utility.WaitUntilReady_And_CLICK(driver,CreateRequest_Button);
         return this;
@@ -86,7 +81,8 @@ public class U02_BusinessLicenseRequestPage {
         Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
         Utility.WaitUntilReady_And_CLICK(driver,FacilityTypeField);
         Utility.WaitUntilReady_And_CLICK(driver,Option1ForAnyList);
-        Utility.WaitUntilReady_And_SENDKEYS(driver,TradeNameField,TradeName);
+        // الفورم بيعيد تحميل نفسه بعد اختيار نوع المنشأة وبيمسح الاسم التجاري لو اتكتب بدري
+        Utility.WaitUntilReady_And_SENDKEYS_AndCheckValue(driver,TradeNameField,TradeName);
         Utility.WaitUntilReady_And_CLICK(driver,NextButtonOfLegalData);
         return this;
     }
@@ -159,7 +155,7 @@ public class U02_BusinessLicenseRequestPage {
 
     // لو فيه نوع مرفق بيرفع عليه الملف ولو مفيش بيعدي
     public U02_BusinessLicenseRequestPage FillAttachmentSection () {
-        Utility.UploadAttachments(driver,AddAttachmentButton);
+        PortalBasedFunctions.FillAttachmentSection(driver,8);
         return this;
     }
 

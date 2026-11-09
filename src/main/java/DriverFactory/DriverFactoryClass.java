@@ -73,10 +73,13 @@ public class DriverFactoryClass {
 
         }
     }
-    // headless لو اتبعت -Dheadless=true او شغالين على Pipeline (Bitbucket بيعرف متغير CI لوحده) - من عندك بيفتح عادي
+    // headless لو اتبعت -Dheadless=true او شغالين على Bitbucket او Jenkins - من انتليجي بيفتح البراوزر عادي
+    // Bitbucket بيعرف متغير CI لوحده، و Jenkins مش بيعرفه بس بيعرف JENKINS_URL و JENKINS_HOME في كل بيلد
     public static boolean IsHeadless() {
         return Boolean.parseBoolean(System.getProperty("headless", "false"))
-                || System.getenv("CI") != null;
+                || System.getenv("CI") != null
+                || System.getenv("JENKINS_URL") != null
+                || System.getenv("JENKINS_HOME") != null;
     }
 
     public static WebDriver getdriver (){
